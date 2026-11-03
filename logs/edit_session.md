@@ -116,4 +116,10 @@ tensor bit-for-bit and change only L15/L19. Question they answer: does the MIT-l
 u-component x1.5 in the same 64 columns: 9/40 correct, 31 truncated, 9/9 finished answers correct, 'Wait' 0.96/kchar,
 'No,' 2.26. Against the baseline 5 gained, none lost. Against A64: 7 shared, A64h alone gets algebra/1265 (the one A64 lost)
 and geometry/967; A64 alone gets 4. Accuracy and 'Wait' both move monotonically with edit strength
-(base 4/40 at 3.22, A64h 9/40 at 0.96, A64 11/40 at 0.25), which a lucky draw would not produce.
+(base 4/40 at 3.22, A64h 9/40 at 0.96, A64 11/40 at 0.25). Three ordered points are suggestive, not proof; together with the paired gains (5-0, 8-1) the effect looks real.
+
+### A64x3: one more point on the dose curve
+Same 64 L22 columns, u-component tripled (make_edit scale -2.0). 65079 weights changed, rel change 2.75% of L22 down_proj
+(A64 was about 1.4%). sha ca063c6a... Question: does the curve keep rising, flatten, or tip over into a new failure
+(the model never doubting, or a different degenerate string) the way P64 tipped into "Wait, wait"? If it keeps rising,
+the full 100 goes to A64x3 instead of A64. Original model file re-hashed after the build: unchanged (04b1c301...).
