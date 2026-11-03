@@ -1,0 +1,26 @@
+{
+  "name": "base_8k_q8",
+  "model": "2B",
+  "task": "math500",
+  "gguf": "gguf/2B_original-q8_0.gguf",
+  "preset": "qwen",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5
+  },
+  "n": 100,
+  "max_tokens": 8192,
+  "think": true,
+  "seed": 0,
+  "first": 0,
+  "backend_sampling": true,
+  "acc": 0.26,
+  "truncated": 0.74,
+  "acc_when_finished": 1.0,
+  "n_finished": 26,
+  "mean_tokens": 7157,
+  "mean_waits_per_kchar": 1.573
+}
