@@ -541,7 +541,7 @@ http = [
 [[package]]
 name = "gguf"
 version = "0.19.0"
-source = { directory = "~/tools/source-code-of-open-source/llama.cpp-b11804/gguf-py" }
+source = { directory = "../../tools/source-code-of-open-source/llama.cpp-b11804/gguf-py" }
 dependencies = [
     { name = "numpy" },
     { name = "pyyaml" },
@@ -1855,7 +1855,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "datasets", specifier = ">=5.1.0" },
-    { name = "gguf", directory = "~/tools/source-code-of-open-source/llama.cpp-b11804/gguf-py" },
+    { name = "gguf", directory = "../../tools/source-code-of-open-source/llama.cpp-b11804/gguf-py" },
     { name = "math-verify", specifier = ">=0.9.0" },
     { name = "numpy", specifier = ">=2.5.4" },
     { name = "protobuf", specifier = ">=7.36.2" },

@@ -16,4 +16,4 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-gguf = { path = "~/tools/source-code-of-open-source/llama.cpp-b11804/gguf-py" }
+gguf = { path = "../../tools/source-code-of-open-source/llama.cpp-b11804/gguf-py" }

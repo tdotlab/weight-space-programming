@@ -14,7 +14,7 @@ from safetensors import safe_open
 from common import LOGS, P, TOK, W, token_z, unembed_stats
 
 torch.set_grad_enabled(False)
-BASE = safe_open(r"~/tools/models/Qwen3.5-0.8B-Base/model.safetensors-00001-of-00001.safetensors", "pt")
+BASE = safe_open(str(BASE_WEIGHTS), "pt")
 PROBE = ["No", " No", "Wait", " Wait", "Hmm", "Actually", "Therefore", " So", "</think>", "\n\n"]
 ids = [TOK[t] for t in PROBE]
 K = 16

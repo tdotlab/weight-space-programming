@@ -1,11 +1,14 @@
 """Shared weight loading. Weight math only: nothing here runs the network."""
+import os
 from functools import lru_cache
 from pathlib import Path
 
 import torch
 from safetensors import safe_open
 
-MODEL_DIR = Path(r"~/tools/models/Qwen3.5-0.8B")
+TOOLS = Path(os.environ.get("WSP_TOOLS", Path.home() / "tools"))  # models, llama.cpp, sources
+MODEL_DIR = TOOLS / "models" / "Qwen3.5-0.8B"
+BASE_WEIGHTS = TOOLS / "models" / "Qwen3.5-0.8B-Base" / "model.safetensors-00001-of-00001.safetensors"
 WEIGHTS = MODEL_DIR / "model.safetensors-00001-of-00001.safetensors"
 ROOT = Path(__file__).resolve().parents[2]
 LOGS = ROOT / "logs"

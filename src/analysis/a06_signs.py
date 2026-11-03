@@ -11,9 +11,9 @@ import json
 import torch
 from safetensors import safe_open
 
-from common import LOGS, W
+from common import BASE_WEIGHTS, LOGS, W
 
-BASE = r"~/tools/models/Qwen3.5-0.8B-Base/model.safetensors-00001-of-00001.safetensors"
+BASE = str(BASE_WEIGHTS)
 L = 22
 
 u = torch.load(LOGS / "a04_directions.pt")["u"].float()

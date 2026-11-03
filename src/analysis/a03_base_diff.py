@@ -9,7 +9,7 @@ from common import *
 
 torch.set_grad_enabled(False)
 tok = AutoTokenizer.from_pretrained(str(MODEL_DIR))
-BASE = safe_open(r"~/tools/models/Qwen3.5-0.8B-Base/model.safetensors-00001-of-00001.safetensors", "pt")
+BASE = safe_open(str(BASE_WEIGHTS), "pt")
 bkeys = set(BASE.keys())
 
 def Wb(name, L):

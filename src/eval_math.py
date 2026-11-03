@@ -10,7 +10,8 @@ import requests
 from math_verify import parse, verify
 
 ROOT = Path(__file__).resolve().parents[1]
-SERVER = r"~\tools\llama.cpp\b11804\llama-server.exe"
+TOOLS = Path(os.environ.get("WSP_TOOLS", Path.home() / "tools"))  # models, llama.cpp, sources
+SERVER = str(TOOLS / "llama.cpp" / "b11804" / "llama-server.exe")
 PROMPT_SUFFIX = "\n\nPlease reason step by step, and put your final answer within \\boxed{}."
 
 PRESETS = {

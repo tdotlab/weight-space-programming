@@ -8,7 +8,7 @@ Edit kinds (all on layer L mlp.down_proj, residual-space unit direction d):
 Usage: uv run python src/make_edit.py --name D_full --kind revert --dir u --k all
 Stacking: --start A64 applies the edit on top of edited/A64/. --dirfile picks the direction file (default a04).
 """
-import argparse, hashlib, json, shutil, subprocess, sys, time
+import argparse, hashlib, json, os, shutil, subprocess, sys, time
 from pathlib import Path
 
 import torch
@@ -16,10 +16,11 @@ from safetensors import safe_open
 from safetensors.torch import save_file
 
 ROOT = Path(__file__).resolve().parents[1]
-ORIG = Path(r"~/tools/models/Qwen3.5-0.8B")
-BASE = Path(r"~/tools/models/Qwen3.5-0.8B-Base")
+TOOLS = Path(os.environ.get("WSP_TOOLS", Path.home() / "tools"))  # models, llama.cpp, sources
+ORIG = TOOLS / "models" / "Qwen3.5-0.8B"
+BASE = TOOLS / "models" / "Qwen3.5-0.8B-Base"
 FNAME = "model.safetensors-00001-of-00001.safetensors"
-CONVERT = r"~/tools/source-code-of-open-source/llama.cpp-b11804/convert_hf_to_gguf.py"
+CONVERT = str(TOOLS / "source-code-of-open-source" / "llama.cpp-b11804" / "convert_hf_to_gguf.py")
 P = "model.language_model."
 
 
