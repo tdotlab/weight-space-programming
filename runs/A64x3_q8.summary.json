@@ -1,0 +1,24 @@
+{
+  "name": "A64x3_q8",
+  "gguf": "gguf/A64x3-q8_0.gguf",
+  "preset": "qwen",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5
+  },
+  "n": 40,
+  "max_tokens": 16384,
+  "think": true,
+  "seed": 0,
+  "first": 40,
+  "backend_sampling": true,
+  "acc": 0.325,
+  "truncated": 0.675,
+  "acc_when_finished": 1.0,
+  "n_finished": 13,
+  "mean_tokens": 13957,
+  "mean_waits_per_kchar": 0.109
+}

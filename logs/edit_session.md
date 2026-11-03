@@ -131,3 +131,18 @@ the baseline ("Wait! Let me check the denominators again"). Reading: post-traini
 columns is roughly neutral; the whole-matrix revert takes out brake and promoter columns alike. A64's effect comes from
 amplifying the specific 64 columns with the largest u-loadings, not from post-training's u-component in general.
 (Interpretation, not separately tested.)
+
+### A64x3 screen (first 40): the curve keeps rising
+13/40 correct, 27 truncated, 13/13 finished correct, 'Wait' 0.04/kchar (base 3.22), 'Actually' 0.05 (base 0.19), 'No,' 2.40.
+Against the baseline 9 gained, none lost. Against A64 4 gained (algebra/1265, algebra/170, geometry/967,
+intermediate_algebra/834), 2 lost (algebra/276, algebra/907). Dose curve on the first 40: 4 (x1), 9 (x1.5), 11 (x2), 13 (x3).
+A64x3 vs A64 alone is not significant (+4/-2); the trend across four points is the evidence. Early finishes read clean
+("Ready to write.", "Solution is 76 degrees."), no sign of overconfident wrong answers: every finished answer is right.
+The truncated runs still circle without 'Wait': re-reading the problem statement ("Maybe the term 'n' is actually...?"),
+arguing over definitions ("factor" vs "prime factor"), "my derivation is **wrong**?". 'Wait' is gone, so further dose can
+only act through whatever else the 64 columns carry.
+
+### A64x5: looking for the top of the curve
+u-component x5 in the same 64 columns (scale -4.0): 65305 weights changed, rel change 5.5% of L22 down_proj,
+sha 1bb8b6b7... Original model re-hashed after the build: unchanged. Queue changed so the full 100 goes to A64x3 before
+A64 (the waiter kills the A64 rest run the moment it starts and runs A64x5 screen, A64x3 rest, A64 rest).

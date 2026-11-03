@@ -1,6 +1,6 @@
 # Status
 
-Last updated 2026-11-03 00:15 EST.
+Last updated 2026-11-03 00:55 EST.
 
 ## Where it stands
 
@@ -10,13 +10,13 @@ The MIT-shaped edit P64 backfired. On the first 40 problems it scored 0/40 with 
 
 The random-direction control R64 matches the baseline exactly (4/40, 36 truncated, Wait 3.16 vs 3.22), so P64's effect is specific to u.
 
-A64, the opposite of P64 (u-component in the same 64 L22 columns doubled), is the first edit that helps: 11/40 correct vs 4/40, every finished answer right, 8 problems gained and 1 lost against the baseline (sign test p about 0.04). 'Wait' fell 13x (3.22 to 0.25 per kchar). The half-strength version A64h lands in between (9/40, Wait 0.96, 5 gained and none lost), so the response is graded with dose. But 29/40 still hit the 16k cap: the spiral keeps going on 'No, ...', 'Is this the correct form?', 'Let's re-verify'. 'Wait' was one leg of the loop, not the loop. There is no post-training direction behind 'No,' to grab (a07: best of 160 candidates z 4.5, vs u's z 23 for 'Wait'), so the rest of the loop is not one surgical target. D_full, which reverts post-training's whole u-component in L22, does next to nothing (5/40, Wait 3.22 to 2.51), so the lever is those 64 columns specifically, not post-training's u-writing in general. Queue (`runs/queue2.log`): A64x3 (u-component tripled: does the dose curve keep rising?), then A64VP and A64VA (A64 plus the MIT-layer edit: v_in projected out of, or doubled in, the top-64 columns of L15 and L19), then A64's remaining 60. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
+A64, the opposite of P64 (u-component in the same 64 L22 columns doubled), is the first edit that helps: 11/40 correct vs 4/40, every finished answer right, 8 problems gained and 1 lost against the baseline (sign test p about 0.04). 'Wait' fell 13x (3.22 to 0.25 per kchar). The half-strength version A64h lands in between (9/40, Wait 0.96, 5 gained and none lost), so the response is graded with dose. But 29/40 still hit the 16k cap: the spiral keeps going on 'No, ...', 'Is this the correct form?', 'Let's re-verify'. 'Wait' was one leg of the loop, not the loop. There is no post-training direction behind 'No,' to grab (a07: best of 160 candidates z 4.5, vs u's z 23 for 'Wait'), so the rest of the loop is not one surgical target. D_full, which reverts post-training's whole u-component in L22, does next to nothing (5/40, Wait 3.22 to 2.51), so the lever is those 64 columns specifically, not post-training's u-writing in general. A64x3 (u-component tripled) keeps the curve rising: 13/40, 9 gained and none lost, 'Wait' practically gone (0.04). Queue (`runs/queue2.log`): A64VP and A64VA (A64 plus the MIT-layer edit: v_in projected out of, or doubled in, the top-64 columns of L15 and L19), then A64x5 (u x5), then A64x3 on all 100, then A64's remaining 60. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
 
 ## Plan
 
 1. Done: baseline on 100 MATH-500 problems (seed 0), qwen preset, thinking on, 16k max tokens.
 2. Screens on the first 40: R64 (is P64's effect specific to u?), A64/A64h/A64x3 (does amplifying the brake cut loops, and where does the dose curve top out?), D_full (revert post-training's u-component across L22).
-3. Any edit that beats the baseline's first 40 (4/40 correct, 36 truncated) gets the full 100. A64 qualifies; it resumes from its 40 after the screens.
+3. Any edit that beats the baseline's first 40 (4/40 correct, 36 truncated) gets the full 100. A64x3 is the best so far and goes first; A64 follows.
 4. Done: a07 found no post-training 'No,' direction. Next lever is upstream: v_in at L15+L19 stacked on A64, both signs (A64VP, A64VA), since weights cannot fix the sign.
 5. Then: the winner gets the full 100, a greedy baseline, and later a slightly bigger Qwen.
 
@@ -33,7 +33,8 @@ First-40 numbers compare against the baseline's same 40 problems: 4/40 correct, 
 | A64_q8 | first 40 | 11/40 | 29/40 | 11/11 | 0.25 | u doubled in P64's columns. +8/-1 vs baseline. 'No,' unchanged (2.29); truncated runs still spiral without 'Wait' |
 | A64h_q8 | first 40 | 9/40 | 31/40 | 9/9 | 0.96 | u x1.5. +5/-0 vs baseline; 7 of its 9 also right under A64. Graded between base and A64 |
 | Dfull_q8 | first 40 | 5/40 | 35/40 | 5/5 | 2.51 | post-training's u-component reverted across all of L22. +2/-1 vs baseline: noise. Loops unchanged |
-| A64x3_q8 | first 40 | running | | | | u x3 in the same 64 cols; next point on the dose curve |
+| A64x3_q8 | first 40 | 13/40 | 27/40 | 13/13 | 0.04 | u x3. +9/-0 vs baseline, +4/-2 vs A64. 'Wait' gone; truncated runs still spiral on 'No,' and re-reading the problem |
+| A64x5_q8 | first 40 | queued | | | | u x5: where does the dose curve top out? |
 | A64VP_q8 | first 40 | queued | | | | A64 + v_in projected out of top-64 cols at L15, L19 |
 | A64VA_q8 | first 40 | queued | | | | A64 + v_in doubled in those columns |
 
