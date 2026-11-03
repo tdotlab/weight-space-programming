@@ -662,7 +662,7 @@ Let's search for the problem statement directly.
 I will perform a quick mental check on common pitfalls:  
 1. $\log_a b$ vs $\log_b a$. No.  
 2. Base of first equation is $y$.  
-   If $\log_6 (x-y)$ is actually $\log_{\text{something}} (x-y)$, where something might be related to the second base? No.  
+If $\log_6 (x-y)$ is actually $\log_{\text{something}} (x-y)$, where something might be related to the second base? No.  
 3. Maybe $\log_y 5x$ is $\log_{1/y} (5/x) = - \log_x$.  
 
 Let's try a very specific interpretation:  

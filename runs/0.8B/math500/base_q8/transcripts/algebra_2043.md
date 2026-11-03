@@ -57,8 +57,8 @@ Here's my thought process for determining the domain of the function $f(x)=\frac
     *   Therefore, domain is $\mathbb{R} \setminus \{2, 3\}$.  
 
 6.  **Wait, let me double check the logic.**  
-    Usually, in these problems, there's a trick or ambiguity. Sometimes people forget that $f(x)$ involves a square root.  
-    If the function is defined as $\frac{2x-7}{\sqrt{x^2-5x+6}}$, we need:  
+Usually, in these problems, there's a trick or ambiguity. Sometimes people forget that $f(x)$ involves a square root.  
+If the function is defined as $\frac{2x-7}{\sqrt{x^2-5x+6}}$, we need:  
     1.  Denominator argument is non-negative. So $x^2-5x+6 \ge 0$.  
         *   The roots of $x^2 - 5x + 6$ are 2 and 3.  
         *   For a continuous quadratic, the parabola opens upwards. It is $\ge 0$ for $x \le 2$ or $x \ge 3$. Wait.  
@@ -340,7 +340,7 @@ Here's my thought process for determining the domain of the function $f(x)=\frac
                                                                                                 *   Wait, if it opens up (standard parabola) with roots at 2 and 3. Then the values are: negative between 2 and 3, positive outside.  
                                                                                                 *   But earlier I calculated $Q(1)=2$ which is positive. And $Q(-1)=12$. So yes.  
                                                                                                 *   Wait. Let's check if min value is indeed negative.  
-                                                                                                     *   If $y = (x-2)(x-3) = x^2 - 5x + 6$. Vertex at $x = 5/2 = 2.5$? No, vertex of $(x-2)(x-3)$?  
+                                                                                                    *   If $y = (x-2)(x-3) = x^2 - 5x + 6$. Vertex at $x = 5/2 = 2.5$? No, vertex of $(x-2)(x-3)$?  
                                                                                                      *   Derivative: $y' = 2(x-2) + (-5)?$ No. $y' = 2x - 5$.  
                                                                                                      *   Wait. This derivative gives the roots of derivative? No.  
                                                                                                      *   The minimum is where $y'=0$. So $2x - 5 = 0 \implies x=2.5$.  
@@ -359,7 +359,7 @@ Here's my thought process for determining the domain of the function $f(x)=\frac
                                                                                                 *   Wait, vertices of parabola opening up. Roots at 2 and 3. Vertex at 2.5. Min value -0.25. This implies graph goes down to -0.25 at x=2.5 and then back up? No, that's impossible since min is the lowest point. If it starts from $\infty$ (as $x \to -\infty$), drops to -0.25, then rises to 0 (at root) and above. So graph goes: $+\infty$ down to -0.25... wait.  
                                                                                                 *   This contradicts roots 2, 3 if the vertex is at 2.5? Wait. If min is -0.25, it must cross x-axis somewhere else? Or maybe roots are not 2 and 3?  
                                                                                                 *   Wait. $x^2 - 5x + 6$.  
-                                                                                                     *   Let's check roots again. Sum=5, Product=6.  
+                                                                                                    *   Let's check roots again. Sum=5, Product=6.  
                                                                                                      *   Roots are 2 and 3.  
                                                                                                      *   So graph must cross x-axis at 2 and 3? Or does it touch? It touches at roots.  
                                                                                                 *   If min value is -0.25 (negative). Then for $x \le 2$ or $x \ge 3$, the function should be positive? No, wait.  

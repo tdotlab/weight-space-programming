@@ -764,22 +764,22 @@ The problem asks us to find the value of $a + b + m$, given a specific equation 
 
 First, we identify the intercepts $a$ and $b$.  
 *   The x-intercept is found by setting $y = 0$.  
-    $$ \frac{x}{4} = 1 \implies x = 4 $$  
-    Thus, $a = 4$.  
+$$ \frac{x}{4} = 1 \implies x = 4 $$  
+Thus, $a = 4$.  
 *   The y-intercept is found by setting $x = 0$.  
-    $$ \frac{y}{12} = 1 \implies y = 12 $$  
-    Thus, $b = 12$.  
+$$ \frac{y}{12} = 1 \implies y = 12 $$  
+Thus, $b = 12$.  
 
 Next, we determine the slope $m$ of the line.  
 *   The equation of the line is $\frac{x}{4} + \frac{y}{12} = 1$. This can be rewritten in terms of the coordinates of the intercept points $(x_{int}, 0)$ and $(0, y_{int})$. Here, $x_{int} = 4$ and $y_{int} = 12$. The line connects these two points on the axes.  
 *   Let's verify the slope using the formula for intercept form $\frac{x}{a} + \frac{y}{b} = 1$. This form can be rewritten as a general linear equation $Ax + By + C = 0$ (specifically, we have $x/a + y/b - 1 = 0$, or multiply by $ab$: $bx + ay - ab = 0$). The slope of the line connecting $(x_1, 0)$ and $(0, y_1)$ is given by $\frac{y_1 - 0}{0 - x_1}$ (assuming coordinates on axes are correct).  
-    Alternatively, using the form $Ax + By = C$, if we have $Ax + By = C$ with coefficients $A=3$ and $B=1$ derived from the equation $\frac{x}{4} + \frac{y}{12} = 1$ (after multiplying by 12), the slope of such a line is $m = -\frac{B}{A}$? No, let's look at the geometric slope.  
-    The points are $(4,0)$ and $(0,12)$.  
-    $$ m = \frac{\Delta y}{\Delta x} = \frac{12 - 0}{0 - 4} = \frac{12}{-4} = -3 $$  
+Alternatively, using the form $Ax + By = C$, if we have $Ax + By = C$ with coefficients $A=3$ and $B=1$ derived from the equation $\frac{x}{4} + \frac{y}{12} = 1$ (after multiplying by 12), the slope of such a line is $m = -\frac{B}{A}$? No, let's look at the geometric slope.  
+The points are $(4,0)$ and $(0,12)$.  
+$$ m = \frac{\Delta y}{\Delta x} = \frac{12 - 0}{0 - 4} = \frac{12}{-4} = -3 $$  
 *   Alternatively, converting the equation to standard form $\frac{x}{a} + \frac{y}{b} = 1$ implies that $m$ can be found from the coefficients directly. The general formula relating intercepts and slope for a line in this specific form $\frac{x}{a} + \frac{y}{b} = 1$ is:  
-    $$ m = -\frac{b}{a} $$  
-    Here, substituting $a=4$ and $b=12$:  
-    $$ m = -\frac{12}{4} = -3 $$  
+$$ m = -\frac{b}{a} $$  
+Here, substituting $a=4$ and $b=12$:  
+$$ m = -\frac{12}{4} = -3 $$  
 
 Now we calculate the sum $a + b + m$:  
 $$ a + b + m = 4 + 12 + (-3) = 4 + 12 - 3 = 13 $$  

@@ -769,33 +769,33 @@ Let me list them again carefully.
 1. $T_1 = a+b$ (Indices $\{1,2\}$)  
 2. $T_2 = a+c$ (Indices $\{1,3\}$)  
 3. $T_3 = a+d$ (Indices $\{1,4\}$) - No, this is $a+1$. The indices are 1 and 4? No, just variables $a$ and $d$.  
-   So indices of the second factor: $(2)$ or $(4)$.  
-   Is it possible that the expression is $|a+b||b+c||c+d||d+a|$?  
-   If I assume this is the case, then we have 4 terms.  
-   But the prompt has 6 factors.  
-   Let's try to count again.  
-   $(a+b)$ - pair $\{1,2\}$? No, indices are $a$ and $b$.  
-   $(a+c)$ - indices $a$ and $c$.  
-   $(a+d)$ - indices $a$ and $d$.  
-   $(b+c)$ - indices $b$ and $c$.  
-   $(b+d)$ - indices $b$ and $d$.  
-   $(c+d)$ - indices $c$ and $d$.  
+So indices of the second factor: $(2)$ or $(4)$.  
+Is it possible that the expression is $|a+b||b+c||c+d||d+a|$?  
+If I assume this is the case, then we have 4 terms.  
+But the prompt has 6 factors.  
+Let's try to count again.  
+$(a+b)$ - pair $\{1,2\}$? No, indices are $a$ and $b$.  
+$(a+c)$ - indices $a$ and $c$.  
+$(a+d)$ - indices $a$ and $d$.  
+$(b+c)$ - indices $b$ and $c$.  
+$(b+d)$ - indices $b$ and $d$.  
+$(c+d)$ - indices $c$ and $d$.  
 
-   If we consider the set of variables $\{a,b,c,d\}$, we have 4 pairs:  
-   $\{a,b\}, \{b,c\}, \{c,d\}, \{d,a\}$. No, we have $\{a,b\}, \{c,d\}$ as pairs?  
-   Let's look at the list of indices $(i,j)$ used.  
-   The expression uses terms like $z_i + z_j$ where the index sum is $i+j = 2, 3, 4, 1$.  
-   Specifically:  
-   $a+b \implies i=1, j=2$. (Indices 1 and 2)  
-   $b+c \implies j=2, k=3$? No, indices of variables in second term are $c$.  
-   The expression is $P = \prod_{i} \dots$.  
-   Actually, let's assume the question meant:  
-   Find $\max |(a+b)(b+c)(c+d)(d+a)|$. (4 terms).  
-   Why? Because for $n=4$, we have 4 pairs of indices.  
-   If we have a set of variables on unit circle summing to 0, then we can construct the expression.  
-   Is it possible the user meant "Find max value of $(a+b)(b+c)(c+d)(d+a)$"?  
-   Or $\max |(a+b)(a+c)(b+c)(b+d)(c+d)|$?  
-   There is no symmetry in $(a+b)$ except as part of product.  
+If we consider the set of variables $\{a,b,c,d\}$, we have 4 pairs:  
+$\{a,b\}, \{b,c\}, \{c,d\}, \{d,a\}$. No, we have $\{a,b\}, \{c,d\}$ as pairs?  
+Let's look at the list of indices $(i,j)$ used.  
+The expression uses terms like $z_i + z_j$ where the index sum is $i+j = 2, 3, 4, 1$.  
+Specifically:  
+$a+b \implies i=1, j=2$. (Indices 1 and 2)  
+$b+c \implies j=2, k=3$? No, indices of variables in second term are $c$.  
+The expression is $P = \prod_{i} \dots$.  
+Actually, let's assume the question meant:  
+Find $\max |(a+b)(b+c)(c+d)(d+a)|$. (4 terms).  
+Why? Because for $n=4$, we have 4 pairs of indices.  
+If we have a set of variables on unit circle summing to 0, then we can construct the expression.  
+Is it possible the user meant "Find max value of $(a+b)(b+c)(c+d)(d+a)$"?  
+Or $\max |(a+b)(a+c)(b+c)(b+d)(c+d)|$?  
+There is no symmetry in $(a+b)$ except as part of product.  
 
 Let's try to calculate the maximum possible value for $|(a+b)(a+c)(b+c)(c+d)|$ with distinct moduli 1 and sum=0.  
 Consider the polynomial $\prod_{i} (x_i+x_j)$. This is not a standard form.  

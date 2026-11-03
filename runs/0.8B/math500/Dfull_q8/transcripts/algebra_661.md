@@ -548,7 +548,7 @@ Here's a thinking process that leads to the solution:
         *   If it skips Days 1, 2, she walks on Days 3, 4...? No.  
 
     *   Let's try a different interpretation: **She walks 4 miles** (implying she has walked 4 miles in the month).  
-            *   If "every third day" refers to **days of the month**?  
+        *   If "every third day" refers to **days of the month**?  
         *   Wait, is it possible that "Suzanne walks four miles every third day" means she walks on Days $3^{rd}$ and then **Days $1$**? (No).  
 
     *   Let's try to search for the exact phrase again.  
@@ -562,10 +562,10 @@ Here's a thinking process that leads to the solution:
         *   She walks 4 miles on Days $1, 2$ (No).  
 
     *   Let's consider the possibility that "every third day" refers to a cycle of **miles**.  
-            *   If she walks 4 miles, and then again on days $3^{rd}$. (No).  
+        *   If she walks 4 miles, and then again on days $3^{rd}$. (No).  
 
     *   Wait, maybe the question is simply asking for **28**? Or **29**?  
-            *   If "every third day" means she walks on Days $1, 2$? No.  
+        *   If "every third day" means she walks on Days $1, 2$? No.  
 
     *   Let's check if there is a trick:  
         *   She walks 4 miles every third day.  

@@ -225,7 +225,7 @@ Let's just multiply manually.
 -----
 ```
 
- 367 (Wait, 19*10=190, 19*7=133). So 347? No.  
+367 (Wait, 19*10=190, 19*7=133). So 347? No.  
 $19 \times 17 = 19(20-3) = 380 - 57 = 323$.  
 My manual multiplication was wrong.  
 $19 \times 17$:  
@@ -236,7 +236,7 @@ $19 \times 17$:
 ------
 ```
 
- 190 (wait, 190? No 19*7=133)  
+190 (wait, 190? No 19*7=133)  
 Wait.  
 
 ```text
@@ -277,16 +277,16 @@ Let's recalculate carefully.
 ------
 ```
 
-   117 (Wait, this is not right)  
- Wait, $19 \times 7$:  
-    10x7=70. 90+7=108. So 725? No.  
+117 (Wait, this is not right)  
+Wait, $19 \times 7$:  
+10x7=70. 90+7=108. So 725? No.  
 
 ```text
      7*9=63.
     7*10=70.
 ```
 
-  Wait, no. $19 \times 7 = (20-1)7 = 140 - 7 = 133$.  
+Wait, no. $19 \times 7 = (20-1)7 = 140 - 7 = 133$.  
 So 340 + 133 = 473.  
 Wait. $19 \times 7 = 133$ is correct.  
 And $20 \times 17$ is not the right direction.  

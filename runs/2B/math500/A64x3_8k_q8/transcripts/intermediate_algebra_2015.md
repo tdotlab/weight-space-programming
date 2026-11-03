@@ -327,9 +327,9 @@ Similarly for the other pair $\alpha_3, \alpha_4$, roots are $\alpha_3, \alpha_4
 This decomposition depends on *which* pair we choose.  
 We have 3 possible groupings:  
 1. $\{\alpha_1, \alpha_2\}$ and $\{\alpha_3, \alpha_4\}$. Sum $A = \alpha_1\alpha_2$, $B = \alpha_3\alpha_4$. Product sum term?  
-   We want $y$ such that $y^2 - (\text{something}) y + z = 0$? No.  
-   Let's check the question again. The set $\{ \alpha_1\alpha_2+\alpha_3\alpha_4, \dots \}$.  
-   So we are looking for combinations of terms $e_i \alpha_j$? No.  
+We want $y$ such that $y^2 - (\text{something}) y + z = 0$? No.  
+Let's check the question again. The set $\{ \alpha_1\alpha_2+\alpha_3\alpha_4, \dots \}$.  
+So we are looking for combinations of terms $e_i \alpha_j$? No.  
 
 Let's try to calculate the value using the relation $P(x) = x^4+2x^3+2$.  
 Is there a specific structure to $\sum_{i<j} s_i$?  
@@ -366,7 +366,7 @@ $s_1 s_2 = (\alpha_1 \alpha_2 + \alpha_3 \alpha_4)(\alpha_1 \alpha_3 + \alpha_2 
 Term by term expansion:  
 1. $\alpha_1^2 \alpha_2 \alpha_3$  
 2. $\alpha_1 \alpha_2 \alpha_2 \alpha_4 = \alpha_1 \alpha_2^2 \alpha_4$? No. $\alpha_1 \alpha_3 \alpha_2 \alpha_4$ (from $\alpha_2\alpha_4$ and $\alpha_3\alpha_4$).  
-   Term is $\alpha_3 \alpha_2 \alpha_3 \alpha_4 = \alpha_2 \alpha_3^2 \alpha_4$.  
+Term is $\alpha_3 \alpha_2 \alpha_3 \alpha_4 = \alpha_2 \alpha_3^2 \alpha_4$.  
 3. $-\alpha_3 \alpha_4 \cdot \dots$  
 Let's do it systematically:  
 $s_1 = \alpha_1\alpha_2 + \alpha_3\alpha_4$.  

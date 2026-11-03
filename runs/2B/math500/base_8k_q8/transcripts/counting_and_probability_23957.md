@@ -82,77 +82,77 @@ Here's my thought process for solving this combinatorics problem:
     *   Show multiplication step.  
     *   Place final answer in the box.  
 
-    *Self-Correction/Double Check:*  
-    Does "3 boys and 2 girls" imply a total of 5 people? Yes.  
-    Are there any gender restrictions on which groups they mix with? No, just pick from the pool.  
-    Is it possible to interpret "boys" as distinct entities or identical items? In combinatorics problems involving people, everyone is unique.  
-    Is there any ambiguity about the order of selection? "Pick 3 boys and 2 girls". Usually means a set {B1, B2, B3, G1, G2}. The phrase "order in which they are chosen does not matter" reinforces this interpretation (combinations). If it were just listing them without specifying the role of order within the group, or if it were an ordered selection of 5 spots from a row of available students (though unlikely here), we'd multiply by $5!$. But since gender is specified and "group presentation" implies a set of participants, $\binom{7}{3}\times\binom{4}{2}$ is the standard interpretation.  
+*Self-Correction/Double Check:*  
+Does "3 boys and 2 girls" imply a total of 5 people? Yes.  
+Are there any gender restrictions on which groups they mix with? No, just pick from the pool.  
+Is it possible to interpret "boys" as distinct entities or identical items? In combinatorics problems involving people, everyone is unique.  
+Is there any ambiguity about the order of selection? "Pick 3 boys and 2 girls". Usually means a set {B1, B2, B3, G1, G2}. The phrase "order in which they are chosen does not matter" reinforces this interpretation (combinations). If it were just listing them without specifying the role of order within the group, or if it were an ordered selection of 5 spots from a row of available students (though unlikely here), we'd multiply by $5!$. But since gender is specified and "group presentation" implies a set of participants, $\binom{7}{3}\times\binom{4}{2}$ is the standard interpretation.  
 
-    Final check of the arithmetic:  
-    $\binom{7}{3} = \frac{7 \cdot 6 \cdot 5}{6} = 35$. Correct.  
-    $\binom{4}{2} = \frac{4 \cdot 3}{2} = 6$. Correct.  
-    $35 \cdot 6 = 210$. Correct.  
+Final check of the arithmetic:  
+$\binom{7}{3} = \frac{7 \cdot 6 \cdot 5}{6} = 35$. Correct.  
+$\binom{4}{2} = \frac{4 \cdot 3}{2} = 6$. Correct.  
+$35 \cdot 6 = 210$. Correct.  
 
-    Wait, I might misinterpret the prompt slightly? "In how many ways can he pick..."  
-    If Mr. Brennan picks a group, he forms a set. The set is unique if the composition differs.  
-    Set {Boy A, Boy B, Girl X} is distinct from Set {Boy C, Boy D, Girl Z}. Yes.  
+Wait, I might misinterpret the prompt slightly? "In how many ways can he pick..."  
+If Mr. Brennan picks a group, he forms a set. The set is unique if the composition differs.  
+Set {Boy A, Boy B, Girl X} is distinct from Set {Boy C, Boy D, Girl Z}. Yes.  
 
-    Let's write down the steps clearly.  
-    1. Define total boys $n_1 = 7$, chosen $k_1 = 3$.  
-    2. Define total girls $n_2 = 4$, chosen $k_2 = 2$.  
+Let's write down the steps clearly.  
+1. Define total boys $n_1 = 7$, chosen $k_1 = 3$.  
+   2. Define total girls $n_2 = 4$, chosen $k_2 = 2$.  
     3. Calculate combinations: $\binom{7}{3}$ and $\binom{4}{2}$.  
     4. Multiply results.  
 
-    Calculation:  
-    $\binom{7}{3} = \frac{7!}{3!4!} = \frac{5040}{6 \times 24} = \frac{5040}{144} = 35$.  
-    $\binom{4}{2} = \frac{4!}{2!2!} = \frac{24}{2 \times 2} = \frac{24}{4} = 6$.  
-    $35 \times 6 = 210$.  
+Calculation:  
+$\binom{7}{3} = \frac{7!}{3!4!} = \frac{5040}{6 \times 24} = \frac{5040}{144} = 35$.  
+$\binom{4}{2} = \frac{4!}{2!2!} = \frac{24}{2 \times 2} = \frac{24}{4} = 6$.  
+$35 \times 6 = 210$.  
 
-    Looks solid. No trick questions detected (e.g., "how many different groups of 5 people" vs "distinct students"). All seem standard.  
+Looks solid. No trick questions detected (e.g., "how many different groups of 5 people" vs "distinct students"). All seem standard.  
 
-    Final Answer formulation:  
-    - Number of ways to choose boys: $\binom{7}{3}$  
-    - Number of ways to choose girls: $\binom{4}{2}$  
+Final Answer formulation:  
+- Number of ways to choose boys: $\binom{7}{3}$  
+  - Number of ways to choose girls: $\binom{4}{2}$  
     - Total ways = $\binom{7}{3} \times \binom{4}{2}$  
     - Calculation yields 210.  
 
-    Wait, is there any interpretation where "boys" and "girls" are treated as one gender in the selection? No, "3 boys and 2 girls" breaks it down.  
-    Is there any restriction that no boy can be a girl? The set has distinct types.  
+Wait, is there any interpretation where "boys" and "girls" are treated as one gender in the selection? No, "3 boys and 2 girls" breaks it down.  
+Is there any restriction that no boy can be a girl? The set has distinct types.  
 
-    Let's quickly check if $4!$ for something else was needed?  
-    Sometimes people confuse this with permutations of groups. But since order doesn't matter, we stick to combinations.  
+Let's quickly check if $4!$ for something else was needed?  
+Sometimes people confuse this with permutations of groups. But since order doesn't matter, we stick to combinations.  
 
-    Wait, "The order in which the boys and girls are chosen does not matter."  
-    Does this mean "Order within the group?" or "Order between genders?" or "Order of selection process (pick a boy then pick a girl)"?  
-    "In how many ways can he pick 3 boys and 2 girls". This implies forming a single group. The set $\{B_1, B_2, G_1, G_2\}$ is the same regardless of whether I picked $B_1$ first or $G_1$ first. The order *within* the group does not matter. So this reinforces combinations logic: just a subset selection.  
-    Usually, phrasing like "order... in which they are chosen" refers to the process. Here it clarifies that we don't care about sequence (i.e., picking $B_1$ then $B_2$ is same as $B_2$ then $B_1$ for the purpose of forming the set).  
+Wait, "The order in which the boys and girls are chosen does not matter."  
+Does this mean "Order within the group?" or "Order between genders?" or "Order of selection process (pick a boy then pick a girl)"?  
+"In how many ways can he pick 3 boys and 2 girls". This implies forming a single group. The set $\{B_1, B_2, G_1, G_2\}$ is the same regardless of whether I picked $B_1$ first or $G_1$ first. The order *within* the group does not matter. So this reinforces combinations logic: just a subset selection.  
+Usually, phrasing like "order... in which they are chosen" refers to the process. Here it clarifies that we don't care about sequence (i.e., picking $B_1$ then $B_2$ is same as $B_2$ then $B_1$ for the purpose of forming the set).  
 
-    Wait, what if the question meant "Pick 3 boys" AND "Pick 2 girls" as separate actions?  
-    No, it says "pick 3 boys and 2 girls *to give a group presentation*". This implies a single collective unit.  
-    If I pick Boy1, Boy2, Girl1 to present, the order of picking them during the process (Boy1 first or Boy1 second) doesn't matter for the final outcome (the list of names).  
+Wait, what if the question meant "Pick 3 boys" AND "Pick 2 girls" as separate actions?  
+No, it says "pick 3 boys and 2 girls *to give a group presentation*". This implies a single collective unit.  
+If I pick Boy1, Boy2, Girl1 to present, the order of picking them during the process (Boy1 first or Boy1 second) doesn't matter for the final outcome (the list of names).  
 
-    Therefore, multiplication rule: $\binom{7}{3} \times \binom{4}{2}$.  
+Therefore, multiplication rule: $\binom{7}{3} \times \binom{4}{2}$.  
 
-    Result 210.  
+Result 210.  
 
-    Final check on the text provided in the prompt:  
-    "Mr. Brennan has 7 boys and 4 girls in his statistics class."  
-    "In how many ways can he pick 3 boys and 2 girls"  
-    "(The order in which the boys and girls are chosen does not matter.)"  
+Final check on the text provided in the prompt:  
+"Mr. Brennan has 7 boys and 4 girls in his statistics class."  
+"In how many ways can he pick 3 boys and 2 girls"  
+"(The order in which the boys and girls are chosen does not matter.)"  
 
-    The parenthesis is slightly ambiguous. It might mean:  
-    1. Order within a group doesn't matter (Standard subset logic).  
-    OR  
-    2. The sequence of picking boys and picking girls sequentially doesn't matter.  
-    Actually, standard phrasing for subsets uses "order in which the chosen members are selected does not matter". This reinforces that we are looking at sets.  
-    Usually, permutations problems say "order matters" or involve positions (arrange a team). Here it is just "pick... to give a group presentation". This implies the final group composition.  
+The parenthesis is slightly ambiguous. It might mean:  
+1. Order within a group doesn't matter (Standard subset logic).  
+OR  
+   2. The sequence of picking boys and picking girls sequentially doesn't matter.  
+Actually, standard phrasing for subsets uses "order in which the chosen members are selected does not matter". This reinforces that we are looking at sets.  
+Usually, permutations problems say "order matters" or involve positions (arrange a team). Here it is just "pick... to give a group presentation". This implies the final group composition.  
 
-    I will proceed with $\binom{7}{3} \times \binom{4}{2}$.  
+I will proceed with $\binom{7}{3} \times \binom{4}{2}$.  
 
-    Calculation again just to be absolutely sure.  
-    7 choose 3:  
-    (7*6*5\) / (6) = 35.  
-    4 choose 2:  
+Calculation again just to be absolutely sure.  
+7 choose 3:  
+(7*6*5\) / (6) = 35.  
+4 choose 2:  
 
 ```text
     (4*3)/(2) = 6.
@@ -160,20 +160,20 @@ Here's my thought process for solving this combinatorics problem:
 ```
 
 
-    If I were to assume the question implies that we select a *subset of boys* AND a *subset of girls*, and then combine them?  
-    The phrase "pick 3 boys and 2 girls" means select one boy, another boy... for the 3 slots? Or just count how many subsets. It's the same thing.  
+If I were to assume the question implies that we select a *subset of boys* AND a *subset of girls*, and then combine them?  
+The phrase "pick 3 boys and 2 girls" means select one boy, another boy... for the 3 slots? Or just count how many subsets. It's the same thing.  
 
-    Let's verify if there is any tricky interpretation like picking a subset of *students* where the gender isn't the defining characteristic, but rather we are splitting the class into two sets? No, that doesn't fit "pick 3 boys". It's clearly selecting specific individuals based on gender constraints.  
+Let's verify if there is any tricky interpretation like picking a subset of *students* where the gender isn't the defining characteristic, but rather we are splitting the class into two sets? No, that doesn't fit "pick 3 boys". It's clearly selecting specific individuals based on gender constraints.  
 
-    What about $\frac{7 \times 6 \times 5}{3!} \times \frac{4 \times 3}{2!}$?  
-    Wait, $3! = 6$.  
-    $7 \times 6 \times 5 / 6$ -> Yes.  
-    $4 \times 3 / 2$ -> No, this is $\binom{4}{2}$.  
-    Wait, in a calculation step I wrote "4 choose 2: (4*3)/2!". No, $(4-2)! = 2!$. So $\frac{4 \times 3}{2 \times 1}$. Yes.  
+What about $\frac{7 \times 6 \times 5}{3!} \times \frac{4 \times 3}{2!}$?  
+Wait, $3! = 6$.  
+$7 \times 6 \times 5 / 6$ -> Yes.  
+$4 \times 3 / 2$ -> No, this is $\binom{4}{2}$.  
+Wait, in a calculation step I wrote "4 choose 2: (4*3)/2!". No, $(4-2)! = 2!$. So $\frac{4 \times 3}{2 \times 1}$. Yes.  
 
-    Everything looks correct.  
+Everything looks correct.  
 
-    Final Answer is 210.  
+Final Answer is 210.  
 
 
 ## Answer

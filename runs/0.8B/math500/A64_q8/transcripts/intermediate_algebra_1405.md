@@ -94,8 +94,8 @@ Specifically, one vertex of the triangle is at the vertex of the parabola.
     *   If the triangle vertices are $A(0,0)$, $B(x_1, x_1^2/8)$, $C(x_2, x_2^2/8)$.  
     *   We want equilateral. So $AB^2 = BC^2 = CA^2$.  
     *   Let's calculate side length squared:  
-        $AB^2 = x_1^2 + (x_1^2/8)^2 / 8$? No, $B=(x,y)$ with $y=x^2/8$. Then distance is $\sqrt{x^2 + y^2} = \sqrt{x^2 + (x^4/64)}$.  
-        Since we want to maximize this or solve for $s$, let's assume specific coordinates.  
+$AB^2 = x_1^2 + (x_1^2/8)^2 / 8$? No, $B=(x,y)$ with $y=x^2/8$. Then distance is $\sqrt{x^2 + y^2} = \sqrt{x^2 + (x^4/64)}$.  
+Since we want to maximize this or solve for $s$, let's assume specific coordinates.  
     *   The problem likely implies a standard case where the triangle vertices are $(0,0)$ and points on parabola...  
     *   Actually, looking at similar problems online (e.g. "Equilateral triangle inscribed in parabola with vertex at focus... no, vertex at vertex"), it's possible to assume the other vertices lie on the parabola.  
     *   Let's check if vertices can be symmetric about the y-axis. If so, vertices are $(-x,y)$ and $(x,y)$? No, parabola is not symmetric in a way that maps $(0,0)$ to itself via reflection? The parabola $y = x^2/8$ is symmetric w.r.t y-axis, but it's only defined on real line $x$. Wait.  
@@ -152,8 +152,8 @@ Specifically, one vertex of the triangle is at the vertex of the parabola.
     *   Let's check if such a triangle can be formed.  
     *   We need to solve for coordinates $(x_1, y_1)$ and $(x_2, y_2)$ such that distance between $A(0,0)$ and $(x_1,y_1)$ is equal to distance between $A$ and $(x_2,y_2)$? No.  
     *   If vertices are $V_A(0,0), V_B(b,y), V_C(-b,y)$. Then sides of length squared:  
-        $d(V_A, V_B)^2 = b^2 + y^2$.  
-        $d(V_A, V_C)^2 = (-b-0)^2 + (y-y)^2$ ? No.  
+$d(V_A, V_B)^2 = b^2 + y^2$.  
+$d(V_A, V_C)^2 = (-b-0)^2 + (y-y)^2$ ? No.  
     *   If $A=(0,0)$ and vertices are $P_1(x,y)$ and $P_2(-x,y)$. Then side length is $\sqrt{x^2+y^2}$.  
     *   But we need $P_1, P_2, P_3$ all on the parabola.  
     *   For $A(0,0)$ to be a vertex of equilateral triangle inscribed in the parabola. The parabola must have an equilateral triangle with one side lying on it? No, vertices are at $(x,y)$.  

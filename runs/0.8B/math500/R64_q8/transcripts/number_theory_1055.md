@@ -276,7 +276,7 @@ Here's a thinking process that leads to the solution:
     *   Wait! If I have 7 bags of gold coins (each $x$). Then "find a bag of 53 coins". This might mean finding a specific bag in the set with 53?  
         *   No, usually "find" implies discovery. If you are looking at a set, how do you find something inside? Maybe it's an empty bag?  
     *   Let's go back to the idea that the user prompt is:  
-        "Seven bags of gold coins. Each bag has the same number of gold coins. One day, you find a bag of 53 coins." -> You found one specific item (bag) containing 53 coins. Wait, if you have 7 bags and each $x$, then maybe the text implies $x$ is not fixed?  
+"Seven bags of gold coins. Each bag has the same number of gold coins. One day, you find a bag of 53 coins." -> You found one specific item (bag) containing 53 coins. Wait, if you have 7 bags and each $x$, then maybe the text implies $x$ is not fixed?  
         *   Maybe the "find a bag of 53 coins" refers to finding a single item from a set of items that was initially counted as something?  
     *   Let's assume the prompt is: "You have 7 bags. You find a bag containing 53 coins."  
         *   Wait, if I found a bag with 53 coins. This implies I have one specific coin in the set. If I have 8 bags total (from some initial 7 plus a new 1?). No, text says "you hold... eight bags". This phrasing is key.  

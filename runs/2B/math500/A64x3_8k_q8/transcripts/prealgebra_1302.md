@@ -78,52 +78,52 @@ Here's my thought process for simplifying $\sqrt{242}$:
     *   Double check formatting. The user asked to "reason step by step".  
     *   Final answer in `\boxed{}`.  
 
-    Let's write out the steps clearly.  
-    1. Start with $\sqrt{242}$.  
-    2. Check if the number inside is divisible by any perfect squares.  
-       $242 = 2 \times 121$.  
+Let's write out the steps clearly.  
+1. Start with $\sqrt{242}$.  
+   2. Check if the number inside is divisible by any perfect squares.  
+$242 = 2 \times 121$.  
     3. Identify that $121 = 11^2$, which is a perfect square ($11 \times 11 = 121$).  
     4. Rewrite the expression under the radical: $\sqrt{2 \times 11^2}$.  
     5. Separate the constants: $\sqrt{11^2} \times \sqrt{2}$.  
     6. Evaluate the square root: $11\sqrt{2}$.  
 
-    This is concise and correct.  
+This is concise and correct.  
 
-    Is there any other way?  
-    Prime factorization of 242: $2 \times 11^2$.  
-    $\sqrt{2 \times 11^2} = 11\sqrt{2}$.  
-    Same result.  
+Is there any other way?  
+Prime factorization of 242: $2 \times 11^2$.  
+$\sqrt{2 \times 11^2} = 11\sqrt{2}$.  
+Same result.  
 
-    Final Answer seems to be $11\sqrt{2}$.  
+Final Answer seems to be $11\sqrt{2}$.  
 
-    One small check: Did I make a mistake in calculation?  
-    $11 \times \sqrt{2} \approx 11 \times 1.414 = 15.554$.  
-    $\sqrt{242}$. $10^2 = 100$. $15^2 = 225$. $16^2 = 256$. It's between 15 and 16. Closer to 16? No, $242-225=17$, $256-242=14$. So roughly 15.something. Looks correct.  
+One small check: Did I make a mistake in calculation?  
+$11 \times \sqrt{2} \approx 11 \times 1.414 = 15.554$.  
+$\sqrt{242}$. $10^2 = 100$. $15^2 = 225$. $16^2 = 256$. It's between 15 and 16. Closer to 16? No, $242-225=17$, $256-242=14$. So roughly 15.something. Looks correct.  
 
-    The question asks for the reasoning step by step and then the final answer.  
-    I will write down the steps clearly.  
+The question asks for the reasoning step by step and then the final answer.  
+I will write down the steps clearly.  
 
-    Step 1: Factorize 242 into prime factors or find a perfect square factor.  
-    Since $242$ is an integer, let's see if it can be written as a product of a perfect square and another number.  
-    Divide 242 by its smallest factors. It is even.  
-    $242 \div 2 = 121$.  
-    So, $\sqrt{242} = \sqrt{2 \times 121}$.  
+Step 1: Factorize 242 into prime factors or find a perfect square factor.  
+Since $242$ is an integer, let's see if it can be written as a product of a perfect square and another number.  
+Divide 242 by its smallest factors. It is even.  
+$242 \div 2 = 121$.  
+So, $\sqrt{242} = \sqrt{2 \times 121}$.  
 
-    Step 2: Use the property of radicals $\sqrt{ab} = \sqrt{a}\sqrt{b}$ (for $a,b > 0$).  
-    $\sqrt{242} = \sqrt{2} \cdot \sqrt{121}$.  
+Step 2: Use the property of radicals $\sqrt{ab} = \sqrt{a}\sqrt{b}$ (for $a,b > 0$).  
+$\sqrt{242} = \sqrt{2} \cdot \sqrt{121}$.  
 
-    Step 3: Simplify the radical part $\sqrt{121}$.  
-    We know that $11 \times 11 = 121$, so $\sqrt{121} = 11$.  
-    Also, $\sqrt{11^2} = 11$ (though technically just $\sqrt{11^2}$ is $11$).  
+Step 3: Simplify the radical part $\sqrt{121}$.  
+We know that $11 \times 11 = 121$, so $\sqrt{121} = 11$.  
+Also, $\sqrt{11^2} = 11$ (though technically just $\sqrt{11^2}$ is $11$).  
 
-    Step 4: Combine the simplified parts.  
-    $\sqrt{2} \cdot 11 = 11\sqrt{2}$.  
+Step 4: Combine the simplified parts.  
+$\sqrt{2} \cdot 11 = 11\sqrt{2}$.  
 
-    The logic holds up perfectly. Ready to output.  
+The logic holds up perfectly. Ready to output.  
 
-    *Self-Correction/Refinement:* Sometimes people might write $\sqrt{242}$ as $15.6$ (approx) but the question asks to "Simplify", which implies getting to radical form with integers. $11\sqrt{2}$ is the simplified radical form. I should provide that.  
+*Self-Correction/Refinement:* Sometimes people might write $\sqrt{242}$ as $15.6$ (approx) but the question asks to "Simplify", which implies getting to radical form with integers. $11\sqrt{2}$ is the simplified radical form. I should provide that.  
 
-    Final Answer: \boxed{11\sqrt{2}}.  
+Final Answer: \boxed{11\sqrt{2}}.  
 
 
 ## Answer

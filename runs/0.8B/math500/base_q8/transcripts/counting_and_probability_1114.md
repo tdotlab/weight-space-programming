@@ -366,7 +366,7 @@ Here's my thought process for solving this problem:
                                                                                             *   Wait. Is it possible that neither $x$ nor $y$ is a multiple of 5? No, I just showed this earlier. If both are $\le 4$, their product cannot be a multiple of 5 because the only multiples of 5 in range are $0, 5, 10...$.  
                                                                                                 *   Wait, $xy$ divisible by 5 implies $x \cdot y = 5k$. Since $x,y < 6$. Max product is 36.  
                                                                                                 *   But wait, does $xy$ being a multiple of 5 imply at least one factor is a multiple of 5?  
-                                                                                                        *   Wait, if I have $\{1..4\}$ and $\{2..4\}$... let's check if my logic about "multiples of 5" covers everything.  
+                                                                                                    *   Wait, if I have $\{1..4\}$ and $\{2..4\}$... let's check if my logic about "multiples of 5" covers everything.  
                                                                                                     *   Is it possible that $xy$ is divisible by 5 but neither factor is a multiple of 5? No, because factors are integers in $\{1..6\}$. The multiples of 5 are just 5 (and maybe 0 if we had 0, but dice don't).  
                                                                                                         *   Wait. Is it possible to have $x$ divisible by 5? Then yes. If $y$ is also divisible by 5? Yes, if both $\ge 5$. But since max is 6, only one number can be 5. So at least one factor must be a multiple of 5.  
                                                                                                         *   Wait, this reasoning "at least one factor must be a multiple of 5" seems robust.  
@@ -463,12 +463,12 @@ Here's my thought process for solving this problem:
                                                                                                                 *   So the events are:  
                                                                                                 *   $E_1$: Product of two numbers from $\{1..6\}$ is divisible by 5.  
                                                                                                 *   This event $E_1$ happens if and only if one factor is a multiple of 5? No.  
-                                                                                                                    *   Wait, let me re-evaluate this.  
-                                                                                                                        *   If $x \in \{1..4\}$ and $y \in \{1..4\}$, product can be divisible by 5? No.  
-                                                                                                                        *   Wait. Is there any integer pair with product divisible by 5 where neither factor is a multiple of 5?  
-                                                                                                                            *   Wait. If I am rolling $\{1..6\}$.  
-                                                                                                                            *   Let's try: $x=2, y=3 \to 6$. Not div by 5.  
-                                                                                                                            *   $x=4, y=4 \to 16$. Not div by 5.  
+                                                                                                    *   Wait, let me re-evaluate this.  
+                                                                                                        *   If $x \in \{1..4\}$ and $y \in \{1..4\}$, product can be divisible by 5? No.  
+                                                                                                            *   Wait. Is there any integer pair with product divisible by 5 where neither factor is a multiple of 5?  
+                                                                                                                *   Wait. If I am rolling $\{1..6\}$.  
+                                                                                                                    *   Let's try: $x=2, y=3 \to 6$. Not div by 5.  
+                                                                                                                        *   $x=4, y=4 \to 16$. Not div by 5.  
                                                                                                                             *   Wait. Is it true that no pair in $\{1..6\}$ has product divisible by 5 except those involving 5?  
                                                                                                                                 *   If $x,y < 5$. Max product $24$? No, max product of $\{1..4\} \times \{1..4\}$ is 16.  
                                                                                                                                 *   Wait, I made an error in range earlier.  

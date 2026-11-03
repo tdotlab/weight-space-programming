@@ -58,21 +58,21 @@ The formula is $f(n) = \lfloor n \rfloor$.
 **5. Compute the values:**  
 
 *   **First term:** $f(\frac{\pi}{3})$  
-    Since $\frac{\pi}{3} \approx 1.047 < 4$, we calculate $\lceil \frac{\pi}{3} \rceil$.  
-    $\frac{\pi}{3}$ is not an integer. It is approximately $1.0472$.  
-    The smallest integer greater than or equal to this is 2.  
-    So, $f(\frac{\pi}{3}) = 2$.  
+Since $\frac{\pi}{3} \approx 1.047 < 4$, we calculate $\lceil \frac{\pi}{3} \rceil$.  
+$\frac{\pi}{3}$ is not an integer. It is approximately $1.0472$.  
+The smallest integer greater than or equal to this is 2.  
+So, $f(\frac{\pi}{3}) = 2$.  
 
 *   **Second term:** $f(\sqrt{45})$  
-    Since $\sqrt{45} \approx 6.708 > 4$, we calculate $\lfloor \sqrt{45} \rfloor$.  
-    We established $6 < \sqrt{45} < 7$.  
-    So, the floor value is 6.  
-    Thus, $f(\sqrt{45}) = 6$.  
+Since $\sqrt{45} \approx 6.708 > 4$, we calculate $\lfloor \sqrt{45} \rfloor$.  
+We established $6 < \sqrt{45} < 7$.  
+So, the floor value is 6.  
+Thus, $f(\sqrt{45}) = 6$.  
 
 *   **Third term:** $f(8^{2/3})$  
-    Since $8^{2/3} = 4$, and $4 \geq 4$, we calculate $\lfloor 4 \rfloor$.  
-    $\lfloor 4 \rfloor = 4$.  
-    Thus, $f(8^{2/3}) = 4$.  
+Since $8^{2/3} = 4$, and $4 \geq 4$, we calculate $\lfloor 4 \rfloor$.  
+$\lfloor 4 \rfloor = 4$.  
+Thus, $f(8^{2/3}) = 4$.  
 
 **6. Sum the values:**  
 Sum = $2 + 6 + 4$.  
@@ -84,13 +84,13 @@ Sum = 12.
     *   Condition for ceil: $n < 4$.  
 
 *   **Term 1**: $n = \pi/3$. $\pi \approx 3.14$. $3.14/3 \approx 1.05$. $1.05 < 4$. So use $\lceil n \rceil$.  
-    $\lceil 1.05 \rceil = 2$. Correct.  
+$\lceil 1.05 \rceil = 2$. Correct.  
 
 *   **Term 2**: $n = \sqrt{45}$. $\sqrt{36}=6, \sqrt{49}=7$. So $6 < \sqrt{45} < 7$. $6 < 4$ is false. Use floor.  
-    $\lfloor 6.708... \rfloor = 6$. Correct.  
+$\lfloor 6.708... \rfloor = 6$. Correct.  
 
 *   **Term 3**: $n = 8^{2/3} = (\sqrt[3]{8})^2 = 2^2 = 4$. $4 \geq 4$ is true. Use floor.  
-    $\lfloor 4 \rfloor = 4$. Correct.  
+$\lfloor 4 \rfloor = 4$. Correct.  
 
 *   **Calculation**: $2 + 6 + 4 = 12$.  
 

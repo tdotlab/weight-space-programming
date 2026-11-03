@@ -86,7 +86,7 @@ Here's my thought process for solving this problem:
     *   **Step 4: Verify the sets again.**  
         *   $A = \{1, 2, 7, 14\}$ (Factors of 14).  
         *   $B = \{x : x|42\}$.  
-            \*   1 | 42  
+\*   1 | 42  
             *   2 | 42 ($21$)  
             *   3 | 42 ($14$) -> No intersection with A here.  
             *   6 | 42 ($7$) -> No intersection with A here.  
@@ -182,8 +182,8 @@ Here's my thought process for solving this problem:
             *   14
 ```
 
-        *   Wait. Is 6 a factor of 14? $14/6 = 2.33$. No.  
-        *   Wait, I listed $\{1, 2, 7, 14\}$ for 14.  
+*   Wait. Is 6 a factor of 14? $14/6 = 2.33$. No.  
+    *   Wait, I listed $\{1, 2, 7, 14\}$ for 14.  
         *   Let's check the intersection again.  
         *   Intersection: Factors of 14 and Factors of 42.  
         *   Set A = $\{1, 2, 7, 14\}$.  
@@ -332,7 +332,7 @@ Here's my thought process for solving this problem:
 
     *   **Is there any case where the number of factors might be higher?**  
         *   Maybe I am blind. Let's list factors of 14 again.  
-            \*   1, 2, 7, 14.  
+\*   1, 2, 7, 14.  
         *   Maybe I missed a factor in 42?  
             *   Factors of 42:  
 
@@ -341,11 +341,11 @@ Here's my thought process for solving this problem:
                 *   2 (2*21)
 ```
 
-                *   3 (3*14) -> Wait, 14 is a factor. So 3 divides 14? No.  
-                *   Let's check 14 as a divisor of 42. $42/14 = 3$. Yes.  
-                *   Wait... In my previous list: $\{1, 2, 3, 6, 7, 14, 21, 42\}$.  
-                *   Is this correct?  
-                    *   $1 \times 42 = 42$  
+*   3 (3*14) -> Wait, 14 is a factor. So 3 divides 14? No.  
+    *   Let's check 14 as a divisor of 42. $42/14 = 3$. Yes.  
+        *   Wait... In my previous list: $\{1, 2, 3, 6, 7, 14, 21, 42\}$.  
+            *   Is this correct?  
+                *   $1 \times 42 = 42$  
                     *   $2 \times 21 = 42$  
                     *   $3 \times 14 = 42$  
                     *   $6 \times 7 = 42$  

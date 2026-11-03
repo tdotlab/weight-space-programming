@@ -34,9 +34,9 @@ Here is a thinking process to solve the problem:
         *   For a regular tetrahedron with side length $s$, the height is $h$. The distance from the center to a vertex (apothem) is $r$?  
         *   Actually, simpler coordinate system: Let the vertices be $(0,0,0)$? No, let's use standard coordinates.  
     *   Standard coordinates for regular tetrahedron with side length 2 are:  
-        $A = (-\frac{\sqrt{6}}{3}, -\frac{\sqrt{6}}{3}, -\frac{\sqrt{6}}{3})$? No, this is usually for $s=1$.  
-        For $s=2$:  
-        The vertices are at distance 2 from the center.  
+$A = (-\frac{\sqrt{6}}{3}, -\frac{\sqrt{6}}{3}, -\frac{\sqrt{6}}{3})$? No, this is usually for $s=1$.  
+For $s=2$:  
+The vertices are at distance 2 from the center.  
     *   Let's define the geometry relative to a plane perpendicular to $ABCD$. Or, maybe using the specific geometric setup where edges are parallel.  
     *   Consider the symmetry axes passing through the midpoints of opposite edges.  
     *   Let $O$ be the centroid (center) of tetrahedron. The edges are equidistant from center.  
@@ -471,21 +471,21 @@ Here is a thinking process to solve the problem:
         *   Vertices at $P_i = \pm \frac{\sqrt{6}}{3} e_1 + \dots$?  
         *   Let's use $\mathbf{u}, \mathbf{v}$ basis vectors for edges.  
     *   If we assume the standard regular tetrahedron with edge length 2, we can set the vertices to:  
-        $A = (0, \frac{\sqrt{6}}{3}, 0)$? No, that's not equilateral triangle.  
-        Let's use vectors $\vec{AB}$ and $\vec{AC}$.  
-        Since faces are equilateral triangles, $\triangle ABC$ is equilateral. So $AB=BC=CA=2$.  
-        $\angle BAC = 60^\circ$.  
-        Similarly for other pairs.  
-        Let's fix coordinates for $A,B,C$.  
-        Let $A=(0,0,0)$. $B=(1, \sqrt{3}, 0)$? No, edge length must be 2. So we can scale.  
-        Let $A = (0,0,0)$.  
-        Since $\angle BAC = 60^\circ$, and edge length is 2, let's place vertices $B$ and $C$ on a sphere of radius 2 centered at $O$ (origin)? No.  
-        Standard coordinates for regular tetrahedron vertices:  
-        Let vertices be $(\frac{1}{\sqrt{3}}, \dots)$?  
+$A = (0, \frac{\sqrt{6}}{3}, 0)$? No, that's not equilateral triangle.  
+Let's use vectors $\vec{AB}$ and $\vec{AC}$.  
+Since faces are equilateral triangles, $\triangle ABC$ is equilateral. So $AB=BC=CA=2$.  
+$\angle BAC = 60^\circ$.  
+Similarly for other pairs.  
+Let's fix coordinates for $A,B,C$.  
+Let $A=(0,0,0)$. $B=(1, \sqrt{3}, 0)$? No, edge length must be 2. So we can scale.  
+Let $A = (0,0,0)$.  
+Since $\angle BAC = 60^\circ$, and edge length is 2, let's place vertices $B$ and $C$ on a sphere of radius 2 centered at $O$ (origin)? No.  
+Standard coordinates for regular tetrahedron vertices:  
+Let vertices be $(\frac{1}{\sqrt{3}}, \dots)$?  
     *   Let's try to place the vertices such that $AB, AC, AD$ are edges of length 2.  
-        $A = (0,0,0)$.  
-        $B = (2,0,0)$.  
-        $C = (1, \sqrt{3}, \dots)$?  
+$A = (0,0,0)$.  
+$B = (2,0,0)$.  
+$C = (1, \sqrt{3}, \dots)$?  
     *   Let's assume the plane cuts through the vertices $A, C$? No, parallel to edges.  
 
     *   Let's search for "plane parallel to edges of tetrahedron".  

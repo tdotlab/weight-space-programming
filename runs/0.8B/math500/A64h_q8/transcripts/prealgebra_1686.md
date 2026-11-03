@@ -307,7 +307,7 @@ Here's my thought process for solving this problem:
             *   Let's check $6$: $6 \times 1.83$. No.  
         *   So for Rick: $\{1, 2, 7, 14\}$.  
     *   Factors of 42: $\{1, 2, 3, 6, 7, 14, 21, 42\}$.  
-            *   Let's check $3$: $3 \times 14 = 42$. Yes.  
+        *   Let's check $3$: $3 \times 14 = 42$. Yes.  
         *   Wait, I am getting confused with the divisibility of numbers in the sets.  
         *   The question asks for intersection of:  
             *   Set A: Numbers dividing 14.  
@@ -406,8 +406,8 @@ Here's my thought process for solving this problem:
                     *   {2, 7}: 14.
 ```
 
-                *   Wait, is it possible to have a factor like $3$? No.  
-            *   So Set A = $\{1, 2, 7\}$.  
+*   Wait, is it possible to have a factor like $3$? No.  
+    *   So Set A = $\{1, 2, 7\}$.  
 
         *   Set B: Divisors of 42.  
             *   Factors: $\{1, 2, 3, 6, 7, 14\}$ (based on prime factorization $2 \cdot 3 \cdot 7$).  

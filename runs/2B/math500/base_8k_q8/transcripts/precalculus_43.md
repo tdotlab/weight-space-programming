@@ -66,16 +66,16 @@ Here's a thinking process that leads to the solution:
     *   "Substitute t=2 into y:" -> -29.  
     *   "Result: (15, -29)."  
 
-    Wait, is there any ambiguity? "point the curve passes through". Usually, this implies a 2D point $(x,y)$. Since $t$ is a real number (specifically 2), and $x,y$ are real numbers, the result is unique.  
+Wait, is there any ambiguity? "point the curve passes through". Usually, this implies a 2D point $(x,y)$. Since $t$ is a real number (specifically 2), and $x,y$ are real numbers, the result is unique.  
 
-    Let's double check the prompt requirements: "put your final answer within \boxed{}".  
+Let's double check the prompt requirements: "put your final answer within \boxed{}".  
 
-    Okay, ready to write.  
+Okay, ready to write.  
 
-    $$ x(2) = 2^3 + 7 = 8 + 7 = 15 $$  
-    $$ y(2) = -3(2^2) - 6(2) - 5 = -3(4) - 12 - 5 = -12 - 12 - 5 = -29 $$  
+$$ x(2) = 2^3 + 7 = 8 + 7 = 15 $$  
+$$ y(2) = -3(2^2) - 6(2) - 5 = -3(4) - 12 - 5 = -12 - 12 - 5 = -29 $$  
 
-    Point: $(15, -29)$.  
+Point: $(15, -29)$.  
 
 
 ## Answer

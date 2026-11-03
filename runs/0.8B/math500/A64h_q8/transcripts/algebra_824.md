@@ -240,16 +240,16 @@ If $\sqrt{45}$ is meant to be $x_2$, maybe there is a typo in the question and i
 
 Let's re-read the inputs carefully.  
 1. $\frac{\pi}{3}$. $\approx 1.05$.  
-   Since $n < 4$, we use $\lceil n \rceil$.  
-   $\lceil 1.05 \rceil = 2$.  
+Since $n < 4$, we use $\lceil n \rceil$.  
+$\lceil 1.05 \rceil = 2$.  
 
 2. $\sqrt{45}$. $\approx 6.708$.  
-   Since $n \geq 4$, we use $\lfloor n \rfloor$.  
-   $\lfloor 6.708 \rfloor = 6$.  
+Since $n \geq 4$, we use $\lfloor n \rfloor$.  
+$\lfloor 6.708 \rfloor = 6$.  
 
 3. $8^{2/3}$. $\approx 4$.  
-   Since $n \geq 4$, we use $\lfloor n \rfloor$.  
-   $\lfloor 4 \rfloor = 4$.  
+Since $n \geq 4$, we use $\lfloor n \rfloor$.  
+$\lfloor 4 \rfloor = 4$.  
 
 Sum is $2 + 6 + 4 = 12$.  
 
@@ -787,20 +787,20 @@ What if $\frac{\pi}{3}$ was meant to be $f(\text{something})$? No, just value.
 Let's write down the steps clearly.  
 1. Determine the domain/condition for each input.  
    - Input 1: $\frac{\pi}{3}$.  
-     Condition: Is $\frac{\pi}{3} \geq 4$? No (approx 1.05). So $n < 4$. Use condition: $\lceil n \rceil$.  
-     Calculate: $\lceil \frac{\pi}{3} \rceil$. Since $\pi/3 > 1$, and is $>1.5$ if rounded up, wait. $1 < 1.05 < 2$. $\lceil 1.05 \rceil = 2$.  
-     Let's verify $\frac{\pi}{3} \approx 1.04719$.  
-     So $\lceil 1.04719 \rceil = 2$.  
+Condition: Is $\frac{\pi}{3} \geq 4$? No (approx 1.05). So $n < 4$. Use condition: $\lceil n \rceil$.  
+Calculate: $\lceil \frac{\pi}{3} \rceil$. Since $\pi/3 > 1$, and is $>1.5$ if rounded up, wait. $1 < 1.05 < 2$. $\lceil 1.05 \rceil = 2$.  
+Let's verify $\frac{\pi}{3} \approx 1.04719$.  
+So $\lceil 1.04719 \rceil = 2$.  
 
    - Input 2: $\sqrt{45}$.  
-     Condition: Is $\sqrt{45} \geq 4$? Yes ($\approx 6.708$). So $n \geq 4$. Use condition: $\lfloor n \rfloor$.  
-     Calculate: $\lfloor \sqrt{45} \rfloor = \lfloor 6.708 \dots \rfloor = 6$.  
+Condition: Is $\sqrt{45} \geq 4$? Yes ($\approx 6.708$). So $n \geq 4$. Use condition: $\lfloor n \rfloor$.  
+Calculate: $\lfloor \sqrt{45} \rfloor = \lfloor 6.708 \dots \rfloor = 6$.  
 
    - Input 3: $8^{2/3}$.  
-     Condition: Is $8^{2/3} \geq 4$? Yes ($=4$). So $n \geq 4$. Use condition: $\lfloor n \rfloor$.  
-     Calculate: $\lfloor 4 \rfloor = 4$.  
+Condition: Is $8^{2/3} \geq 4$? Yes ($=4$). So $n \geq 4$. Use condition: $\lfloor n \rfloor$.  
+Calculate: $\lfloor 4 \rfloor = 4$.  
 
-   Sum: $2 + 6 + 4 = 12$.  
+Sum: $2 + 6 + 4 = 12$.  
 
 Is there any ambiguity about "8^(2/3)"?  
 $8^{2/3} = (8^1)^{2/3}$ or $(8^2)^{1/3}$? No, $x^{m/n} = \sqrt[m]{x^n}$.  

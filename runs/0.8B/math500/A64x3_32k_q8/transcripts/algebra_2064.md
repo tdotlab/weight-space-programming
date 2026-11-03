@@ -29,7 +29,7 @@ Here's my thought process for solving this problem:
         *   Expand: $x(2 - x) = 2x - x^2$.  
         *   So, $E = 4(2x - x^2 + 14 - 7)$ ... No, $(x+7)(2-x)$ is actually $2x - x^2 + 14 - 7$... no.  
         *   Correct expansion:  
-            $(x + 7)(2 - x) = x(2 - x) + 7(2 - x) = 2x - x^2 + 14 - 7x = -x^2 - 5x + 14$.  
+$(x + 7)(2 - x) = x(2 - x) + 7(2 - x) = 2x - x^2 + 14 - 7x = -x^2 - 5x + 14$.  
         *   Now, $E = 4(-x^2 - 5x + 14) = -4x^2 - 20x + 56$.  
         *   This is a downward opening parabola. The maximum value occurs at the vertex.  
 
@@ -1073,11 +1073,11 @@ Here's my thought process for solving this problem:
                                                                                                     *   $E(-2.5) = 81$.  
 
             *   Let me double check this result with a simpler function or logic.  
-                                *   Consider $(x+7)(2-x)$. Max of $(x+7)(2-x)$ is achieved at the vertex between -7 and 2? No, the interval between roots is $[-7, 2]$. The vertex is -2.5. So the max value should be positive.  
-                                *   But we found it opens down ($A=-1$). If it opens down, then the maximum is at the vertex (since vertex is the peak of a cup shape that has been pulled down by the sign of $x^2$?). No.  
-                                    *   Let's clarify "opens down".  
-                                        *   A parabola opens up if $a > 0$. It has minimum at vertex? No, max.  
-                                        *   A parabola opens down if $a < 0$. It has maximum at vertex? Yes.  
+                *   Consider $(x+7)(2-x)$. Max of $(x+7)(2-x)$ is achieved at the vertex between -7 and 2? No, the interval between roots is $[-7, 2]$. The vertex is -2.5. So the max value should be positive.  
+                    *   But we found it opens down ($A=-1$). If it opens down, then the maximum is at the vertex (since vertex is the peak of a cup shape that has been pulled down by the sign of $x^2$?). No.  
+                        *   Let's clarify "opens down".  
+                            *   A parabola opens up if $a > 0$. It has minimum at vertex? No, max.  
+                                *   A parabola opens down if $a < 0$. It has maximum at vertex? Yes.  
                                 *   So if $A=-1$, the graph of $(x+7)(2-x)$ opens up/down? No, it opens up or down depends on coefficient.  
                                     *   If we have $(x+7)(2-x)$. Coefficient of $x^2$ is -1. So it opens down.  
                                     *   Therefore, vertex is a maximum point.  

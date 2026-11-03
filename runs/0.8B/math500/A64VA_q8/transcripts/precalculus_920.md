@@ -219,38 +219,38 @@ Here is the thought process for solving the problem:
                     *   Let's redo carefully.  
                     *   Row 2 of A is $\begin{pmatrix} -1 & -2 \end{pmatrix}$? No, row 1 is $(-1)$ and row 2 is $(-2)$.  
                     *   Matrix $A$:  
-                        $$
+$$
                         \begin{pmatrix}
                         3 & 7 \\
                         -1 & -2
                         \end{pmatrix}
                         $$
-                        Let's multiply by $A^2 = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$.  
-                        Row 1: $(2)(-1) = -2$, $(7)(-2) = -14$, $(2)(-1)= -2$, $(7)(-3)=-21$?  
-                        No, standard matrix multiplication.  
-                        $A^3_{ij} = \sum_k A_{ik} (A^2)_{kj}$.  
-                        Row 1: $\begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$  
-                        Row 2: $\begin{pmatrix} -1 & -2 \end{pmatrix}$  
-                        $M = A^2$ (calculated): $\begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$.  
-                        Let's recheck row 1, col 2.  
-                        $M_{12} = 2(7) + (-1)(-2)$? No.  
-                        Row 1 of $A^3$: $2(-1)$ is not right. The entries are elements of the matrix product.  
-                        Wait, I used the wrong A in previous step. Let's be super careful.  
+Let's multiply by $A^2 = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$.  
+Row 1: $(2)(-1) = -2$, $(7)(-2) = -14$, $(2)(-1)= -2$, $(7)(-3)=-21$?  
+No, standard matrix multiplication.  
+$A^3_{ij} = \sum_k A_{ik} (A^2)_{kj}$.  
+Row 1: $\begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$  
+Row 2: $\begin{pmatrix} -1 & -2 \end{pmatrix}$  
+$M = A^2$ (calculated): $\begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$.  
+Let's recheck row 1, col 2.  
+$M_{12} = 2(7) + (-1)(-2)$? No.  
+Row 1 of $A^3$: $2(-1)$ is not right. The entries are elements of the matrix product.  
+Wait, I used the wrong A in previous step. Let's be super careful.  
 
         *   **Let's recompute the powers.**  
             *   $\mathbf{A} = \begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$.  
             *   $\mathbf{A}^2 = \begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix} \begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$  
-                $= \begin{pmatrix} 9-7 & 21-14 \\ -3+2 & -7+4 \end{pmatrix} = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$. (My first calc was correct).  
+$= \begin{pmatrix} 9-7 & 21-14 \\ -3+2 & -7+4 \end{pmatrix} = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$. (My first calc was correct).  
             *   $\mathbf{A}^3 = \mathbf{A}^2 \cdot \mathbf{A}$  
-                $= \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix} \begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$  
-                Row 1:  
-                $(2)(3) + (7)(-1) = 6 - 7 = -1$.  
-                $(2)(7) + (7)(-2) = 14 - 14 = 0$.  
-                So first row is $[-1, 0]$.  
-                Row 2:  
-                $(-1)(3) + (-3)(-1) = -3 + 3 = 0$.  
-                $(-1)(7) + (-3)(-2) = -7 + 6 = -1$.  
-                So second row is $[0, -1]$.  
+$= \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix} \begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$  
+Row 1:  
+$(2)(3) + (7)(-1) = 6 - 7 = -1$.  
+$(2)(7) + (7)(-2) = 14 - 14 = 0$.  
+So first row is $[-1, 0]$.  
+Row 2:  
+$(-1)(3) + (-3)(-1) = -3 + 3 = 0$.  
+$(-1)(7) + (-3)(-2) = -7 + 6 = -1$.  
+So second row is $[0, -1]$.  
             *   So $\mathbf{A}^3 = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix} = -\mathbf{I}$.  
 
     *   This confirms $A^3 = -I$ is correct.  
@@ -328,11 +328,11 @@ Here is the thought process for solving the problem:
                 *   $(-I) = \pm 1$.  
                 *   Let's compute $\mathbf{A}^4$.  
                     *   $\begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix} \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix}$  
-                        $= \begin{pmatrix} -2 + 0 \\ 1-3 \end{pmatrix} = \begin{pmatrix} -2 \\ -2 \end{pmatrix}$? No, $(7)(0)=0$.  
-                        Let's redo:  
-                        $\mathbf{A}^4 = A^2 \cdot A^2$? No. $A^3 = -I$. So $A^4 = A \cdot (-I) = -A$? No, $A^3 = -I$.  
-                        $A^4 = A^2 A^2$ is not possible since $A^3 = -I$. $A^3 A^1 = -I A = -A$.  
-                        $A^4 = A \cdot (-I) = -A$.  
+$= \begin{pmatrix} -2 + 0 \\ 1-3 \end{pmatrix} = \begin{pmatrix} -2 \\ -2 \end{pmatrix}$? No, $(7)(0)=0$.  
+Let's redo:  
+$\mathbf{A}^4 = A^2 \cdot A^2$? No. $A^3 = -I$. So $A^4 = A \cdot (-I) = -A$? No, $A^3 = -I$.  
+$A^4 = A^2 A^2$ is not possible since $A^3 = -I$. $A^3 A^1 = -I A = -A$.  
+$A^4 = A \cdot (-I) = -A$.  
                     *   Is $A$? No. $\mathbf{A}^4 = -A$.  
                 *   Then $n=5$: $(-A)^2 = A^2$? No, $\mathbf{A}^5 = (-A) \cdot A^3 = (-A)(-I) = A$.  
                     *   Let's check: $\mathbf{A}^4 = -A$. $\mathbf{A}^5 = (-A)^2 = A^2$? No. $(-A) \cdot A^3$? No, order is $(\pm 1)$ vs $(+I)$.  
@@ -340,14 +340,14 @@ Here is the thought process for solving the problem:
                         *   $\mathbf{A}^3 = -I$.  
                         *   $\mathbf{A}^4 = (-I) \cdot A$ (if $(-I)$ is identity?) No, $A^4 = -I \cdot A^2$? No.  
                         *   Let's assume the sequence of powers is:  
-                            $n=1 \to A$  
-                            $n=3 \to -I$  
-                            $n=4 \to -A$ (since $A^4 = (-I) \cdot A$?) Wait, $A^4 = A \cdot (-I)$. No.  
-                            Let's re-calculate $\mathbf{A}^4$.  
-                            $A^3 = -I$.  
-                            $A^4 = A \cdot (-I)$? No, matrix multiplication is not associative if I just multiply scalars?  
-                            $(-I)^1$ is scalar. $-I$ times $\begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$ is a vector? No, that's wrong.  
-                            If $A^3 = -I$, then $A^4 = A^3 A = (-I)A = -A$. Correct.  
+$n=1 \to A$  
+$n=3 \to -I$  
+$n=4 \to -A$ (since $A^4 = (-I) \cdot A$?) Wait, $A^4 = A \cdot (-I)$. No.  
+Let's re-calculate $\mathbf{A}^4$.  
+$A^3 = -I$.  
+$A^4 = A \cdot (-I)$? No, matrix multiplication is not associative if I just multiply scalars?  
+$(-I)^1$ is scalar. $-I$ times $\begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$ is a vector? No, that's wrong.  
+If $A^3 = -I$, then $A^4 = A^3 A = (-I)A = -A$. Correct.  
                         *   So the pattern repeats with period 3 for $n > 2$?  
                             *   $n \to \dots$  
                             *   If $n \equiv 0 \pmod 3$, then $\mathbf{A}^n = (-I)^{\text{number of multiples}}$.  
@@ -401,10 +401,10 @@ Here is the thought process for solving the problem:
                                         *   Let's calculate $M^2$.  
                                             *   $M^2 = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix} \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$? No, I used $M$ from earlier.  
                                             *   Let's recalculate $A^2$.  
-                                                $M = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$.  
+$M = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$.  
                                         *   Then $\mathbf{A}^4 = M^2$.  
-                                            $= \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix} \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$  
-                                            $= \begin{pmatrix} (4-7) & (14-21) \\ (-2+9) & (-7-9) \end{pmatrix} = \begin{pmatrix} -3 & -7 \\ 7 & -16 \end{pmatrix}$.  
+$= \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix} \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$  
+$= \begin{pmatrix} (4-7) & (14-21) \\ (-2+9) & (-7-9) \end{pmatrix} = \begin{pmatrix} -3 & -7 \\ 7 & -16 \end{pmatrix}$.  
                                         *   Let me check previous $A^2$ again. $A^2 = M^2_{calc}$ from earlier? No, I calculated $\mathbf{A}^2$ as $\begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$ in one place and then I checked it against $\mathbf{A}^4$ calculation?  
                                             *   In previous step, I wrote $M = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$. Then computed $\mathbf{A}^3 = -I$.  
                                             *   If $\mathbf{A}^3 = -I$, then $A^4 = A(-I) = -A$ is false because $\mathbf{A}^2$ must be related to $\mathbf{A}$.  
@@ -547,7 +547,7 @@ Here is the thought process for solving the problem:
                                                                                                 *   $M$ (row 1): $3(3)+7(-1) = 2$, $3(7)+7(-2)=7$, $-1(3)+(-2)(-1)=-1$, $-1(7)+(-2)(-2)=-3$.  
                                                                                                 *   So $\mathbf{A}^2$ should be $\begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}$.  
                                                                                                 *   Let's verify this.  
-                                                                                                     *   $M_{11} = 2, M_{12} = 7$. $M_{21} = -1, M_{22} = -3$.  
+                                                                                                    *   $M_{11} = 2, M_{12} = 7$. $M_{21} = -1, M_{22} = -3$.  
                                                                                                      *   Check row 2: $-1(3) + (-2)(-1) = -1$? No.  
                                                                                                          *   $(A^2)_{21} = \begin{pmatrix} 2 & 7 \\ -1 & -3 \end{pmatrix}_{21}$? No.  
                                                                                                          *   $(-1)(3) + (-3)(-1)$ is my error in previous step.  

@@ -222,7 +222,7 @@ Here's my thought process for simplifying $\sqrt{242}$:
             *   $242 = 2 \times (11^2)$.  
             *   Is there any factor missing?  
             *   Let's list divisors of 242.  
-                \*   1, 2, 11, 22, 121, 242.  
+\*   1, 2, 11, 22, 121, 242.  
                 *   Perfect squares among these: 1, (none), (none), 1.  
                 *   Wait, I said "divisible by 4... No". So no 4.  
                 *   Divisible by 9? No.  
@@ -283,7 +283,7 @@ Here's my thought process for simplifying $\sqrt{242}$:
         *   This confirms $121$ is the largest perfect square factor.  
 
     *   Final Answer formulation:  
-        $\sqrt{242} = \sqrt{2 \times 11^2} = 11\sqrt{2}$.  
+$\sqrt{242} = \sqrt{2 \times 11^2} = 11\sqrt{2}$.  
 
     *   **Is it worth checking if I missed any trick?** Like $\sqrt{243} = 9\sqrt{3}$? $242$ is close to 243.  
         *   $242 = 11^2 \times 2$.  

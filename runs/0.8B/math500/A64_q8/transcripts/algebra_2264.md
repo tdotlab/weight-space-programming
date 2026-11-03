@@ -510,8 +510,8 @@ Here's a thinking process that leads to the correct solution:
                                                                 *   The expression to simplify is $\frac{3+4i}{1+2i}$. To find the result, multiply by conjugate of denominator $1-2i$.  
                                                                     *   Denominator becomes 5.  
                                                                     *   Numerator: $(3+4i)(1-2i)$.  
-                                                                            *   $= 3(1) - 6i + 4i(-2i)?$ No, I need to sum terms carefully.  
-                                                                                *   Real part of product: $ac$?  
+                                                                        *   $= 3(1) - 6i + 4i(-2i)?$ No, I need to sum terms carefully.  
+                                                                            *   Real part of product: $ac$?  
                                                                                 *   Imaginary part of product: $bc+ad$?  
                                                                                 *   Let's expand $(a+bi)(c-di)$ properly.  
                                                                                     *   $= ac + adi + bci - bd i^2$.  

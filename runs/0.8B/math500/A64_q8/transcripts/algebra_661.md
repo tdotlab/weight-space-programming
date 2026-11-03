@@ -598,8 +598,8 @@ Here's a thinking process that leads to the solution:
             *   But the question asks for minimum miles in February.  
             *   Usually, these questions ask for total distance over a period of time.  
         *   What if "every third day" implies she walks 4 miles on Days 1, 4, 7 (Days of month)?  
-                *   If so, how many days is that in February?  
-                    *   But what is the number of intervals?  
+            *   If so, how many days is that in February?  
+                *   But what is the number of intervals?  
 
     *   **Let's try to interpret "every third day" as a rate.**  
         *   Rate = $4/3$ miles per 3-day interval.  

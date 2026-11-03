@@ -81,57 +81,57 @@ Here's a thinking process that leads to the solution:
     *   Integers are whole numbers: $t \in \{5, 6, 7, ..., 12\}$.  
     *   Number of values = $12 - 5 + 1 = 8$.  
 
-    Wait, did I miscount? Let me list them explicitly again.  
+Wait, did I miscount? Let me list them explicitly again.  
 
 ```text
     5, 6, 7, 8, 9, 10, 11, 12.
     1, 2, 3, 4, 5, 6, 7, 8.
 ```
 
-    Yes, it's 8.  
+Yes, it's 8.  
 
-    Let's double check if I missed anything subtle. "Square root of $t$" implies we look for real numbers $t$. If $t$ is negative, $\sqrt{t}$ is undefined in reals (and usually complex). Usually, in these problems, we deal with real integers.  
-    So $t$ must be positive.  
+Let's double check if I missed anything subtle. "Square root of $t$" implies we look for real numbers $t$. If $t$ is negative, $\sqrt{t}$ is undefined in reals (and usually complex). Usually, in these problems, we deal with real integers.  
+So $t$ must be positive.  
 
-    The integer values are 5, 6, 7, 8, 9, 10, 11, 12.  
-    Total count = 8.  
+The integer values are 5, 6, 7, 8, 9, 10, 11, 12.  
+Total count = 8.  
 
-    Let's quickly re-read the question to ensure no constraints on $t$ (like $t$ being a perfect square or something). It just says "integer values of $t$". So any integer works as long as $\sqrt{t}$ is within range.  
+Let's quickly re-read the question to ensure no constraints on $t$ (like $t$ being a perfect square or something). It just says "integer values of $t$". So any integer works as long as $\sqrt{t}$ is within range.  
 
-    The phrasing "The square root of t" confirms we are looking at the function value, not just algebraic manipulation of variables, but solving for the variable $t$.  
-    Logic holds up.  
+The phrasing "The square root of t" confirms we are looking at the function value, not just algebraic manipulation of variables, but solving for the variable $t$.  
+Logic holds up.  
 
-    Final check:  
-    $2 < \sqrt{5} \approx 2.23$ (True)  
-    $\sqrt{12} \approx 3.46$ (True)  
-    Next integer is 13. $\sqrt{13} \approx 3.605$ (False, $>3.5$)  
-    Previous integer is 4. $\sqrt{4} = 2$ (False, not greater than 2).  
+Final check:  
+$2 < \sqrt{5} \approx 2.23$ (True)  
+$\sqrt{12} \approx 3.46$ (True)  
+Next integer is 13. $\sqrt{13} \approx 3.605$ (False, $>3.5$)  
+Previous integer is 4. $\sqrt{4} = 2$ (False, not greater than 2).  
 
-    So the valid integers are 5 through 12.  
-    Total count is 8.  
+So the valid integers are 5 through 12.  
+Total count is 8.  
 
-    The result seems robust.  
+The result seems robust.  
 
-    Step-by-step reasoning for final output:  
-    1. Identify the given inequality involving $\sqrt{t}$.  
-    2. Square the entire inequality to solve for $t$.  
+Step-by-step reasoning for final output:  
+1. Identify the given inequality involving $\sqrt{t}$.  
+   2. Square the entire inequality to solve for $t$.  
     3. Simplify the bounds of the new inequality.  
     4. Identify the set of integers in that range.  
     5. Count the size of the set.  
     6. Conclude.  
 
-    Calculation of square: $3.5^2 = \frac{7}{2} \cdot \frac{7}{2} = \frac{49}{4} = 12.25$.  
-    Bounds: $4 < t < 12.25$.  
-    Integers > 4 and < 12.25 are integers $>4$ up to $<13$.  
-    Smallest integer is 5.  
-    Largest integer is 12.  
-    Count is $12 - 5 + 1 = 8$.  
+Calculation of square: $3.5^2 = \frac{7}{2} \cdot \frac{7}{2} = \frac{49}{4} = 12.25$.  
+Bounds: $4 < t < 12.25$.  
+Integers > 4 and < 12.25 are integers $>4$ up to $<13$.  
+Smallest integer is 5.  
+Largest integer is 12.  
+Count is $12 - 5 + 1 = 8$.  
 
-    Looks correct.  
+Looks correct.  
 
-    Wait, is there any ambiguity about "square root of t" being the principal root? Yes, usually implies positive root for real numbers. If it meant complex roots, "greater than less than" would be impossible to define in standard order without context (usually $\sqrt{x}$ refers to the non-negative one). Standard convention holds.  
+Wait, is there any ambiguity about "square root of t" being the principal root? Yes, usually implies positive root for real numbers. If it meant complex roots, "greater than less than" would be impossible to define in standard order without context (usually $\sqrt{x}$ refers to the non-negative one). Standard convention holds.  
 
-    The steps are clear.  
+The steps are clear.  
 
 
 ## Answer

@@ -12,10 +12,10 @@ The user wants to find the largest integer less than 2010 that satisfies specifi
 
 **Conditions:**  
 1. Let $n$ be the number we are looking for.  
-   $n < 2010$  
-   $n \equiv 5 \pmod{7}$  
-   $n \equiv 10 \pmod{11}$  
-   $n \equiv 10 \pmod{13}$  
+$n < 2010$  
+$n \equiv 5 \pmod{7}$  
+$n \equiv 10 \pmod{11}$  
+$n \equiv 10 \pmod{13}$  
 
 **Let's break down the problem.**  
 
@@ -244,8 +244,8 @@ So LCM = Product.
 So LCM = $7 \times 11 \times 13$.  
 Wait. Is it 987 or 1001?  
 $7 \cdot 11 \cdot 13$:  
-   7 \* 11 = 77  
-   77 * 13 = $700 + 21 + 25$? No.  
+7 \* 11 = 77  
+77 * 13 = $700 + 21 + 25$? No.  
 Wait, $11 \times 13 = (10+1) \times 13 = 130 + 13 = 143$.  
 $7 \times 143$:  
 
@@ -255,7 +255,7 @@ $7 \times 143$:
    7 * 3 = 21
 ```
 
-   Sum = $700 + 280 + 21 = 981$? No.  
+Sum = $700 + 280 + 21 = 981$? No.  
 Wait, let me calculate carefully.  
 
 ```text
@@ -265,9 +265,9 @@ Wait, let me calculate carefully.
       998
 ```
 
-     2561 ? No.  
+2561 ? No.  
 Let's just do standard multiplication:  
-   100 + 40 + 3 is wrong for the digits of 7?  
+100 + 40 + 3 is wrong for the digits of 7?  
 Wait, $7 \times 143$.  
 $10 \times 143 = 1430$.  
 $4 \times 143 = 572$.  
@@ -281,7 +281,7 @@ Let's do it simply.
   -----
 ```
 
-   998 ? No. $7 \times 10 = 70$, $7 \times 40 = 280$. Wait, I'm messing up the digits.  
+998 ? No. $7 \times 10 = 70$, $7 \times 40 = 280$. Wait, I'm messing up the digits.  
 
 ```text
    143 * 7
@@ -291,7 +291,7 @@ Let's do it simply.
    3 * 7 = 21.
 ```
 
-   Sum: $280 + 700 + 21 = 981$? Wait.  
+Sum: $280 + 700 + 21 = 981$? Wait.  
 Wait, I calculated $\text{LCM}$ of 7 and 11 is 77.  
 $\text{LCM}(7, 11) \times 13 = 77 \times 13$.  
 Wait, the prime factors are 7, 11, 13.  
@@ -317,7 +317,7 @@ Let's check $91 \times 11$:
    91 * 1 = 91
 ```
 
-   Sum = 1001.  
+Sum = 1001.  
 
 Let's re-calculate $\text{LCM}(7, 13)$.  
 Is it 91? No. $13 \times 7 = 91$. Yes.  
@@ -844,9 +844,9 @@ $10 \times 11 = 110$.
 $110 \times 13$? No.  
 $7 \times 11 = 77$.  
 $13 \times 77$:  
-   $13 \times 70 = 910$.  
-   $13 \times 7 = 91$.  
-   Sum: $1001$.  
+$13 \times 70 = 910$.  
+$13 \times 7 = 91$.  
+Sum: $1001$.  
 Wait. I said LCM(7, 11) is 77 or something? No.  
 LCM(2, 3) = 6? No. LCM(2,3)=6. Product $2 \times 3 = 6$.  
 So $\text{lcm}(a,b,c)$ where $a,b,c$ are distinct primes and coprime is indeed the product of all numbers.  

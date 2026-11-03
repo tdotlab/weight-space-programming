@@ -278,7 +278,7 @@ Here's my thought process for solving this problem:
                                                 *   Is $(5,3)$ valid? $5+3=8 > 4$. Invalid.  
                                                 *   So for a point to be in region, it must satisfy $x+y \le 4$.  
                                             *   Let's find the area of this intersection.  
-                                                    The condition $x+y \le 4$ is equivalent to $y \le 4-x$.  
+The condition $x+y \le 4$ is equivalent to $y \le 4-x$.  
                                                 *   Since $y \le 4-x$, and we also have $0 \le y \le 4$.  
                                                 *   Wait, let's look at the line $y=4-x$. This is a line in the first quadrant.  
                                                     *   The region defined by $x+y \le 4$ is a triangle with vertices $(0,4), (4,0)$ and $(?,?)$. Wait.  

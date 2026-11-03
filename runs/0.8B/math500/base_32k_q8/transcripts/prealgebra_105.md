@@ -226,7 +226,7 @@ Here's a thinking process that leads to the correct solution:
                                     *   Right = East? Or Bottom?  
                                     *   Wait, standard compass map (North up, East right). 12 is North.  
                                     *   If you look at a clock.  
-                                        \*   12 -> 3 -> 6 -> 9.  
+\*   12 -> 3 -> 6 -> 9.  
                                         *   Usually, looking at a clock face, the numbers increase counter-clockwise.  
                                         *   So "Right" usually means towards the number 9? Or 7 (West)?  
                                     *   This is ambiguous.  
@@ -489,8 +489,8 @@ Here's a thinking process that leads to the correct solution:
                                                                                                         *   Rotation: To Right (Clockwise).  
                                                                                                         *   Result: South? Or West?  
                                                                                                 *   Let's check a standard riddle. "If you face North and spin right, what direction do you end up facing?"  
-                                                                                                            *   If I face North (0 degrees).  
-                                                                                                            *   Rotate to Right $\implies$ $+90^\circ$.  
+                                                                                                    *   If I face North (0 degrees).  
+                                                                                                        *   Rotate to Right $\implies$ $+90^\circ$.  
                                                                                                             *   Wait. If I rotate $+90^\circ$ (Counter-Clockwise), I face South ($-90^\circ$) or East?  
                                                                                                             *   Let's check: Face North (Up). Rotate $-90^\circ$ (Clockwise on map). That means facing West? No, that's usually 12 to 9. Wait. 12 is N. 3 is E. CW is 12->9 (West).  
                                                                                                             *   Wait. If I rotate Clockwise (CW) around North? Or East?  
@@ -516,11 +516,11 @@ Here's a thinking process that leads to the correct solution:
                                                                                                     *   To spin to Right (which usually means rotating towards the East-West plane? No).  
                                                                                                     *   Actually, let's look at it as: "Spins to her right" $\implies$ She turns $90^\circ$ to face West? Or East?  
                                                                                                 *   Let's check a common riddle. "If you face North and spin clockwise, what direction do you end up facing?"  
-                                                                                                        *   If I face North ($0^\circ$). Spin Clockwise $\implies$ $-90^\circ$. This means facing West (if I rotate around North-South axis? No, if I rotate around X-axis).  
+                                                                                                    *   If I face North ($0^\circ$). Spin Clockwise $\implies$ $-90^\circ$. This means facing West (if I rotate around North-South axis? No, if I rotate around X-axis).  
                                                                                                 *   Okay. Let's assume the question implies a rotation of $90^\circ$ in the plane perpendicular to the direction she is facing.  
                                                                                                     *   If I am facing North. Spin right $\implies$ Rotate to face West? Or East?  
                                                                                                 *   Let's try the most logical "Right" interpretation:  
-                                                                                                        *   Facing North (Up).  
+                                                                                                    *   Facing North (Up).  
                                                                                                         *   Right side of body points to East. (If I hold a stick at 12, my right hand is on the Right side of the wall?). No, if I face North (up), I am holding a stick perpendicular to my face. If I turn "Right", I rotate around the vertical axis.  
                                                                                                 *   Let's assume the rotation axis is horizontal (East-West plane). Then facing North $\implies$ Facing along $y$. Right $\implies$ turning towards $-x$ (West) or $+x$ (East)?  
                                                                                                 *   Wait. If you face North. Your body points South? Or East?  
@@ -551,11 +551,11 @@ Here's a thinking process that leads to the correct solution:
                                                                                                         *   Wait. Usually "Right" means **Clockwise** in terms of standard compass usage.  
                                                                                                     *   Facing North ($0^\circ$). Spin Right $\implies$ Rotate towards West? Or East?  
                                                                                                 *   Let's check the direction of "Spin to her right".  
-                                                                                                        *   If I am at a table and face North. My back is South.  
+                                                                                                    *   If I am at a table and face North. My back is South.  
                                                                                                         *   If I spin to my Right (which implies turning around 90 degrees), do I end up facing West or East?  
                                                                                                 *   Wait. If I spin to my right, I turn "to the right side". If I am facing North, my right hand side faces **East**.  
-                                                                                                        *   Wait. Let's visualize:  
-                                                                                                            *   Face North (Up).  
+                                                                                                    *   Wait. Let's visualize:  
+                                                                                                        *   Face North (Up).  
                                                                                                             *   Right side of body faces East? Or West?  
                                                                                                 *   Imagine a person standing in front of an open door. Their back is to the wall (North). The right hand points West? No, East. Wait. If you face South (Back), Right hand faces North. If you face North (Up), Right hand faces East?  
                                                                                                 *   Let's try: Facing North. Left side faces West. Right side faces East? No.  
@@ -593,7 +593,7 @@ Here's a thinking process that leads to the correct solution:
                                                                                                     *   East is $(1, 0)$.  
                                                                                                     *   Facing North $\implies \mathbf{v} = (0, 1)$? No, usually facing North implies the vector pointing along North is positive.  
                                                                                                 *   Let's try to interpret "Right" as a direction on the compass: **South**.  
-                                                                                                        *   If I spin to my right, I turn South.  
+                                                                                                    *   If I spin to my right, I turn South.  
                                                                                                 *   Wait. Let's check a specific riddle: "A figure skater faces north and spins clockwise (or right)."  
                                                                                                 *   Usually, "spin to her right" means spinning in the direction of the right hand rule. If you face North, your right hand points towards East? No, West? Or South?  
                                                                                                 *   Let's use the coordinate system: $X$ is East, $Y$ is North.  

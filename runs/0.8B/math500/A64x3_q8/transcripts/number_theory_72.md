@@ -343,7 +343,7 @@ Here's a thinking process that leads to the solution:
                                             *   3: 2
 ```
 
-                                            *   4: 3 (Divisors {1, 2, 4}) -> $2^2$. This is one prime power.  
+*   4: 3 (Divisors {1, 2, 4}) -> $2^2$. This is one prime power.  
 
 ```text
                                             *   5: 2
@@ -352,7 +352,7 @@ Here's a thinking process that leads to the solution:
                                             *   8: 4
 ```
 
-                                            *   9: 3 (Divisors {1, 3, 9}) -> $3^2$. This is another prime power.  
+*   9: 3 (Divisors {1, 3, 9}) -> $3^2$. This is another prime power.  
 
 ```text
                                             *   10: 4
@@ -364,18 +364,18 @@ Here's a thinking process that leads to the solution:
                                             *   16: 5
 ```
 
-                                            *   ...  
-                                        *   So only numbers are 4, 9.  
-                                    *   Are there any others?  
-                                        *   We need to ensure that no other number can have exactly 3 divisors.  
-                                        *   This implies $\tau(n) = 3$.  
-                                        *   For $n$ with positive integer divisors:  
-                                            *   If $n$ has at least two distinct prime factors (distinct primes), then $\tau(n) \ge 2$. Since it is exactly 3, one must be of form $1 \times 3$. This corresponds to exponents $0, 2$ for some primes. But if we have other primes, say $p_2$, the term for $p_2$ would be $\ge 1$.  
-                                            *   Let's check this condition carefully. If we assume integers with non-zero prime factors exist.  
-                                                *   For distinct primes $p_1, p_2$, if exponents are non-negative, terms are $(e_i+1)$.  
-                                                *   If $n = p_1^{a_1} p_2^{a_2} \dots$ with $a_i \ge 0$ integers.  
-                                                *   Divisor count $\tau(n) = \prod (a_i+1)$.  
-                                                *   We require this to be 3.  
+*   ...  
+    *   So only numbers are 4, 9.  
+        *   Are there any others?  
+            *   We need to ensure that no other number can have exactly 3 divisors.  
+                *   This implies $\tau(n) = 3$.  
+                    *   For $n$ with positive integer divisors:  
+                        *   If $n$ has at least two distinct prime factors (distinct primes), then $\tau(n) \ge 2$. Since it is exactly 3, one must be of form $1 \times 3$. This corresponds to exponents $0, 2$ for some primes. But if we have other primes, say $p_2$, the term for $p_2$ would be $\ge 1$.  
+                            *   Let's check this condition carefully. If we assume integers with non-zero prime factors exist.  
+                                *   For distinct primes $p_1, p_2$, if exponents are non-negative, terms are $(e_i+1)$.  
+                                    *   If $n = p_1^{a_1} p_2^{a_2} \dots$ with $a_i \ge 0$ integers.  
+                                        *   Divisor count $\tau(n) = \prod (a_i+1)$.  
+                                            *   We require this to be 3.  
                                                 *   Since factors must be integers, possible sets for product is $\{3\}$? No. $\{1, 3\}$ or something else.  
                                                 *   For $a_1, a_2$ integers. If we have more than one distinct prime, then at least two factors are $\ge 1$.  
                                                     *   If we have multiple distinct primes with exponents summing to...  

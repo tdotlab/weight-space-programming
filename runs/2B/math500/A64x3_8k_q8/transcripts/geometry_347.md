@@ -347,13 +347,13 @@ The prompt asks "Please reason step by step", so I should write out the thought 
 1.  **Understand the Diagram and Properties**: We have a circle with diameter $AB$. A triangle $\triangle ABC$ is inscribed in this circle. By definition, the three vertices lie on the circumference.  
 2.  **Apply Thales's Theorem (Diameter Property)**: A fundamental theorem in geometry states that if a triangle has one side as the diameter of its circumcircle, then the angle opposite to that side is a right angle ($90^\circ$). Since $AB$ is the diameter, the angle $\angle ACB$ (the angle at vertex $C$) must be $90^\circ$.  
 3.  **Use Angle Sum Property**: The sum of the interior angles of any triangle is always $180^\circ$. For $\triangle ABC$, we have:  
-    $$ \angle A + \angle B + \angle C = 180^\circ $$  
+$$ \angle A + \angle B + \angle C = 180^\circ $$  
 4.  **Substitute Values**: We are given that $\angle A = 14^\circ$ and we found $\angle C = 90^\circ$. Substituting these into the equation:  
-    $$ 14^\circ + \angle B + 90^\circ = 180^\circ $$  
+$$ 14^\circ + \angle B + 90^\circ = 180^\circ $$  
 5.  **Solve**:  
-    $$ 104^\circ + \angle B = 180^\circ $$  
-    $$ \angle B = 180^\circ - 104^\circ $$  
-    $$ \angle B = 76^\circ $$  
+$$ 104^\circ + \angle B = 180^\circ $$  
+$$ \angle B = 180^\circ - 104^\circ $$  
+$$ \angle B = 76^\circ $$  
 
 The result is consistent and verified. I will put `76^\circ` in the box. Or `76`. The question asks "How many degrees". If I write $76^\circ$, it means $76$ degrees. It's unambiguous. If I write 76, it implies 76 of whatever unit or just a number. But usually $\angle B$ is an angle with measure $76^\circ$. The answer is the measure. I'll include the degree symbol for precision.  
 

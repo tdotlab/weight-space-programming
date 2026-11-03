@@ -378,7 +378,7 @@ Here's my thought process for solving this problem:
                                     *   Midpoint of $AC$: $((5+7)/2, (3+4)/2) = (6.5, 3.5)$.  
                                     *   Then $B(6,8)$ or something is mid? If midpoint of $AB$ is same as $C$? No.  
                                 *   Midpoint of $BD$ equals midpoint of $AC$.  
-                                        *   $D(x,y)$.  
+                                    *   $D(x,y)$.  
                                         *   $(x+7)/2 = 13/2 \implies x + 7 = 13 \implies x=6$.  
                                         *   And $(y+3)/2 = 3.5 \implies y+3 = 7 \implies y=4$.  
                                             *   Midpoint of $BD$ is $(6, 7)$? No.  

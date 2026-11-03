@@ -325,9 +325,9 @@ Here is the thinking process to solve the problem:
             *   Usually, this problem involves a trapezoid or similar.  
     *   Let's look at the diagram again. It seems to show an isosceles triangle? No.  
     *   The coordinates in the code are:  
-        \*   A(0.1, 1). B(-1, 0). C(0,0). D(3,0). E(-0.3, -3).  
-            *   Area of $\triangle ABC$: $A=(0.1, 1)$, $B=(-1, 0)$, $C=(0, 0)$.  
-                *   Base = length of vector BC? No, base on x-axis? Let's check.  
+\*   A(0.1, 1). B(-1, 0). C(0,0). D(3,0). E(-0.3, -3).  
+        *   Area of $\triangle ABC$: $A=(0.1, 1)$, $B=(-1, 0)$, $C=(0, 0)$.  
+            *   Base = length of vector BC? No, base on x-axis? Let's check.  
                 *   Vector $AB = (-1 - 0.1, 0 - 1) = (-1.1, -1)$. Length $\sqrt{1.21 + 1} = \sqrt{2.21}$. Area using determinant:  
                     *   Using coordinates above: 0.5 * |det|. Wait, determinant with these points gave 0.5? No. Let me check again.  
                     *   $x_A=0.1, y_A=1$. $x_B=-1, y_B=0$. $x_C=0, y_C=0$.  
@@ -380,7 +380,7 @@ Here is the thinking process to solve the problem:
                     *   $= 0.5 | 0 - 1 + 0 | = 0.5$.  
                 *   Wait, if the vertices are in order A, B, C?  
             *   Let's check coordinates again.  
-                \*   A(0.1, 1). B(-1, 0). C(0, 0).  
+\*   A(0.1, 1). B(-1, 0). C(0, 0).  
                 *   $A-B = (-1.1, -1)$.  
                 *   $C-A = (0-0.1, 0-1) = (-0.1, -1)$.  
                 *   Area using cross product formula? No, area is half the magnitude of cross product of two adjacent edges.  

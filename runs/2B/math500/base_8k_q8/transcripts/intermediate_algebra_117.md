@@ -115,13 +115,13 @@ So we can identify $a, b$ as $P(1)-b$, etc. No.
 Let's look at the values.  
 For a polynomial $P(x)$ of degree 3:  
 1. $P(x) = (x-1)(x-4) K_1(x) + R(x)$.  
-   Since $\deg P=3$ and deg $(x-1)(x-4)=2$, $\deg K_1(x) = 1$. Let $K_1(x) = u x + v$.  
-   So $P(1) = R(1)$, $P(4) = R(4)$. Wait, this doesn't fix $R$ uniquely unless we know more.  
-   Actually $R(x)$ is a specific linear polynomial. The values $P(1), P(4)$ are fixed constants determined by $P(x)$.  
-   Wait, no. If I change $P(x)$ (e.g. add $x(x-1)(x-2)$ which has roots at 1, 4? No).  
-   Let's check degrees again. $\deg(P)=3$.  
-   The constraint is just that $P(1)=R(1)$ and $P(4)=R(4)$.  
-   But we have no condition that links $P(1), P(4)$ to anything else except via $R(x)$, which depends on other values.  
+Since $\deg P=3$ and deg $(x-1)(x-4)=2$, $\deg K_1(x) = 1$. Let $K_1(x) = u x + v$.  
+So $P(1) = R(1)$, $P(4) = R(4)$. Wait, this doesn't fix $R$ uniquely unless we know more.  
+Actually $R(x)$ is a specific linear polynomial. The values $P(1), P(4)$ are fixed constants determined by $P(x)$.  
+Wait, no. If I change $P(x)$ (e.g. add $x(x-1)(x-2)$ which has roots at 1, 4? No).  
+Let's check degrees again. $\deg(P)=3$.  
+The constraint is just that $P(1)=R(1)$ and $P(4)=R(4)$.  
+But we have no condition that links $P(1), P(4)$ to anything else except via $R(x)$, which depends on other values.  
 
 Let's try to construct a system of equations for the coefficients of $P(x) = x^3 + ax^2 + bx + c$.  
 $P(0)=c=5$. So $c=5$.  

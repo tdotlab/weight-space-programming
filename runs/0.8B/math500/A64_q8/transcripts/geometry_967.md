@@ -631,7 +631,7 @@ Here's a thinking process that leads to the solution:
         *   This phrasing is ambiguous. It can mean:  
             1. Vertices are coincident? (Requires shift such that $\theta = k \cdot 360/n$). Min = 72.  
             2. The shape (set of points) is identical to the original set in terms of position relative to center?  
-                *   If $\theta$ shifts by 0, then it's identity.  
+               *   If $\theta$ shifts by 0, then it's identity.  
                 *   For regular pentagon, shifting vertices by 1/5 of perimeter? No.  
             *   Maybe "coincides" means that the rotated shape is superimposed on the original one (i.e., they share a common vertex)? No, usually implies orientation.  
 

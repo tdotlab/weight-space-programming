@@ -733,14 +733,14 @@ $\vec{BA} = A - B$ and $\vec{BC} = C - B$.
 First, we calculate the components of these vectors based on the coordinates.  
 
 1.  **Calculate vector $\vec{BA}$:**  
-    $$ \vec{BA} = (x_A - x_B, y_A - y_B, z_A - z_B) $$  
-    $$ \vec{BA} = (1 - 3, -11 - (-4), 2 - 1) $$  
-    $$ \vec{BA} = (-2, -7, 1) $$  
+$$ \vec{BA} = (x_A - x_B, y_A - y_B, z_A - z_B) $$  
+$$ \vec{BA} = (1 - 3, -11 - (-4), 2 - 1) $$  
+$$ \vec{BA} = (-2, -7, 1) $$  
 
 2.  **Calculate vector $\vec{BC}$:**  
-    $$ \vec{BC} = (x_C - x_B, y_C - y_B, z_C - z_B) $$  
-    $$ \vec{BC} = (-2 - 3, 1 - (-4), -1 - 1) $$  
-    $$ \vec{BC} = (-5, 5, -2) $$  
+$$ \vec{BC} = (x_C - x_B, y_C - y_B, z_C - z_B) $$  
+$$ \vec{BC} = (-2 - 3, 1 - (-4), -1 - 1) $$  
+$$ \vec{BC} = (-5, 5, -2) $$  
 
 Next, we compute the dot product $\vec{BA} \cdot \vec{BC}$ and the magnitudes of these vectors. The magnitude squared is given by $|\vec{v}|^2$.  
 

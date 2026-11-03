@@ -495,7 +495,7 @@ Here's a thinking process that leads to the solution:
             *   If so, she walks distance $x$ on Days $\{1, 2\}$? No.  
 
     *   Let's consider the problem statement: **"Suzanne walks four miles every third day."** -> Maybe this is a puzzle about **discrete steps** where she walks 4 miles in an interval of length 3 (like "every hour").  
-            *   If it means: On Day 1, 2 miles. On Day 4, 2 miles... No.  
+        *   If it means: On Day 1, 2 miles. On Day 4, 2 miles... No.  
 
     *   Let's go with the most literal interpretation:  
         *   She walks **four miles** on Days $\{1, 4\}$? (If she visits locations every 3 days).  

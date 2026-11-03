@@ -446,7 +446,7 @@ This means either:
 1. I made a mistake in interpreting the recurrence or condition.  
 2. The problem implicitly assumes a specific value for $f(1)$ such that it cancels? No, sum can't be constant unless coefficients are zero.  
 3. Maybe the indices in the sum are different?  
-   "compute $\sum_{n=1}^{1985} f(n)$".  
+"compute $\sum_{n=1}^{1985} f(n)$".  
 4. Is it possible the problem is $f(n+1) = (-1)^{n} n - 2 f(n)$? Or something with alternating signs but a different constant.  
 
 Let's reconsider the condition $f(1) = f(1986)$.  

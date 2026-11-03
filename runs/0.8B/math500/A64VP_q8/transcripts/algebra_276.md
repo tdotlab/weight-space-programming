@@ -850,10 +850,10 @@ Now, we compare this expanded expression to the original given polynomial $10x^2
 
 Matching coefficients:  
 1.  The coefficient of $x^2$ must be equal to the coefficient of $x^2$ in the expression.  
-    $$AB = 10$$  
+$$AB = 10$$  
 
 2.  The coefficient of $x$ must be equal to the coefficient of $x$ in the expression.  
-    $$3A - 8B = -1$$  
+$$3A - 8B = -1$$  
 
 We need to find integers $A$ and $B$ that satisfy these equations. Since $A$ and $B$ are integers, we can approach this by looking at the factor pairs of 10 or solving the system of equations directly.  
 
@@ -862,16 +862,16 @@ $(1, 10), (2, 5), (5, 2), (10, 1)$ and also their negative counterparts, etc. Ho
 
 Let's test the pairs:  
 *   **Case $(A,B) = (1, 10)$:**  
-    $$3(1) - 8(10) = 3 - 80 = -77 \neq -1$$  
+$$3(1) - 8(10) = 3 - 80 = -77 \neq -1$$  
 *   **Case $(A,B) = (2, 5)$:**  
-    $$3(2) - 8(5) = 6 - 40 = -34 \neq -1$$  
+$$3(2) - 8(5) = 6 - 40 = -34 \neq -1$$  
 *   **Case $(A,B) = (5, 2)$:**  
-    $$3(5) - 8(2) = 15 - 16 = -1$ This matches the required equation!  
+$$3(5) - 8(2) = 15 - 16 = -1$ This matches the required equation!  
 *   **Case $(A,B) = (-1, -10)$** (Since product is 10 and signs match for negative integers):  
-    $$3(-1) - 8(-10) = -3 + 80 = 77 \neq -1$$  
+$$3(-1) - 8(-10) = -3 + 80 = 77 \neq -1$$  
 *   **Case $(A,B) = (2, -5)$:** (Note: Product of $A$ and $B$ is still 10 if we consider integers. Let's check product).  
-    $$A=2, B=-5 \implies AB = -10$$ This does not satisfy $AB=10$.  
-    If we assumed product was absolute value... but the constant term in expansion of $(Ax-8)(Bx+3)$ is $(-8)(3) = -24$, which matches. The coefficient of $x^2$ is $AB$. So $AB=10$.  
+$$A=2, B=-5 \implies AB = -10$$ This does not satisfy $AB=10$.  
+If we assumed product was absolute value... but the constant term in expansion of $(Ax-8)(Bx+3)$ is $(-8)(3) = -24$, which matches. The coefficient of $x^2$ is $AB$. So $AB=10$.  
 
 Thus, the only integer solution for $A$ and $B$ satisfying both conditions is $A=5$ and $B=2$. (Note: $A$ must be a positive factor if we assume product is positive because constant term $-24$ comes from $(-8)(3)$. However, in this specific problem $(Ax-8)(Bx+3)$, the constant term is $-24$, so it's always negative regardless of signs. The only solution we found was $A=5, B=2$).  
 

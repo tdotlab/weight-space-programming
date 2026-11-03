@@ -138,7 +138,7 @@ Here's my thought process for solving this problem:
                                         1. $y=0$ (for $0 \le x \le 4$). No, this is just the line $y=0$. Since $y$ must be $\ge 0$, it's the half-plane above $y=0$.  
                                         2. $x=8$? No intersection with square.  
                                         3. $x+y=4$ for $x,y \ge 0$. But in the rectangle, we have vertices $(0,0), (4,0), (8,4)$? No.  
-                                            *   The condition is $y \le 4-x$.  
+                                           *   The condition is $y \le 4-x$.  
                                             *   So valid points are those inside the region where $x+y \le 4$ and $x \ge 0, y \ge 0$.  
                                             *   Since we are looking at a rectangle defined by $x \in [0,8]$ and $y \in [0,4]$, let's look at the condition $y \le 4-x$ (which is equivalent to $x+y \le 4$).  
                                             *   For each $x$, we want valid $y$. The constraint is $y \in [0,4]$ AND $x+y \le 4 \implies y \le 4-x$.  
@@ -272,7 +272,7 @@ Here's my thought process for solving this problem:
                                                                 1. Along $y=0$: The segment from $x=0$ to $x=4$. Area = $\int_0^4 x dx$? No. The region is defined by vertices $(0,0), (4,0)$? No, that's a point. It's a line from $(0,0)$ to $(4,0)$.  
                                                                 2. Along $x=8$: Line $y \le -4$. Not possible.  
                                                                 3. Along $x+y=4$ inside the square: The region defined by this inequality is a triangle with vertices $(0,0), (0,4), (4,0)$? No.  
-                                                                    *   Let's check $(0,4)$. It's on the line.  
+                                                                   *   Let's check $(0,4)$. It's on the line.  
                                                                     *   Let's check $(0,0)$. It's inside.  
                                                                     *   Let's check $(4,0)$. It's on the line.  
                                                                     *   What about $(2,3)$? $2+3=5 > 4$. No.  
@@ -390,7 +390,7 @@ Here's my thought process for solving this problem:
                                                                                 *   Vertices of the valid region:  
                                                                                     1. Intersection of $x+y=4$ with axes? No, this is just a line. The condition is $y \le 4-x$.  
                                                                                     2. So we are looking at the set $\{(x,y) | x \in [0,8], y \in [0,4], x+y \le 4\}$.  
-                                                                                        *   We want to find the area of this region.  
+                                                                                       *   We want to find the area of this region.  
                                                                                         *   Let's visualize $x+y=4$ intersects $x=0$ at $(0,4)$ and $y=4$ at $(-4,4)$? No.  
                                                                                         *   Wait, let's re-read the question carefully. Is it possible that "randomly selected" means selecting from the probability space of the whole plane? No, usually this phrasing with inequalities implies sampling from the region defined by inequalities. But here it specifies domain $0 \le x \le 8$ and $0 \le y \le 4$. So we must be in this rectangle.  
                                                                                         *   Let's check the condition $x+y \le 4$ again.  

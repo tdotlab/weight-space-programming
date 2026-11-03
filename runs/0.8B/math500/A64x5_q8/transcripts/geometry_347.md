@@ -404,7 +404,7 @@ Here's my thought process for solving this geometry problem:
                                 *   $B=(1, 0)$, $C=(0, \sqrt{3}/2)$. Length squared $1 + 3/4 = 7/4$.  
                                 *   Sum: $1.5 + 1.5 = 3$. Not 1 (length of AB is 2).  
                                 *   So $\triangle ABC$ formed by this C is NOT right-angled at C? It's not a right triangle in Euclidean space?  
-                                        *   This example: A=(-1,0), B=(1,0) (diameter on x-axis). C=(0, sqrt(3)/2). This is circumcenter of equilateral? No.  
+                                    *   This example: A=(-1,0), B=(1,0) (diameter on x-axis). C=(0, sqrt(3)/2). This is circumcenter of equilateral? No.  
                                         *   Circumcenter of circle radius 1 centered at origin. Points A, B, C must satisfy $x^2+y^2=1$? Yes.  
                                         *   But here C is $(0, \sqrt{3}/2)$. $\sqrt{3}/2 \approx 0.866$. Radius squared = $1 - 0.75 = 0.25$. $\sqrt{3} = 1.732$. $1.732^2 = 3$.  
                                         *   So C is not on the circle radius 1 (circumradius of A, B). It's on a circle with radius sqrt(1)? No.  

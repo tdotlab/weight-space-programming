@@ -1111,7 +1111,7 @@ Here is a thinking process to solve the problem:
     *   Let's verify if this cut is parallel to edges AB and CD.  
         *   If it's cutting off vertex A? No.  
     *   Let's check if the plane passing through midpoints of edges $AC$ and $BD$ is parallel to edge $AB$.  
-            *   Vector $\vec{AB}$ is not in the plane?  
+        *   Vector $\vec{AB}$ is not in the plane?  
             *   The midpoint $M_{AC}$ lies on face $ABC$. The midpoint $M_{BD}$ lies on face $BDC$ (which contains $C, D, B$). No, $M_{BD}$ is on $BD$.  
             *   The line connecting $M_{AC}$ and $M_{BD}$.  
                 *   Does it contain $\vec{AB}$? No.  

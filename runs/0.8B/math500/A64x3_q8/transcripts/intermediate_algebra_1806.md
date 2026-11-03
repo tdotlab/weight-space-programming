@@ -22,69 +22,69 @@ However, it's not strictly required to use polar coordinates for the substitutio
 
 Let's look at the expression term by term:  
 1. $|1 + z|$: The magnitude of $1 + z$ where $z$ is on the unit circle. This can be written as $\sqrt{(1+\cos\theta)^2 + \sin^2\theta} = \sqrt{1 + 2\cos\theta + \cos^2\theta - \sin^2\theta}$?  
-   Let's stick to $z = e^{i\theta}$.  
-   $|1 + z| = |1 + e^{i\theta}|$.  
-   Also, for $z$ on unit circle, this quantity is related to the distance from $-1$ to the point $z$? No.  
-   It is $\sqrt{2}$ if $z=0$, but we are on the unit circle so $z \ne 0$.  
-   Let's use polar form for the magnitude:  
-   $|1 + z| = |e^{i\alpha} + e^{i\beta}|$ where $\theta$ is phase.  
-   Or simpler, if $z=e^{i\theta}$, then $|1+e^{i\theta}|^2 = 1 + e^{i\theta} + e^{-i\theta} + 1 = 2(1 + \cos\theta) + 0$ ? No.  
-   $|a+b|^2 = a\bar{b} + b\bar{a} + |a|^2 + |b|^2 - 2\text{Re}(a \bar{b})$.  
-   For $|1+e^{i\theta}|^2 = (1+\cos\theta)^2 + (\sin\theta)^2 = 1 + 2\cos\theta + \cos^2\theta + \sin^2\theta = 2 + 2\cos\theta$.  
-   This is $|1+z|^2$ in terms of $\theta$.  
-   Max value of $|1+e^{i\theta}|$ on the unit circle?  
-   Actually, $z=e^{i\theta}$ means $z = \cos\theta + i\sin\theta$.  
-   Then $1+z = 1+\cos\theta + i\sin\theta = 2\cos^2(\theta/2) + e^{i\theta} - 1$? No.  
-   Let's calculate $|1+e^{i\theta}|^2$ directly.  
-   The expression is $\sqrt{2} \cdot \text{something}$? No.  
-   Let $z = e^{i\theta}$. Then $|1+z|^2 = (1+\cos\theta)^2 + \sin^2\theta = 2+2\cos\theta$.  
-   This is maximized when $\cos\theta = 1$, i.e., $z=1$, then value is $\sqrt{4} = 2$. Or minimized when $\cos\theta = -1$ ($z=-1$), value is $\sqrt{0}=0$.  
-   However, this is just $(1+z)^2 + z^2$. That's not right.  
-   $|1+z|^2 = (1+\cos\theta)^2 + \sin^2\theta$ is not correct because $z$ has imaginary part $\sin\theta$.  
-   Let $a=1$, $b=z=e^{i\theta}$. $|1+b|^2 = 1+|b|^2+2\text{Re}(b) = 1+\cos^2\theta + 2\cos\theta$? No.  
-   $|1+b|^2 = (1+\cos\theta)^2 - (\sin\theta)(-\sin\theta)?$ No.  
-   $(1+\cos\theta)^2 + \sin^2\theta = 1 + 2\cos\theta + \cos^2\theta + \sin^2\theta = 2 + 2\cos\theta$. This is $|1+z|^2$ in terms of $\theta$ is correct.  
-   But if $z=e^{i\theta}$, then $1+e^{i\theta}$ has magnitude squared?  
-   Let's check again. $1 = e^{0}$. $z = e^{i\theta}$.  
-   $|1+z|^2 = (e^0 + z)(e^{-0} \overline{z})$ ? No, that's wrong.  
-   Magnitude of vector sum $a+b$. $|a+b|^2 = a\bar{b} + b\bar{a} + |a|^2+|b|^2 - 2(a\bar{b})\cos(\text{angle})$? No.  
-   Let's use formula: $|u+v|^2 = |u|^2 + |v|^2 + 2\text{Re}(u\bar{v})$.  
-   Here $u=1, v=z=e^{i\theta}$. $u \bar{v} = e^{-i\theta}$. $\text{Re}(e^{-i\theta}) = \cos\theta$.  
-   So $|1+z|^2 = |1|^2 + |z|^2 + 2\cos\theta = 1 + 1 + 2\cos\theta = 2(1+\cos\theta)$. This is correct.  
-   Since $z$ lies on unit circle, $|z|=1$, so $z^* z = 1$.  
-   The term is $\sqrt{|1+z|^2}$.  
-   The maximum of $|1+z|$ when $|z|=1$:  
-   Let $w = 1+z$. Then $|w|^2 = |1+e^{i\theta}|^2 = 2(1+\cos\theta)$.  
-   Max is when $\cos\theta=1$ i.e., $z=1$, giving $|1+w|=2$. But this value depends on the angle.  
-   The term we are maximizing is $|1+z|$ (magnitude). The max possible magnitude is 2, but that occurs at $z=1$.  
-   If $z=-1$, it's 0. If $z=i$, $1+i \to \sqrt{2}$.  
+Let's stick to $z = e^{i\theta}$.  
+$|1 + z| = |1 + e^{i\theta}|$.  
+Also, for $z$ on unit circle, this quantity is related to the distance from $-1$ to the point $z$? No.  
+It is $\sqrt{2}$ if $z=0$, but we are on the unit circle so $z \ne 0$.  
+Let's use polar form for the magnitude:  
+$|1 + z| = |e^{i\alpha} + e^{i\beta}|$ where $\theta$ is phase.  
+Or simpler, if $z=e^{i\theta}$, then $|1+e^{i\theta}|^2 = 1 + e^{i\theta} + e^{-i\theta} + 1 = 2(1 + \cos\theta) + 0$ ? No.  
+$|a+b|^2 = a\bar{b} + b\bar{a} + |a|^2 + |b|^2 - 2\text{Re}(a \bar{b})$.  
+For $|1+e^{i\theta}|^2 = (1+\cos\theta)^2 + (\sin\theta)^2 = 1 + 2\cos\theta + \cos^2\theta + \sin^2\theta = 2 + 2\cos\theta$.  
+This is $|1+z|^2$ in terms of $\theta$.  
+Max value of $|1+e^{i\theta}|$ on the unit circle?  
+Actually, $z=e^{i\theta}$ means $z = \cos\theta + i\sin\theta$.  
+Then $1+z = 1+\cos\theta + i\sin\theta = 2\cos^2(\theta/2) + e^{i\theta} - 1$? No.  
+Let's calculate $|1+e^{i\theta}|^2$ directly.  
+The expression is $\sqrt{2} \cdot \text{something}$? No.  
+Let $z = e^{i\theta}$. Then $|1+z|^2 = (1+\cos\theta)^2 + \sin^2\theta = 2+2\cos\theta$.  
+This is maximized when $\cos\theta = 1$, i.e., $z=1$, then value is $\sqrt{4} = 2$. Or minimized when $\cos\theta = -1$ ($z=-1$), value is $\sqrt{0}=0$.  
+However, this is just $(1+z)^2 + z^2$. That's not right.  
+$|1+z|^2 = (1+\cos\theta)^2 + \sin^2\theta$ is not correct because $z$ has imaginary part $\sin\theta$.  
+Let $a=1$, $b=z=e^{i\theta}$. $|1+b|^2 = 1+|b|^2+2\text{Re}(b) = 1+\cos^2\theta + 2\cos\theta$? No.  
+$|1+b|^2 = (1+\cos\theta)^2 - (\sin\theta)(-\sin\theta)?$ No.  
+$(1+\cos\theta)^2 + \sin^2\theta = 1 + 2\cos\theta + \cos^2\theta + \sin^2\theta = 2 + 2\cos\theta$. This is $|1+z|^2$ in terms of $\theta$ is correct.  
+But if $z=e^{i\theta}$, then $1+e^{i\theta}$ has magnitude squared?  
+Let's check again. $1 = e^{0}$. $z = e^{i\theta}$.  
+$|1+z|^2 = (e^0 + z)(e^{-0} \overline{z})$ ? No, that's wrong.  
+Magnitude of vector sum $a+b$. $|a+b|^2 = a\bar{b} + b\bar{a} + |a|^2+|b|^2 - 2(a\bar{b})\cos(\text{angle})$? No.  
+Let's use formula: $|u+v|^2 = |u|^2 + |v|^2 + 2\text{Re}(u\bar{v})$.  
+Here $u=1, v=z=e^{i\theta}$. $u \bar{v} = e^{-i\theta}$. $\text{Re}(e^{-i\theta}) = \cos\theta$.  
+So $|1+z|^2 = |1|^2 + |z|^2 + 2\cos\theta = 1 + 1 + 2\cos\theta = 2(1+\cos\theta)$. This is correct.  
+Since $z$ lies on unit circle, $|z|=1$, so $z^* z = 1$.  
+The term is $\sqrt{|1+z|^2}$.  
+The maximum of $|1+z|$ when $|z|=1$:  
+Let $w = 1+z$. Then $|w|^2 = |1+e^{i\theta}|^2 = 2(1+\cos\theta)$.  
+Max is when $\cos\theta=1$ i.e., $z=1$, giving $|1+w|=2$. But this value depends on the angle.  
+The term we are maximizing is $|1+z|$ (magnitude). The max possible magnitude is 2, but that occurs at $z=1$.  
+If $z=-1$, it's 0. If $z=i$, $1+i \to \sqrt{2}$.  
 
 2. Term $|1 - z + z^2|$:  
-   Let $w = 1 - z + z^2$. We need to find the maximum of $|w|$ for $z=e^{i\theta}$? No, just finding max over $\theta$.  
-   Alternatively, notice $z^3 = 1$ corresponds to something.  
-   Let's write in terms of polynomials or complex numbers.  
-   Wait, there's a known identity involving $z^2+1+z$ etc?  
-   The expression is $|1 - z + z^2|$.  
-   Maybe substitute $w = z-1$? No.  
-   Consider the substitution $y=1-z$? Then $z = 1-y$.  
-   If $z=e^{i\theta}$, then $y = e^{-i\theta} - 1$.  
-   Let's try to rewrite $|1 - z + z^2|$.  
-   We know that if $w=1-z$, $w+1-z$ is not simple.  
-   Maybe express in terms of the roots? No.  
-   The expression looks like a determinant or something related to polynomials.  
-   $1 - z + z^2 = (z-1)(z-0)$? No, $(z-1)^2 + 1$? No.  
-   $z^3+1 = (z+1)(z^2-z+1)$. Not directly related to $|1+z|^2$.  
-   Let's see if we can factor it or rewrite.  
-   Consider $(z-1/2)^2$?  
-   Or consider geometric interpretation in the complex plane.  
-   Points on unit circle are $e^{i\theta}$.  
-   The term $1 - z + z^2$ corresponds to vector addition: $(1,0)$ and vectors $-z, z^2$? No.  
-   Let's visualize it in terms of angles.  
-   Or maybe write $|1 - z + z^2|$ as modulus of a complex number.  
-   Is there a relation with the polynomial roots?  
-   Consider $(1-z)(1+z)$ is not relevant.  
-   Let's try to see what the value is when $z$ is close to something.  
-   Or maybe $z$ must be such that $|1 - z + z^2|$ takes specific values.  
+Let $w = 1 - z + z^2$. We need to find the maximum of $|w|$ for $z=e^{i\theta}$? No, just finding max over $\theta$.  
+Alternatively, notice $z^3 = 1$ corresponds to something.  
+Let's write in terms of polynomials or complex numbers.  
+Wait, there's a known identity involving $z^2+1+z$ etc?  
+The expression is $|1 - z + z^2|$.  
+Maybe substitute $w = z-1$? No.  
+Consider the substitution $y=1-z$? Then $z = 1-y$.  
+If $z=e^{i\theta}$, then $y = e^{-i\theta} - 1$.  
+Let's try to rewrite $|1 - z + z^2|$.  
+We know that if $w=1-z$, $w+1-z$ is not simple.  
+Maybe express in terms of the roots? No.  
+The expression looks like a determinant or something related to polynomials.  
+$1 - z + z^2 = (z-1)(z-0)$? No, $(z-1)^2 + 1$? No.  
+$z^3+1 = (z+1)(z^2-z+1)$. Not directly related to $|1+z|^2$.  
+Let's see if we can factor it or rewrite.  
+Consider $(z-1/2)^2$?  
+Or consider geometric interpretation in the complex plane.  
+Points on unit circle are $e^{i\theta}$.  
+The term $1 - z + z^2$ corresponds to vector addition: $(1,0)$ and vectors $-z, z^2$? No.  
+Let's visualize it in terms of angles.  
+Or maybe write $|1 - z + z^2|$ as modulus of a complex number.  
+Is there a relation with the polynomial roots?  
+Consider $(1-z)(1+z)$ is not relevant.  
+Let's try to see what the value is when $z$ is close to something.  
+Or maybe $z$ must be such that $|1 - z + z^2|$ takes specific values.  
 
 Let's use polar coordinates or substitution again.  
 Let $z = e^{i\theta}$.  

@@ -40,7 +40,7 @@ Here's a thinking process that leads to the solution:
     *   So, we are looking for ordered pairs $(y, c)$ such that $y \neq c$.  
 
     *   Let's use the formula:  
-        Total ordered pairs where elements can be equal minus Total ordered pairs where elements cannot be different? No, simply count valid cases.  
+Total ordered pairs where elements can be equal minus Total ordered pairs where elements cannot be different? No, simply count valid cases.  
 
     *   Valid Case 1: Yann picks dish X, Camille picks dish Y where $X \neq Y$.  
     *   Number of choices for Yann = 10.  
@@ -208,135 +208,135 @@ Here's a thinking process that leads to the solution:
 
     *   Result is 90.  
 
-    Let's double check edge cases or alternative interpretations of "combinations of meals".  
-    Could it mean they order a meal consisting of dishes?  
-    "10 items on the menu... each orders one dish" -> This fixes that constraint.  
-    "how many different combinations of meals" -> This refers to the result of the ordering process. Since there are two diners, the outcome is determined by their distinct choices.  
+Let's double check edge cases or alternative interpretations of "combinations of meals".  
+Could it mean they order a meal consisting of dishes?  
+"10 items on the menu... each orders one dish" -> This fixes that constraint.  
+"how many different combinations of meals" -> This refers to the result of the ordering process. Since there are two diners, the outcome is determined by their distinct choices.  
 
-    Could "refuse to order the same dish" mean something more subtle? Like Yann picks a *set* and Camille picks a *subset*?  
-    No, "orders one dish". So Yann has $\{d_y\}$, Camille has $\{d_c\}$. Condition $d_y \neq d_c$.  
-    This confirms 90.  
+Could "refuse to order the same dish" mean something more subtle? Like Yann picks a *set* and Camille picks a *subset*?  
+No, "orders one dish". So Yann has $\{d_y\}$, Camille has $\{d_c\}$. Condition $d_y \neq d_c$.  
+This confirms 90.  
 
-    Is there any interpretation where the answer is $10 \times 10 / 2 = 50$? No, that assumes they order the *same* dish (indistinguishable). But here distinctness matters.  
-    Wait, if "Yann orders Chicken" and "Camille orders Fish", this is a valid outcome. If we assume "Chicken" and "Fish" are specific types, does it matter that they cannot pick "the same dish" by index? Yes, usually implies index.  
-    What if there were 2 items (Chicken, Apple)?  
-    Yann=Chicken. Camille can't=Chicken. Camille must be Apple. (1).  
-    Yann=Apple. Camille can't be Apple. Camille must be Chicken. (1).  
-    Total = 2. $n \times (n-1)$.  
+Is there any interpretation where the answer is $10 \times 10 / 2 = 50$? No, that assumes they order the *same* dish (indistinguishable). But here distinctness matters.  
+Wait, if "Yann orders Chicken" and "Camille orders Fish", this is a valid outcome. If we assume "Chicken" and "Fish" are specific types, does it matter that they cannot pick "the same dish" by index? Yes, usually implies index.  
+What if there were 2 items (Chicken, Apple)?  
+Yann=Chicken. Camille can't=Chicken. Camille must be Apple. (1).  
+Yann=Apple. Camille can't be Apple. Camille must be Chicken. (1).  
+Total = 2. $n \times (n-1)$.  
 
-    Wait, if they both pick Chicken and Apple is fine? No. "Same dish" refers to the specific physical item or type?  
-    Usually, in these problems, unless specified as identical items, dishes are distinct (Index 1, Index 2, etc.).  
-    Also "Chicken" vs "Fish". Are Chicken and Fish distinct indices? Yes.  
-    If "refuse to order the same dish" means they can't pick the specific item (e.g. Item #5).  
-    It works out to $10 \times 9$.  
+Wait, if they both pick Chicken and Apple is fine? No. "Same dish" refers to the specific physical item or type?  
+Usually, in these problems, unless specified as identical items, dishes are distinct (Index 1, Index 2, etc.).  
+Also "Chicken" vs "Fish". Are Chicken and Fish distinct indices? Yes.  
+If "refuse to order the same dish" means they can't pick the specific item (e.g. Item #5).  
+It works out to $10 \times 9$.  
 
-    What if the question meant: Yann chooses a *set* of items he eats, and Camille chooses a set? No, "each orders one".  
+What if the question meant: Yann chooses a *set* of items he eats, and Camille chooses a set? No, "each orders one".  
 
-    Is it possible that Yann can't order Chicken and Camille can't order Fish because... no.  
-    The phrase "refuse to order the same dish" applies to the outcome (Yann's choice vs Camille's choice).  
+Is it possible that Yann can't order Chicken and Camille can't order Fish because... no.  
+The phrase "refuse to order the same dish" applies to the outcome (Yann's choice vs Camille's choice).  
 
-    One subtle point: Does "combination of meals" refer to a combination for the restaurant? i.e., how many valid combinations of dishes are *possible* given that they are distinct people. It asks for the number of scenarios/choices they make.  
+One subtle point: Does "combination of meals" refer to a combination for the restaurant? i.e., how many valid combinations of dishes are *possible* given that they are distinct people. It asks for the number of scenarios/choices they make.  
 
-    Let's write down the steps clearly.  
-    Total dishes = 10.  
-    Yann's choice: Any dish (10 options).  
-    Camille's choice: Any dish except Yann's. ($10-1=9$ options).  
-    Calculation: $10 \times 9 = 90$.  
+Let's write down the steps clearly.  
+Total dishes = 10.  
+Yann's choice: Any dish (10 options).  
+Camille's choice: Any dish except Yann's. ($10-1=9$ options).  
+Calculation: $10 \times 9 = 90$.  
 
-    Is it possible the question is simpler? "How many different combinations of meals can they order?" -> This might imply that they order a meal as a unit (e.g., Meal A & B) and we are looking for the count of these unique pairs $\{Yann, Camille\}$. If order mattered ($Y,C$ vs $C,Y$), it's 90.  
-    However, could "combination" imply that $(Chicken, Fish)$ is just a set of items? No, because they are different diners. But if I say "The combination of meals is {Chicken, Fish}", does it imply *who* ate what? Not necessarily. But in the context of Yann and Camille as distinct actors, specifying their order is part of defining the state. The parenthetical clarifies this ambiguity: "Who orders what matters". This confirms we count $(Yann\_dish, Camille\_dish)$ pairs.  
+Is it possible the question is simpler? "How many different combinations of meals can they order?" -> This might imply that they order a meal as a unit (e.g., Meal A & B) and we are looking for the count of these unique pairs $\{Yann, Camille\}$. If order mattered ($Y,C$ vs $C,Y$), it's 90.  
+However, could "combination" imply that $(Chicken, Fish)$ is just a set of items? No, because they are different diners. But if I say "The combination of meals is {Chicken, Fish}", does it imply *who* ate what? Not necessarily. But in the context of Yann and Camille as distinct actors, specifying their order is part of defining the state. The parenthetical clarifies this ambiguity: "Who orders what matters". This confirms we count $(Yann\_dish, Camille\_dish)$ pairs.  
 
-    What if "different combinations" refers to the set $\{D_1, D_2\}$ being the same regardless of who ordered it?  
-    Let's re-read carefully: "It does matter who orders what---Yann ordering chicken and Camille ordering fish is different from Yann ordering fish and Camille ordering chicken."  
-    This sentence explicitly contrasts two states where only the assignment changes. In combinatorial counting, if these states are described as "different" (implying distinct possibilities) but usually "combinations" might not distinguish between them unless specified as "ordered tuples". Given the explicit contrast in the parenthesis, it strongly suggests that we should treat the assignment of specific dishes to specific people as a primary variable.  
-    However, there is a catch. If Yann and Camille are just two people, and we ask "how many combinations of meals they ordered", usually we would list the pair $(D_1, D_2)$. If I say "The combination of meals was Chicken and Fish", does that tell me anything about who got which?  
-    Actually, in standard English usage, "combos" often implies a set (e.g. a salad combo). But here they are specific diners.  
-    The parenthetical note is the key. It tells us to treat $(Chicken, Fish)$ and $(Fish, Chicken)$ as distinct.  
-    If I assume this means we simply need to count ordered pairs of disjoint sets from $\{1..10\}$? No, that would be $n(n-1)$.  
+What if "different combinations" refers to the set $\{D_1, D_2\}$ being the same regardless of who ordered it?  
+Let's re-read carefully: "It does matter who orders what---Yann ordering chicken and Camille ordering fish is different from Yann ordering fish and Camille ordering chicken."  
+This sentence explicitly contrasts two states where only the assignment changes. In combinatorial counting, if these states are described as "different" (implying distinct possibilities) but usually "combinations" might not distinguish between them unless specified as "ordered tuples". Given the explicit contrast in the parenthesis, it strongly suggests that we should treat the assignment of specific dishes to specific people as a primary variable.  
+However, there is a catch. If Yann and Camille are just two people, and we ask "how many combinations of meals they ordered", usually we would list the pair $(D_1, D_2)$. If I say "The combination of meals was Chicken and Fish", does that tell me anything about who got which?  
+Actually, in standard English usage, "combos" often implies a set (e.g. a salad combo). But here they are specific diners.  
+The parenthetical note is the key. It tells us to treat $(Chicken, Fish)$ and $(Fish, Chicken)$ as distinct.  
+If I assume this means we simply need to count ordered pairs of disjoint sets from $\{1..10\}$? No, that would be $n(n-1)$.  
 
-    Wait, could it mean combinations of *types*? i.e. {Chicken, Fish}? No, the menu items are "items".  
-    So, if there are 10 types.  
-    Yann picks type A. Camille picks type B ($A \neq B$).  
-    If order mattered (who picks what), it's $10 \times 9$.  
-    If order didn't matter between people (just the set of types picked by both), then it would be $\{A, B\}$.  
-    But since they are *different* diners, and "Who orders what matters", it is asking for permutations of the menu items into slots.  
+Wait, could it mean combinations of *types*? i.e. {Chicken, Fish}? No, the menu items are "items".  
+So, if there are 10 types.  
+Yann picks type A. Camille picks type B ($A \neq B$).  
+If order mattered (who picks what), it's $10 \times 9$.  
+If order didn't matter between people (just the set of types picked by both), then it would be $\{A, B\}$.  
+But since they are *different* diners, and "Who orders what matters", it is asking for permutations of the menu items into slots.  
 
-    Wait, does "refuse to order the same dish" imply that Yann and Camille cannot order the *same physical item*, or just that if one picks a specific type, the other can't pick that type? Yes.  
-    So, we have 10 distinct types. We are placing two marbles (Yann's choice and Camille's choice) on a board such that no marble is on the same spot? No, that's not right.  
-    It's: Choose $d_1 \in \{1..10\}$. Choose $d_2 \in \{1..10\}$ such that $d_2 \neq d_1$.  
-    This is exactly the definition of a surjective map or injection? No, just an ordered pair with distinct components.  
-    Count: 90.  
+Wait, does "refuse to order the same dish" imply that Yann and Camille cannot order the *same physical item*, or just that if one picks a specific type, the other can't pick that type? Yes.  
+So, we have 10 distinct types. We are placing two marbles (Yann's choice and Camille's choice) on a board such that no marble is on the same spot? No, that's not right.  
+It's: Choose $d_1 \in \{1..10\}$. Choose $d_2 \in \{1..10\}$ such that $d_2 \neq d_1$.  
+This is exactly the definition of a surjective map or injection? No, just an ordered pair with distinct components.  
+Count: 90.  
 
-    Let me double check if there's any tricky interpretation of "refuse to order the same dish" that implies something like they share a menu but can't pick the *exact* thing?  
-    If I order Chicken at 5 and you order Fish at 7, is it valid? Yes.  
-    Is it possible the question implies Yann orders {Chicken, Item A} and Camille orders {Fish, Item B}? No "each orders one dish".  
+Let me double check if there's any tricky interpretation of "refuse to order the same dish" that implies something like they share a menu but can't pick the *exact* thing?  
+If I order Chicken at 5 and you order Fish at 7, is it valid? Yes.  
+Is it possible the question implies Yann orders {Chicken, Item A} and Camille orders {Fish, Item B}? No "each orders one dish".  
 
-    Let's verify against the exact text again: "Yann ordering chicken and Camille ordering fish is different from Yann ordering fish and Camille ordering chicken."  
-    This confirms that $(D_Y=D_{chicken}, D_C=D_{fish})$ is distinct from $(D_Y=D_{fish}, D_C=D_{chicken})$.  
-    If they were unordered combinations, $(Chicken, Fish)$ and $(Fish, Chicken)$ would be the same "combination". The text proves they are different. Thus, we must distinguish them. This is an ordered sequence or assignment problem.  
-    Yann picks first (or second), Camille picks second (or first).  
-    The number of ways to pick $x_1$ from set of size 10 for Yann: 10.  
-    The number of ways to pick $x_2$ from the remaining set of size 9 for Camille: 9.  
-    Total = 90.  
+Let's verify against the exact text again: "Yann ordering chicken and Camille ordering fish is different from Yann ordering fish and Camille ordering chicken."  
+This confirms that $(D_Y=D_{chicken}, D_C=D_{fish})$ is distinct from $(D_Y=D_{fish}, D_C=D_{chicken})$.  
+If they were unordered combinations, $(Chicken, Fish)$ and $(Fish, Chicken)$ would be the same "combination". The text proves they are different. Thus, we must distinguish them. This is an ordered sequence or assignment problem.  
+Yann picks first (or second), Camille picks second (or first).  
+The number of ways to pick $x_1$ from set of size 10 for Yann: 10.  
+The number of ways to pick $x_2$ from the remaining set of size 9 for Camille: 9.  
+Total = 90.  
 
-    Let's quickly check if "combinations" can be interpreted as sets in a non-standard context. If Yann and Camille are indistinguishable, it would be 45. But they are distinct people (Yann vs Camille). The problem treats them as distinct entities ("who orders what").  
+Let's quickly check if "combinations" can be interpreted as sets in a non-standard context. If Yann and Camille are indistinguishable, it would be 45. But they are distinct people (Yann vs Camille). The problem treats them as distinct entities ("who orders what").  
 
-    So, the solution is $90$.  
+So, the solution is $90$.  
 
-    Wait, is there any interpretation where "refuse to order the same dish" means Yann cannot order *Chicken* if Camille orders *Chicken*? Yes. That's the standard reading.  
-    Could it mean they refuse to order a combination where their dishes are not distinct?  
-    Example: Can you combine 2 chickens and 0 fish into one meal? No, "each orders one dish".  
+Wait, is there any interpretation where "refuse to order the same dish" means Yann cannot order *Chicken* if Camille orders *Chicken*? Yes. That's the standard reading.  
+Could it mean they refuse to order a combination where their dishes are not distinct?  
+Example: Can you combine 2 chickens and 0 fish into one meal? No, "each orders one dish".  
 
-    Is there any constraint like Yann *must* pick Chicken? No.  
-    Is there any constraint like the menu items must be distinct from each other? Yes, obviously, but even if they were identical (e.g. all dishes are just 'Food'), then Yann cannot order 'Food' if Camille orders 'Food'.  
+Is there any constraint like Yann *must* pick Chicken? No.  
+Is there any constraint like the menu items must be distinct from each other? Yes, obviously, but even if they were identical (e.g. all dishes are just 'Food'), then Yann cannot order 'Food' if Camille orders 'Food'.  
 
-    Wait, what if the problem implies they choose meals from a pool of 10 *types* where "same dish" means type? Yes, that's what I did.  
+Wait, what if the problem implies they choose meals from a pool of 10 *types* where "same dish" means type? Yes, that's what I did.  
 
-    Is it possible the question is asking for the number of distinct *menus* available? No, "how many different combinations of meals can Yann and Camille order". It's about their specific selections.  
+Is it possible the question is asking for the number of distinct *menus* available? No, "how many different combinations of meals can Yann and Camille order". It's about their specific selections.  
 
-    Final check:  
-    Number of choices for Yann = 10.  
-    Number of choices for Camille = 9 (since she cannot pick the same dish).  
-    Since the question asks "How many different combinations" but clarifies that it matters who orders what, this refers to ordered pairs $(D_Y, D_C)$.  
-    Result: $10 \times 9 = 90$.  
+Final check:  
+Number of choices for Yann = 10.  
+Number of choices for Camille = 9 (since she cannot pick the same dish).  
+Since the question asks "How many different combinations" but clarifies that it matters who orders what, this refers to ordered pairs $(D_Y, D_C)$.  
+Result: $10 \times 9 = 90$.  
 
-    Let's think if there's any ambiguity in "refuse to order the same dish".  
-    Does it mean Yann picks A and Camille picks B is forbidden? No.  
-    It means $D_Y \neq D_C$.  
-    Is it possible they are allowed to pick the *same type* but different *items*?  
-    Example: "If there are 10 items...". The items are distinct entities.  
-    Usually, if there were multiple items of the same name (e.g. 2 chickens), "refusing to order the same dish" would be ambiguous. However, "Chicken" and "Fish" are listed as items on a menu, implying unique identifiers or types.  
-    Given the wording "If there are 10 items... how many combinations", usually we assume all 10 are distinct.  
-    If they were not distinct (e.g. 5 identical 'Chicken' dishes), and Yann picks one 'Chicken', can Camille pick 'Chicken'? Yes, they would still order the same dish type?  
-    The phrasing "refuse to order the same dish" usually applies to the specific item chosen by the person. Even if two people are both allowed to choose 'Chicken', that's a restriction on the set of all items available in the universe? No, usually in these riddles, dishes are distinct indices.  
-    Also "It matters who orders what"—if they could order the same dish (say 10 items of 'Chicken' exist), then picking 1 chicken by Yann and 1 chicken by Camille would result in a combination of meals being "Chickens". But that interpretation leads to $n^2$ or similar.  
-    The most standard reading is: 10 distinct dishes (e.g., Dishes 1-10). Yann selects one, Camille selects one from remaining.  
+Let's think if there's any ambiguity in "refuse to order the same dish".  
+Does it mean Yann picks A and Camille picks B is forbidden? No.  
+It means $D_Y \neq D_C$.  
+Is it possible they are allowed to pick the *same type* but different *items*?  
+Example: "If there are 10 items...". The items are distinct entities.  
+Usually, if there were multiple items of the same name (e.g. 2 chickens), "refusing to order the same dish" would be ambiguous. However, "Chicken" and "Fish" are listed as items on a menu, implying unique identifiers or types.  
+Given the wording "If there are 10 items... how many combinations", usually we assume all 10 are distinct.  
+If they were not distinct (e.g. 5 identical 'Chicken' dishes), and Yann picks one 'Chicken', can Camille pick 'Chicken'? Yes, they would still order the same dish type?  
+The phrasing "refuse to order the same dish" usually applies to the specific item chosen by the person. Even if two people are both allowed to choose 'Chicken', that's a restriction on the set of all items available in the universe? No, usually in these riddles, dishes are distinct indices.  
+Also "It matters who orders what"—if they could order the same dish (say 10 items of 'Chicken' exist), then picking 1 chicken by Yann and 1 chicken by Camille would result in a combination of meals being "Chickens". But that interpretation leads to $n^2$ or similar.  
+The most standard reading is: 10 distinct dishes (e.g., Dishes 1-10). Yann selects one, Camille selects one from remaining.  
 
-    Let's verify with "combinations" vs "permutations" language in math competitions.  
-    Usually, "How many ways can two people choose...?" -> $n(n-1)$ for distinct items and order matters between people (since Y!=C implies a permutation).  
-    If the question asked "How many combinations of dishes are there?", that would be $\binom{n}{2} \times 1$? No, usually set of dishes ordered. But since they have specific names, it's permutations.  
-    I will stick with 90.  
+Let's verify with "combinations" vs "permutations" language in math competitions.  
+Usually, "How many ways can two people choose...?" -> $n(n-1)$ for distinct items and order matters between people (since Y!=C implies a permutation).  
+If the question asked "How many combinations of dishes are there?", that would be $\binom{n}{2} \times 1$? No, usually set of dishes ordered. But since they have specific names, it's permutations.  
+I will stick with 90.  
 
-    Let's quickly check if there is any other interpretation where the answer is different.  
-    What if "combinations" refers to the set of pairs $(Y, C)$? That is what we counted.  
-    What if "refuse to order the same dish" means they pick a meal $M$ and they cannot have the *same* dish in their meal? i.e., Yann picks {D}, Camille picks {C} where D != C?  
-    This results in the same count: 90.  
-    What if "refuse to order the same dish" implies that both orders must be distinct items? (i.e. they cannot pick Chicken/Chicken). Same result.  
+Let's quickly check if there is any other interpretation where the answer is different.  
+What if "combinations" refers to the set of pairs $(Y, C)$? That is what we counted.  
+What if "refuse to order the same dish" means they pick a meal $M$ and they cannot have the *same* dish in their meal? i.e., Yann picks {D}, Camille picks {C} where D != C?  
+This results in the same count: 90.  
+What if "refuse to order the same dish" implies that both orders must be distinct items? (i.e. they cannot pick Chicken/Chicken). Same result.  
 
-    Is it possible the question implies Yann and Camille are picking a meal *together*? No, "each orders one dish".  
+Is it possible the question implies Yann and Camille are picking a meal *together*? No, "each orders one dish".  
 
-    So the calculation is robustly 90.  
+So the calculation is robustly 90.  
 
-    Wait, let me reread carefully: "If there are 10 items on the menu, and each orders one dish..."  
-    This means Yann picks $y \in Menu$, Camille picks $c \in Menu$.  
-    Condition: $y$ is not the same dish as $c$.  
-    If items are distinct: 90.  
-    If items were "Chicken", "Fish" etc. and they can order multiple types... well, that's the list.  
+Wait, let me reread carefully: "If there are 10 items on the menu, and each orders one dish..."  
+This means Yann picks $y \in Menu$, Camille picks $c \in Menu$.  
+Condition: $y$ is not the same dish as $c$.  
+If items are distinct: 90.  
+If items were "Chicken", "Fish" etc. and they can order multiple types... well, that's the list.  
 
-    Let's assume a potential trick where they order a combination of dishes *from each other*. No, "each orders one dish".  
+Let's assume a potential trick where they order a combination of dishes *from each other*. No, "each orders one dish".  
 
-    One small check on the word "combination". In everyday language, a combination often implies a set (e.g., you have a combo meal for me and a combo meal for you). If I ask "what combinations can they make", I might mean "How many different sets of two dishes did they order?"  
-    However, the parenthetical instruction "It does matter who orders what" is a  
+One small check on the word "combination". In everyday language, a combination often implies a set (e.g., you have a combo meal for me and a combo meal for you). If I ask "what combinations can they make", I might mean "How many different sets of two dishes did they order?"  
+However, the parenthetical instruction "It does matter who orders what" is a  
 
 ## Answer
 

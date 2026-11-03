@@ -30,35 +30,35 @@ $\vec{v} = C - B$
 
 Calculation steps:  
 1. Find coordinates of $A$, $B$, $C$.  
-   $A = (1, -11, 2)$  
-   $B = (3, -4, 1)$  
-   $C = (-2, 1, -1)$  
+$A = (1, -11, 2)$  
+$B = (3, -4, 1)$  
+$C = (-2, 1, -1)$  
 
 2. Calculate $\vec{u} = A - B = (1-3, -11 - (-4), 2-1) = (-2, -7, 1)$.  
-   Let's double check these coordinates and vector subtraction.  
-   $x_A - x_B = 1 - 3 = -2$.  
-   $y_A - y_B = -11 - (-4) = -7$.  
-   $z_A - z_B = 2 - 1 = 1$.  
-   So $\vec{u} = (-2, -7, 1)$.  
+Let's double check these coordinates and vector subtraction.  
+$x_A - x_B = 1 - 3 = -2$.  
+$y_A - y_B = -11 - (-4) = -7$.  
+$z_A - z_B = 2 - 1 = 1$.  
+So $\vec{u} = (-2, -7, 1)$.  
 
 3. Calculate $\vec{v} = C - B = (-2-3, 1 - (-4), -1 - 1) = (-5, 5, -2)$.  
-   Let's verify these coordinates and vector subtraction.  
-   $x_C - x_B = -2 - 3 = -5$.  
-   $y_C - y_B = 1 - (-4) = 5$.  
-   $z_C - z_B = -1 - 1 = -2$.  
-   So $\vec{v} = (-5, 5, -2)$.  
+Let's verify these coordinates and vector subtraction.  
+$x_C - x_B = -2 - 3 = -5$.  
+$y_C - y_B = 1 - (-4) = 5$.  
+$z_C - z_B = -1 - 1 = -2$.  
+So $\vec{v} = (-5, 5, -2)$.  
 
 4. Compute the dot product $\vec{u} \cdot \vec{v}$:  
-   $\vec{u} \cdot \vec{v} = u_x v_x + u_y v_y + u_z v_z$  
-   $= (-2)(-5) + (-7)(5) + (1)(-2)$  
-   $= 10 - 35 - 2$  
-   $= 10 - 35 = -25$  
-   $-25 - 2 = -27$? Wait.  
-   Let me recalculate:  
-   $u_x v_x = (-2) \times (-5) = 10$.  
-   $u_y v_y = (-7) \times 5 = -35$.  
-   $u_z v_z = (1) \times (-2) = -2$.  
-   Sum: $10 - 35 - 2 = -27$.  
+$\vec{u} \cdot \vec{v} = u_x v_x + u_y v_y + u_z v_z$  
+$= (-2)(-5) + (-7)(5) + (1)(-2)$  
+$= 10 - 35 - 2$  
+$= 10 - 35 = -25$  
+$-25 - 2 = -27$? Wait.  
+Let me recalculate:  
+$u_x v_x = (-2) \times (-5) = 10$.  
+$u_y v_y = (-7) \times 5 = -35$.  
+$u_z v_z = (1) \times (-2) = -2$.  
+Sum: $10 - 35 - 2 = -27$.  
 
 Wait, previously I got -27. Let me recheck the dot product calculation carefully.  
 $\vec{u} = (-2, -7, 1)$  
@@ -1616,8 +1616,8 @@ I will formulate the response now.
 
 Steps:  
 1. Calculate vectors $\vec{BA}$ and $\vec{BC}$.  
-   $\vec{BA} = A - B = (-2, -7, 1)$.  
-   $\vec{BC} = C - B = (-5, 5, -2)$.  
+$\vec{BA} = A - B = (-2, -7, 1)$.  
+$\vec{BC} = C - B = (-5, 5, -2)$.  
 2. Compute dot product $\vec{BA} \cdot \vec{BC} = (-2)(-5) + (-7)(5) + (1)(-2) = 10 - 35 - 2 = -27$.  
 3. Compute magnitudes: $|\vec{BA}|^2 = (-2)^2 + (-7)^2 + (1)^2 = 54$, so $|\vec{BA}| = \sqrt{54}$. Similarly for $\vec{BC}$.  
 4. Apply formula $\cos \theta = \frac{-27}{\sqrt{54}\sqrt{54}} = \frac{-27}{54} = -1/2$.  

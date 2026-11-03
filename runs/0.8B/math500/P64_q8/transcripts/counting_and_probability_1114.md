@@ -35,7 +35,7 @@ Here's my thought process for solving this problem:
     *   **List of numbers:** $\{1, 2, 3, 4, 5, 6\}$.  
     *   **Multiples of 5:** $0$ (no) and $5$ (yes).  
     *   The multiples of 5 in the set are:  
-        \*   5.  
+\*   5.  
 
     *   Wait, let's look at the condition "product of two numbers is a multiple of 5".  
     *   If I multiply any $a \times b$, can it be a multiple of 5?  

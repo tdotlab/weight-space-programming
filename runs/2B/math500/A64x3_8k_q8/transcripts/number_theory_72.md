@@ -159,7 +159,7 @@ Here's a thinking process that leads to the solution:
         *   11 -> 121
 ```
 
-    *   Step 3: Identify the 5th number.  
+*   Step 3: Identify the 5th number.  
 
 11. **Self-Correction/Edge Case Check:**  
     *   Did I miss any prime numbers? Primes are 2, 3, 5, 7, 11...  
@@ -331,7 +331,7 @@ Here's a thinking process that leads to the solution:
         *   11 -> 121
 ```
 
-    *   Fifth item: 121.  
+*   Fifth item: 121.  
 
     *   Just to ensure I don't mix up prime counting (number of primes vs list).  
     *   Primes are $P_n$. We need $n \in \{ p^2 : p \in P_1, ..., P_5 \}$. No, just the first 5 integers in the sorted list of numbers satisfying the condition.  
@@ -354,8 +354,8 @@ The integers with exactly three positive divisors are those that have a prime fa
 
 Here is the reasoning:  
 1.  **Condition for Exactly Three Divisors:** The number of positive divisors of an integer $n$, denoted as $\tau(n)$, can be determined from its prime factorization $n = p_1^{e_1} p_2^{e_2} \cdots$. The formula is $\tau(n) = (e_1 + 1)(e_2 + 1)\cdots$.  
-    To have exactly three divisors ($\tau(n) = 3$), we must have $(e_1 + 1) \times \dots = 3$. Since 3 is a prime number, the only way to achieve this product is if there is exactly one factor equal to 3. This implies $e_1 + 1 = 3$, so $e_1 = 2$.  
-    Thus, every integer with exactly three positive divisors must be the square of a prime number ($p^2$).  
+To have exactly three divisors ($\tau(n) = 3$), we must have $(e_1 + 1) \times \dots = 3$. Since 3 is a prime number, the only way to achieve this product is if there is exactly one factor equal to 3. This implies $e_1 + 1 = 3$, so $e_1 = 2$.  
+Thus, every integer with exactly three positive divisors must be the square of a prime number ($p^2$).  
 
 2.  **Listing the Numbers in Ascending Order:** We need to find the first five such integers. This requires listing all prime numbers $p$, squaring them, and arranging the results in ascending order.  
     *   The first few prime numbers are: $2, 3, 5, 7, 11, \dots$  

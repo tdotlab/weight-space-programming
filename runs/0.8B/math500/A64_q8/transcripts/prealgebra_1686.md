@@ -37,8 +37,8 @@ Here's my thought process for solving this problem:
         *   3
 ```
 
-        *   6 ($2 \times 3$)  
-        *   7 ($7 \times 1$ or $2 \times 3.5$, no, it's $7 \times 6$... etc. $42/1, 42/2, 42/3, 42/4, 42/6, 42/7, 42/8, 42/9, 42/10$.  
+*   6 ($2 \times 3$)  
+    *   7 ($7 \times 1$ or $2 \times 3.5$, no, it's $7 \times 6$... etc. $42/1, 42/2, 42/3, 42/4, 42/6, 42/7, 42/8, 42/9, 42/10$.  
         *   The factors of 42 are $1, 2, 3, 6, 7, 14, 21, 42$.  
 
 5.  **Interpret "Thinking of a positive factor":**  
@@ -308,7 +308,7 @@ Here's my thought process for solving this problem:
         *   42: 1, 2, 3, 6, 7, 14, 21, 42.
 ```
 
-        *   The set is $\{1, 2, 7\}$.  
+*   The set is $\{1, 2, 7\}$.  
 
     *   Could there be any trick related to "positive factor" meaning $x > n$? No, factor means divisor (usually $d \le n$, or just positive integer factor). If $x > n$, it's a multiple.  
     *   So factors are $1, d_1, d_2$.  

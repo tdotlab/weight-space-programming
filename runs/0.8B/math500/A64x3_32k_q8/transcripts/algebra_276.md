@@ -30,19 +30,19 @@ Comparing with $10x^2 - x - 24$:
 
 1. The term $10x^2$ comes from $ABx^2$. So, $AB = 10$.  
 2. The constant term is $-24$. In the expansion:  
-   $(Ax)(3) + (-8)(Bx) + (-8)(3)$? No.  
-   Term by term:  
-   $A x \cdot B x = ABx^2$  
-   $A x \cdot 3 = 3A x$  
-   $(-8) \cdot B x = -8B x$  
-   $(-8) \cdot (-8)?$ No, constant term from multiplication is product of constants. $(-8)(3) = -24$.  
+$(Ax)(3) + (-8)(Bx) + (-8)(3)$? No.  
+Term by term:  
+$A x \cdot B x = ABx^2$  
+$A x \cdot 3 = 3A x$  
+$(-8) \cdot B x = -8B x$  
+$(-8) \cdot (-8)?$ No, constant term from multiplication is product of constants. $(-8)(3) = -24$.  
 
-   So the expression becomes:  
-   $ABx^2 + (3A - 8B)x - 24$.  
+So the expression becomes:  
+$ABx^2 + (3A - 8B)x - 24$.  
 
-   The original expression is $10x^2 - x - 24$.  
-   Matching coefficients with powers of $x$:  
-   1. $AB = 10$  
+The original expression is $10x^2 - x - 24$.  
+Matching coefficients with powers of $x$:  
+1. $AB = 10$  
    2. Coefficient of $x$: $3A - 8B = -1$ (because the term is $-x$, i.e., $-x = -1x$, so $3A - 8B = -1$)  
 
 Let's solve for integers $A$ and $B$.  
@@ -80,7 +80,7 @@ Pairs of integers multiplying to 10.
 2) $A = 2, B = 5 \implies 3(2) - 8(5) = 6 - 40 = -34$. No.  
 3) $A = 3$ is not a factor (no integer factor 1).  
 4) $A = 5, B = 2 \implies 3(5) - 8(2) = 15 - 16 = -1$. YES.  
-   Here $A=5, B=2$.  
+Here $A=5, B=2$.  
 5) $A = -2, B = -5 \implies 3(-2) - 8(-5) = -6 + 40 = 34$. No.  
 6) $A = -1, B = -10 \implies 3(-1) - 8(-10) = -3 + 80 = 77$. No.  
 7) $A = -5, B = -2 \implies 3(-5) - 8(-2) = -15 + 16 = 1$. No.  
@@ -113,9 +113,9 @@ Pairs $(A, B)$:
 1. $(1, 10): 3(1) - 8(10) = 3 - 80 = -77$ (No)  
 2. $(2, 5): 3(2) - 8(5) = 6 - 40 = -34$ (No)  
 3. $(5, 2): 3(5) - 8(2) = 15 - 16 = -1$ (Yes)  
-   Here $A=5, B=2$.  
-   Or maybe signs are mixed? What about $(-5, -2)$? No, product is positive.  
-   $(-5, -2): 3(-5) - 8(-2) = -15 + 16 = 1$ (No)  
+Here $A=5, B=2$.  
+Or maybe signs are mixed? What about $(-5, -2)$? No, product is positive.  
+$(-5, -2): 3(-5) - 8(-2) = -15 + 16 = 1$ (No)  
 4. $(10, 1): 3(10) - 8(1) = 24 - 8 = 16$ (No).  
 
 So the only pair is $(A, B) = (5, 2)$.  
@@ -323,58 +323,58 @@ Let's check the $3A - 8B$ condition on each pair.
 1. $3(1) - 8(10) = 3 - 80 = -77$. No.  
 2. $3(2) - 8(5) = 6 - 40 = -34$. No.  
 3. $3(5) - 8(2) = 15 - 16 = -1$. YES.  
-   Pairs with solution: $(5, 2)$ and permutations if signs were different?  
-   Since we need integers A and B for the equation to hold. The factorization form requires A and B to be the coefficients in front of x in both terms.  
-   If we used $A = -2$ (leading coeff) but then sign was negative: $(-2x-8)(5x+3)$? No, $B$ would have to be 5. Then we get $(Ax-8)(Bx+3)$ with $x^2$ term $AB=10$.  
-   But in the expression $Ax-8$, if A is -5 and B is 2, we get $(-5x-8)(2x+3) = -10x^2 + \dots$ which is not our polynomial.  
-   The coefficient of $x^2$ must be positive 10 (or at least the sign matches).  
-   For $(Ax-8)(Bx+3)$ to produce $10x^2$, we need $AB = 10$.  
-   With pairs:  
-   $(5, 2) \implies AB=10$. Coeffs match.  
-   $(-5, -2) \implies AB=10$. If A=-5 and B=-2: $Ax-8 = -5x-8$. Product is $(A)(B)x^2 + (-8)(3)$? No.  
-   Let's re-verify the product expansion for $(A,B) = (-5, -2)$.  
-   $Ax-8$: $(-5x)-8$.  
-   $Bx+3$: $(-2x)+3$.  
-   Product: $(-5x)(-2x) + (-5x)(3) + (-8)(-2x) + (-8)(3)$  
-   $= 10x^2 - 15x + 16x - 24$  
-   $= 10x^2 + x - 24$.  
-   This is wrong. We need $10x^2 - x - 24$. So signs of the linear coefficients must match.  
-   In $(Ax-8)(Bx+3)$, coefficient of x is $A(3) + B(-8)$? No.  
-   Let's write carefully:  
-   $(A x - 8)(B x + 3) = A(B)x^2 + A(3)x + (-8)(B)x + (-8)(3)$  
-           $= ABx^2 + (3A - 8B)x - 24$.  
+Pairs with solution: $(5, 2)$ and permutations if signs were different?  
+Since we need integers A and B for the equation to hold. The factorization form requires A and B to be the coefficients in front of x in both terms.  
+If we used $A = -2$ (leading coeff) but then sign was negative: $(-2x-8)(5x+3)$? No, $B$ would have to be 5. Then we get $(Ax-8)(Bx+3)$ with $x^2$ term $AB=10$.  
+But in the expression $Ax-8$, if A is -5 and B is 2, we get $(-5x-8)(2x+3) = -10x^2 + \dots$ which is not our polynomial.  
+The coefficient of $x^2$ must be positive 10 (or at least the sign matches).  
+For $(Ax-8)(Bx+3)$ to produce $10x^2$, we need $AB = 10$.  
+With pairs:  
+$(5, 2) \implies AB=10$. Coeffs match.  
+$(-5, -2) \implies AB=10$. If A=-5 and B=-2: $Ax-8 = -5x-8$. Product is $(A)(B)x^2 + (-8)(3)$? No.  
+Let's re-verify the product expansion for $(A,B) = (-5, -2)$.  
+$Ax-8$: $(-5x)-8$.  
+$Bx+3$: $(-2x)+3$.  
+Product: $(-5x)(-2x) + (-5x)(3) + (-8)(-2x) + (-8)(3)$  
+$= 10x^2 - 15x + 16x - 24$  
+$= 10x^2 + x - 24$.  
+This is wrong. We need $10x^2 - x - 24$. So signs of the linear coefficients must match.  
+In $(Ax-8)(Bx+3)$, coefficient of x is $A(3) + B(-8)$? No.  
+Let's write carefully:  
+$(A x - 8)(B x + 3) = A(B)x^2 + A(3)x + (-8)(B)x + (-8)(3)$  
+$= ABx^2 + (3A - 8B)x - 24$.  
 
-   We need $AB=10$ and $3A-8B = -1$.  
-   For $(5, 2)$:  
-   $AB = 10$.  
-   $3(5) - 8(2) = 15 - 16 = -1$. Matches.  
+We need $AB=10$ and $3A-8B = -1$.  
+For $(5, 2)$:  
+$AB = 10$.  
+$3(5) - 8(2) = 15 - 16 = -1$. Matches.  
 
-   For $(-5, -2)$:  
-   $AB = (-5)(-2) = 10$.  
-   $3(-5) - 8(-2) = -15 + 16 = 1$. Fails.  
+For $(-5, -2)$:  
+$AB = (-5)(-2) = 10$.  
+$3(-5) - 8(-2) = -15 + 16 = 1$. Fails.  
 
-   What about negative factors?  
-   For $(A, B)$ pairs with product -10? No, leading coeff is 10 positive. So we need both A and B to be such that $AB=10$?  
-   If the coefficient of $x^2$ in $(Ax-8)(Bx+3)$ is $AB$.  
-   For it to be $10$, $A$ and $B$ must multiply to 10. Since $A, B \in \mathbb{Z}$, possible pairs are:  
-   1) $(5, 2)$ -> product 10.  
+What about negative factors?  
+For $(A, B)$ pairs with product -10? No, leading coeff is 10 positive. So we need both A and B to be such that $AB=10$?  
+If the coefficient of $x^2$ in $(Ax-8)(Bx+3)$ is $AB$.  
+For it to be $10$, $A$ and $B$ must multiply to 10. Since $A, B \in \mathbb{Z}$, possible pairs are:  
+1) $(5, 2)$ -> product 10.  
    2) $(-5, -2)$ -> product 10.  
    3) $(2, 5)$ -> product 10.  
    4) $(-2, 5)$ -> product -10.  
-   So $AB=10$ requires pairs like $(\pm 5, \pm 2)$.  
+So $AB=10$ requires pairs like $(\pm 5, \pm 2)$.  
 
-   Let's check the expansion for $(A, B) = (-5, 2)$?  
-   If A=-5 and B=2:  
-   Coeff of x^2 is -10. We want +10. So no.  
-   Coeff of x term? $3(-5) - 8(2) = -1$. Matches! But coeff of x^2 must be 10.  
+Let's check the expansion for $(A, B) = (-5, 2)$?  
+If A=-5 and B=2:  
+Coeff of x^2 is -10. We want +10. So no.  
+Coeff of x term? $3(-5) - 8(2) = -1$. Matches! But coeff of x^2 must be 10.  
 
-   What about A=2 and B=-5?  
-   Coeff of x^2 is -10. No, we need +10.  
-   If we assume coefficients can be swapped in the factors (i.e. the question might mean $(Bx-8)$ or something). But it says $(Ax-8)(Bx+3)$.  
+What about A=2 and B=-5?  
+Coeff of x^2 is -10. No, we need +10.  
+If we assume coefficients can be swapped in the factors (i.e. the question might mean $(Bx-8)$ or something). But it says $(Ax-8)(Bx+3)$.  
 
-   So only positive integer solution works for $AB=10$.  
-   And we found $(5, 2)$ is a valid solution.  
-   Thus $A=5$ and $B=2$.  
+So only positive integer solution works for $AB=10$.  
+And we found $(5, 2)$ is a valid solution.  
+Thus $A=5$ and $B=2$.  
 
 Let me consider if I can write the expression as $(Ax-8)(Bx+3)$ where $A$ or $B$ could be non-integers. But the problem specifies integers. So my derivation holds.  
 
@@ -471,18 +471,18 @@ The only integer solution for $AB=10$ is $(\pm 5, \pm 2)$? No, $(A,B)$ pairs pro
 Pairs: $\{ (1,10), (10,1) \}$ and $\{(2,5), (5,2)\}$. And their negatives.  
 $(A,B)$ values are:  
 1. $(-1,-10) \implies AB=10$. But signs don't match $3A-8B=-1$?  
-   $3(-1) - 8(-10) = -3 + 80 = 77 \neq -1$.  
+$3(-1) - 8(-10) = -3 + 80 = 77 \neq -1$.  
 2. $(-1,10) \implies AB=10$. $-3 - 80 = -83$.  
 3. $(5, -2) \implies AB=-10$. Fails leading coeff requirement (if we consider standard expansion).  
-   If $A=5, B=-2$: product is $-10$. Then linear term coeff is $3(5)-8(-2)=15+16=31$ or something? No, the coefficient of $x^2$ is $AB x^2 = -10x^2$.  
-   This does not match $10x^2$.  
+If $A=5, B=-2$: product is $-10$. Then linear term coeff is $3(5)-8(-2)=15+16=31$ or something? No, the coefficient of $x^2$ is $AB x^2 = -10x^2$.  
+This does not match $10x^2$.  
 4. $(5, 2) \implies AB=10$. Linear term: $3(5)-8(2)=-1$. Matches.  
 5. $(-5,-2)$ product is $10$. But linear coeff check?  
-   $A=-5, B=-2$. $3(-5) - 8(-2) = -15 + 16 = 1$. Fails.  
-   The expansion would be $(Ax-8)(Bx+3)$ with $A=-5, B=-2 \implies (-5x-8)(-2x+3)$.  
-   Wait. If I use the factors from my list $(A,B) = (5, 2)$, then $A=5, B=2$.  
-   Then product is $(5x-8)(2x+3) = 10x^2 + \dots$ No, it matches signs!  
-   If I use $(A,B)=(-5, -2)$? No, that gives linear coeff wrong.  
+$A=-5, B=-2$. $3(-5) - 8(-2) = -15 + 16 = 1$. Fails.  
+The expansion would be $(Ax-8)(Bx+3)$ with $A=-5, B=-2 \implies (-5x-8)(-2x+3)$.  
+Wait. If I use the factors from my list $(A,B) = (5, 2)$, then $A=5, B=2$.  
+Then product is $(5x-8)(2x+3) = 10x^2 + \dots$ No, it matches signs!  
+If I use $(A,B)=(-5, -2)$? No, that gives linear coeff wrong.  
 
 So indeed the only valid solution is $A=5, B=2$.  
 This leads to $AB+B = 10+2 = 12$.  
@@ -639,44 +639,44 @@ The answer is 12.
 To find the value of $AB+B$ given the factorization $10x^2 - x - 24 = (Ax-8)(Bx+3)$ where $A$ and $B$ are integers, we can follow these steps:  
 
 1.  **Expand the Right Hand Side (RHS):**  
-    We expand the expression $(Ax-8)(Bx+3)$.  
-    $$ (Ax - 8)(Bx + 3) = A(Bx)x^2 \text{? No, } (Ax)(Bx) = ABx^2 $$  
-    The cross terms involving $x$ are:  
-    $$ A(x)(3) + (-8)(Bx) = 3A - 8B $$  
-    There is no constant term from the product of the two linear terms? No, it's a product.  
-    Let's expand carefully using the distribution property:  
-    $$(Ax-8)(Bx+3) = A x \cdot B x + A x \cdot 3 + (-8) \cdot B x + (-8) \cdot 3$$  
-    $$ = ABx^2 + 3A - 8Bx - 24$$  
+We expand the expression $(Ax-8)(Bx+3)$.  
+$$ (Ax - 8)(Bx + 3) = A(Bx)x^2 \text{? No, } (Ax)(Bx) = ABx^2 $$  
+The cross terms involving $x$ are:  
+$$ A(x)(3) + (-8)(Bx) = 3A - 8B $$  
+There is no constant term from the product of the two linear terms? No, it's a product.  
+Let's expand carefully using the distribution property:  
+$$(Ax-8)(Bx+3) = A x \cdot B x + A x \cdot 3 + (-8) \cdot B x + (-8) \cdot 3$$  
+$$ = ABx^2 + 3A - 8Bx - 24$$  
 
 2.  **Compare Coefficients:**  
-    The given expression is $10x^2 - x - 24$.  
-    Comparing the terms with powers of $x$ on both sides:  
+The given expression is $10x^2 - x - 24$.  
+Comparing the terms with powers of $x$ on both sides:  
     *   The coefficient of $x^2$ must be equal to $10$:  
-        $$ AB = 10 $$  
+$$ AB = 10 $$  
     *   The coefficient of $x$ (linear term) must match the given expression's coefficient, which is $-1$. In our expansion, it is $(3A - 8B)$:  
-        $$ 3A - 8B = -1 $$  
+$$ 3A - 8B = -1 $$  
 
 3.  **Find Integers A and B:**  
-    We need to find integer pairs $(A, B)$ such that their product is 10 ($AB=10$) and $3A - 8B = -1$.  
+We need to find integer pairs $(A, B)$ such that their product is 10 ($AB=10$) and $3A - 8B = -1$.  
 
-    Possible integer factor pairs for 10 are: $\{(1, 10), (2, 5), (-5, -2)\}$ and their negatives. Since we want the leading coefficient of the quadratic to be positive, and standard factorization forms $(Ax-8)(Bx+3)$ imply that $AB$ is determined by the signs in the expansion if we consider $AB=10$, let's check which pairs satisfy both conditions.  
-    *   Consider the pair $(A, B) = (5, 2)$:  
-        $AB = 5 \times 2 = 10$. Correct.  
-        Check the linear term equation:  
-        $$ 3(5) - 8(2) = 15 - 16 = -1 $$  
-        This matches the condition for the expression's coefficient of $x$.  
+Possible integer factor pairs for 10 are: $\{(1, 10), (2, 5), (-5, -2)\}$ and their negatives. Since we want the leading coefficient of the quadratic to be positive, and standard factorization forms $(Ax-8)(Bx+3)$ imply that $AB$ is determined by the signs in the expansion if we consider $AB=10$, let's check which pairs satisfy both conditions.  
+*   Consider the pair $(A, B) = (5, 2)$:  
+$AB = 5 \times 2 = 10$. Correct.  
+Check the linear term equation:  
+$$ 3(5) - 8(2) = 15 - 16 = -1 $$  
+This matches the condition for the expression's coefficient of $x$.  
 
-    Let's briefly check other pairs to be sure there are no others.  
-    *   Consider $(A, B) = (-5, 2)$: $AB=10$, but linear term would be $3(-5)-8(2) = -15+16=1 \neq -1$.  
+Let's briefly check other pairs to be sure there are no others.  
+*   Consider $(A, B) = (-5, 2)$: $AB=10$, but linear term would be $3(-5)-8(2) = -15+16=1 \neq -1$.  
     *   Consider $(A, B) = (2, -5)$: $AB=10$, but $3(2)-8(-5)=6-40=-34 \neq -1$.  
 
-    So the only solution is $A=5$ and $B=2$.  
-    (Note: The question does not specify positive integers for A and B, so $(5, 2)$ is a valid solution where both are integers).  
+So the only solution is $A=5$ and $B=2$.  
+(Note: The question does not specify positive integers for A and B, so $(5, 2)$ is a valid solution where both are integers).  
 
 4.  **Calculate AB + B:**  
-    Using $A=5$ and $B=2$:  
-    $$ AB = 10 $$  
-    $$ B = 2 $$  
-    $$ AB + B = 10 + 2 = 12 $$  
+Using $A=5$ and $B=2$:  
+$$ AB = 10 $$  
+$$ B = 2 $$  
+$$ AB + B = 10 + 2 = 12 $$  
 
 \boxed{12}  

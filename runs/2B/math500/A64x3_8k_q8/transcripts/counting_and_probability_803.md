@@ -79,89 +79,89 @@ Here's a thinking process to solve the problem:
     *   Area(E) = $\frac{1}{2} \cdot 4 \cdot 4 = 8$.  
     *   Prob = $8/32 = 1/4$.  
 
-    Let's quickly check if there is any ambiguity. "0 <= x <= 8". "0 <= y <= 4".  
-    It's a standard geometry probability problem.  
-    Total Area: $W \times H = 8 \times 4 = 32$.  
-    Favorable Area: Defined by $y = -x + 4$ with $x,y \ge 0$. The region is a right triangle with legs 4 and 4. Area = 8.  
-    Probability = $8/32 = 1/4$.  
+Let's quickly check if there is any ambiguity. "0 <= x <= 8". "0 <= y <= 4".  
+It's a standard geometry probability problem.  
+Total Area: $W \times H = 8 \times 4 = 32$.  
+Favorable Area: Defined by $y = -x + 4$ with $x,y \ge 0$. The region is a right triangle with legs 4 and 4. Area = 8.  
+Probability = $8/32 = 1/4$.  
 
-    Let's verify again.  
-    Is it possible the question implies an ordering or something else? No, just "randomly selected" usually implies uniform distribution on the area.  
+Let's verify again.  
+Is it possible the question implies an ordering or something else? No, just "randomly selected" usually implies uniform distribution on the area.  
 
-    Could the region be a polygon that includes more?  
-    The intersection of $x+y \le 4$ with the first quadrant is the triangle vertices $(0,0), (4,0), (0,4)$.  
-    This triangle lies completely inside the rectangle $[0,8] \times [0,4]$ because the farthest point in x-direction on this triangle is $x=4$, which is $\le 8$. The farthest in y is $y=4$, which is equal to the boundary.  
-    Therefore, no additional area subtraction or inclusion needs to be considered based on the rectangle bounds.  
+Could the region be a polygon that includes more?  
+The intersection of $x+y \le 4$ with the first quadrant is the triangle vertices $(0,0), (4,0), (0,4)$.  
+This triangle lies completely inside the rectangle $[0,8] \times [0,4]$ because the farthest point in x-direction on this triangle is $x=4$, which is $\le 8$. The farthest in y is $y=4$, which is equal to the boundary.  
+Therefore, no additional area subtraction or inclusion needs to be considered based on the rectangle bounds.  
 
-    Final check of arithmetic:  
-    $8/32 = 1/4$.  
-    The probability is $0.25$.  
+Final check of arithmetic:  
+$8/32 = 1/4$.  
+The probability is $0.25$.  
 
-    Is there any tricky interpretation?  
-    "point $(x,y)$"  
-    Maybe polar coordinates? No, simple Cartesian integration works and matches intuition.  
+Is there any tricky interpretation?  
+"point $(x,y)$"  
+Maybe polar coordinates? No, simple Cartesian integration works and matches intuition.  
 
-    Steps to write down:  
-    1. Define the sample space as a rectangle in the xy-plane.  
-    2. Calculate total area.  
+Steps to write down:  
+1. Define the sample space as a rectangle in the xy-plane.  
+   2. Calculate total area.  
     3. Define the region satisfying $x+y \le 4$ within that rectangle (implicitly constrained by non-negative coordinates, though standard for such problems unless specified otherwise).  
     4. Calculate the favorable area.  
     5. Divide favorable by total.  
 
-    Step 1:  
-    The sample space is the set of points $(x,y)$ such that $0 \le x \le 8$ and $0 \le y \le 4$.  
-    Area = $(8-0) \times (4-0) = 32$.  
+Step 1:  
+The sample space is the set of points $(x,y)$ such that $0 \le x \le 8$ and $0 \le y \le 4$.  
+Area = $(8-0) \times (4-0) = 32$.  
 
-    Step 2 & 3:  
-    We need to find the area of the region where $x+y \le 4$ within this sample space.  
-    Since $x$ and $y$ must be non-negative (implied by the bounds), this condition implies $y \le -x + 4$.  
-    The vertices of the feasible region are determined by intersections:  
-    $(0,0)$ -> $0+0=0 \le 4$ (Yes)  
-    $(4,0)$ -> $4+0=4 \le 4$ (Yes) and on boundary  
-    $(0,4)$ -> $0+4=4 \le 4$ (Yes) and on boundary  
+Step 2 & 3:  
+We need to find the area of the region where $x+y \le 4$ within this sample space.  
+Since $x$ and $y$ must be non-negative (implied by the bounds), this condition implies $y \le -x + 4$.  
+The vertices of the feasible region are determined by intersections:  
+$(0,0)$ -> $0+0=0 \le 4$ (Yes)  
+$(4,0)$ -> $4+0=4 \le 4$ (Yes) and on boundary  
+$(0,4)$ -> $0+4=4 \le 4$ (Yes) and on boundary  
 
-    Step 4:  
-    The region satisfying the condition is a right-angled triangle with base 4 (along x-axis) and height 4 (along y-axis).  
-    Area = $\frac{1}{2} \times 4 \times 4 = 8$.  
-    Since the line $x+y=4$ is far below $x=8$, it doesn't extend beyond the bounds of the rectangle on the x-axis or y-axis, so this entire triangle is inside the main rectangle.  
+Step 4:  
+The region satisfying the condition is a right-angled triangle with base 4 (along x-axis) and height 4 (along y-axis).  
+Area = $\frac{1}{2} \times 4 \times 4 = 8$.  
+Since the line $x+y=4$ is far below $x=8$, it doesn't extend beyond the bounds of the rectangle on the x-axis or y-axis, so this entire triangle is inside the main rectangle.  
 
-    Step 5:  
-    Probability = $\frac{8}{32} = \frac{1}{4}$.  
+Step 5:  
+Probability = $\frac{8}{32} = \frac{1}{4}$.  
 
-    The solution seems solid.  
+The solution seems solid.  
 
-    Double check arithmetic:  
-    $1/2 * 4 * 4 = 8$.  
-    $8*4 = 32$.  
-    $8/32 = 1/4$.  
+Double check arithmetic:  
+$1/2 * 4 * 4 = 8$.  
+$8*4 = 32$.  
+$8/32 = 1/4$.  
 
-    Looks correct.  
+Looks correct.  
 
-    Final Answer formulation:  
-    - Identify total area $A = 32$.  
-    - Identify favorable area $B = 8$.  
+Final Answer formulation:  
+- Identify total area $A = 32$.  
+  - Identify favorable area $B = 8$.  
     - Calculate ratio.  
     - Simplify fraction.  
 
-    One edge case thought: What if the problem meant a region like "x <= 4" and "y <= 4"? No, it's specifically x+y <= 4.  
-    What if the bounds were different? Say $x \le 1$ and $y \le 4$. Then triangle is still area $\frac{1}{2} \cdot 4 \cdot 4 = 8$ because the max possible x is constrained to 4 anyway by the line equation. If the rectangle was very small, say $x \le 0.5$, then the region would be cut off. But here the rectangle is large enough ($x_{max}=8$, $y_{max}=4$) so it captures the full triangle defined by $x+y \le 4$.  
+One edge case thought: What if the problem meant a region like "x <= 4" and "y <= 4"? No, it's specifically x+y <= 4.  
+What if the bounds were different? Say $x \le 1$ and $y \le 4$. Then triangle is still area $\frac{1}{2} \cdot 4 \cdot 4 = 8$ because the max possible x is constrained to 4 anyway by the line equation. If the rectangle was very small, say $x \le 0.5$, then the region would be cut off. But here the rectangle is large enough ($x_{max}=8$, $y_{max}=4$) so it captures the full triangle defined by $x+y \le 4$.  
 
-    The constraints are:  
-    $x \ge 0$  
-    $y \ge 0$  
-    $x \le 8$  
-    $y \le 4$  
-    Condition: $x + y \le 4$  
+The constraints are:  
+$x \ge 0$  
+$y \ge 0$  
+$x \le 8$  
+$y \le 4$  
+Condition: $x + y \le 4$  
 
-    From $x + y \le 4$, we have $x \le 4 - y$. Since $y \ge 0$, $x \le 4$. Since the problem requires $x \le 8$, the condition $x \le 4$ is tighter. Thus, for any valid point in the rectangle, $x$ is automatically bounded by 4 if it also satisfies $x+y \le 4$.  
+From $x + y \le 4$, we have $x \le 4 - y$. Since $y \ge 0$, $x \le 4$. Since the problem requires $x \le 8$, the condition $x \le 4$ is tighter. Thus, for any valid point in the rectangle, $x$ is automatically bounded by 4 if it also satisfies $x+y \le 4$.  
 
-    The favorable region is the set of points $(x,y)$ where $0 \le x \le 4$, $0 \le y \le 4$, and $y \le 4-x$. This defines the triangle with vertices $(0,0), (4,0), (0,4)$.  
-    The area is indeed 8.  
-    The probability is $1/4$.  
+The favorable region is the set of points $(x,y)$ where $0 \le x \le 4$, $0 \le y \le 4$, and $y \le 4-x$. This defines the triangle with vertices $(0,0), (4,0), (0,4)$.  
+The area is indeed 8.  
+The probability is $1/4$.  
 
-    Let's write out the response steps clearly.  
-    1. Total Area calculation.  
-    2. Probability region definition.  
+Let's write out the response steps clearly.  
+1. Total Area calculation.  
+   2. Probability region definition.  
     3. Favorable Area calculation.  
     4. Division and simplification.  
 

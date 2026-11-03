@@ -77,12 +77,12 @@ Here is a thinking process to solve the problem:
         *   If it passes through midpoints of $AB$ and $CD$, then since $ABCD$ is regular, the segment $AD$ connects vertices. $AB$ and $CD$ are opposite sides? No, $AB$ and $CD$ are adjacent?  
         *   Let's denote the edges as edges meeting at a vertex, say $A$. The edges meeting at $C$ are $AC$, $AD$, $CB$. $AB$ connects $A,B$.  
         *   If we consider a regular tetrahedron $ABCD$, let's place it on coordinates.  
-            Let the vertices be $(0,0,0)$, etc? No, that might be messy.  
-            Let's use the property: A plane passing through midpoints of edges $AB$ and $CD$.  
-            Is there a standard configuration where this yields a symmetric result?  
-            The midpoint of $AB$ is on the face connecting $A,B$? No, $AB$ are vertices.  
-            The midpoint $M_{AB}$ lies on line segment $AB$.  
-            The plane passes through $M_{AB}$ and intersects the tetrahedron?  
+Let the vertices be $(0,0,0)$, etc? No, that might be messy.  
+Let's use the property: A plane passing through midpoints of edges $AB$ and $CD$.  
+Is there a standard configuration where this yields a symmetric result?  
+The midpoint of $AB$ is on the face connecting $A,B$? No, $AB$ are vertices.  
+The midpoint $M_{AB}$ lies on line segment $AB$.  
+The plane passes through $M_{AB}$ and intersects the tetrahedron?  
 
     *   Let's re-evaluate "parallel to edges AB and CD". If this means the plane is perpendicular to the edge vectors, it defines a direction.  
     *   In 2D geometry problems, "edges" usually refers to lines in the plane containing the polygon (tetrahedron is not planar in a general sense).  

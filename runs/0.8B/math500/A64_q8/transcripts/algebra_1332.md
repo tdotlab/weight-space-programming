@@ -402,11 +402,11 @@ Here's my thought process for solving this problem:
 To solve this problem, we need to interpret Daniel's relationship as stated in the text and use it to find the population of television sales for a new cost price.  
 
 1.  **Identify the Variable Relationship:**  
-    The problem states that the popularity (measured in the number of customers/buying events) is inversely proportional to its cost. Let $C$ be the cost and $N$ be the popularity.  
-    This implies an inverse relationship: $N = \frac{k}{C}$, where $k$ is a constant of proportionality.  
+The problem states that the popularity (measured in the number of customers/buying events) is inversely proportional to its cost. Let $C$ be the cost and $N$ be the popularity.  
+This implies an inverse relationship: $N = \frac{k}{C}$, where $k$ is a constant of proportionality.  
 
 2.  **Determine the Constant ($k$) from the First Data Point:**  
-    The problem gives us a scenario: "If 15 customers buy a television that costs $$1500".
+The problem gives us a scenario: "If 15 customers buy a television that costs $$1500".
     This implies that at a cost of \$1500, the number of customers (popularity) is 15.
 
     Using the relationship $N = \frac{k}{C}$, we can set up the equation:
@@ -419,18 +419,18 @@ To solve this problem, we need to interpret Daniel's relationship as stated in t
 3.  **Apply to the Second Scenario:**
     We need to find how many customers would buy a television that costs $$2500, using Daniel's theory and the calculated constant.
 
-    Using the relationship $N = \frac{k}{C}$ with the new cost of \$2500:  
-    $N = \frac{22500}{2500}$  
+Using the relationship $N = \frac{k}{C}$ with the new cost of \$2500:  
+$N = \frac{22500}{2500}$  
 
 4.  **Calculate the Result:**  
-    Simplify the fraction:  
-    $N = \frac{22500}{2500}$  
-    $N = \frac{225}{25}$ (canceling out one zero)  
-    $N = \frac{9}{1}$  
-    $N = 9$  
+Simplify the fraction:  
+$N = \frac{22500}{2500}$  
+$N = \frac{225}{25}$ (canceling out one zero)  
+$N = \frac{9}{1}$  
+$N = 9$  
 
-    Alternatively, calculate $22500 / 2500$:  
-    $22500 / 2500 = 9$.  
+Alternatively, calculate $22500 / 2500$:  
+$22500 / 2500 = 9$.  
 
 Thus, according to Daniel's theory, there would be **9** customers buying the television.  
 

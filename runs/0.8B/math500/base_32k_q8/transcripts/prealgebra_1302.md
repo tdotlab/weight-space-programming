@@ -341,7 +341,7 @@ Here's my thought process for simplifying $\sqrt{242}$:
                             *   Wait, let's restart with standard algorithm for simplifying $\sqrt{n}$ where $n$ is an integer.  
                                 1. Find the prime factorization of $n$.  
                                 2. Extract any squared prime factors (like 4, 9) from $n$. Write them in simplified form to get a product of integers (the number $k$ and then multiply by $\sqrt{\text{squarefree part}}$).  
-                                    *   Actually, simpler: The expression $\sqrt{n}$ can be written as $a\sqrt{b}$. If we have prime factors, check if they are perfect squares.  
+                                   *   Actually, simpler: The expression $\sqrt{n}$ can be written as $a\sqrt{b}$. If we have prime factors, check if they are perfect squares.  
                                 3. For example, $242 = 2 \cdot 121 = 2 \cdot 11^2$. No, wait.  
                                 *   Let's just use the algorithm:  
                                     *   Write $n$ as product of primes: $n = p_1^{e_1} \dots p_k^{e_k}$.  
@@ -789,7 +789,7 @@ Here's my thought process for simplifying $\sqrt{242}$:
                                                                     *   Wait, if $n = p_1^{a_1} \dots$, then we can pull out squares from the radicand.  
                                                                     *   Here, exponents are $1, 2$.  
                                                                     *   If $n = k \cdot m$ where $\sqrt{m}$ has a rational part?  
-                                                                            *   Wait, if $m = 11^2$, then $\sqrt{n} = \sqrt{2} \cdot \sqrt{11^2} = 11\sqrt{2}$.  
+                                                                        *   Wait, if $m = 11^2$, then $\sqrt{n} = \sqrt{2} \cdot \sqrt{11^2} = 11\sqrt{2}$.  
                                                                             *   Is this simplification correct?  
                                                                             *   If I have $\sqrt{36}$, answer is 6. Here $36 = 36 \times 1$ (no). $36 = 3 \cdot 12$? No. $36 = 4 \cdot 9$. So $3\sqrt{9} \cdot 12 = 6\sqrt{3}$ no.  
                                                                             *   Wait, if I write $\sqrt{n}$ and it has a rational part inside the radical? No.  
@@ -851,7 +851,7 @@ Here's my thought process for simplifying $\sqrt{242}$:
                                                                                             *   Is it possible the number ends with ...5? Then odd/even check. No, just parity.  
                                                                                             *   Okay, I am confident that 242 is divisible by 11.  
                                                                                 *   Wait, what if $n=2$? It's not divisible by 11 (divisible by $2^{2-1}$?). No.  
-                                                                                        *   $2 = 1 \cdot 2$. Not div by 11.  
+                                                                                    *   $2 = 1 \cdot 2$. Not div by 11.  
                                                                                         *   So why does $242$ have a factor $11$?  
                                                                                             *   Wait, $242 / 11 = 22$. Yes.  
                                                                                             *   If $n=13$, $\sqrt{13}$ not integer.  
@@ -1020,7 +1020,7 @@ Here's my thought process for simplifying $\sqrt{242}$:
                                                                                                     *   Is it possible the question implies $n$ is an integer and we just want to extract integer parts if present?  
                                                                                                         *   Example: $\sqrt{56} = \sqrt{4 \cdot 14}$. The factor 4 simplifies to $2^2$ which is a perfect square.  
                                                                                                     *   Here, my "square factors" are $11^2$. Wait.  
-                                                                                                            *   Is $242$ divisible by $11^2$? No. $242 / 11^2 = 242 / 121 = 2$. Yes!  
+                                                                                                        *   Is $242$ divisible by $11^2$? No. $242 / 11^2 = 242 / 121 = 2$. Yes!  
                                                                                                             *   So $242 = 11^2 \cdot 2$.  
                                                                                                             *   So the factors of 242 are $2$ and $11^2$.  
                                                                                                             *   Is $11^2$ a "square" factor? Yes. It's a perfect square number.  

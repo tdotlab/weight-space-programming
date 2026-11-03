@@ -14,7 +14,7 @@ The problem asks for the sum of $\frac{2^a}{3^b 5^c}$ over all triples $(a,b,c)$
 Let's denote the condition that $(a,b,c) \in T$ by:  
 1. $a, b, c \in \mathbb{Z}^+$ (positive integers).  
 2. There exist a triangle with sides $a, b, c$. This is equivalent to the triangle inequalities:  
-   $a + b > c$, $b + c > a$, and $c + a > b$.  
+$a + b > c$, $b + c > a$, and $c + a > b$.  
 
 We want to compute $S = \sum_{(a,b,c) \in T} 2^a 3^{-b} 5^{-c}$.  
 Wait, the formula is $\frac{2^a}{3^b 5^c}$. Since it's an infinite sum (since there are infinitely many integers), we need to check if it converges. The terms decrease as exponents increase. For large $a,b,c$, the term is small.  

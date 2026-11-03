@@ -277,16 +277,16 @@ The condition is $(x-1)^2 \le x^2+P(x) ...$ no.
 Let's go back to $\phi(y) = Py^2 + Qy + R$.  
 Constraints:  
 1. $\phi(y) \ge y^2 + 1 \implies (\alpha-1)y^2 + (2\alpha+Q)y + (\alpha+R) \ge y^2 + 1$.  
-   This leads to $P_0 y^2 + P_1 y + P_0 - 2 = ...$ no.  
-   $\phi(y) \ge y^2+1$ is the condition for ALL $y$.  
-   Since $\phi(y)$ is quadratic, let's consider it as a graph.  
-   The lower bound curve $L(x) = (x-1)^2 + 1$ is tangent to the upper bound curve $H(x) = 2(x-1)^2 + 1$ at $(1,1)$.  
-   Since $\phi(y)$ lies between them and is a polynomial, does it have to be tangent?  
-   Suppose $\phi(y) \neq L(y)$ for some $y$. Then since they are both convex, the region between them is non-empty.  
-   However, we are in 1D. The difference is a function.  
-   Let's check if $\phi(y)$ can strictly satisfy this.  
-   If $\phi(y) > y^2+1$ for some $y$, then it's fine.  
-   But for all $y$.  
+This leads to $P_0 y^2 + P_1 y + P_0 - 2 = ...$ no.  
+$\phi(y) \ge y^2+1$ is the condition for ALL $y$.  
+Since $\phi(y)$ is quadratic, let's consider it as a graph.  
+The lower bound curve $L(x) = (x-1)^2 + 1$ is tangent to the upper bound curve $H(x) = 2(x-1)^2 + 1$ at $(1,1)$.  
+Since $\phi(y)$ lies between them and is a polynomial, does it have to be tangent?  
+Suppose $\phi(y) \neq L(y)$ for some $y$. Then since they are both convex, the region between them is non-empty.  
+However, we are in 1D. The difference is a function.  
+Let's check if $\phi(y)$ can strictly satisfy this.  
+If $\phi(y) > y^2+1$ for some $y$, then it's fine.  
+But for all $y$.  
 
 Let's test specific candidates.  
 Usually in such problems, the polynomial is $P(x) = 2(x-1)^2 + c' (x-1) + d'$?  

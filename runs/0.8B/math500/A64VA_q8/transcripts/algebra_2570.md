@@ -54,13 +54,13 @@ Here's my thought process for solving this problem:
         *   $29 \times 7 = 203$.  
     *   Let's list them up:  
         14. $7 \times 14 = 98$ (Wait, 100 > 98).  
-        Okay, let me just count the multiples of 7 between 100 and 200 directly without listing them until I calculate the sum.  
+Okay, let me just count the multiples of 7 between 100 and 200 directly without listing them until I calculate the sum.  
 
     *   Range: [100, 200].  
     *   Multiples are $x$ where $x = 7k$.  
     *   Max multiple: $200 = 7 \times 28$?  
-        $7 \times 20 = 140$.  
-        $7 \times 30 = 210$.  
+$7 \times 20 = 140$.  
+$7 \times 30 = 210$.  
     *   So integers are $k \in \{14, ..., 28\}$.  
     *   Let's check the lower bound again.  
         *   Smallest integer in range: $\lceil 100/7 \rceil$? No.  
@@ -216,7 +216,7 @@ Here's my thought process for solving this problem:
                                                 *   The ones strictly greater than 100 (excluding 98? If inclusive) and less than or equal to 200.  
                                             *   Range is likely [105, 196] if we assume strict inequality because "between" often excludes boundaries in English unless specified. But "multiples of 7 between X and Y" usually refers to the interval $[X, Y]$ where $X$ is inclusive or exclusive?  
                                             *   Let's calculate both possibilities and see which seems reasonable for the context (math puzzle).  
-                                                    *   If "between" means strictly greater: sum = 105 + ... + 196.  
+                                                *   If "between" means strictly greater: sum = 105 + ... + 196.  
                                                     *   If "between" means inclusive [100, 200]: sum includes 100? No. But does it include non-multiples? Yes, usually "sum of all multiples".  
                                                         *   Does it mean $\{ x \in [100, 200] \text{ such that } x \equiv 0 \pmod 7 \}$? Or $\{ x \in [100, 200] \}$?  
                                                             *   If I interpret "sum of all multiples" in range $[100, 200]$ as just finding the sum of numbers that are multiples of 7 in that range:  
@@ -342,7 +342,7 @@ Here's my thought process for solving this problem:
                                         *   112
 ```
 
-                                        *   ...  
+*   ...  
 
 ```text
                                         *   182
@@ -350,14 +350,14 @@ Here's my thought process for solving this problem:
                                         *   196
 ```
 
-                                *   Count: 14 numbers.  
-                                *   Is this correct?  
-                                    *   Let's check range of $k$ values for these multiples.  
-                                    *   Range is roughly between 14 and 28 (since 7*14=98, 7*28=196).  
-                                    *   But the lower bound is 100. So $k \ge 15$.  
-                                    *   Upper bound is 200. So $k \le 28$. (Since $7 \times 28 = 196 < 200$).  
-                                    *   The range for $k$ is $[15, 28]$.  
-                                *   So the sum is $S = \sum_{k=15}^{28} 7k$? No, this would be sum of multiples of 7 in terms of integer $k$, but we are summing the values $x$ such that $x$ is a multiple.  
+*   Count: 14 numbers.  
+    *   Is this correct?  
+        *   Let's check range of $k$ values for these multiples.  
+            *   Range is roughly between 14 and 28 (since 7*14=98, 7*28=196).  
+                *   But the lower bound is 100. So $k \ge 15$.  
+                    *   Upper bound is 200. So $k \le 28$. (Since $7 \times 28 = 196 < 200$).  
+                        *   The range for $k$ is $[15, 28]$.  
+                            *   So the sum is $S = \sum_{k=15}^{28} 7k$? No, this would be sum of multiples of 7 in terms of integer $k$, but we are summing the values $x$ such that $x$ is a multiple.  
                                 *   So we need to sum $\{ x \in \mathbb{Z} : 100 < x \le 200, x = 7k \text{ for some integer } k \}$.  
                                 *   The values are multiples of 7 that lie in $[105, 196]$.  
                                     *   Is there any ambiguity here?  
@@ -468,13 +468,13 @@ Here's my thought process for solving this problem:
                                                                                                             *   Are there any other multiples? No.  
                                                                                                         *   So sum is sum of these 14 terms.  
                                                                                                 *   However, let's consider the phrasing "between". In common parlance, between A and B implies $A < x$ or $x < B$. If it means range $[A, B]$, it often includes endpoints.  
-                                                                                                        *   Let's look at the wording again: "sum of all of the multiples of 7 between 100 and 200".  
-                                                                                                            *   I will assume inclusive of lower bound since "between" is used in many contexts (like "number between 3 and 5"). But if endpoints are not integers, it might be strictly between.  
+                                                                                                    *   Let's look at the wording again: "sum of all of the multiples of 7 between 100 and 200".  
+                                                                                                        *   I will assume inclusive of lower bound since "between" is used in many contexts (like "number between 3 and 5"). But if endpoints are not integers, it might be strictly between.  
                                                                                                     *   Let's verify the upper bound logic. $7 \times 28 = 196$. Is this $\le 200$? Yes. So 196 is included if range includes upper bound. Is 203 included? No.  
                                                                                                     *   If range was inclusive of upper bound, does it mean we stop at $7 \times 28$? Yes.  
                                                                                                     *   If range meant $[105, 196]$, then we include all multiples in this sequence.  
                                                                                                 *   Let's check the number of terms.  
-                                                                                                        *   Multiples in $(91, 210)$? No, just between 100 and 200.  
+                                                                                                    *   Multiples in $(91, 210)$? No, just between 100 and 200.  
                                                                                                         *   If range is $[105, 196]$, we have multiples: 105, ..., 196. Count = 14.  
                                                                                                 *   If range was strictly greater than 98? No, it says "between 100 and 200".  
                                                                                                     *   Let's assume inclusive of lower bound for a moment. The smallest multiple would be 105. Is there any other constraint?  
@@ -486,7 +486,7 @@ Here's my thought process for solving this problem:
                                                                                                                     *   If range is inclusive lower bound: We find multiples $\ge 105$. (No, $98 < 100$, next is 105).  
                                                                                                                         *   So we consider multiples in $[105, 200]$.  
                                                                                                                             *   Count: $(200 - 105)/7 + 1$?  
-                                                                                                                                    *   Let's check. If range was $[105, 196]$, then count is $14$ (since 14 numbers in arithmetic progression).  
+                                                                                                                                *   Let's check. If range was $[105, 196]$, then count is $14$ (since 14 numbers in arithmetic progression).  
                                                                                                                                 *   However, if we consider "between" to strictly mean $A < x < B$.  
                                                                                                                                     *   Then we exclude 105? No. We look at numbers. $105 \notin [98, 203]$? No.  
                                                                                                                                 *   Multiples of 7 in range $(91, 210)$:  
@@ -536,9 +536,9 @@ Here's my thought process for solving this problem:
                                                                                             *   So we sum multiples in $[105, 196]$.  
                                                                                         *   Count is 14.  
                                                                                         *   Sum is $\sum_{k=15}^{28} 7k$.  
-                                                                                                *   Sum = $7 \times \frac{14 \times (15+28)}{2} = 7 \times 7.5 \times 43$? No, arithmetic sum of 14 terms.  
+                                                                                            *   Sum = $7 \times \frac{14 \times (15+28)}{2} = 7 \times 7.5 \times 43$? No, arithmetic sum of 14 terms.  
                                                                                         *   Formula for sum of AP: $n/2(a_1 + a_n)$.  
-                                                                                                *   $a_1=105$, $a_n=196$. $n=14$.  
+                                                                                            *   $a_1=105$, $a_n=196$. $n=14$.  
                                                                                                 *   Sum = $\frac{14}{2} (105+196) = 7 \times 301 = 2107$? No.  
                                                                                                 *   Let's calculate sum of multiples directly.  
                                                                                                 *   List: 105, 112, ..., 196.  

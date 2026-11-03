@@ -9,8 +9,8 @@
 > int i, n;  
 >
 > for (i = -8; i <= 8; ++i) {  
->   draw((i,-8)--(i,8),gray(0.7));  
->   draw((-8,i)--(8,i),gray(0.7));  
+> draw((i,-8)--(i,8),gray(0.7));  
+> draw((-8,i)--(8,i),gray(0.7));  
 > }  
 >
 > draw((-8,0)--(8,0),Arrows(6));  
@@ -67,8 +67,8 @@ The points $L$ and $R$ are constructed by `extension(A, B, (8,0), (8,1))` and si
 Let's trace back to see what lines are drawn.  
 1. Draw `(i,-8)--(i,8)` for i from -8 to 8. This draws horizontal lines at y = 4 and y = -4. No.  
 2. The coordinates `L` and `R` are defined in the code as:  
-   `draw((-8,i)--(8,i), gray);` (This is a vertical line? No, i varies from 0 to 8. It's lines at $x=0$).  
-   Let's assume standard plot mode. The text says "The following line is parameterized". This implies we should determine the equation or relation between x and y coordinates of the points involved based on the geometry shown in Asymptote code.  
+`draw((-8,i)--(8,i), gray);` (This is a vertical line? No, i varies from 0 to 8. It's lines at $x=0$).  
+Let's assume standard plot mode. The text says "The following line is parameterized". This implies we should determine the equation or relation between x and y coordinates of the points involved based on the geometry shown in Asymptote code.  
 
 Let's look at the specific problem statement.  
 "The following line is parameterized, so that its direction vector is of the form $\begin{pmatrix} -7 \\ b \end{pmatrix}$."  

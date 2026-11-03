@@ -263,19 +263,19 @@ Okay, I am ready.
 
 Steps:  
 1.  Factor the denominator polynomial.  
-    $x^2 - 5x - 14 = (x-7)(x+2)$.  
+$x^2 - 5x - 14 = (x-7)(x+2)$.  
 2.  Identify the roots of the denominator to find vertical asymptotes.  
-    The roots are $x=7$ and $x=-2$.  
-    Since the numerator is non-zero at these values ($N(7)=14, N(-2)=-4$), there are no holes. These are the x-coordinates where the function has vertical asymptotes.  
-    So, $\{a, b\} = \{7, -2\}$.  
+The roots are $x=7$ and $x=-2$.  
+Since the numerator is non-zero at these values ($N(7)=14, N(-2)=-4$), there are no holes. These are the x-coordinates where the function has vertical asymptotes.  
+So, $\{a, b\} = \{7, -2\}$.  
 3.  Determine the horizontal asymptote.  
-    Compare the degree of the numerator to the denominator.  
-    Numerator: $2x$ (degree 1).  
-    Denominator: $x^2 - 5x - 14$ (degree 2).  
-    Since the degree of the denominator is strictly greater than the degree of the numerator, there is a horizontal asymptote given by the ratio of the leading coefficients. Here it is $\frac{0}{0}$? No, ratio of limits or simply $\lim_{x\to\infty} \frac{2x}{x^2} = 0$.  
-    So $y = 0$, which implies $c = 0$.  
+Compare the degree of the numerator to the denominator.  
+Numerator: $2x$ (degree 1).  
+Denominator: $x^2 - 5x - 14$ (degree 2).  
+Since the degree of the denominator is strictly greater than the degree of the numerator, there is a horizontal asymptote given by the ratio of the leading coefficients. Here it is $\frac{0}{0}$? No, ratio of limits or simply $\lim_{x\to\infty} \frac{2x}{x^2} = 0$.  
+So $y = 0$, which implies $c = 0$.  
 4.  Calculate the sum.  
-    $a+b+c = 7 + (-2) + 0 = 5$.  
+$a+b+c = 7 + (-2) + 0 = 5$.  
 
 The solution seems robust. No other interpretations found that change the outcome.  
 Sum is 5.  

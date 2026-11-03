@@ -93,13 +93,13 @@ Here's my thought process for solving this problem:
     *   Heron's formula is the gold standard for this type of problem. It works regardless of whether sides are integers or decimals, as long as they satisfy triangle inequality.  
 
     *   Calculation again:  
-        $$ \text{Area} = \sqrt{\frac{(a+b+c)(-a+b+c-a+b-c)(-a-b+c) ...}{2}} $$ (This looks like the expanded form of $\sqrt{8 \times 9 \times 2}$, so $12$ is definitely correct).  
+$$ \text{Area} = \sqrt{\frac{(a+b+c)(-a+b+c-a+b-c)(-a-b+c) ...}{2}} $$ (This looks like the expanded form of $\sqrt{8 \times 9 \times 2}$, so $12$ is definitely correct).  
     *   The standard Heron's formula:  
-        $$ A = \sqrt{s(s-a)(s-b)(s-c)} $$  
-        where $s = \frac{a+b+c}{2}$.  
-        For sides $5, 5, 6$:  
-        $$ s = \frac{16}{2} = 8 $$  
-        $$ A = \sqrt{8(3)(3)(2)} = \sqrt{144} = 12 $$  
+$$ A = \sqrt{s(s-a)(s-b)(s-c)} $$  
+where $s = \frac{a+b+c}{2}$.  
+For sides $5, 5, 6$:  
+$$ s = \frac{16}{2} = 8 $$  
+$$ A = \sqrt{8(3)(3)(2)} = \sqrt{144} = 12 $$  
 
     *   Let's check for potential "tricks" or misinterpretations.  
     *   Does "5, 5 and 6 units" imply an equilateral triangle (where all are 3/2) or something else? No, it explicitly says sides of lengths 5, 5, 6. This is a scalene triangle with two equal legs.  

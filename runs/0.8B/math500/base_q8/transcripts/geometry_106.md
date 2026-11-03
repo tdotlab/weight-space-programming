@@ -475,7 +475,7 @@ Here's a thinking process that leads to the solution:
             *   No, side lengths are fixed.  
 
     *   Let me consider if the problem meant "One side is 8, another side is 9"?  
-            *   If $s_1=8, s_2=8$, perimeter = 31.  
+        *   If $s_1=8, s_2=8$, perimeter = 31.  
             *   If $s_1=8, s_2=9$. Then $P = 17 + c$. Max $c=15$? No, if $s_1=8, s_2=9$, then $c < 8+9-15$. Wait.  
                 *   Triangle Inequality: $8+9 > c \implies 17 > c$.  
                 *   Is it possible that "two sides... are each 8" means one side is 8 and the other side is 9?  

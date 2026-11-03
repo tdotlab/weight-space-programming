@@ -519,12 +519,12 @@ So the calculation holds up.
 
 Let's write down the steps clearly for the final response.  
 1. Identify vertical asymptotes by setting denominator $= 0$.  
-   $x^2 - 5x - 14 = (x+2)(x-7)$.  
-   Roots: $x = -2, x = 7$.  
-   So $a = -2$, $b = 7$ (or vice versa).  
+$x^2 - 5x - 14 = (x+2)(x-7)$.  
+Roots: $x = -2, x = 7$.  
+So $a = -2$, $b = 7$ (or vice versa).  
 2. Identify horizontal asymptote by limit as $x \to \pm \infty$.  
-   $\lim_{x\to\infty} \frac{2x}{x^2-5x-14}$. The terms in denominator dominate numerator. Leading term is 0 in quotient? No, $x/x = 1$ (approximation). So $\frac{2}{x} \to 0$.  
-   Thus $c=0$.  
+$\lim_{x\to\infty} \frac{2x}{x^2-5x-14}$. The terms in denominator dominate numerator. Leading term is 0 in quotient? No, $x/x = 1$ (approximation). So $\frac{2}{x} \to 0$.  
+Thus $c=0$.  
 3. Sum $a+b+c = -2 + 7 + 0 = 5$.  
 
 Double check the wording of "vertical asymptote".  
@@ -862,14 +862,14 @@ The question is straightforward application of factoring rational functions.
 
 Steps to write:  
 1. Determine vertical asymptotes: Solve $x^2 - 5x - 14 = 0$.  
-   Factor: $(x+2)(x-7)$.  
-   Roots: $x = -2, x = 7$.  
-   So $a = -2, b = 7$ (sum).  
+Factor: $(x+2)(x-7)$.  
+Roots: $x = -2, x = 7$.  
+So $a = -2, b = 7$ (sum).  
 2. Determine horizontal asymptote: Limit as $x \to \infty$.  
-   $\lim_{x\to\infty} \frac{2x}{x^2} = 0$.  
-   So $c = 0$.  
+$\lim_{x\to\infty} \frac{2x}{x^2} = 0$.  
+So $c = 0$.  
 3. Calculate sum $a+b+c$.  
-   $-2 + 7 + 0 = 5$.  
+$-2 + 7 + 0 = 5$.  
 
 Seems complete.  
 
@@ -971,16 +971,16 @@ Okay, proceeding with solution.
 
 Steps:  
 1.  Find vertical asymptotes by finding roots of the denominator.  
-    Equation: $x^2 - 5x - 14 = 0$.  
-    Solving for $x$:  
-    Using quadratic formula or factoring:  
-    $(x+2)(x-7) = x^2 + 2x - 7x - 14 = x^2 - 5x - 14$.  
-    So roots are $a = -2$ and $b = 7$. (Assuming order does not matter for sum).  
+Equation: $x^2 - 5x - 14 = 0$.  
+Solving for $x$:  
+Using quadratic formula or factoring:  
+$(x+2)(x-7) = x^2 + 2x - 7x - 14 = x^2 - 5x - 14$.  
+So roots are $a = -2$ and $b = 7$. (Assuming order does not matter for sum).  
 2.  Find horizontal asymptote by calculating the limit as $x \to \infty$.  
-    $\lim_{x\to\infty} \frac{2x}{x^2-5x-14} = 0$ because the degree of the numerator (1) is less than the degree of the denominator (2).  
-    Thus, $c = 0$.  
+$\lim_{x\to\infty} \frac{2x}{x^2-5x-14} = 0$ because the degree of the numerator (1) is less than the degree of the denominator (2).  
+Thus, $c = 0$.  
 3.  Calculate the sum $a+b+c$.  
-    $a+b+c = -2 + 7 + 0 = 5$.  
+$a+b+c = -2 + 7 + 0 = 5$.  
 
 The logic holds up.  
 
@@ -1409,111 +1409,111 @@ Answer is 5.
 Let me write down the steps for clarity in the thinking trace.  
 1. The graph is given by $f(x) = \frac{2x}{x^2-5x-14}$.  
 2. To find vertical asymptotes, we identify roots of the denominator.  
-   Denominator: $D(x) = x^2 - 5x - 14$.  
-   Roots $x$ satisfy $D(x) = 0 \implies x^2 - 5x - 14 = 0$.  
-   Using quadratic formula or factorization, we find roots.  
-   Factors of 14 (product) and sum 5? No.  
-   Let's check factorization again:  
-   $(-7)(-2) = 14$? No, product must be $-14$ for constant term.  
-   Sum of roots: $(x+2)(x-7)$ is correct?  
-   Check $(x+2)(x-7) = x^2 + 7x - 2x - 14 = x^2 + 5x - 14$.  
-   This has sum 5.  
-   So roots are $r_1, r_2$ such that product is -14 (from $ab$) or -14 is constant term? No.  
-   If polynomial is $x^2 + Ax + B$, roots satisfy $\sum r = -A, \prod r = B$.  
-   Here $A=-5, B=-14$. So sum $r_1+r_2 = 5$ and product $r_1r_2 = -14$.  
-   We need integers or real numbers.  
-   Factors of $-14$: $(7, -2)$. Sum is $5$.  
-   So factors are $\{7, -2\}$.  
-   This corresponds to $(x-(-2))(x-(-7))$? No, $(x+2)(x-7)$ gives roots $\{-2, 7\}$?  
-   Let's check expansion of $(x+2)(x-7)$.  
-   $x \cdot x = x^2$.  
-   $x \cdot (-7) = -7x$.  
-   $(-2) \cdot x = -2x$. (No).  
-   Let's expand properly:  
-   $(x+a)(x+b)$.  
-   Sum of coefficients? No.  
-   $(x+2)(x-7) = x(x) + 2x - 7x - 14$ is incorrect order?  
-   It is $x^2 + (2)x + (-7)x + 2(-7)$? No.  
-   Let's just use the standard formula.  
-   $(x-r_1)(x-r_2) = x^2 - (r_1+r_2)x + r_1r_2$.  
-   Given roots are $a, b$ such that $a+b=5, ab=-14$.  
-   Pair $\{2, 7\}$ gives sum 9.  
-   Pair $\{-2, 7\}$ gives sum 5.  
-   Product $(-2)(-7) = 14 \neq -14$.  
-   So pair $\{-2, 7\}$ does not work for product -14.  
-   The only integer pair with sum 5 and product -14?  
-   Factors of 14: $2, 7$ gives sum 9. $(-2), (-7)$ gives sum -9.  
-   There is NO pair of integers satisfying sum 5 and product -14.  
-   This implies my assumption about roots being $\{-2, 7\}$ is wrong or the polynomial is different.  
-   If polynomial is $x^2-5x-14$, then product must be $r_1r_2 = c/a$ if we assume leading coeff 1? Yes, $c=-14$.  
-   So roots must satisfy sum 5 and product -14.  
-   Let's check again.  
-   $(x+2)(x-7)$ expansion: $x(x)+2x + (-7)x + 2(-7)$? No.  
-   $(x-2)(x+7) = x^2 - 2x + 7x - 14$.  
-   $x \cdot x$ (coefficient of $x$ term).  
-   Let's look at the polynomial form.  
-   $P(x) = (x-r_1)(x-r_2) = x^2 - (r_1+r_2)x + r_1r_2$.  
-   Given $P(x) = x^2-5x-14$.  
-   We need $-(r_1+r_2) = -5 \implies r_1+r_2 = 5$.  
-   And $r_1r_2 = -14$.  
-   Let's check integer solutions again.  
-   Try all pairs $\{a, b\}$ of integers.  
-   If $a=7, b=-2$, then $a+b=5$. Product $(-2)(-1)$? No. $a=-2, b=-7$.  
-   $ab = 14$ (or -14 depending on signs).  
-   $r_1=r_2=...$  
-   We need product $r_1 r_2 = -14$.  
-   And sum $r_1+r_2 = 5$.  
-   Possible pairs $\{a,b\}$ with product -14 and sum 5?  
-   Try positive integers: 7, -2 (one pos one neg) -> prod -14. Sum 5.  
-   If factors are $\{2, -7\}$, then $2 \cdot (-7) = -14$. Sum $2 + (-7) = -5$. No sum 5.  
-   So integer pairs that satisfy product -14 and sum 5?  
-   Let's try all divisors of -14.  
-   Factors: $\pm 1, \pm 2, \pm 7, \pm 14$.  
-   Combinations for sum 5:  
-   $(-7, 2)$ -> sum $-5$.  
-   $(2, -7)$ -> sum $-5$.  
-   $(7, -2)$? No.  
-   Let's check all combinations of 2 factors $\{a, b\} \in \{\pm 1, \dots\}$.  
-   $(-2)(-7) = 14$. Sum -9.  
-   $(2)(-7) = -14$. Sum -5.  
-   So only possible combination is $\{-2, 7\}$ with product 14? No.  
-   The problem states that the vertical asymptotes are $x=a$ and $x=b$.  
-   Since the equation must have real roots for existence of asymptotes at infinity (for rational functions), we assume roots exist.  
-   So my factorization check $(x+2)(x-7)$ was:  
-   $x^2 - 7x + 2x - 14 = x^2 - 5x - 14$.  
-   This yields sum of roots $7-(-2) = 9$? No.  
-   $r_1+r_2 = 5$.  
-   So factors must sum to 5.  
-   Let's check pairs $\{a,b\}$ such that sum is 5 and product is -14.  
-   We need integers $a, b$.  
-   Sum $a+b=5$.  
-   Product $ab=-14$.  
-   Possible pairs from $\pm 2, \pm 7$:  
-   If positive: $2, 3$? No sum 5? No $2+7=9$.  
-   If negative: $-2, -7$ -> sum -9.  
-   $-7, -2$ -> sum -9.  
-   $1, ? \to 4$? $1+4=5$. Product $-4$ (no -14).  
-   Is there any pair with product -14 and sum 5?  
-   Let's check pairs with product -14:  
-   $\{2, -7\}$. Sum -5.  
-   $\{-2, 7\}$? No, $(-2)(7) = -14$. Sum -9.  
-   $\{-7, 2\}$. Sum -5.  
-   $\{2, 7\}$. Sum 9.  
-   $\{7, -2\}$. Sum 5. (Product $-14$).  
-   This works!  
-   So factors are $\{7, -2\}$ or $\{-2, 7\}$? No, $(x-(-2))(x-(-7)) = (x+2)(x-7)$.  
-   Roots are $-2, 7$?  
-   Let's check: if roots are $r_1=-2, r_2=7$.  
-   Sum $r_1+r_2 = 5$. Product $r_1r_2 = -14$.  
-   Then polynomial is $(x+2)(x-7)$?  
-   $(x+2)(x-7) = x(x-7) + (-7)$? No.  
-   $(x+2)(x-7) = x^2 - 7x + 2x - 14 = x^2 - 5x - 14$.  
-   This expansion is correct.  
-   So roots are $\{-2, 7\}$.  
-   So factors must be $(x+2)$ and $(x-7)$.  
-   And this matches the polynomial.  
-   Therefore vertical asymptotes at $x=-2$ and $x=7$.  
-   This confirms my previous conclusion.  
+Denominator: $D(x) = x^2 - 5x - 14$.  
+Roots $x$ satisfy $D(x) = 0 \implies x^2 - 5x - 14 = 0$.  
+Using quadratic formula or factorization, we find roots.  
+Factors of 14 (product) and sum 5? No.  
+Let's check factorization again:  
+$(-7)(-2) = 14$? No, product must be $-14$ for constant term.  
+Sum of roots: $(x+2)(x-7)$ is correct?  
+Check $(x+2)(x-7) = x^2 + 7x - 2x - 14 = x^2 + 5x - 14$.  
+This has sum 5.  
+So roots are $r_1, r_2$ such that product is -14 (from $ab$) or -14 is constant term? No.  
+If polynomial is $x^2 + Ax + B$, roots satisfy $\sum r = -A, \prod r = B$.  
+Here $A=-5, B=-14$. So sum $r_1+r_2 = 5$ and product $r_1r_2 = -14$.  
+We need integers or real numbers.  
+Factors of $-14$: $(7, -2)$. Sum is $5$.  
+So factors are $\{7, -2\}$.  
+This corresponds to $(x-(-2))(x-(-7))$? No, $(x+2)(x-7)$ gives roots $\{-2, 7\}$?  
+Let's check expansion of $(x+2)(x-7)$.  
+$x \cdot x = x^2$.  
+$x \cdot (-7) = -7x$.  
+$(-2) \cdot x = -2x$. (No).  
+Let's expand properly:  
+$(x+a)(x+b)$.  
+Sum of coefficients? No.  
+$(x+2)(x-7) = x(x) + 2x - 7x - 14$ is incorrect order?  
+It is $x^2 + (2)x + (-7)x + 2(-7)$? No.  
+Let's just use the standard formula.  
+$(x-r_1)(x-r_2) = x^2 - (r_1+r_2)x + r_1r_2$.  
+Given roots are $a, b$ such that $a+b=5, ab=-14$.  
+Pair $\{2, 7\}$ gives sum 9.  
+Pair $\{-2, 7\}$ gives sum 5.  
+Product $(-2)(-7) = 14 \neq -14$.  
+So pair $\{-2, 7\}$ does not work for product -14.  
+The only integer pair with sum 5 and product -14?  
+Factors of 14: $2, 7$ gives sum 9. $(-2), (-7)$ gives sum -9.  
+There is NO pair of integers satisfying sum 5 and product -14.  
+This implies my assumption about roots being $\{-2, 7\}$ is wrong or the polynomial is different.  
+If polynomial is $x^2-5x-14$, then product must be $r_1r_2 = c/a$ if we assume leading coeff 1? Yes, $c=-14$.  
+So roots must satisfy sum 5 and product -14.  
+Let's check again.  
+$(x+2)(x-7)$ expansion: $x(x)+2x + (-7)x + 2(-7)$? No.  
+$(x-2)(x+7) = x^2 - 2x + 7x - 14$.  
+$x \cdot x$ (coefficient of $x$ term).  
+Let's look at the polynomial form.  
+$P(x) = (x-r_1)(x-r_2) = x^2 - (r_1+r_2)x + r_1r_2$.  
+Given $P(x) = x^2-5x-14$.  
+We need $-(r_1+r_2) = -5 \implies r_1+r_2 = 5$.  
+And $r_1r_2 = -14$.  
+Let's check integer solutions again.  
+Try all pairs $\{a, b\}$ of integers.  
+If $a=7, b=-2$, then $a+b=5$. Product $(-2)(-1)$? No. $a=-2, b=-7$.  
+$ab = 14$ (or -14 depending on signs).  
+$r_1=r_2=...$  
+We need product $r_1 r_2 = -14$.  
+And sum $r_1+r_2 = 5$.  
+Possible pairs $\{a,b\}$ with product -14 and sum 5?  
+Try positive integers: 7, -2 (one pos one neg) -> prod -14. Sum 5.  
+If factors are $\{2, -7\}$, then $2 \cdot (-7) = -14$. Sum $2 + (-7) = -5$. No sum 5.  
+So integer pairs that satisfy product -14 and sum 5?  
+Let's try all divisors of -14.  
+Factors: $\pm 1, \pm 2, \pm 7, \pm 14$.  
+Combinations for sum 5:  
+$(-7, 2)$ -> sum $-5$.  
+$(2, -7)$ -> sum $-5$.  
+$(7, -2)$? No.  
+Let's check all combinations of 2 factors $\{a, b\} \in \{\pm 1, \dots\}$.  
+$(-2)(-7) = 14$. Sum -9.  
+$(2)(-7) = -14$. Sum -5.  
+So only possible combination is $\{-2, 7\}$ with product 14? No.  
+The problem states that the vertical asymptotes are $x=a$ and $x=b$.  
+Since the equation must have real roots for existence of asymptotes at infinity (for rational functions), we assume roots exist.  
+So my factorization check $(x+2)(x-7)$ was:  
+$x^2 - 7x + 2x - 14 = x^2 - 5x - 14$.  
+This yields sum of roots $7-(-2) = 9$? No.  
+$r_1+r_2 = 5$.  
+So factors must sum to 5.  
+Let's check pairs $\{a,b\}$ such that sum is 5 and product is -14.  
+We need integers $a, b$.  
+Sum $a+b=5$.  
+Product $ab=-14$.  
+Possible pairs from $\pm 2, \pm 7$:  
+If positive: $2, 3$? No sum 5? No $2+7=9$.  
+If negative: $-2, -7$ -> sum -9.  
+$-7, -2$ -> sum -9.  
+$1, ? \to 4$? $1+4=5$. Product $-4$ (no -14).  
+Is there any pair with product -14 and sum 5?  
+Let's check pairs with product -14:  
+$\{2, -7\}$. Sum -5.  
+$\{-2, 7\}$? No, $(-2)(7) = -14$. Sum -9.  
+$\{-7, 2\}$. Sum -5.  
+$\{2, 7\}$. Sum 9.  
+$\{7, -2\}$. Sum 5. (Product $-14$).  
+This works!  
+So factors are $\{7, -2\}$ or $\{-2, 7\}$? No, $(x-(-2))(x-(-7)) = (x+2)(x-7)$.  
+Roots are $-2, 7$?  
+Let's check: if roots are $r_1=-2, r_2=7$.  
+Sum $r_1+r_2 = 5$. Product $r_1r_2 = -14$.  
+Then polynomial is $(x+2)(x-7)$?  
+$(x+2)(x-7) = x(x-7) + (-7)$? No.  
+$(x+2)(x-7) = x^2 - 7x + 2x - 14 = x^2 - 5x - 14$.  
+This expansion is correct.  
+So roots are $\{-2, 7\}$.  
+So factors must be $(x+2)$ and $(x-7)$.  
+And this matches the polynomial.  
+Therefore vertical asymptotes at $x=-2$ and $x=7$.  
+This confirms my previous conclusion.  
 
 Let's do a sanity check on roots sum:  
 The polynomial is $x^2 - 5x - 14$.  

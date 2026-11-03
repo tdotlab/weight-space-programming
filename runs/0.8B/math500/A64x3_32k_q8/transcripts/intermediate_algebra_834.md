@@ -203,52 +203,52 @@ So $x=9$ is the valid solution.
 
 Let's write down the steps clearly.  
 1. Use log laws to combine terms in equation (1).  
-   $\log_6(x-y) + \log_6(x+y) = 2$.  
-   This implies $\log_6((x-y)(x+y)) = 2$.  
-   $(x-y)(x+y) = x^2 - y^2 = 36$.  
+$\log_6(x-y) + \log_6(x+y) = 2$.  
+This implies $\log_6((x-y)(x+y)) = 2$.  
+$(x-y)(x+y) = x^2 - y^2 = 36$.  
 
 2. Use equation (2).  
-   $\log_y (5x) = 2$.  
-   This implies $y^2 = 5x$ (assuming base $y > 1$, and $y$ positive).  
-   Or generally $y^2 = 5x$ or $x=4y$ etc? No, $b=c \implies c^c$.  
-   So $y^2 = 5x$.  
+$\log_y (5x) = 2$.  
+This implies $y^2 = 5x$ (assuming base $y > 1$, and $y$ positive).  
+Or generally $y^2 = 5x$ or $x=4y$ etc? No, $b=c \implies c^c$.  
+So $y^2 = 5x$.  
 
 3. Solve the system.  
-   Substitute (1) into (2): $(x-y)(x+y) = 6^2 = 36$ is incorrect.  
-   The equation was $\log_6((x-y)(x+y)) = 2$.  
-   This means $(x-y)(x+y)$ must be $6^2 = 36$.  
-   Also the second equation: $\log_y (5x) = 2$ implies $y^2 = 5x$.  
+Substitute (1) into (2): $(x-y)(x+y) = 6^2 = 36$ is incorrect.  
+The equation was $\log_6((x-y)(x+y)) = 2$.  
+This means $(x-y)(x+y)$ must be $6^2 = 36$.  
+Also the second equation: $\log_y (5x) = 2$ implies $y^2 = 5x$.  
 
 4. From $x^2 - y^2 = 36$, substitute $y^2 = 5x$:  
-   $x^2 - 5x = 36$.  
-   $x^2 - 5x - 36 = 0$.  
+$x^2 - 5x = 36$.  
+$x^2 - 5x - 36 = 0$.  
 
 5. Factor: $(x-8)(x+4)$? No, $x^2 + 4x - 8x - 32 \ne x^2 - 5x - 36$.  
-   Factors of -36 that sum to -5: 8 and -4? No. $8 \times (-4) = -32$, not -36.  
-   $(-8)(4)$? No. $9 \times (-4)$? $-36 + 1 = -35$.  
-   Try factors of 36 that add to -5.  
-   $(-9, 4)$. Product -36. Sum $-5$.  
-   So $x^2 + 4x - 8x - 36$... No.  
-   Let's check factors again.  
-   $(x+4)(x-9)$?  
-   $x^2 - 9x + 4x - 36 = x^2 - 5x - 36$. Yes.  
-   Roots are 9 and -4.  
+Factors of -36 that sum to -5: 8 and -4? No. $8 \times (-4) = -32$, not -36.  
+$(-8)(4)$? No. $9 \times (-4)$? $-36 + 1 = -35$.  
+Try factors of 36 that add to -5.  
+$(-9, 4)$. Product -36. Sum $-5$.  
+So $x^2 + 4x - 8x - 36$... No.  
+Let's check factors again.  
+$(x+4)(x-9)$?  
+$x^2 - 9x + 4x - 36 = x^2 - 5x - 36$. Yes.  
+Roots are 9 and -4.  
 
 6. Check validity of $x=9$.  
-   We need $x > 0$ for the log function.  
-   If $x=9$, then $y^2 = 5(9) = 45$. $y = \sqrt{45}$.  
-   Equation (1): $\log_6((9-\sqrt{45})(9+\sqrt{45})) = \log_6(36) = 2$. This works.  
-   Equation (2): $\log_{\sqrt{45}} 45 = 2$?  
-   $y^2 = 5x \implies y = \sqrt{5x} = \sqrt{45}$.  
-   $\log_y(5x) = \log_{\sqrt{45}} 45$.  
-   Using property of logs: $\log_b b^k = k$ is true for $b>0, b \neq 1$.  
-   So base $y=\sqrt{45}$, argument $45$.  
-   Since $45 > 1$, base is positive.  
-   Let's check if we need to check domain constraints on base $y=6$ in equation (2). No, equation (2) doesn't constrain base $y$ except it must be valid as a base. Base $y$ in $\log_y 5x$. Since argument is $5x$, and log exists for any positive argument $>0$.  
-   Here $5x = 45 > 0$. So the argument is fine.  
-   However, we need to check if the logarithm base allows this value. $y^2=45 \implies y=\sqrt{45} > 1$ (approx 6.7).  
-   $\log_6(x-y)$ term: $x-y = 9 - 3\sqrt{5}$. Since $3\sqrt{5} \approx 3(2.23) = 6.7$, $x-y > 0$.  
-   So all conditions seem satisfied for $x=9$.  
+We need $x > 0$ for the log function.  
+If $x=9$, then $y^2 = 5(9) = 45$. $y = \sqrt{45}$.  
+Equation (1): $\log_6((9-\sqrt{45})(9+\sqrt{45})) = \log_6(36) = 2$. This works.  
+Equation (2): $\log_{\sqrt{45}} 45 = 2$?  
+$y^2 = 5x \implies y = \sqrt{5x} = \sqrt{45}$.  
+$\log_y(5x) = \log_{\sqrt{45}} 45$.  
+Using property of logs: $\log_b b^k = k$ is true for $b>0, b \neq 1$.  
+So base $y=\sqrt{45}$, argument $45$.  
+Since $45 > 1$, base is positive.  
+Let's check if we need to check domain constraints on base $y=6$ in equation (2). No, equation (2) doesn't constrain base $y$ except it must be valid as a base. Base $y$ in $\log_y 5x$. Since argument is $5x$, and log exists for any positive argument $>0$.  
+Here $5x = 45 > 0$. So the argument is fine.  
+However, we need to check if the logarithm base allows this value. $y^2=45 \implies y=\sqrt{45} > 1$ (approx 6.7).  
+$\log_6(x-y)$ term: $x-y = 9 - 3\sqrt{5}$. Since $3\sqrt{5} \approx 3(2.23) = 6.7$, $x-y > 0$.  
+So all conditions seem satisfied for $x=9$.  
 
 What if $x=-4$?  
 $x^2 - y^2 = 36 \implies 16 - y^2 = 36 \implies y^2 = -20$. Impossible for real log argument/base.  
@@ -612,24 +612,24 @@ Okay, solution is solid.
 
 The steps:  
 1. Use $\log_6((x-y)(x+y)) = 2$. This implies $(x-y)(x+y) = 6^2 = 36$.  
-   Expand to $x^2 - y^2 = 36$.  
+Expand to $x^2 - y^2 = 36$.  
 2. From $\log_y 5x = 2$, we have $y^2 = 5x$ (assuming $y>0, y \neq 1$).  
-   Note: If $y < 1$, the base would be less than 1. The argument $5x > 0$. $\log_y 5x$ could be positive if $\log_b b^2 = 2$ is valid. Yes, $b^2=a$.  
+Note: If $y < 1$, the base would be less than 1. The argument $5x > 0$. $\log_y 5x$ could be positive if $\log_b b^2 = 2$ is valid. Yes, $b^2=a$.  
 3. Substitute $y^2 = 5x$ into (1).  
-   $x^2 - 5x = 36 \implies x^2 - 5x - 36 = 0$.  
+$x^2 - 5x = 36 \implies x^2 - 5x - 36 = 0$.  
 4. Factor: $(x-9)(x+4) = 0$?  
-   Check: $x=9, x=-4$.  
-   $(-4)(4) + (9)(-8)$? No. $(x-9)(x+4) = x^2 - 5x - 36$. Yes.  
-   So $x=9$ or $x=-4$.  
+Check: $x=9, x=-4$.  
+$(-4)(4) + (9)(-8)$? No. $(x-9)(x+4) = x^2 - 5x - 36$. Yes.  
+So $x=9$ or $x=-4$.  
 5. Check domain constraints:  
-   For $\log_6(x-y) + \log_6(x+y) = 2$, both terms of the log argument must be positive.  
-   $(x-y)(x+y)$ is always positive if $x^2 - y^2 > 0$.  
-   This implies $|x| > |y|$ or something? No, just product positive.  
-   However, we need to check if $y$ can be real such that $y = \sqrt{5x}$ works for all cases?  
-   If $x=9$, $y^2=45 \implies y \approx 6.7$. Base > 0 and not 1. Valid.  
-   Also $\log_6(9 - 3\sqrt{5})$ term is positive. $x-y = 9-6.7=2.3 > 0$. Valid.  
-   For $x=-4$, $y^2=-20 \implies y=i\sqrt{5}$ (imaginary). Log base not defined in reals or complex with standard branches (usually real domain required). Invalid.  
-   So only $x=9$ is valid.  
+For $\log_6(x-y) + \log_6(x+y) = 2$, both terms of the log argument must be positive.  
+$(x-y)(x+y)$ is always positive if $x^2 - y^2 > 0$.  
+This implies $|x| > |y|$ or something? No, just product positive.  
+However, we need to check if $y$ can be real such that $y = \sqrt{5x}$ works for all cases?  
+If $x=9$, $y^2=45 \implies y \approx 6.7$. Base > 0 and not 1. Valid.  
+Also $\log_6(9 - 3\sqrt{5})$ term is positive. $x-y = 9-6.7=2.3 > 0$. Valid.  
+For $x=-4$, $y^2=-20 \implies y=i\sqrt{5}$ (imaginary). Log base not defined in reals or complex with standard branches (usually real domain required). Invalid.  
+So only $x=9$ is valid.  
 
 Final answer: 9.  
 
@@ -676,7 +676,7 @@ Now we must satisfy both equations and their domain constraints.
 We need to check $x$ values against the requirement for $\log$ base arguments. Usually, we require positive bases and arguments of logs.  
 Equation 2 implies $y^2 = 5x$.  
 - If $x=9$: $y^2 = 45 \implies y = \sqrt{45} \approx 6.708$. This is a valid real base.  
-  Then the first equation holds: $(9-\sqrt{45})(9+\sqrt{45}) = 36$, and since $y$ is positive, $\log_y(5x)$ is defined ($y>1$ for logs to be real).  
+Then the first equation holds: $(9-\sqrt{45})(9+\sqrt{45}) = 36$, and since $y$ is positive, $\log_y(5x)$ is defined ($y>1$ for logs to be real).  
 - If $x=-4$: $y^2 = 5(-4) = -20$. For a real logarithm $\log_b a$ to exist, the base must be positive and the argument must be positive. Here, neither condition is met ($y$ is imaginary). Thus, $x=-4$ is not a valid solution.  
 
 Therefore, the only valid value for $x$ is 9.  

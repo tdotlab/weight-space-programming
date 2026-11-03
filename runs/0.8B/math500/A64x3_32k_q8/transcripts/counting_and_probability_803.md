@@ -90,7 +90,7 @@ Here's my thought process for solving this problem:
             *   From constraints 2 and 3, we have $y \le 4 - x$. Since $y \ge 0$, this implies $4-x \ge 0$, so $x \le 4$.  
             *   Also from constraint 1, $x$ can range up to 8.  
             *   So we are looking at the region defined by:  
-                $0 \le x \le 8$ (fixed) and $x \le 4$ (from constraint 3).  
+$0 \le x \le 8$ (fixed) and $x \le 4$ (from constraint 3).  
             *   Combined with constraints 2 ($y \ge 0$), this becomes $0 \le y \le 4-x$.  
 
         *   **Let's check the validity of this region:**  
@@ -100,7 +100,7 @@ Here's my thought process for solving this problem:
                 *   So, if $x \le 4$, any $y$ satisfying $0 \le y \le 4-x$ works. If $x > 4$, then there are no points $(x,y)$ satisfying the condition because for $y \in [0, 4]$ to satisfy $x+y \le 4$, we need $y \le 4-x$. But if $x > 4$, then $4-x < 0$, so $y \le 4-x$ means $y < 0$. Since $y \ge 0$, the condition $x+y \le 4$ is impossible for $x > 4$? Let me double check.  
                     *   If $x=5$, then $y \le -1$, but $y \ge 0$. Impossible. Correct.  
             *   Therefore, we are looking at the area of the polygon:  
-                $x \in [0, 4]$ and $y \in [0, 4-x]$.  
+$x \in [0, 4]$ and $y \in [0, 4-x]$.  
 
     *   **Calculation of Area:**  
         *   Integrate with respect to x from 0 to 4.  
@@ -795,7 +795,7 @@ Since $y \le 4 - x$, and we are also constrained by $x \ge 0$, we must have $4 -
 - For a point to satisfy $x + y \le 4$ and be in the sample space, it must satisfy both the box boundaries and the line inequality.  
 - If $x > 4$, then $4 - x < 0$. Since $y \ge 0$ (as per condition 2), we would need $y \le 4-x < 0$, which is impossible for non-negative $y$. Thus, no points exist with $x > 4$ that satisfy both constraints.  
 - If $0 \le x \le 4$:  
-    - We have the lower bound $x = 0$ (from condition 1 and box constraint).  
+  - We have the lower bound $x = 0$ (from condition 1 and box constraint).  
     - For any $x$, the valid range of $y$ is $0 \le y \le 4-x$. This corresponds to the triangle region where the vertices are formed by the intersection of the constraints.  
 
 Thus, the region satisfying the conditions is the polygon with vertices $(0,0)$, $(4,0)$, and $(0,4)$.  

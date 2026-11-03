@@ -584,7 +584,7 @@ Here's a thinking process that leads to the solution:
                 *   If $x=28$. Count is 9.  
                 *   Distance = $9 \times 4 = 36$ miles?  
     *   But what if "every third day" means she walks on days $d$ such that $d$ is a multiple of 3 (i.e., multiples of 3).  
-            *   The number of days in Feb ($x$) is usually considered to be 28 or 29.  
+        *   The number of days in Feb ($x$) is usually considered to be 28 or 29.  
             *   Is it possible the question asks for the minimum number of miles she can walk if she has a specific set of days? No.  
 
     *   Let's assume the problem is from a logic puzzle context where "every third day" refers to $x$ (the month length) such that $x$ is divisible by 3?  

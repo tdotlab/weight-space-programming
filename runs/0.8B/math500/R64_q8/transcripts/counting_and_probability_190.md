@@ -259,8 +259,8 @@ Here's a thinking process that leads to the solution:
                 *   Subsets:  
                     1. {A,B,C,D,E} (all except F) -> Size 5.  
                     2. {A,B,C,D,F} (all except A? No, that's different). Wait.  
-                    3\. {B,C,D,E,F}.  
-                    ... wait.  
+3\. {B,C,D,E,F}.  
+... wait.  
             *   Let me think of this clearly.  
                 *   Let the set be $S = \{s_1, s_2, s_3, s_4, s_5, s_6\}$.  
                 *   We want to choose a subset of size 5.  

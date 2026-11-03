@@ -36,17 +36,17 @@ Here's a thinking process that leads to the solution:
 
 4.  **Calculation:**  
     *   The number of ways to choose $k$ items from a set of $n$ distinct items is given by the binomial coefficient:  
-        $$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$  
+$$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$  
     *   Here, $n = 6$, $k = 5$.  
 
     *   Wait, let me double check if there are multiple interpretations. If the question meant "permutation" (order matters), it would be usually phrased as "arrange", "select and order". But standard English usage for "selected from a group" implies combination.  
     *   Let's assume Combination ($C(6, 5)$).  
 
     *   Calculation:  
-        $$ C(6, 5) = \frac{6!}{5!(6-5)!} $$  
-        $$ = \frac{6!}{5!1!} $$  
-        $$ = \frac{6 \times 5!}{1 \times 5!} $$  
-        $$ = 6 $$  
+$$ C(6, 5) = \frac{6!}{5!(6-5)!} $$  
+$$ = \frac{6!}{5!1!} $$  
+$$ = \frac{6 \times 5!}{1 \times 5!} $$  
+$$ = 6 $$  
 
     *   However, let's re-read the prompt again. "In how many ways can 5 students be selected from a group of 6 students?"  
     *   It could potentially mean Permutation if it was about ordering them (like picking 5 names for a class). But since no order is specified, it defaults to combinations.  
@@ -60,7 +60,7 @@ Here's a thinking process that leads to the solution:
     *   What if the students are indistinguishable? They are distinct people (Student 1 is different from Student 2).  
 
     *   Let's calculate $\binom{6}{5}$ just to be sure.  
-        $C(6, 5) = \frac{6!}{5!1!} = 6$.  
+$C(6, 5) = \frac{6!}{5!1!} = 6$.  
 
     *   Are there any alternative interpretations?  
         *   Maybe selecting specific "students" implies we care about the order of selection (e.g., picking a class). But usually questions asking for ways to select people ignore the order of the act. If they wanted the order, they'd say "in how many ways can 5 students be arranged in a circle", etc.  
@@ -179,10 +179,10 @@ Here's a thinking process that leads to the solution:
         4. Calculate result.  
 
     *   Just to be absolutely sure, I'll calculate $C(6,5)$ again.  
-        $C(n,k) = n! / (k!(n-k)!)$  
-        $6! / (5! \times 1!) = (6 \times 5!) / (5 \times 4!) \dots$ No, that's not how factorial works.  
-        It's $6 \times (5 \times 4!) / (5 \times 4!)$.  
-        It reduces to $6 \times \frac{1}{1!} = 6$.  
+$C(n,k) = n! / (k!(n-k)!)$  
+$6! / (5! \times 1!) = (6 \times 5!) / (5 \times 4!) \dots$ No, that's not how factorial works.  
+It's $6 \times (5 \times 4!) / (5 \times 4!)$.  
+It reduces to $6 \times \frac{1}{1!} = 6$.  
     *   The logic holds.  
 
     *   Is there any ambiguity regarding "group"? If it were a set of people, they are distinct.  

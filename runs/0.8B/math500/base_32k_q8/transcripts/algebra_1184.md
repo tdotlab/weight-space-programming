@@ -103,7 +103,7 @@ Here's a thinking process that leads to the solution:
                                                             *   If we start from $n=1$:  
                                                                 *   "adding and multiplying by each successive integer".  
                                                                 *   This usually means $k_{i+1} = k_i + 1$ or something? Or maybe the rule for $a_{n}$ is defined as:  
-                                                                    $a_n = a_{n-1}$ if operation was multiplication, or $a_n = a_{n-1} \times k$.  
+$a_n = a_{n-1}$ if operation was multiplication, or $a_n = a_{n-1} \times k$.  
                                                             *   Let's look at the example provided in the text again.  
                                                                 *   "Second term produced by adding 1 to first term". This corresponds to $k=2$? Or just "integer beginning with 1"? No, it says "adding 1" (using 1). Then "third term is produced by multiplying the second term by 1" (using 1 again?).  
                                                                 *   Wait, does the sequence of integers change? "Each successive integer beginning with 1" might imply $k=1$ for second term, then $k=2$ for third... No, it says "produced by alternately adding and multiplying by each successive integer". This implies we are looking at a sequence of operations.  

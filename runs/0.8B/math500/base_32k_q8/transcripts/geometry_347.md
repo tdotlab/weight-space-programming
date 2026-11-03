@@ -1047,7 +1047,7 @@ Here's my thought process for solving this geometry problem:
                             *   We have vertices C, B, A on circle.  
                             *   Angle at center subtends arc CA? No, B?  
                             *   Let's check the positions.  
-                                \*   A(-1,0), B(1,0).  
+\*   A(-1,0), B(1,0).  
                                 *   $O$ is midpoint of AB.  
                                 *   We know $\angle ACB = 90^\circ$.  
                                 *   So triangle ABC is right-angled at C.  
@@ -1261,7 +1261,7 @@ Here's my thought process for solving this geometry problem:
                                                                                 *   Vertex B is connected to A and C. Angle at B ($\angle ABC$) intercepts arc AC?  
                                                                                     *   Sides BA and BC. Intercepted arc AC.  
                                                                                 *   Vertex C is connected to A and B. Angle at C ($\angle ACB$) intercepts arc AB.  
-                                                                                        *   Sides CA and CB. Intercepted arc AB.  
+                                                                                    *   Sides CA and CB. Intercepted arc AB.  
                                                                                 *   Wait. Is this correct?  
                                                                                     *   Let's check with a right triangle.  
                                                                                         *   Points A, B diametrically opposite. C on circle.  

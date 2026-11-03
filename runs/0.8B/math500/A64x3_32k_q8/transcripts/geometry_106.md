@@ -205,7 +205,7 @@ Substituting the given lengths ($a=8, b=8$):
 - First inequality: $8 + 8 > c \implies 16 > c$. Since $c$ represents a length and must be a whole number (positive integer), we have $c < 16$. Thus, $c \le 15$.  
 
 - The third inequality is always true if $a=8, b=8, c > 0$:  
-  $8 + c > 8 \implies c > 0$ (which implies $c \ge 1$).  
+$8 + c > 8 \implies c > 0$ (which implies $c \ge 1$).  
 
 The perimeter $P$ of the triangle is given by:  
 $P = a + b + c = 8 + 8 + c = 16 + c$.  

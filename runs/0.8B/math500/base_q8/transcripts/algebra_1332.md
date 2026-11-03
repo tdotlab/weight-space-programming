@@ -34,8 +34,8 @@ Here's my thought process for solving this problem:
     *   Relationship: Sales ($P$) is inversely proportional to Cost ($C$).  
     *   Formula: $P \propto \frac{1}{C}$ or $\frac{P}{C} = k$.  
     *   Using Point 1:  
-        $$ \frac{P_1}{C_1} = \frac{15}{1500} $$  
-        $$ \text{Sales per customer } (k) = \frac{15}{1500} $$  
+$$ \frac{P_1}{C_1} = \frac{15}{1500} $$  
+$$ \text{Sales per customer } (k) = \frac{15}{1500} $$  
 
 5.  **Calculate the Constant ($k$):**  
     *   $k = \frac{15}{1500}$  
@@ -48,9 +48,9 @@ Here's my thought process for solving this problem:
     *   Wait, if the relationship is "inversely proportional", does it mean Sales $\times$ Cost = constant, or Cost $\times$ Sales = constant? Let's re-read the definition.  
     *   Usually, $P \propto 1/C$. So, Sales $\cdot$ Cost = Constant.  
     *   If I plug in $C_2 = 2500$, then:  
-        $$ P \cdot C = k $$  
+$$ P \cdot C = k $$  
     *   Using Point 1 ($C_1=1500, P_1=15$):  
-        $$ k = 15 \times 1500 = 22500 $$ (or just $\frac{P}{C}$).  
+$$ k = 15 \times 1500 = 22500 $$ (or just $\frac{P}{C}$).  
     *   Wait, usually the relationship is $P \propto C^{-1}$. Let's check if there's any ambiguity.  
     *   Usually "inversely proportional" means $y \cdot x = c$ or $y/x = c$. If I have a variable and it varies inversely as another, it means $x \to k$, so $y \propto 1/x$. Let's stick to the standard math phrasing:  
         *   "Popularity is inversely proportional to cost" $\implies$ $P \cdot C = k$.  
@@ -64,8 +64,8 @@ Here's my thought process for solving this problem:
     *   Let's recalculate using $k = P \cdot C$.  
         *   At $(C=1500, P=15) \implies k = 15000$ or just $P = 15/1500$.  
         *   Then at $(C=2500)$:  
-            $P' = k/C'$  
-            $P' = (15/1500) \cdot (1/(2500))$ ? No, that would be $1/80000$.  
+$P' = k/C'$  
+$P' = (15/1500) \cdot (1/(2500))$ ? No, that would be $1/80000$.  
     *   Let's look at the wording again. "Popularity is inversely proportional to cost."  
         *   Does this mean Popularity is a function of Cost? $P(C) = \frac{k}{C}$?  
         *   Or does it mean "If $A$ is popularity and $B$ is cost, $AB = k$" (Inverse means product?)  
@@ -175,7 +175,7 @@ Here's my thought process for solving this problem:
                                                                                     *   At cost \$100, sales = 10.  
                                                                                     *   At cost \$200, sales = $10 / 2 = 5$ (halving).  
                                                                                 *   Wait. If I have a function where Sales is inversely proportional to Cost.  
-                                                                                        *   Let $f(C) = k/C$.  
+                                                                                    *   Let $f(C) = k/C$.  
                                                                                         *   This implies for Cost=1500, Sales=k/1500.  
                                                                                         *   For Cost=2500, Sales=k/2500.  
                                                                                         *   The relationship between Sales and Cost is "Inverse".  
@@ -311,7 +311,7 @@ Here's my thought process for solving this problem:
                                                                                                     *   In some contexts (like algebra), $y \propto x^{-1}$ is defined as "Inverse Variation".  
                                                                                                 *   Wait, let me look at a different angle.  
                                                                                                 *   Maybe the user means:  
-                                                                                                     Sales = k / Cost.  
+Sales = k / Cost.  
                                                                                                 *   Wait. Let's try to interpret the phrase "Inversely proportional" in the context of the variables given.  
                                                                                                 *   Usually, it implies that as $C$ increases, $P$ decreases.  
                                                                                                 *   Is this consistent with $P \cdot C = k$? No.  
@@ -332,7 +332,7 @@ Here's my thought process for solving this problem:
                                                                                                             *   Let's look at the phrase "A varies inversely with B".  
                                                                                                             *   If A is directly proportional to B, and B varies inversely with A? No.  
                                                                                                 *   Okay, let's look at this:  
-                                                                                                        *   Direct variation: $y \propto x$. Product constant? No. $y/x = c$.  
+                                                                                                    *   Direct variation: $y \propto x$. Product constant? No. $y/x = c$.  
                                                                                                         *   Inverse variation: $y/x$ is a constant? No.  
                                                                                                             *   Wait. I am stuck in a loop trying to recall the definitions vs checking intuition.  
                                                                                                 *   Let's use intuition: "Inverse proportion" means doubling one variable halves another. (e.g. $x \to 2x, y \to y/2$).  
@@ -365,7 +365,7 @@ Here's my thought process for solving this problem:
                                                                                                     *   "Two variables vary inversely as each other." $\implies$ They satisfy $x \cdot y = k$. Wait, that seems contradictory.  
                                                                                                         *   If I have two quantities and they vary inversely, then if one increases, the other decreases by a factor? No, that's usually what it means.  
                                                                                                 *   But mathematically: "If A varies directly as B", then $A = kB$. (Product is constant? No.)  
-                                                                                                        *   Wait. If $y/x$ is constant? No. That would be "Direct".  
+                                                                                                    *   Wait. If $y/x$ is constant? No. That would be "Direct".  
                                                                                                         *   Let's re-read the most fundamental definition of direct and inverse.  
                                                                                                             *   Direct: If A doubles, B doubles. ($A = kB$) $\implies AB = k$. (Product is constant?) NO. $k=2$. So $AB = 2 \cdot 10 = 20$.  
                                                                                                             *   Inverse: If A doubles, B halves? Or A and B are inversely proportional. This implies that if you double one of them, the other is divided by the same amount.  
@@ -416,7 +416,7 @@ Here's my thought process for solving this problem:
                                                                                                     *   Often, it is defined as: "As price increases, sales decrease."  
                                                                                                         *   But is there a mathematical model used to define it?  
                                                                                                 *   Let's check the specific phrase: "Popularity (sales) is inversely proportional to its cost."  
-                                                                                                        *   This sounds like $Sales \propto 1/Price$. Wait. If I say $Sales = Price / Constant$? No.  
+                                                                                                    *   This sounds like $Sales \propto 1/Price$. Wait. If I say $Sales = Price / Constant$? No.  
                                                                                                 *   Let's try to interpret it as $Sales = k \cdot C^{-1}$ or something else.  
                                                                                                 *   But wait. Is it possible the problem is simpler?  
                                                                                                 *   Usually "inversely proportional" means that if one doubles, the other halves. Wait. If I have two numbers and their product is constant...  
@@ -425,7 +425,7 @@ Here's my thought process for solving this problem:
                                                                                                         *   Inverse Variation: Product of variables is constant? Or Ratio is constant?  
                                                                                                             *   Wait, in inverse variation (like $y = 1/x$), if I have $x=2$, $y=0.5$. If I have $x=4$, $y=0.25$. The ratio $y/x = 1/8$ is constant. So "Inverse" usually means the product of variables is NOT constant, but the ratio (if we consider them two numbers?) No, it means the relationship between the two quantities is inverse to each other?  
                                                                                                 *   Let's go back to basics:  
-                                                                                                        *   Direct proportionality: $y$ varies directly with $x$. If $x$ doubles, $y$ doubles.  
+                                                                                                    *   Direct proportionality: $y$ varies directly with $x$. If $x$ doubles, $y$ doubles.  
                                                                                                         *   Inverse proportionality: $y$ varies inversely with $x$. If $x$ doubles, $y$ halves (or decreases).  
                                                                                                 *   Wait. Is "inversely proportional" meant as "inverse variation"? Yes.  
                                                                                                 *   So if Cost goes up, Popularity goes down.  
@@ -435,19 +435,19 @@ Here's my thought process for solving this problem:
                                                                                                 *   Wait. Let me check the logic for "Product is constant" vs "Ratio is constant".  
                                                                                                 *   Let's say I have variables $x$ and $y$. They are inversely proportional if $\frac{x}{y}$ or something else is constant? Or is it the other way around?  
                                                                                                 *   Wait. If I use standard algebra definitions:  
-                                                                                                        *   If $y$ varies directly as $x$, then $y = k x$ (Product is NOT constant). Wait. No, product of variables is not constant. Just the ratio $x/y$ is constant.  
-                                                                                                            *   Actually, wait. If I say "Sales is inversely proportional to Cost", does it mean "If I multiply Sales by 2, Cost doubles"?  
+                                                                                                    *   If $y$ varies directly as $x$, then $y = k x$ (Product is NOT constant). Wait. No, product of variables is not constant. Just the ratio $x/y$ is constant.  
+                                                                                                        *   Actually, wait. If I say "Sales is inversely proportional to Cost", does it mean "If I multiply Sales by 2, Cost doubles"?  
                                                                                                             *   Let's try to check if there's a standard problem like this online.  
                                                                                                                 *   Search query mental simulation: "inversely proportional popularity cost".  
                                                                                                 *   Often, "inversely proportional" implies that $Sales \propto 1/Price$.  
                                                                                                 *   But wait. If I say "Popularity is inversely proportional to cost", does it mean $Sales \cdot Cost = \text{constant}$? No, that's usually called "directly proportional" if you interpret the variables loosely (e.g. as a product constant). Wait.  
-                                                                                                            *   Let's try a different definition:  
-                                                                                                                *   Sometimes "inversely proportional" means the variables $x$ and $y$ vary such that $xy = \text{constant}$.  
+                                                                                                    *   Let's try a different definition:  
+                                                                                                        *   Sometimes "inversely proportional" means the variables $x$ and $y$ vary such that $xy = \text{constant}$.  
                                                                                                 *   Wait, if I have a function where one variable is $Sales$ and the other is $Cost$. If $Sales \propto 1/Cost$, then $Sales \cdot Cost$ is NOT constant. It varies with $1/Sales$.  
                                                                                                 *   Wait. If Sales $\cdot$ Cost = k? No, that means if you increase Cost to double (2500 vs 1500), Sales must halve (7.5 vs 9). Or stay same?  
                                                                                                 *   Let's look at the example given in a similar problem: "If $x$ increases by factor of 3, then $y$ must decrease by a factor of 3." Wait. That is direct variation for inverse. No.  
-                                                                                                        *   Wait. Let's look at the phrasing again.  
-                                                                                                            *   "Popularity ... is inversely proportional to cost."  
+                                                                                                    *   Wait. Let's look at the phrasing again.  
+                                                                                                        *   "Popularity ... is inversely proportional to cost."  
                                                                                                 *   This implies that as Cost increases, Popularity decreases.  
                                                                                                 *   Does it imply $Sales \propto 1/Price$? Yes.  
                                                                                                 *   But does it imply $Sales = k / Price$? Or something else?  
@@ -455,30 +455,30 @@ Here's my thought process for solving this problem:
                                                                                                 *   Let's check the definition of "inversely proportional" again carefully.  
                                                                                                 *   Definition 1: Two quantities vary inversely with respect to each other if $\frac{y}{x} = k$ (where $k$ is a non-zero constant). Wait. No, that's direct variation ($xy=k$ is not correct. If $y=x$, ratio is 1? No.)  
                                                                                                 *   Let's check the standard:  
-                                                                                                        *   Direct variation: $y = kx$. $\implies y/x = k$.  
+                                                                                                    *   Direct variation: $y = kx$. $\implies y/x = k$.  
                                                                                                         *   Inverse variation: $y = k/x$. $\implies xy$ is not constant. Wait. If I define "inverse proportion" as $xy=k$, then this would be a valid interpretation? No.  
                                                                                                 *   Let's check the math again:  
-                                                                                                        *   Direct variation ($A \propto B$) means $A = kB$. (Product is NOT constant). Wait, no. If I multiply two variables and get $k$, that implies they vary inversely? No. This interpretation is wrong.  
+                                                                                                    *   Direct variation ($A \propto B$) means $A = kB$. (Product is NOT constant). Wait, no. If I multiply two variables and get $k$, that implies they vary inversely? No. This interpretation is wrong.  
                                                                                                 *   Let's check the wording:  
-                                                                                                            *   "If $x$ and $y$ are inversely proportional." $\implies xy = c$. (This means if I double x, y halves? No. If I have $xy=c$, then $x$ doubles $\implies y$ halves. Yes.)  
+                                                                                                    *   "If $x$ and $y$ are inversely proportional." $\implies xy = c$. (This means if I double x, y halves? No. If I have $xy=c$, then $x$ doubles $\implies y$ halves. Yes.)  
                                                                                                 *   Wait. This is the correct mathematical definition of Inverse Variation in terms of product constant. (Product of two variables varies inversely). Wait, no. "Inverse" usually means reciprocal relationship ($1/x \to 1/y$? No).  
                                                                                                 *   Let's re-verify with a simple example:  
-                                                                                                            *   Example: $y = k/x$. This means if I have to calculate the sales for Cost \$1500, Sales is proportional to 1/Price.  
-                                                                                                                *   Wait. If Price doubles (from 1500 to 2500), Sales must halve? No, wait. If $P \cdot C = k$. Then $C=1500 \implies P=15$. $k=22500$.  
-                                                                                                                *   But does "Inverse Proportional" mean Product Constant or Ratio Constant?  
+                                                                                                    *   Example: $y = k/x$. This means if I have to calculate the sales for Cost \$1500, Sales is proportional to 1/Price.  
+                                                                                                        *   Wait. If Price doubles (from 1500 to 2500), Sales must halve? No, wait. If $P \cdot C = k$. Then $C=1500 \implies P=15$. $k=22500$.  
+                                                                                                            *   But does "Inverse Proportional" mean Product Constant or Ratio Constant?  
                                                                                                 *   Let's think about the word "inverse".  
                                                                                                 *   If A is inversely proportional to B, it means that if B doubles, A halves.  
                                                                                                 *   Wait. Is this consistent with $y = k/x$? Yes. If I have $y=15/2500$, that's a halving (if 1500->2500).  
                                                                                                 *   Wait. Does it mean "If B is tripled, A triples"? No. That would be direct.  
                                                                                                 *   So, if Price doubles, Sales halves. This implies $Sales \cdot Cost$ is constant? No. That's incorrect.  
                                                                                                 *   Wait. Let me re-verify the definition.  
-                                                                                                        *   Inverse Variation: If x doubles, y halves.  
-                                                                                                            *   Direct Variation: If x doubles, y triples? (No, that's not standard).  
+                                                                                                    *   Inverse Variation: If x doubles, y halves.  
+                                                                                                        *   Direct Variation: If x doubles, y triples? (No, that's not standard).  
                                                                                                             *   Wait. Let's check the wording "Inverse Proportional" again.  
                                                                                                 *   Some texts define it as "A varies inversely with B if $A \cdot B = constant$."  
                                                                                                 *   This means if B doubles, A halves.  
                                                                                                 *   Wait. If I say $Sales \propto 1/Price$, that implies that $Sales$ is inversely proportional to Price. (Wait. Is this correct?)  
-                                                                                                            *   Yes. Inverse Variation means the product of variables varies inversely? No. Inverse variation means one increases, the other decreases.  
+                                                                                                    *   Yes. Inverse Variation means the product of variables varies inversely? No. Inverse variation means one increases, the other decreases.  
                                                                                                 *   Let's check a common misconception. "Inverse proportionality" often means "product is constant". (e.g., $xy=c$).  
                                                                                                 *   However, if I take the definition $y \propto 1/x$, then $x$ and $y$ are inversely proportional to each other in terms of magnitude? No, that's not how it works.  
                                                                                                 *   Let me check a math problem context. "If $A$ is inversely proportional to $B$, it means $A/B$ is constant." (Wait, no, this is wrong).  
@@ -490,8 +490,8 @@ Here's my thought process for solving this problem:
                                                                                                         *   Then if $x$ doubles, $y$ doubles.  
                                                                                                         *   Inverse variation: If $y \propto 1/x$. Then $y \cdot x = k$? No. This means if $x$ changes, $y$ changes inversely to it. Wait.  
                                                                                                 *   Wait. Let me check my intuition on the word "inverse" vs "direct".  
-                                                                                                        *   Direct: If $x$ doubles, $y$ doubles. (Ratio $y/x = constant$? No. That means $y/x$ is a variable? No, just ratio is constant).  
-                                                                                                            *   Wait. If $y = 2x$, then $y/x = 2$ (constant).  
+                                                                                                    *   Direct: If $x$ doubles, $y$ doubles. (Ratio $y/x = constant$? No. That means $y/x$ is a variable? No, just ratio is constant).  
+                                                                                                        *   Wait. If $y = 2x$, then $y/x = 2$ (constant).  
                                                                                                             *   If $y = 1/2x$, then $y/x = 1/2$. Constant.  
                                                                                                 *   Let me check this against the example "Sales vs Cost".  
                                                                                                 *   If Sales and Cost are inversely proportional, does it mean $Sales / Cost$ is constant? No. That would be direct variation (if ratio increases).  
@@ -510,10 +510,10 @@ Here's my thought process for solving this problem:
                                                                                                     *   "Direct variation": A varies directly with B ($y = kx$).  
                                                                                                     *   "Inverse variation": A varies inversely with B ($y = k/x$).  
                                                                                                 *   Does this mean $A \cdot B = k$ (if we interpret the variables as $x, y$) or just the ratio? Wait.  
-                                                                                                        *   If I say "If $x$ and $y$ are inversely proportional." It usually means $\frac{x}{y} = const$? No. That's Direct Variation ($A \propto B$). Wait.  
+                                                                                                    *   If I say "If $x$ and $y$ are inversely proportional." It usually means $\frac{x}{y} = const$? No. That's Direct Variation ($A \propto B$). Wait.  
                                                                                                 *   Let me check again. If A varies directly as B, then $A/B$ is a constant. This implies if B doubles, A also doubles (if A=2B). Wait.  
                                                                                                 *   Wait. If I have an equation $y = 2x$. Then if x doubles, y must double? No, wait.  
-                                                                                                        *   Let's look at the ratio definition: "Direct proportionality" is when the variables change in a consistent way such that their product is constant? No, usually just variable ratio is constant.  
+                                                                                                    *   Let's look at the ratio definition: "Direct proportionality" is when the variables change in a consistent way such that their product is constant? No, usually just variable ratio is constant.  
                                                                                                 *   Wait. This is getting confusing. Let's rely on the most standard mathematical meaning of "Inverse Proportional".  
                                                                                                 *   It means that $y \propto 1/x$. So $y = k/x$.  
                                                                                                 *   If this is the case, then Sales at Cost 2500 would be determined.  
@@ -525,7 +525,7 @@ Here's my thought process for solving this problem:
                                                                                                 *   But wait. If $P$ and $C$ are inversely related in the sense of their product being constant?  
                                                                                                 *   Let's check: "Inversely proportional" means $P \cdot C = k$. This is true for "product of two variables varies inversely"? No.  
                                                                                                 *   Wait, let me verify this definition one more time.  
-                                                                                                        *   If I have two quantities $x$ and $y$. They are directly proportional if $\frac{x}{y} = k$. No. That's inverse? No. Direct means constant product? No.  
+                                                                                                    *   If I have two quantities $x$ and $y$. They are directly proportional if $\frac{x}{y} = k$. No. That's inverse? No. Direct means constant product? No.  
                                                                                                 *   Wait. Let me check the Wikipedia definition or similar. "Inversely proportional" usually refers to functions like $f(x) = 1/x$ (or similar). This means $x$ and $f(x)$ are inversely related.  
                                                                                                 *   If I use this definition, then as Cost ($C$) doubles, Popularity ($P$) halves? Wait.  
                                                                                                 *   Let's check: If $P = k/C$. Then $k/2500 = 15 \cdot (1/1500)$? No. $15/2500$?  
@@ -533,7 +533,7 @@ Here's my thought process for solving this problem:
                                                                                                 *   If I have $P(C) = k/C$.  
                                                                                                 *   Then $k = P \cdot C$? Wait. This is incorrect for "inversely proportional".  
                                                                                                 *   Let's check the math definitions again.  
-                                                                                                        *   Direct: $A = kB$. (Product NOT constant).  
+                                                                                                    *   Direct: $A = kB$. (Product NOT constant).  
                                                                                                 *   Wait. If I have $y = 2x$, then product is not constant.  
                                                                                                 *   Wait. Let me assume the question comes from a source where "inversely proportional" means $\frac{P}{C}$ is constant? No, that's "direct" (if P/C changes with C). Wait. If P/C changes with C, it's direct? No.  
                                                                                                 *   Let me check the example: $y = x^2$. Direct.  

@@ -819,7 +819,7 @@ Here's a thinking process that leads to the solution:
             *   Let's check if 49 satisfies all conditions in a way I might have missed.  
             *   Conditions:  
                 1. $A \% d = 1$ for $d \in \{2,3,4,6\}$. (Or something similar).  
-                    *   $49 \% 2 = 1$. (OK)  
+                   *   $49 \% 2 = 1$. (OK)  
                     *   $49 \% 3 = 1$. (OK)  
                     *   $49 \% 4 = 1$. (OK)  
                     *   $49 \% 6 = 5 \neq 1$.  

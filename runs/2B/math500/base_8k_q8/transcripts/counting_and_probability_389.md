@@ -272,7 +272,7 @@ Here's a thinking process that leads to the solution:
     *   Usually, questions about ordering pizzas explicitly ask for permutations if order matters (e.g., "In how many ways can you select and arrange..."). Since the question just says "order", we stick to combinations.  
 
     *   Final calculation check:  
-        $\binom{8}{2} = \frac{8 \cdot 7}{2} = 28$.  
+$\binom{8}{2} = \frac{8 \cdot 7}{2} = 28$.  
 
     *   Let's verify against a potential permutation answer (56).  
     *   If the question was "How many ways can Mikka order toppings?", he might imply a sequence. But "different pizzas" implies the result is static or categorical. A pizza with {A, B} is distinct from {B, A} in terms of *what* is on it? No.  

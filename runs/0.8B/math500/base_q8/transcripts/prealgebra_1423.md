@@ -300,8 +300,8 @@ Here's a thinking process that leads to the solution:
                                                                                     *   We have $C = 18\pi$ inches.  
                                                                                     *   If "2 rev every 3s" means frequency is $f = \frac{2}{3}$ Hz? Or period $T=1.5$ s?  
                                                                                         *   Wait, let's check the phrase "makes 2 revolutions every 3 seconds". This is ambiguous. It could mean:  
-                                                                                            a) Frequency is 2/3 rev/s (meaning in 3s it makes 2 revers).  
-                                                                                            b) Period of one revolution is 3s (meaning frequency is 1/3).  
+a) Frequency is 2/3 rev/s (meaning in 3s it makes 2 revers).  
+b) Period of one revolution is 3s (meaning frequency is 1/3).  
                                                                                         *   If frequency is $f=2/3$, then $v_{linear} = \omega r$. But $\omega$ depends on time. Wait, if $f$ is fixed, then $\omega$ is constant? No. Angular velocity is defined as $d\theta/dt$. $f$ is the number of revolutions per second? Or "every 3s" might refer to period?  
                                                                                         *   If I have a wheel and it makes 2 rev every 3 seconds. This sounds like "speed is 2/3". But usually speed is angular velocity or linear speed.  
                                                                                         *   If it means angular speed is $f$ rev/s?  

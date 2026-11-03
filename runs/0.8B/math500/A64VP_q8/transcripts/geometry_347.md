@@ -344,34 +344,34 @@ The problem asks for the measure of angle $B$ in a triangle $\triangle ABC$ that
 **Step-by-step Derivation:**  
 
 1.  **Identify the Properties of the Inscribed Triangle:**  
-    The problem states that triangle $\triangle ABC$ is inscribed in a circle where side $AB$ is a diameter. This means that points $A$, $B$, and $C$ lie on the circumference of a circle with center $O$ such that segment $AB$ passes through the center $O$.  
+The problem states that triangle $\triangle ABC$ is inscribed in a circle where side $AB$ is a diameter. This means that points $A$, $B$, and $C$ lie on the circumference of a circle with center $O$ such that segment $AB$ passes through the center $O$.  
 
 2.  **Apply the Inscribed Angle Theorem for a Diameter:**  
-    According to the theorem regarding inscribed angles: The angle subtended by a diameter at any point on the circumference is a right angle (specifically, $90^\circ$).  
-    In this triangle $\triangle ABC$, let's consider the vertices. Since $A$ and $B$ are endpoints of the diameter, and $C$ is a vertex of the triangle, if we interpret standard labeling conventions for inscribed angles, the angle subtended by the diameter at any point on the circle would be an angle that relates to the arc formed by the diameter and the other points.  
-    Specifically, the angle subtended by the diameter $AB$ at any point $C$ on the circle is a right angle because the central angle corresponding to the diameter (which forms a $180^\circ$ arc) corresponds to an inscribed angle of half that? No, simply: The angle subtended by a diameter at any point on the circumference is $90^\circ$.  
-    Therefore, in $\triangle ABC$, the angle opposite to side $AB$, which is vertex $C$, must be $90^\circ$ or $180^\circ - \text{something}$. Let's verify.  
+According to the theorem regarding inscribed angles: The angle subtended by a diameter at any point on the circumference is a right angle (specifically, $90^\circ$).  
+In this triangle $\triangle ABC$, let's consider the vertices. Since $A$ and $B$ are endpoints of the diameter, and $C$ is a vertex of the triangle, if we interpret standard labeling conventions for inscribed angles, the angle subtended by the diameter at any point on the circle would be an angle that relates to the arc formed by the diameter and the other points.  
+Specifically, the angle subtended by the diameter $AB$ at any point $C$ on the circle is a right angle because the central angle corresponding to the diameter (which forms a $180^\circ$ arc) corresponds to an inscribed angle of half that? No, simply: The angle subtended by a diameter at any point on the circumference is $90^\circ$.  
+Therefore, in $\triangle ABC$, the angle opposite to side $AB$, which is vertex $C$, must be $90^\circ$ or $180^\circ - \text{something}$. Let's verify.  
 
-    The vertices of the triangle are on the circle. Since $AB$ is a diameter, any point $C$ on the circle will subtend an angle of $90^\circ$ with respect to the segment $AB$ in terms of inscribed angle subtended by the arc $AB$. The central angle subtending the arc $ACB$ or whatever. But more simply:  
-    The angle $\angle ACB$ is the inscribed angle subtending the diameter $AB$. Therefore, $\angle ACB = 90^\circ$.  
+The vertices of the triangle are on the circle. Since $AB$ is a diameter, any point $C$ on the circle will subtend an angle of $90^\circ$ with respect to the segment $AB$ in terms of inscribed angle subtended by the arc $AB$. The central angle subtending the arc $ACB$ or whatever. But more simply:  
+The angle $\angle ACB$ is the inscribed angle subtending the diameter $AB$. Therefore, $\angle ACB = 90^\circ$.  
 
-    Let's check if there are any other interpretations. What if the vertices are not ordered such that $\angle C$ is the one with the right angle? If $\angle A = 14^\circ$, then vertex $C$ could be anywhere on the circle. However, since $AB$ is a diameter, $AC \perp BC$ means that $C$ forms a right triangle with sides $AC$ and $BC$. This holds true for any point $C$ on the circle.  
-    Thus, we have established that $\angle C = 90^\circ$.  
+Let's check if there are any other interpretations. What if the vertices are not ordered such that $\angle C$ is the one with the right angle? If $\angle A = 14^\circ$, then vertex $C$ could be anywhere on the circle. However, since $AB$ is a diameter, $AC \perp BC$ means that $C$ forms a right triangle with sides $AC$ and $BC$. This holds true for any point $C$ on the circle.  
+Thus, we have established that $\angle C = 90^\circ$.  
 
 3.  **Calculate the Angle B:**  
-    We are given $\angle A = 14^\circ$.  
-    The sum of interior angles in a triangle is always $180^\circ$.  
-    So, $\angle A + \angle B + \angle C = 180^\circ$.  
+We are given $\angle A = 14^\circ$.  
+The sum of interior angles in a triangle is always $180^\circ$.  
+So, $\angle A + \angle B + \angle C = 180^\circ$.  
 
-    Substituting the known values:  
-    $$14^\circ + \angle B + 90^\circ = 180^\circ$$  
-    $$\angle B + 104^\circ = 180^\circ$$  
-    $$\angle B = 180^\circ - 104^\circ$$  
-    $$\angle B = 76^\circ$$  
+Substituting the known values:  
+$$14^\circ + \angle B + 90^\circ = 180^\circ$$  
+$$\angle B + 104^\circ = 180^\circ$$  
+$$\angle B = 180^\circ - 104^\circ$$  
+$$\angle B = 76^\circ$$  
 
-    Alternatively, using the fact that an angle in a triangle is equal to $90^\circ$ for the third angle if it were subtended by the diameter.  
-    The angles of the triangle are determined by the vertices: $\angle A$, $\angle B$, and $\angle C$. We found that $\angle C = 90^\circ$ (or $\angle ACB = 90^\circ$). Then,  
-    $\angle B = 180^\circ - (\angle A + \angle C) = 180^\circ - (14^\circ + 90^\circ) = 76^\circ$.  
+Alternatively, using the fact that an angle in a triangle is equal to $90^\circ$ for the third angle if it were subtended by the diameter.  
+The angles of the triangle are determined by the vertices: $\angle A$, $\angle B$, and $\angle C$. We found that $\angle C = 90^\circ$ (or $\angle ACB = 90^\circ$). Then,  
+$\angle B = 180^\circ - (\angle A + \angle C) = 180^\circ - (14^\circ + 90^\circ) = 76^\circ$.  
 
 **Conclusion:**  
 The measure of angle $B$ is $76^\circ$.  

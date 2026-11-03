@@ -42,12 +42,12 @@ Let's check if there are other interpretations. The question asks for "What inte
 
 Let's write down the steps clearly.  
 1.  Start with $\frac{1}{4} < \frac{x}{7}$.  
-    Multiply by 7: $\frac{7}{4} < x$.  
-    Decimal: $1.75 < x$.  
+Multiply by 7: $\frac{7}{4} < x$.  
+Decimal: $1.75 < x$.  
 
 2.  Start with $\frac{x}{7} < \frac{1}{3}$.  
-    Multiply by 7: $x < \frac{7}{3}$.  
-    Decimal: $x < 2.333...$  
+Multiply by 7: $x < \frac{7}{3}$.  
+Decimal: $x < 2.333...$  
 
 3.  Combine: $1.75 < x < 2.333...$  
 4.  Identify integers in this range. The integers are $\{2\}$.  
@@ -103,20 +103,20 @@ Final answer format: \boxed{2}
 To find the integer $x$ that satisfies the inequality $\frac{1}{4} < \frac{x}{7} < \frac{1}{3}$, we can follow these steps:  
 
 1.  **Multiply all parts of the inequality by 7** to isolate $x$. Since 7 is positive, the direction of the inequality signs remains unchanged.  
-    $$ 7 \cdot \frac{1}{4} < x < 7 \cdot \frac{1}{3} $$  
+$$ 7 \cdot \frac{1}{4} < x < 7 \cdot \frac{1}{3} $$  
 
 2.  **Simplify the fractions**:  
     *   For the lower bound: $\frac{7}{4} = 1 + \frac{3}{4} = 1.75$.  
     *   For the upper bound: $\frac{7}{3}$ can be written as a mixed number or decimal. Since we are looking for an integer, let's use the fraction form to compare it with simple integers. We know that $\frac{7}{3} = \frac{21}{9}$ or approximately $2.333$.  
 
-    So, the inequality becomes:  
-    $$ 1.75 < x < 2.333\dots $$  
+So, the inequality becomes:  
+$$ 1.75 < x < 2.333\dots $$  
 
 3.  **Find the integer(s) in the interval**: We are looking for an integer value of $x$ that is strictly greater than $1.75$ and strictly less than $2.333\dots$.  
     *   The integers greater than $1.75$ start with $2, 3, \dots$  
     *   The integers less than $2.333\dots$ end at $2, 1, \dots$  
 
-    The only integer that satisfies both conditions is $2$.  
+The only integer that satisfies both conditions is $2$.  
 
 4.  **Verification**:  
     *   Check the lower bound: $\frac{1}{4} = 0.25$. $x/7 = 2/7 \approx 0.286$. Is $0.25 < 0.286$? Yes.  

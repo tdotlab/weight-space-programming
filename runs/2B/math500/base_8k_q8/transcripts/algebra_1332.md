@@ -44,8 +44,8 @@ Here's a thinking process that leads to the solution:
     *   Let's check: $\frac{22500}{2500} = \frac{225}{25}$.  
     *   $225 / 25$: $200/25 = 8$, remaining $25/25 = 1$. Total = $9$.  
 
-    *Wait, let's re-read the prompt carefully to ensure I didn't misread "inversely proportional".*  
-    *   Inverse proportion: As one goes up, the other goes down.  
+*Wait, let's re-read the prompt carefully to ensure I didn't misread "inversely proportional".*  
+*   Inverse proportion: As one goes up, the other goes down.  
     *   Cost increases from $\$1500$ to $\$2500$. This is an increase of a factor of $2500/1500 = 5/3$.  
     *   Sales should decrease by the inverse of that factor. $Sales_{new} / Sales_{old} = Cost_{old} / Cost_{new} = 1500 / 2500 = 3/5$.  
     *   $15 \cdot (3/5) = 9$.  
@@ -73,38 +73,38 @@ Here's a thinking process that leads to the solution:
     *   Step 3: Plug in new cost ($x=2500$).  
     *   Step 4: Solve for $y$.  
 
-    Calculation check:  
-    $15 / 1500 = 1/100$. So $Sales \cdot Cost = 1/100$? No.  
-    Let's stick to $k=22500$.  
-    $P \cdot 1500 = 22500 \Rightarrow P = 15$.  
-    $P \cdot 2500 = 22500 \Rightarrow P = 9$.  
-    Looks solid.  
+Calculation check:  
+$15 / 1500 = 1/100$. So $Sales \cdot Cost = 1/100$? No.  
+Let's stick to $k=22500$.  
+$P \cdot 1500 = 22500 \Rightarrow P = 15$.  
+$P \cdot 2500 = 22500 \Rightarrow P = 9$.  
+Looks solid.  
 
-    Wait, did I mess up the multiplication in step 4?  
-    $15 \times 1500 = 15 \times (1000 + 500) = 15000 + 7500 = 22500$. Correct.  
-    $22500 / 2500 = 9$.  
-    $15 \times 1.5 = 22.5$.  
-    Wait, why did I doubt the proportion?  
-    $Sales_{new} = Sales_{old} \times (Cost_{old}/Cost_{new})$  
-    $Sales_{new} = 15 \times (1500/2500)$  
-    $Sales_{new} = 15 \times (3/5) = 9$.  
+Wait, did I mess up the multiplication in step 4?  
+$15 \times 1500 = 15 \times (1000 + 500) = 15000 + 7500 = 22500$. Correct.  
+$22500 / 2500 = 9$.  
+$15 \times 1.5 = 22.5$.  
+Wait, why did I doubt the proportion?  
+$Sales_{new} = Sales_{old} \times (Cost_{old}/Cost_{new})$  
+$Sales_{new} = 15 \times (1500/2500)$  
+$Sales_{new} = 15 \times (3/5) = 9$.  
 
-    Wait, did I make a silly arithmetic error?  
-    $22500 / 2500$.  
-    Divide by $100$: $225 / 25$.  
-    Multiply top and bottom by 4 to get $25$ (wait $25/5=5$, $25 \times 4 = 100$).  
-    Actually, just divide $225$ by $25$. $25 \times 9 = 225$. Yes.  
+Wait, did I make a silly arithmetic error?  
+$22500 / 2500$.  
+Divide by $100$: $225 / 25$.  
+Multiply top and bottom by 4 to get $25$ (wait $25/5=5$, $25 \times 4 = 100$).  
+Actually, just divide $225$ by $25$. $25 \times 9 = 225$. Yes.  
 
-    Final Answer is 9.  
+Final Answer is 9.  
 
-    Let's double check the wording of the question to ensure no trick. "inversely proportional to its cost". "15 customers buy a television that costs \$1500". "how many customers would buy a television that costs \$2500?". Straightforward application of formula $y=k/x$.  
+Let's double check the wording of the question to ensure no trick. "inversely proportional to its cost". "15 customers buy a television that costs \$1500". "how many customers would buy a television that costs \$2500?". Straightforward application of formula $y=k/x$.  
 
-    One nuance: "customers" is the unit. Sometimes units are per customer. The problem asks for "how many customers", implying integer or real number? Usually sales figures in these problems are treated as discrete entities, but mathematically it results in 9 which is an integer. If it was $15 \times (3/5) = 9$, that's a very nice round number, suggesting this is the intended path.  
+One nuance: "customers" is the unit. Sometimes units are per customer. The problem asks for "how many customers", implying integer or real number? Usually sales figures in these problems are treated as discrete entities, but mathematically it results in 9 which is an integer. If it was $15 \times (3/5) = 9$, that's a very nice round number, suggesting this is the intended path.  
 
-    Let's write down the response.  
+Let's write down the response.  
 
-    *   **Step 1:** Define variables.  
-        *   Let $s$ be the sales/popularity (number of customers).  
+*   **Step 1:** Define variables.  
+    *   Let $s$ be the sales/popularity (number of customers).  
         *   Let $c$ be the cost of the television.  
     *   **Step 2:** Set up the equation based on "inversely proportional".  
         *   The relationship is given by $s = \frac{k}{c}$ or $k = s \cdot c$.  
@@ -119,12 +119,12 @@ Here's a thinking process that leads to the solution:
         *   $s_2 = 22,500 / 2500$.  
         *   $s_2 = 9$.  
 
-    Seems perfect.  
+Seems perfect.  
 
-    Double check the "15 customers buy a television" part. Does it imply that *only* those 15 bought? Or is the claim Daniel makes about the population generally? Usually in these problems, we assume Daniel's claim applies to the sales rate (popularity = number of buyers), or simply interpret "15 customers buy..." as the observation data point $s_1$. Yes.  
+Double check the "15 customers buy a television" part. Does it imply that *only* those 15 bought? Or is the claim Daniel makes about the population generally? Usually in these problems, we assume Daniel's claim applies to the sales rate (popularity = number of buyers), or simply interpret "15 customers buy..." as the observation data point $s_1$. Yes.  
 
-    Final Answer formulation.  
-    $\boxed{9}$  
+Final Answer formulation.  
+$\boxed{9}$  
 
 
 ## Answer

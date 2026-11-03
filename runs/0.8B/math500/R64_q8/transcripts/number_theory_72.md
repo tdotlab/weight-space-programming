@@ -254,7 +254,7 @@ Here's a thinking process that leads to the solution:
                                                                                                     *   For $n=p^k$, $d(n)=k+1$. Formula gives $k+1$. Correct.  
                                                                                                     *   For $n=p_1 p_2$, $d(n)=(1+1)(1+1)=4$. Formula gives 4.  
                                                                                                 *   Wait, what about $p_1^a q_1^b$?  
-                                                                                                        *   This is not a prime power.  
+                                                                                                    *   This is not a prime power.  
                                                                                                         *   Is it possible that the formula is $(a_i+1)$? No, I keep mixing this up.  
                                                                                                     *   Okay, standard math fact: $\tau(n) = (n^{\alpha}) + 1$? No.  
                                                                                                 *   Wait, let's use the explicit list method which is usually safer for checking.  

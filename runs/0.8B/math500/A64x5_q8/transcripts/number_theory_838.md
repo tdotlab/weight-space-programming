@@ -519,26 +519,26 @@ Candidates for $x$:
 1. Check $x=1$. Yes.  
 2. Check $x=2$. $8 | 10!$. (Yes).  
 3. Check $x=3$. $27 \mid 10!$. (No, because $v_3(27)=3$ and $v_3(10!) = 4$? No, $\lfloor 10/3 \rfloor + \dots = 4$.  
-   $10! = 3628800$. $3628800 / 27 = 134400$. Yes. It IS a divisor.  
-   Why did I think it's false? Because of my previous manual calculation for $x=2$ and $x=3$ failing because I didn't check if the cube roots were integers.  
-   Let me re-verify this step carefully.  
-   If $d \mid n!$, then $\lfloor n!/d \rfloor = k$? No.  
-   If $d \mid n!$, then $n!/d$ is integer.  
-   For $x=3$, $x^3=27$. Does 27 divide 10!?  
-   We know $27 = 3^3$. $N = 10!$. $v_3(10!) = \lfloor 10/3 \rfloor + \dots = 4$. So exponent of 3 in $N$ is 4.  
-   Exponent of 3 in $x^3$ is $3 v_3(x) = 3(1) = 3$.  
-   Condition: $v_3(N) \ge v_3(x^3)$? No, $v_p(N)$ is the exponent in $N$, not $x^3$.  
-   For divisibility $x^3 \mid N$, we require $x^3$ to be a divisor.  
-   This means $\exists k, x^3 \cdot k = N$.  
-   Since $k$ must be integer, this is equivalent to saying that if $N = p^{v_p(N)} \dots$, then the exponent of $p$ in $N$ must be divisible by 1? No.  
-   It means that we need $\exists m \in \mathbb{Z}^+$ such that $x^3 | N - k x^3$. No, just $N = k x^3$.  
-   This implies $v_p(N) \ge v_p(x^3)$ for all prime factors $p$? No.  
-   It means we need to check if the exponent in $N$ is sufficient to cover the factor $x^3$.  
-   Since $x^3 = \prod p^{u_p}$, and $N = \prod q^{v_q}$.  
-   Then we need that for each prime $q$, $v_q(N) \ge u_q$.  
-   If this holds, then there is an integer $k$ (actually $x^3 | N$ means the divisibility condition).  
-   The condition $x^3 \mid N$ is equivalent to $\sum_{j} v_j(N)$ being a multiple of 1? No.  
-   It is simply that $N = x^3 k$.  
+$10! = 3628800$. $3628800 / 27 = 134400$. Yes. It IS a divisor.  
+Why did I think it's false? Because of my previous manual calculation for $x=2$ and $x=3$ failing because I didn't check if the cube roots were integers.  
+Let me re-verify this step carefully.  
+If $d \mid n!$, then $\lfloor n!/d \rfloor = k$? No.  
+If $d \mid n!$, then $n!/d$ is integer.  
+For $x=3$, $x^3=27$. Does 27 divide 10!?  
+We know $27 = 3^3$. $N = 10!$. $v_3(10!) = \lfloor 10/3 \rfloor + \dots = 4$. So exponent of 3 in $N$ is 4.  
+Exponent of 3 in $x^3$ is $3 v_3(x) = 3(1) = 3$.  
+Condition: $v_3(N) \ge v_3(x^3)$? No, $v_p(N)$ is the exponent in $N$, not $x^3$.  
+For divisibility $x^3 \mid N$, we require $x^3$ to be a divisor.  
+This means $\exists k, x^3 \cdot k = N$.  
+Since $k$ must be integer, this is equivalent to saying that if $N = p^{v_p(N)} \dots$, then the exponent of $p$ in $N$ must be divisible by 1? No.  
+It means that we need $\exists m \in \mathbb{Z}^+$ such that $x^3 | N - k x^3$. No, just $N = k x^3$.  
+This implies $v_p(N) \ge v_p(x^3)$ for all prime factors $p$? No.  
+It means we need to check if the exponent in $N$ is sufficient to cover the factor $x^3$.  
+Since $x^3 = \prod p^{u_p}$, and $N = \prod q^{v_q}$.  
+Then we need that for each prime $q$, $v_q(N) \ge u_q$.  
+If this holds, then there is an integer $k$ (actually $x^3 | N$ means the divisibility condition).  
+The condition $x^3 \mid N$ is equivalent to $\sum_{j} v_j(N)$ being a multiple of 1? No.  
+It is simply that $N = x^3 k$.  
 
 Let's check if there are any primes $p$ such that $v_p(10!) < v_p(x^3)$.  
 For this to hold, we need $\exists p$ such that $v_p(10!) < 3 \cdot v_p(x)$? No.  

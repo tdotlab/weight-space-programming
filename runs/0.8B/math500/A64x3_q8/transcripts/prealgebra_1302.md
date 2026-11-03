@@ -124,16 +124,16 @@ Here's a thinking process that leads to the simplified radical expression:
         5. Notice that 2 is outside the radical ($a$) and $11$ is inside the radical squared ($\sqrt{b^2}$).  
         6. Apply the square root rule for radicals: $\sqrt{a \cdot b^2} = a\sqrt{b}$.  
         7. Here, we have $2 \cdot (11^2)$ in our radicand, but the standard way to handle this is:  
-           $\sqrt{2 \times 11^2} = \sqrt{2} \times \sqrt{11^2}$  
-           Since $11^2 = 11 \times 11$, and the term inside the root is a perfect square (specifically 11 times itself), we extract it.  
-           $\sqrt{242} = 11\sqrt{2}$.  
+$\sqrt{2 \times 11^2} = \sqrt{2} \times \sqrt{11^2}$  
+Since $11^2 = 11 \times 11$, and the term inside the root is a perfect square (specifically 11 times itself), we extract it.  
+$\sqrt{242} = 11\sqrt{2}$.  
 
     *   Let's re-verify the logic for "per factorization".  
-        $242 = 2 \times 121$  
-        $\sqrt{242} = \sqrt{2 \times 121}$  
-        Since $121$ is a perfect square ($11^2$), $\sqrt{2 \times 11^2} = \sqrt{2}\sqrt{11^2} = 11\sqrt{2}$?  
-        Actually, standard math rules: $\sqrt{x^2 y} = |x|\sqrt{y}$. Since $242 > 0$, we take positive roots.  
-        $11\sqrt{2}$.  
+$242 = 2 \times 121$  
+$\sqrt{242} = \sqrt{2 \times 121}$  
+Since $121$ is a perfect square ($11^2$), $\sqrt{2 \times 11^2} = \sqrt{2}\sqrt{11^2} = 11\sqrt{2}$?  
+Actually, standard math rules: $\sqrt{x^2 y} = |x|\sqrt{y}$. Since $242 > 0$, we take positive roots.  
+$11\sqrt{2}$.  
 
     *   Final Answer Construction.  
 

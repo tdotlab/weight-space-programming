@@ -1554,7 +1554,7 @@ If we consider a standard calendar year with $365$ or $366$ days (assuming a non
 - If she walks on **Days 3** and **Days 6** (every third day), this means she walks on Days that are divisible by 3 within the month's sequence.  
 - For a month of length $L$, if she walks every third day, the number of full cycles is $\lfloor L/3 \rfloor$.  
 - In a year (standard years):  
-    - If we assume standard months (January, February).  
+  - If we assume standard months (January, February).  
     - In January (usually 31 days), multiples of 3 fit in $31$: $31/3 \approx 10.33$, so roughly 10 weeks? No, typically riddles ask for specific counts.  
     - In **February** (28 or 29 days): $28/3 \approx 9.33$, so roughly 9 full cycles.  
 

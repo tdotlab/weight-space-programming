@@ -333,7 +333,7 @@ Here is a thinking process to solve the problem:
                                                                                     *   For $y=2x-3 \implies 7 = 8 - 3 = 5$ (No).  
                                                                                 *   So $(4,7)$ is not on either asymptote.  
                                                                             *   So we can use the coordinates of intersection to find center if we know it's a specific type? No.  
-                                                                                    *   Wait, maybe the problem implies that the hyperbola has vertices at $(0, \pm 17)$ or something? No.  
+                                                                                *   Wait, maybe the problem implies that the hyperbola has vertices at $(0, \pm 17)$ or something? No.  
                                                                                 *   Let's go back to basics. I need to calculate distance between foci.  
                                                                             *   To find foci, I first need to know if the hyperbola is in a standard form like $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$ or something else.  
                                                                                 *   Let's check slopes again. $m=2$. So lines are $y-3 = 2(x-h)$? No, that would mean intersection point $(h,k)$.  

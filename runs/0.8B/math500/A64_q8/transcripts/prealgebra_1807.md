@@ -303,8 +303,8 @@ Here's a thinking process to solve the problem:
                                                                     *   Values: $\{A, 90, 90, D\}$. Wait. I missed something. $B$ and $C$ are at vertices. $D$ and $A$ are the others? No. Vertices are B, C, A, D. So $\angle B=90$, $\angle C=90$.  
                                                                     *   Then we have angles $A$ and $D$. The sum of all is 360. So $A+D = 180$.  
                                                                     *   So the set of values for the quad is $\{A, 90, 90, D\}$. No, the values at vertices are $A, 90, 90, A$ and $D$?  
-                                                                            *   Vertices B, C have angles 90. Vertex A has angle $A$. Vertex D has angle $D$.  
-                                                                                *   So the set of angles is $\{A, 90, 90, D\}$.  
+                                                                        *   Vertices B, C have angles 90. Vertex A has angle $A$. Vertex D has angle $D$.  
+                                                                            *   So the set of angles is $\{A, 90, 90, D\}$.  
                                                                             *   But this is only if $A$ and $D$ are not 90?  
                                                                                 *   If $A=60$, angles are $\{60, 90, 90, 120\}$. (If B and C are right).  
                                                                                 *   Max is 120. Min is 60. $120 = 2(60)$. Correct.  

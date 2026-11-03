@@ -169,7 +169,7 @@ Here's a thinking process that leads to the solution:
                                 2. $\binom{3+2-1}{2-1} = \binom{4}{1} = 4$. Correct.  
                                 3. $\binom{3+2-1}{3-1}$... wait, if we used $\binom{n+k-1}{k}$ it would be 6? No.  
                             *   Let's check the indices carefully. $n=5$ balls into 2 distinguishable boxes. Solutions:  
-                                $(0,5), (1,4), (2,3), (3,2), (4,1), (5,0)$. Count = 6.  
+$(0,5), (1,4), (2,3), (3,2), (4,1), (5,0)$. Count = 6.  
                             *   Formula $\binom{n+k-1}{k-1}$? No, usually it is $\binom{n+k-1}{k}$. Wait, for $n=3, k=2$, we found count 4. If formula was $\binom{3+2}{2} = \binom{5}{2} = 10$? No.  
                             *   Let's derive properly. The number of non-negative solutions to $x_1 + ... + x_k = n$.  
                             *   This is equivalent to putting $n$ items into a circle with no wrap around, wait.  

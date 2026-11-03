@@ -629,10 +629,10 @@ Here is a thinking process to solve the problem:
                                                                                         *   So slope is -2? Wait. $\frac{\Delta y}{\Delta x} = \frac{y_2-y_1}{x_2-x_1}$.  
                                                                                             *   If $y$ decreases, slope is negative.  
                                                                         *   Let's check line 1 again: $(0,-3)$ and $(8.5, 17)$? No.  
-                                                                                *   Equation $y = 2x - 3$. Passes through $(0,-3)$. Slope $\frac{17 - (-3)}{8.5 - 0} = \frac{20}{8.5}$? No.  
-                                                                                    *   Wait, the line $y = 2x - 3$ has slope $\pm 2$? Or $\pm 2/1$?  
+                                                                            *   Equation $y = 2x - 3$. Passes through $(0,-3)$. Slope $\frac{17 - (-3)}{8.5 - 0} = \frac{20}{8.5}$? No.  
+                                                                                *   Wait, the line $y = 2x - 3$ has slope $\pm 2$? Or $\pm 2/1$?  
                                                                                 *   Wait, let's check $y$ vs $x$.  
-                                                                                        *   If I take two points on it: $(0, -3)$ and $(8.5, 17)$. No, that's not the slope.  
+                                                                                    *   If I take two points on it: $(0, -3)$ and $(8.5, 17)$. No, that's not the slope.  
                                                                                         *   Let's find slope with one point as origin? No.  
                                                                                         *   Let me just use the formula $m = \frac{A}{B}$ for line $y = \pm Ax + B$. No.  
                                                                                         *   For line $Ax + By = C$, $m = -A/B$? No, $m = A/B$ if slope 1? No.  

@@ -240,8 +240,8 @@ Here's a thinking process that leads to the simplified radical expression:
 
     *   Let's double check if there's any weird math notation I missed. "Put your final answer in boxed."  
     *   The format is:  
-        Reasoning  
-        \boxed{...}  
+Reasoning  
+\boxed{...}  
 
     *   Ready to generate response.  
 
@@ -296,26 +296,26 @@ Here's a thinking process that leads to the simplified radical expression:
 To simplify the radical expression $\sqrt{242}$, we need to find factors of 242 that can be removed from under the square root sign. This allows us to write the result in the form $a \sqrt{b}$, where $a$ is a rational number and $b$ is an integer.  
 
 1.  **Analyze the radicand:**  
-    The number inside the radical is $242$. To simplify it, we should look for integers (factors) that allow us to separate out a perfect square term from 242.  
+The number inside the radical is $242$. To simplify it, we should look for integers (factors) that allow us to separate out a perfect square term from 242.  
 
 2.  **Prime factorization:**  
-    We can find if 242 has any perfect square factors by breaking it down into its prime components or checking for divisors.  
+We can find if 242 has any perfect square factors by breaking it down into its prime components or checking for divisors.  
     *   Since $242$ is even, we know that $2$ divides $242$. Let's check the other part: $242 / 2 = 121$.  
     *   So, $242 = 121 \times 2$.  
 
 3.  **Identify the perfect square factor:**  
-    Notice that $121$ is a square number. Let's check its roots: $10^2=100$, so $\sqrt{100}=10$. Since $121 = 11 \times 11$, we can express it as $11^2$.  
-    Therefore, we have the prime factorization of 242 as:  
-    $$242 = 2 \times 11^2$$  
+Notice that $121$ is a square number. Let's check its roots: $10^2=100$, so $\sqrt{100}=10$. Since $121 = 11 \times 11$, we can express it as $11^2$.  
+Therefore, we have the prime factorization of 242 as:  
+$$242 = 2 \times 11^2$$  
 
 4.  **Apply the properties of radicals:**  
-    Using the property $\sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}$ (where $a$ and $b$ are positive integers), we can rewrite the expression:  
-    $$ \sqrt{242} = \sqrt{2 \times 11^2} = \sqrt{2} \times \sqrt{11^2} $$  
+Using the property $\sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b}$ (where $a$ and $b$ are positive integers), we can rewrite the expression:  
+$$ \sqrt{242} = \sqrt{2 \times 11^2} = \sqrt{2} \times \sqrt{11^2} $$  
 
 5.  **Simplify:**  
-    Using the property $\sqrt{n^2} = n$, we know that $\sqrt{11^2} = 11$.  
-    So, substituting this back into the expression:  
-    $$ \sqrt{242} = 11\sqrt{2} $$  
+Using the property $\sqrt{n^2} = n$, we know that $\sqrt{11^2} = 11$.  
+So, substituting this back into the expression:  
+$$ \sqrt{242} = 11\sqrt{2} $$  
 
 The number inside the radical is now a perfect square multiplied by the integer $11$, leaving $2$ as the remaining term under the radical. Since $2$ has no square factors other than itself, this is in its simplest form.  
 

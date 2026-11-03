@@ -1377,9 +1377,9 @@ $x^3$: $x \cdot x + x^2 \cdot (-x) = x^3 - x^3 = 0$? No.
 $x^2$: $x \cdot (-x) = 0$? No.  
 Term $x^2$ in product: $x \cdot B_1$ is $x(-x+2)$? No.  
 Let's do it row by row carefully.  
-   x^4    x^3    x^2     x^1   const  
-  +------+-------+-----+---------+-------+-----\+  
- | x^4 | + | 0 | + | -| + |      |      |        (No)  
+x^4    x^3    x^2     x^1   const  
++------+-------+-----+---------+-------+-----\+  
+| x^4 | + | 0 | + | -| + |      |      |        (No)  
 Let's check product $x^4-x^3+x^2$...? No.  
 
 Let's factor $(x^2+x-1)(x^2-x+2)$:  

@@ -24,7 +24,7 @@ Here's my thought process for solving this combinatorics problem:
 3.  **Identify the Mathematical Model:**  
     *   This is a classic "Combination" problem (permutations).  
     *   The number of ways to choose $k$ items from a set of $n$ distinct items where order doesn't matter is given by:  
-        $$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$  
+$$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$  
 
 4.  **Apply the Formula:**  
     *   We need to pick 3 boys and 2 girls.  
@@ -36,21 +36,21 @@ Here's my thought process for solving this combinatorics problem:
 
 5.  **Perform the Calculation:**  
     *   The number of ways to choose 3 boys out of 7:  
-        $$ C(7, 3) = \frac{7!}{3!(7-3)!} = \frac{7!}{3!4!} $$  
-        Calculate $C(7, 3)$:  
-        $$ \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35 $$  
+$$ C(7, 3) = \frac{7!}{3!(7-3)!} = \frac{7!}{3!4!} $$  
+Calculate $C(7, 3)$:  
+$$ \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35 $$  
 
     *   The number of ways to choose 2 girls out of 4:  
-        $$ C(4, 2) = \frac{4!}{2!(4-2)!} = \frac{4!}{2!2!} $$  
-        Calculate $C(4, 2)$:  
-        $$ \frac{4 \times 3}{2 \times 1} = 6 $$  
+$$ C(4, 2) = \frac{4!}{2!(4-2)!} = \frac{4!}{2!2!} $$  
+Calculate $C(4, 2)$:  
+$$ \frac{4 \times 3}{2 \times 1} = 6 $$  
 
     *   The total number of ways to pick the group is the product of these two independent choices (Combinations are multiplicative for distinct items).  
-        $$ \text{Total Ways} = C(7, 3) \times C(4, 2) $$  
-        $$ \text{Total Ways} = 35 \times 6 $$  
+$$ \text{Total Ways} = C(7, 3) \times C(4, 2) $$  
+$$ \text{Total Ways} = 35 \times 6 $$  
 
     *   Calculate the product:  
-        $$ 35 \times 6 = 210 $$  
+$$ 35 \times 6 = 210 $$  
 
     *   Alternatively, since the order doesn't matter and both sets (boys and girls) are chosen simultaneously, we can view this as choosing a specific subgroup from the class. Since there are two types of students and the problem asks for 3 boys and 2 girls, it's equivalent to picking 5 items out of 11 where the first 3 are boys and the next 2 are girls.  
 
@@ -61,7 +61,7 @@ Here's my thought process for solving this combinatorics problem:
     *   "Pick 3 boys and 2 girls". Yes, this means exactly 3 boys AND exactly 2 girls. It's a subset selection problem.  
     *   So, $\binom{7}{3}$ ways to pick 3 boys. Then we have 2 positions remaining for the girls. Wait, no. The groups are chosen from the class.  
     *   Let's re-evaluate: "Pick 3 boys and 2 girls". This is a standard combination problem. $C(n,r)$. Here $n=7$ (boys), $r=3$.  
-        $$ \binom{7}{3} = 35 $$  
+$$ \binom{7}{3} = 35 $$  
     *   But wait, I missed the specific condition "and 2 girls". The total class has 4 girls. So the number of ways to pick 3 boys from 7 is 35. Then we need to distribute those specific chosen boys into 3 distinct slots? No, order doesn't matter.  
     *   Wait, the phrasing "Mr. Brennan has 7 boys and 4 girls" means the total set of students available is $S = \{b_1, \dots, b_7\} \cup \{g_1, \dots, g_4\}$.  
     *   We need to select a subset $B$ of boys and $G$ of girls.  

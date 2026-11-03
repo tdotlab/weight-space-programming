@@ -603,18 +603,18 @@ Maybe $f(n)$ for negative integers? No.
 
 Okay, let's write down the solution steps clearly.  
 1. Evaluate $n_1 = \frac{\pi}{3}$.  
-   $1.047 < 4$. Condition $n < 4$ is true. So use $f(\dots) = \lceil n \rceil$.  
-   $\lceil \frac{\pi}{3} \rceil = 2$.  
+$1.047 < 4$. Condition $n < 4$ is true. So use $f(\dots) = \lceil n \rceil$.  
+$\lceil \frac{\pi}{3} \rceil = 2$.  
 
 2. Evaluate $n_2 = \sqrt{45}$.  
-   $6.708 > 4$. Condition $n \geq 4$ is true. So use $f(\dots) = \lfloor n \rfloor$.  
-   $\lfloor \sqrt{45} \rfloor = 6$.  
+$6.708 > 4$. Condition $n \geq 4$ is true. So use $f(\dots) = \lfloor n \rfloor$.  
+$\lfloor \sqrt{45} \rfloor = 6$.  
 
 3. Evaluate $n_3 = 8^{2/3}$.  
-   $8^{2/3} = 4$.  
-   Condition: Is $4 < 4$? False. So condition "if $n < 4$" is false.  
-   Therefore use "else" (condition $n \geq 4$).  
-   So $f(4) = \lfloor 4 \rfloor = 4$.  
+$8^{2/3} = 4$.  
+Condition: Is $4 < 4$? False. So condition "if $n < 4$" is false.  
+Therefore use "else" (condition $n \geq 4$).  
+So $f(4) = \lfloor 4 \rfloor = 4$.  
 
 Sum: $2 + 6 + 4 = 12$.  
 

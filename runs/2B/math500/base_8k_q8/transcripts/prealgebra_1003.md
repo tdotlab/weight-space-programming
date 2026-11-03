@@ -129,25 +129,25 @@ The user wants to find the measure of angle $BAC$ given a geometric configuratio
                     *   In the diagram (hypothetically), we have point A, point C, point D, point F.  
                     *   Wait, B is labeled. Is there a connection?  
                     *   Let's look at the label "F". `pair F` is not defined in code but referenced. Actually, looking at the code again:  
-                        ```  
-                        pair A = dir(360*3/7+90);  
-                        pair B = dir(360*2/7+90); // This is just a point on heptagon?  
-                        pair C = A+dir(90)*(F-A); // Wait, F is undefined here? Ah, wait. Maybe `F` is `dir(...)`. Let's look closer at the code provided in the prompt block.  
-                        ```  
-                        The code block:  
-                        ```  
-                        for(int i=0; i <=7; ++i) {  
-                          draw(dir(360*i/7+90)--dir(360*(i+1)/7+90));  
-                        }  
-                        pair A = dir(360*3/7+90);  
-                        pair B = dir(360*2/7+90); // This puts B at angle 2*51.8 deg?  
-                        pair C = A+dir(90)*(F-A);  
-                        pair D = C+F-A; // D defined by C and F? Where does F come from?  
-                        ```  
-                        Wait, this is messy. The user provided code is likely a reconstruction of the image or just an attempt to generate it. Let's ignore the specific code details and rely on the problem statement: "A square and a regular heptagon are coplanar and share a common side $\overline{AD}$."  
+```
+                        pair A = dir(360*3/7+90);
+                        pair B = dir(360*2/7+90); // This is just a point on heptagon?
+                        pair C = A+dir(90)*(F-A); // Wait, F is undefined here? Ah, wait. Maybe `F` is `dir(...)`. Let's look closer at the code provided in the prompt block.
+```
+The code block:  
+```
+                        for(int i=0; i <=7; ++i) {
+                          draw(dir(360*i/7+90)--dir(360*(i+1)/7+90));
+                        }
+                        pair A = dir(360*3/7+90);
+                        pair B = dir(360*2/7+90); // This puts B at angle 2*51.8 deg?
+                        pair C = A+dir(90)*(F-A);
+                        pair D = C+F-A; // D defined by C and F? Where does F come from?
+```
+Wait, this is messy. The user provided code is likely a reconstruction of the image or just an attempt to generate it. Let's ignore the specific code details and rely on the problem statement: "A square and a regular heptagon are coplanar and share a common side $\overline{AD}$."  
 
-    *   **Interpretation of "Share Common Side AD":**  
-        *   Usually means $A$ and $D$ are vertices of both polygons?  
+*   **Interpretation of "Share Common Side AD":**  
+    *   Usually means $A$ and $D$ are vertices of both polygons?  
         *   Let's assume the vertices of the heptagon are labeled sequentially, say $V_1, V_2, \dots, V_7$.  
         *   Let $V_1 = A$ and $V_3$ (or similar) be D? Or maybe just vertices that make up the segment AD.  
         *   Let's assume the square is formed by vertices A, D and two other points.  

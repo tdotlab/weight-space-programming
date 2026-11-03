@@ -331,7 +331,7 @@ Here's a thinking process that leads to the solution:
         *   Let's try a logic check. What if the conditions are actually:  
             1. $x$ is divisible by 7? (Since remainder is 0).  
             2. $x \pmod k = 1$ for all $k \in \{2, 3, 4, 6\}$?  
-                *   Let's check: $x=14$. $14 \pmod 7 = 0$.  
+               *   Let's check: $x=14$. $14 \pmod 7 = 0$.  
                 *   If I have to satisfy "remainder is 1", maybe it means $x = n \times d + 1$? No.  
     *   Let's assume the prompt is a specific logic puzzle.  
         *   Riddle: "If her age is divided by 2, remainder is 1."  

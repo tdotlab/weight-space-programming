@@ -19,7 +19,7 @@ Here's a thinking process that leads to the solution:
     *   **Distinctness:** Order matters (swapping dishes between people constitutes a different combination).  
 
 2.  **Determine the approach:**  
-    This is a permutation problem or a combinations problem with constraints. Since order matters between individuals and the items are distinct, it involves selecting two different items out of 10 for two people.  
+This is a permutation problem or a combinations problem with constraints. Since order matters between individuals and the items are distinct, it involves selecting two different items out of 10 for two people.  
 
 3.  **Step-by-Step Calculation:**  
 
@@ -70,11 +70,11 @@ Here's a thinking process that leads to the solution:
     *   "It does matter who orders what" -> Checked (permutation logic).  
 
 7.  **Final Answer Formulation:**  
-    Yann can choose any of the 10 dishes ($10$ options).  
-    Camille then chooses a different one from the remaining items ($9$ options).  
-    Total combinations = $10 \times 9 = 90$.  
+Yann can choose any of the 10 dishes ($10$ options).  
+Camille then chooses a different one from the remaining items ($9$ options).  
+Total combinations = $10 \times 9 = 90$.  
 
-    $\boxed{90}$  
+$\boxed{90}$  
 
 
 ## Answer

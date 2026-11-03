@@ -287,11 +287,11 @@ $(x^4 - 16x^2 + 5x + 20) / (x+1) = x^3(x-1)^2 ...$ no.
 Perform synthetic division with $-1$:  
 Coeffs: 1, 0, -16, 5, 20.  
 -1 | 1 0 -16 5 20  
-     | 1 0 -17 -20 ? No.  
-       |-1   0\.  
-    $x^3(-1)$ -> coeff becomes $-1$.  
-    Multiply $-1 \times (-1)^2 = 1$? No.  
-      Coeff: $1 \cdot x^3 ( \dots) \rightarrow$ just use row operations.  
+| 1 0 -17 -20 ? No.  
+|-1   0\.  
+$x^3(-1)$ -> coeff becomes $-1$.  
+Multiply $-1 \times (-1)^2 = 1$? No.  
+Coeff: $1 \cdot x^3 ( \dots) \rightarrow$ just use row operations.  
 Coeffs: 1, 0, -16, 5, 20  
 Row 1: $-1$ |  
 $x^4$: $1(-1)^0 = 1$.  

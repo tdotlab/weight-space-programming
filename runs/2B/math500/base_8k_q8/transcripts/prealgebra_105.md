@@ -166,36 +166,32 @@ Here's a thinking process that leads to the correct solution:
                                                 *   If we map compass to standard polar coordinates (math), usually North is $+y$, East is $+x$.  
                                                 *   If we rotate Clockwise from North: We go $0 \to 90$? No. $N \to E$ in this coordinate system implies rotating "Right" visually on the map?  
                                                 *   Let's draw it.  
-                                                    ```  
-                                                    [N]       (12 o'clock)  
-                                                     |  
-                             [W]-------(90 degrees?) No wait.  
-
-```text
+```
+                                                    [N]       (12 o'clock)
+                                                     |
+                             [W]-------(90 degrees?) No wait.
                                                     |
                              [E]-------
+                                                    | (3 o'clock)
+                                                    [S]       (6 o'clock)
 ```
-
-                                                    | (3 o'clock)  
-                                                    [S]       (6 o'clock)  
-                                                    ```  
-                                                    *   Wait, if N is 12 and E is 3. Then 12 -> 3 is a "Right" turn? No.  
-                                                    *   Let's assume the skater is on a standard compass rose.  
-                                                    *   North is 0 deg. East is 90 deg (standard math).  
-                                                        *   If I am at N, and I rotate to E... that is +90 degrees. Is it Left or Right?  
-                                                            *   CCW is "Right" direction of rotation on a clock face? No, CCW goes $N \to W \to S \to E$. Wait.  
-                                                            *   If X is East, Y is North. (Standard math: X horizontal right, Y vertical up).  
-                                                                *   Angle 0 is X ($E$). Angle 90 is Y ($N$).  
-                                                                *   To go from N (90) to E (0), you rotate -90. This is CW.  
-                                                            *   So if "spinning to her right" means CW rotation, then we subtract $2250^\circ$.  
-                                                    *   Wait, what if the map is rotated so that North is 12 and East is 3? Then going from N to E (12 to 3) on a clock face corresponds to moving "forward" or "right"?  
-                                                        *   If I am facing North. My right hand points East. If I turn my body so it faces East, I have turned $90^\circ$ towards my right side.  
-                                                            *   Wait, is turning to East considered a "left" or "right" turn?  
-                                                                *   If you are driving North and want to go West (Left turn). If you want to go East (Right turn). Yes, going East is a Right turn.  
-                                                                *   So, spinning to her right means turning towards East.  
+*   Wait, if N is 12 and E is 3. Then 12 -> 3 is a "Right" turn? No.  
+    *   Let's assume the skater is on a standard compass rose.  
+        *   North is 0 deg. East is 90 deg (standard math).  
+            *   If I am at N, and I rotate to E... that is +90 degrees. Is it Left or Right?  
+                *   CCW is "Right" direction of rotation on a clock face? No, CCW goes $N \to W \to S \to E$. Wait.  
+                    *   If X is East, Y is North. (Standard math: X horizontal right, Y vertical up).  
+                        *   Angle 0 is X ($E$). Angle 90 is Y ($N$).  
+                            *   To go from N (90) to E (0), you rotate -90. This is CW.  
+                                *   So if "spinning to her right" means CW rotation, then we subtract $2250^\circ$.  
+                                    *   Wait, what if the map is rotated so that North is 12 and East is 3? Then going from N to E (12 to 3) on a clock face corresponds to moving "forward" or "right"?  
+                                        *   If I am facing North. My right hand points East. If I turn my body so it faces East, I have turned $90^\circ$ towards my right side.  
+                                            *   Wait, is turning to East considered a "left" or "right" turn?  
+                                                *   If you are driving North and want to go West (Left turn). If you want to go East (Right turn). Yes, going East is a Right turn.  
+                                                    *   So, spinning to her right means turning towards East.  
                                                         *   Does it mean CW or CCW on the compass?  
                                                             *   Clockwise rotation: $N \to E \to S \to W \to N$.  
-                                                                    *   Is that a "Right" turn? Yes, if you imagine a clock face. 12 to 3 is Right (CW).  
+                                                                *   Is that a "Right" turn? Yes, if you imagine a clock face. 12 to 3 is Right (CW).  
                                                             *   If I am facing North. My right side is East. To face East is turning my right arm towards the center of the earth?  
                                                                 *   Wait, usually in these problems:  
                                                                     *   Facing North ($0^\circ$).  

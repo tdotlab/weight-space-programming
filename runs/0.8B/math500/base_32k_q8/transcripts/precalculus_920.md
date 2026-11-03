@@ -328,7 +328,7 @@ Here is my thought process for solving this problem:
                                                                                                 *   Let me recompute:  
                                                                                                 *   Row 1, Col 1: $3(3) + 7(-1) = 9 - 7 = 2$.  
                                                                                                 *   Row 1, Col 2: $3(7) + 7(-2)$? No. $3 \cdot (-2) - 7 \cdot 1$ (Wait, matrix multiplication is sum over k).  
-                                                                                                   $(A^2)_{12} = A_{11}A_{22} + A_{12}A_{21}$.  
+$(A^2)_{12} = A_{11}A_{22} + A_{12}A_{21}$.  
                                                                                                 *   Wait. $A = \begin{pmatrix} 3 & 7 \\ -1 & -2 \end{pmatrix}$. $A^2 = \begin{pmatrix} (3)(-2) - (-1)(7) & (3)(7) + (-1)(7)? No.  
                                                                                                 *   Wait, matrix multiplication rules are $(AB)_{ij} = \sum_k A_{ik} B_{kj}$.  
                                                                                                 *   $A_{11}=3, A_{12}=7, A_{21}=-1, A_{22}=-2$.  
@@ -355,11 +355,11 @@ Here is my thought process for solving this problem:
                                                                                                 *   Wait. $A^2_{11} = A_{11}^2 - 0$? No.  
                                                                                                 *   Wait, I'm making this too complicated by trying to "guess" the matrix multiplication.  
                                                                                                 *   Let me write down a generic expansion:  
-                                                                                                   $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$.  
-                                                                                                   $A^2 = \begin{pmatrix} a^2 + bc & ab + bd \\ ac + cd & bc + d^2 \end{pmatrix}$? No.  
+$A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$.  
+$A^2 = \begin{pmatrix} a^2 + bc & ab + bd \\ ac + cd & bc + d^2 \end{pmatrix}$? No.  
                                                                                                 *   Let's just compute:  
-                                                                                                  $(A^2)_{11} = 3^2 + (-1)(7)?$ No, the entries are $A_{11}, A_{21}, A_{12}, A_{22}$ etc.  
-                                                                                                 Wait, let me check if I have the matrix elements right.  
+$(A^2)_{11} = 3^2 + (-1)(7)?$ No, the entries are $A_{11}, A_{21}, A_{12}, A_{22}$ etc.  
+Wait, let me check if I have the matrix elements right.  
                                                                                                 *   Row 1: $3, 7$.  
                                                                                                 *   Row 2: $-1, -2$.  
                                                                                                 *   Wait, row 1 is $(3, 7)$. Row 2 is $(-1, -2)$.  

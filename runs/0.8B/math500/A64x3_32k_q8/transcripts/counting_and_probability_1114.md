@@ -285,7 +285,7 @@ Here's my thought process for solving this problem:
                         *   If $x=3$, no solution.  
                         *   ...  
                     *   What about other cases?  
-                            *   Multiples of 5: $\{0, 5\}$.  
+                        *   Multiples of 5: $\{0, 5\}$.  
                             *   Is there any chance that a multiple of 5 results from $2y$ where $y \in \{1..6\}$? No.  
                             *   Is there any chance that $x=5$ is divisible by 5? Yes. Then $xy = 5y$. Divisible by 5 for any $y$.  
                             *   So the valid pairs are all pairs $(d_1, d_2)$ where at least one die has a value in $\{0, 5\}$? No, we just need product divisible by 5.  
@@ -681,7 +681,7 @@ Here's my thought process for solving this problem:
                                                                                                             *   $x=5$: all pairs valid.  
                                                                                                             *   $x=6$: need $y=5/6$ (no).  
                                                                                                 *   So let's re-evaluate this carefully.  
-                                                                                                        *   Let's check if there is any integer solution for $xy \equiv 0 \pmod 5$ with $x, y \in \{1..6\}$.  
+                                                                                                    *   Let's check if there is any integer solution for $xy \equiv 0 \pmod 5$ with $x, y \in \{1..6\}$.  
                                                                                                         *   We established earlier that for a product to be divisible by 5, at least one factor must be 5? Or at least one factor must not be $\equiv -1 \pmod 5$?  
                                                                                                         *   The condition "product is multiple of 5" means $xy = 5k$. This implies $x \cdot y$ has a prime factor 5. Since 5 is a prime, either $x=5$ or $y=5$. (Since 5 divides one of them).  
                                                                                                         *   Is this true? Yes. If $5 | xy$, then $5 | x$ or $5 | y$ or both.  
@@ -714,7 +714,7 @@ Here's my thought process for solving this problem:
                                                                                                                 *   $(5, 5) \to 25$.  
                                                                                                             *   $x=6$: no solution.  
                                                                                                 *   So total favorable pairs are:  
-                                                                                                        *   Pairs with product divisible by 5.  
+                                                                                                    *   Pairs with product divisible by 5.  
                                                                                                 *   Valid pairs: $(1, 5), (2, 5), (5, 1), \dots$? No.  
                                                                                                 *   Let's list all distinct pairs $(x, y)$.  
                                                                                                 *   $P = \{(x,y) \in \{1..6\}^2 : xy \text{ is multiple of } 5\}$.  
@@ -888,14 +888,14 @@ Here's my thought process for solving this problem:
                                                                                             *   $(3, ?) \to$ none.  
                                                                                             *   $(4, ?) \to$ none.  
                                                                                             *   $(5, 1), (5, 2), (5, 3), (5, 4), (5, 5)$.  
-                                                                                                            *   And also pairs from other $y$.  
-                                                                                                                *   If we use the condition "at least one die roll is a multiple of 5" (i.e. face value is 5).  
+                                                                                                *   And also pairs from other $y$.  
+                                                                                                    *   If we use the condition "at least one die roll is a multiple of 5" (i.e. face value is 5).  
                                                                                             *   If $x=1$, $y=5$ is the only candidate (since 5 is unique multiple). So $(1, 5)$ works.  
                                                                                             *   If $x=2$, $y=5$ is the only candidate. So $(2, 5)$ works.  
                                                                                             *   If $x=3$, no solution? Yes, because $3k$ cannot be divisible by 5.  
                                                                                             *   ...  
                                                                                                 *   This confirms that we are simply counting pairs where at least one number is a multiple of 5? No. That was "face value" not product divisibility. The condition for divisibility is product divisibility.  
-                                                                                                            *   Since $x \cdot y = 5k$, and $x,y \ge 1$.  
+                                                                                                    *   Since $x \cdot y = 5k$, and $x,y \ge 1$.  
                                                                                                 *   This implies that if we look at all possible values for $xy$, it must be a multiple of 5.  
                                                                                                 *   Is there any value in $\{1..6\}^2$ such that product is divisible by 5? Yes: $(1,5), (5,1), \dots$.  
                                                                                                 *   So the set of valid pairs is $S_{fav} = \{(x,y) \mid x=5 \text{ or } y=5\}$.  
@@ -967,7 +967,7 @@ Here's my thought process for solving this problem:
                                                                                                     *   Outcomes where $x=5$: any $y$ works? Yes. $(5, y)$ for $y \in \{1..6\}$. (5 pairs).  
                                                                                                 *   Outcomes where $y=5$: 5 pairs ($1..5$).  
                                                                                                 *   Are these distinct from the sets above?  
-                                                                                                        *   $\{(1,5), (2,5)\}$ vs $\{(5, 1)..(5, 6)\}$.  
+                                                                                                    *   $\{(1,5), (2,5)\}$ vs $\{(5, 1)..(5, 6)\}$.  
                                                                                                 *   So we have all outcomes where at least one is 5.  
                                                                                                 *   Total favorable: $4$ (pairs $(x,y)$ with $x=5$) + $6$ (pairs $(y,x)$ with $y=5$?) No, let's use inclusion-exclusion or direct listing.  
                                                                                                 *   The set of all valid pairs is the set $\{(x,y) \mid x=5 \lor y=5\}$.  
@@ -1002,7 +1002,7 @@ Here's my thought process for solving this problem:
                                                                                                         *   Also $4 \times ? \to 20$. Not 15.  
                                                                                                 *   Product 20: $4 \times 5 = 20$. $(4, 5)$.  
                                                                                                 *   Product 25: $5 \times 5 = 25$ (if allowed). But we are checking if product is divisible by 5.  
-                                                                                                        *   If $d_1=5$, any product is multiple of 5? Yes. So all $d_2=1..6$ give valid outcomes?  
+                                                                                                    *   If $d_1=5$, any product is multiple of 5? Yes. So all $d_2=1..6$ give valid outcomes?  
                                                                                                     *   Let's re-evaluate this step.  
                                                                                                 *   Condition: "product is a multiple of 5".  
                                                                                                 *   If $d_1 \in \{1..6\}$ and $d_2 \in \{1..6\}$.  
@@ -1018,7 +1018,7 @@ Here's my thought process for solving this problem:
                                                                                                         *   Is there a number in $\{1..6\}$ that divides 10 but is not 5? No (1, 2, 4 divide 10? No).  
                                                                                                         *   So $(3, ?)$ works only if $y=5$.  
                                                                                                 *   Pairs with $d_1=4$: $4 d_2$ must be divisible by 5. No solution (since $\gcd(4,5)=1$, and no integer multiple of 5 except 5). So $(4, ?)$ impossible?  
-                                                                                                        *   Let's check $4 \times 5 = 20$. Divisible by 5. Yes. But $d_1=4$?  
+                                                                                                    *   Let's check $4 \times 5 = 20$. Divisible by 5. Yes. But $d_1=4$?  
                                                                                                 *   If we check for $x=1$: only $y=5$. Pair $(1, 5)$.  
                                                                                                 *   Check for $x=2$: $y=5$. Pair $(2, 5)$.  
                                                                                                 *   Check for $x=3$: $y=5$. Pair $(3, 5)$.  
@@ -1055,7 +1055,7 @@ Here's my thought process for solving this problem:
                                                                                                 *   Let's re-evaluate: does "at least one number is 5" imply "product is divisible by 5"?  
                                                                                                     *   Yes.  
                                                                                                 *   Does "product is divisible by 5" imply "at least one number is 5"?  
-                                                                                                        *   Yes, because the only multiple of 5 in $\{1..6\}$ is 5.  
+                                                                                                    *   Yes, because the only multiple of 5 in $\{1..6\}$ is 5.  
                                                                                                     *   So valid pairs are those where at least one factor is 5?  
                                                                                                 *   This logic leads to a counting problem.  
                                                                                                 *   But we have to check if there are any other outcomes.  
@@ -1067,7 +1067,7 @@ Here's my thought process for solving this problem:
                                                                                                 *   Since faces can be any number, we consider all pairs $(d_1, d_2) \in \{1..6\}^2$.  
                                                                                                 *   Valid: $d_1=5$ or $d_2=5$. (And also if $d_1=5$, product is multiple of 5).  
                                                                                                 *   Are there any other valid outcomes?  
-                                                                                                        *   We found earlier that only pairs $(x,y)$ where at least one number is a multiple of 5.  
+                                                                                                    *   We found earlier that only pairs $(x,y)$ where at least one number is a multiple of 5.  
                                                                                                 *   So the set of favorable outcomes is exactly those where $d_1=5$ or $d_2=5$.  
                                                                                                 *   Is it possible to have neither? No.  
                                                                                                 *   So we need to count pairs $(x,y) \in \{1..6\}^2$ such that $x=5$ or $y=5$.  

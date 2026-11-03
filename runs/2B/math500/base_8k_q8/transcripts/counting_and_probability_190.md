@@ -29,18 +29,18 @@ Here's a thinking process that leads to the solution:
 
 5.  **Perform the Calculation:**  
     *   Substitute $n=6$ and $k=5$:  
-        $$C(6, 5) = \frac{6!}{5!(6-5)!}$$  
+$$C(6, 5) = \frac{6!}{5!(6-5)!}$$  
     *   Simplify the denominator:  
-        $$\binom{6}{5} = \frac{6!}{5! \cdot 1!}$$  
+$$\binom{6}{5} = \frac{6!}{5! \cdot 1!}$$  
     *   Expand the factorials (or notice that $n-k$ is small here):  
-        $$6! = 720$$  
-        $$5! = 120$$  
-        $$1! = 1$$  
+$$6! = 720$$  
+$$5! = 120$$  
+$$1! = 1$$  
     *   Or, using cancellation:  
-        $$\frac{6 \times 5 \times 4 \times 3 \times 2 \times 1}{(5 \times 4 \times 3 \times 2 \times 1) \times 1}$$  
-        The $5!$ in the denominator cancels out most of the terms in the numerator (specifically leaving just the first factor and the remainder). Actually, it leaves just $6!/5! = 6$.  
+$$\frac{6 \times 5 \times 4 \times 3 \times 2 \times 1}{(5 \times 4 \times 3 \times 2 \times 1) \times 1}$$  
+The $5!$ in the denominator cancels out most of the terms in the numerator (specifically leaving just the first factor and the remainder). Actually, it leaves just $6!/5! = 6$.  
     *   Alternatively, $\binom{6}{5} = \binom{6}{6-5} = \binom{6}{1}$.  
-        $$\binom{6}{1} = \frac{6}{1} = 6$$  
+$$\binom{6}{1} = \frac{6}{1} = 6$$  
 
 6.  **Alternative Approach (Logic):**  
     *   Total ways to choose 5 students from 6 is equivalent to the number of students *not* chosen.  

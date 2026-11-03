@@ -22,21 +22,21 @@ Here's a thinking process that leads to the solution:
 
 3.  **Solve for $t$ using substitution:**  
     *   Substitute $x$ back into the inequality:  
-        $$2 < x < 3.5$$  
+$$2 < x < 3.5$$  
     *   We know that $x = \sqrt{t}$, so squaring both sides gives a relationship between $t$ and $x$. Since the inequality holds for positive values of $x$, and $\sqrt{t} > 0$ always, there's no issue with signs (as long as $t$ is real).  
     *   Multiply by itself:  
-        $$t < x^2$$  
+$$t < x^2$$  
     *   Square both sides again to isolate $t$:  
-        $$t = x^2$$  
+$$t = x^2$$  
 
 4.  **Determine the Range of $t$:**  
     *   From the original problem statement and substitution, we want the number of integer values for $t$.  
     *   The inequality is $2 < \sqrt{t} < 3.5$.  
     *   We can square all parts of the inequality (noting that both sides are positive for real numbers).  
     *   Squaring:  
-        $$2^2 < t < 3.5^2$$  
+$$2^2 < t < 3.5^2$$  
     *   Calculate squares:  
-        $$4 < t < 12.25$$  
+$$4 < t < 12.25$$  
 
 5.  **Identify Integer Solutions:**  
     *   We need to count the number of integers $t$ such that $4 < t < 12.25$.  
@@ -56,7 +56,7 @@ Here's a thinking process that leads to the solution:
         *   11
 ```
 
-        *   (Note: Since $t < 12.25$, we don't need to check 12).  
+*   (Note: Since $t < 12.25$, we don't need to check 12).  
 
     *   Counting:  
         1.  $t = 5$  
@@ -68,9 +68,9 @@ Here's a thinking process that leads to the solution:
         7.  $t = 11$  
 
     *   Total count:  
-        $7 \times 2 - 1 = 13$  
-        Let's re-calculate: $11, 10, 9, 8, 7, 6, 5$.  
-        There are $7$ integers.  
+$7 \times 2 - 1 = 13$  
+Let's re-calculate: $11, 10, 9, 8, 7, 6, 5$.  
+There are $7$ integers.  
 
 7.  **Double Check the Calculation:**  
     *   Wait, did I miss a nuance? The problem says "less than".  
@@ -132,7 +132,7 @@ Here's a thinking process that leads to the solution:
 
     *   Squaring: $4 < t < 12.25$.  
     *   Integers in this interval:  
-        5, 6, 7, 8, 9, 10, 11\.  
+5, 6, 7, 8, 9, 10, 11\.  
     *   Count: 7.  
 
     *   Let's consider if $t$ needs to be a positive real number? Yes, square roots of integers are usually defined for non-negative reals. If negative reals are involved, we'd have imaginary numbers. So assume standard domain $t \ge 0$. Since $4 < t < 12.25$, $t$ is in $(0, 12)$.  

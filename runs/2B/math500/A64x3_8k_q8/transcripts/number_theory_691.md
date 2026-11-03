@@ -317,20 +317,20 @@ The question asks for the largest eight-digit integer in the base 2 (binary) sys
 
 1.  **Understand Base 2 Digits**: In base 2, integers are represented using only two digits: $0$ and $1$. These digits correspond to powers of $2$, specifically $2^0, 2^1, 2^2, \dots$.  
 2.  **Define "Eight-Digit"**: An integer with eight digits in base 2 means it has a bit-length (number of digits) of 8. This corresponds to values ranging from $2^7$ down to $2^0$. The positions are:  
-    $$2^7, 2^6, 2^5, 2^4, 2^3, 2^2, 2^1, 2^0$$  
-    (which is equivalent to bits from position 7 down to 0).  
+$$2^7, 2^6, 2^5, 2^4, 2^3, 2^2, 2^1, 2^0$$  
+(which is equivalent to bits from position 7 down to 0).  
 3.  **Maximize the Integer**: To find the largest integer with a fixed number of digits in a base system, we must choose the maximum possible digit for each position.  
     *   The allowed digits are $\{0, 1\}$.  
     *   Therefore, the maximum value for any digit is $1$.  
 4.  **Formulate the Value**: We construct the binary representation by placing the maximum digit ($1$) at every possible position up to the highest power of 2 (which corresponds to $8 - 1 = 7$ for an 8-digit number).  
-    The binary string is:  
-    $$11111111_2$$  
+The binary string is:  
+$$11111111_2$$  
 5.  **Convert to Base 10**: To find the numerical value, we sum the values of these powers of 2. This can be done using the formula $\sum_{i=0}^{n-1} 2^i = 2^n - 1$.  
-    Here, $n = 8$ (since there are 8 digits).  
-    $$Value = \sum_{i=0}^{7} 2^i = 2^8 - 1$$  
+Here, $n = 8$ (since there are 8 digits).  
+$$Value = \sum_{i=0}^{7} 2^i = 2^8 - 1$$  
 6.  **Calculate**:  
-    $$2^8 = 256$$  
-    $$256 - 1 = 255$$  
+$$2^8 = 256$$  
+$$256 - 1 = 255$$  
 
 The largest eight-digit base 2 integer is $11111111$ in binary, which is equal to $255$ in decimal.  
 

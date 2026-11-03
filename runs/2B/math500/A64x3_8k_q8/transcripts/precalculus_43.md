@@ -69,12 +69,12 @@ Here's my thought process for solving this problem:
 
     *   Let's write out the steps clearly.  
     *   Step 1: Substitute $t=2$ into $x(t) = t^3 + 7$.  
-        $$x(2) = (2)^3 + 7 = 8 + 7 = 15$$  
+$$x(2) = (2)^3 + 7 = 8 + 7 = 15$$  
     *   Step 2: Substitute $t=2$ into $y(t) = -3t^2 - 6t - 5$.  
-        $$y(2) = -3(2)^2 - 6(2) - 5 = -3(4) - 12 - 5 = -12 - 12 - 5 = -29$$  
+$$y(2) = -3(2)^2 - 6(2) - 5 = -3(4) - 12 - 5 = -12 - 12 - 5 = -29$$  
     *   Step 3: The point is $(15, -29)$.  
 
-    The reasoning is solid. Ready to generate the output.  
+The reasoning is solid. Ready to generate the output.  
 
 
 ## Answer

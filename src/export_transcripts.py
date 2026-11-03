@@ -35,45 +35,66 @@ def art(ln):
 def md(text):
     """Model text -> Markdown that renders as written: one line stays one line, fences and
     display math the model left open get closed so they can't swallow the rest of the file,
-    and runs of hand-drawn layout go in a monospace block so they keep their alignment."""
-    out, fence, math = [], None, False
+    and runs of hand-drawn layout go in a monospace block so they keep their alignment.
+    Qwen indents prose as if continuing a list; left alone, Markdown turns everything after
+    the list's end into one code block. So indentation survives only on list items in a list."""
+    out, fence, math, in_list, blank, offset = [], None, False, False, True, 0
     lines = [l.rstrip() for l in text.split("\n")]
     i = 0
     while i < len(lines):
         ln = lines[i]
         i += 1
-        if not fence and not math and art(ln):
-            j = i
-            while j < len(lines) and art(lines[j]):
-                j += 1
-            if j - i >= 1:  # two or more layout lines in a row
-                out += ["", "```text", *lines[i - 1:j], "```", ""]
-                i = j
-                continue
-            ln = LIST.sub(lambda m: m.group(1) + "\\" + m.group(2) if m.group(2)[0] in "-+*"
-                          else m.group(1) + m.group(2)[:-1] + "\\" + m.group(2)[-1], ln, count=1)
         if fence:
-            out.append(ln)
-            if re.fullmatch(r"\s{0,3}" + re.escape(fence[0]) + "{%d,}\\s*" % len(fence), ln):
-                fence = None
-            continue
-        m = OPEN.match(ln)
-        if m and not math:
-            fence = m.group(1)
+            if re.fullmatch(r"\s*" + re.escape(fence[0]) + r"{%d,}\s*" % len(fence), ln):
+                ln, fence = ln.strip(), None  # Qwen indents closing fences; Markdown allows 3 spaces
             out.append(ln)
             continue
         if math:
             out.append(ln)
             math = ln.count("$$") % 2 == 0
             continue
+        if not ln:
+            out.append("")
+            blank = True
+            continue
+        if art(ln):
+            j = i
+            while j < len(lines) and art(lines[j]):
+                j += 1
+            if j > i:  # two or more layout lines in a row
+                out += ["", "```text", *lines[i - 1:j], "```", ""]
+                i, in_list, blank = j, False, True
+                continue
+            ln = LIST.sub(lambda m: m.group(1) + "\\" + m.group(2) if m.group(2)[0] in "-+*"
+                          else m.group(1) + m.group(2)[:-1] + "\\" + m.group(2)[-1], ln, count=1)
+        lm = LIST.match(ln)
+        is_list = bool(lm) and not ln.lstrip().startswith("\\")
+        if is_list and in_list:
+            # a nested item more than 3 spaces past its parent's text is code: clamp it
+            ind = min(len(lm.group(1)), offset)
+            ln = " " * ind + ln.lstrip()
+        else:
+            ln = ln.lstrip()
+        if is_list:
+            m = re.match(r"\s*(?:[-+*]|\d+[.)])( *)", ln)
+            gap = len(m.group(1))
+            offset = len(m.group(0)) if 1 <= gap <= 4 else len(m.group(0)) - gap + 1
+        in_list = is_list or (in_list and not blank)
+        blank = False
+        m = OPEN.match(ln)
+        if m:  # a fence at column 0 ends any list, so what follows starts flush again
+            fence, in_list = m.group(1), False
+            out.append(ln)
+            continue
         if RULE.fullmatch(ln):
             out += ["", ln]
+            in_list = False
             continue
         parts = SPAN.split(ln)
-        ln = "".join(p if i % 2 else TAG.sub("&lt;", p) for i, p in enumerate(parts))
+        ln = "".join(p if k % 2 else TAG.sub("&lt;", p) for k, p in enumerate(parts))
         # an unpaired $$ opens a display block running over the next lines
         math = "".join(parts[::2]).count("$$") % 2 == 1
-        out.append(ln + ("  " if ln and not math else ""))  # two spaces = hard line break
+        out.append(ln + ("  " if not math else ""))  # two spaces = hard line break
     if fence:
         out.append(fence)
     if math:

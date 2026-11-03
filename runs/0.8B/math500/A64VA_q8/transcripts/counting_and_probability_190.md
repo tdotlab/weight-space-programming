@@ -24,7 +24,7 @@ Here's a thinking process that leads to the solution:
 2.  **Calculation:**  
     *   Method 1: Direct Calculation using Permutations if we were forming a line or sequence, but for "selection", combinations are standard.  
     *   Using the Combination formula:  
-        $$ \binom{6}{5} $$  
+$$ \binom{6}{5} $$  
     *   Calculate value:  
         *   $\frac{6!}{5!(6-5)!}$  
         *   $\frac{6!}{5!1!}$  
@@ -76,7 +76,7 @@ Here's a thinking process that leads to the solution:
     *   Let's stick to $\binom{6}{5}$.  
 
     *   Calculation detail:  
-        $$ \frac{6!}{5!(6-5)!} = \frac{6 \times 5!}{5!1!} = 6 $$  
+$$ \frac{6!}{5!(6-5)!} = \frac{6 \times 5!}{5!1!} = 6 $$  
 
     *   Is there any ambiguity about "group of 6"? It doesn't imply specific students, just "students". The number of available students is fixed.  
     *   Answer: 6.  
@@ -157,30 +157,30 @@ Here's a thinking process that leads to the solution:
     *   $C(6,5)$.  
     *   $C(n,k)$ represents $\binom{n}{k}$.  
     *   The standard calculation is:  
-        $$ \binom{6}{5} = \frac{6!}{5!(2)!} \quad ?? $$ No.  
-        $n=6, k=5$. $n-k = 1$.  
-        $\frac{6!}{5!1!} = 6 \times (5!/1!) / 5!$...  
-        Let's just write out the product.  
-        $C(6,5) = 6 \times \binom{5}{4}$. $\binom{5}{4}=5$. So $6 \times 5 = 30$. No.  
-        My previous step: $\frac{6!}{5!(2)!}$ is for choosing 2 from 3? No.  
-        Formula check:  
-        $C(6,1) = 6$. (Choose 1 from 6).  
-        $C(6,2) = 15$. (Choose 2 from 6).  
-        $C(6,5)$ means choose 5 items from a set of 6? That would leave 1 item behind. Since we can't select more items than available in the "remaining" way, it's just choosing one person? No, that doesn't make sense.  
-        Let me re-calculate $\binom{n}{k}$.  
-        $\binom{6}{5}$ means choose 5 people from 6.  
-        Ways to pick 5 people from a group of 6 is simply picking the last one?  
-        No, that's not right.  
-        $C(n,k)$ formula calculation:  
-        $\binom{n}{k} = \frac{n!}{k!(n-k)!}$  
-        Here $n=6$, $k=5$.  
-        Denominator $(5!)$ and $(1!)$.  
-        Numerator $6!$.  
-        So $6!/ (5! 1!)$.  
-        $6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720$.  
-        $5! = 120$.  
-        $1! = 1$.  
-        $\frac{720}{120 \times 1} = 6$.  
+$$ \binom{6}{5} = \frac{6!}{5!(2)!} \quad ?? $$ No.  
+$n=6, k=5$. $n-k = 1$.  
+$\frac{6!}{5!1!} = 6 \times (5!/1!) / 5!$...  
+Let's just write out the product.  
+$C(6,5) = 6 \times \binom{5}{4}$. $\binom{5}{4}=5$. So $6 \times 5 = 30$. No.  
+My previous step: $\frac{6!}{5!(2)!}$ is for choosing 2 from 3? No.  
+Formula check:  
+$C(6,1) = 6$. (Choose 1 from 6).  
+$C(6,2) = 15$. (Choose 2 from 6).  
+$C(6,5)$ means choose 5 items from a set of 6? That would leave 1 item behind. Since we can't select more items than available in the "remaining" way, it's just choosing one person? No, that doesn't make sense.  
+Let me re-calculate $\binom{n}{k}$.  
+$\binom{6}{5}$ means choose 5 people from 6.  
+Ways to pick 5 people from a group of 6 is simply picking the last one?  
+No, that's not right.  
+$C(n,k)$ formula calculation:  
+$\binom{n}{k} = \frac{n!}{k!(n-k)!}$  
+Here $n=6$, $k=5$.  
+Denominator $(5!)$ and $(1!)$.  
+Numerator $6!$.  
+So $6!/ (5! 1!)$.  
+$6! = 6 \times 5 \times 4 \times 3 \times 2 \times 1 = 720$.  
+$5! = 120$.  
+$1! = 1$.  
+$\frac{720}{120 \times 1} = 6$.  
 
     *   Let's check if I made a mistake in the manual calculation or logic.  
     *   $\binom{n}{k}$ represents ways to choose $k$ objects from $n$.  

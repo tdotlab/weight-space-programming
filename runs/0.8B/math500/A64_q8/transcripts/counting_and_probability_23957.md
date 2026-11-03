@@ -596,18 +596,18 @@ Here is the step-by-step reasoning:
 
 3.  **Calculate the combinations:**  
     *   We choose 3 boys out of the 7 available:  
-        $$ \binom{7}{3} = \frac{7!}{3!(7-3)!} = \frac{7!}{3!4!} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35 $$  
+$$ \binom{7}{3} = \frac{7!}{3!(7-3)!} = \frac{7!}{3!4!} = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35 $$  
     *   We choose 2 girls out of the 4 available:  
-        $$ \binom{4}{2} = \frac{4!}{2!(4-2)!} = \frac{4!}{2!2!} = \frac{4 \times 3}{2 \times 1} = 6 $$  
+$$ \binom{4}{2} = \frac{4!}{2!(4-2)!} = \frac{4!}{2!2!} = \frac{4 \times 3}{2 \times 1} = 6 $$  
 
 4.  **Multiply the results:**  
     *   Since we are selecting a group of boys and a separate selection from girls, and order does not matter for the boys and for the girls (meaning we just select a subset of individuals), the total number of ways is the product of the combinations:  
-        $$ \text{Total Ways} = \binom{7}{3} \times \binom{4}{2} $$  
-        $$ \text{Total Ways} = 35 \times 6 $$  
+$$ \text{Total Ways} = \binom{7}{3} \times \binom{4}{2} $$  
+$$ \text{Total Ways} = 35 \times 6 $$  
     *   Calculation:  
-        $$ 30 \times 6 = 180 $$  
-        $$ 5 \times 6 = 30 $$  
-        $$ 180 + 30 = 210 $$  
+$$ 30 \times 6 = 180 $$  
+$$ 5 \times 6 = 30 $$  
+$$ 180 + 30 = 210 $$  
 
 Therefore, there are 210 ways to pick a group of 3 boys and 2 girls.  
 

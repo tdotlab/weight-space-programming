@@ -267,7 +267,7 @@ Test $r = -1$:
   -------------------
 ```
 
-     1   5    10   -13 (Not 0)  
+1   5    10   -13 (Not 0)  
 
 Test $r = -2$:  
 
@@ -277,8 +277,8 @@ Test $r = -2$:
   ------------------
 ```
 
-      1   4    7   0? No, calculation:  
-  Wait, let me redo the synthetic division carefully.  
+1   4    7   0? No, calculation:  
+Wait, let me redo the synthetic division carefully.  
 
 Coefficients of $P(x)$ divided by $(x-1)$ gave remainder 0.  
 Next step divides result by factor corresponding to remaining root.  

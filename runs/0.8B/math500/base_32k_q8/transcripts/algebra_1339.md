@@ -360,7 +360,7 @@ Here's a thinking process that leads to the solution:
                     *   Then $x = (5\sqrt{24})^2 = 25 \cdot 24 = 600$.  
                 *   But if I assume the relationship is just "variable y varies inversely as x" (meaning product constant), why mention $\sqrt x$? It's confusing.  
             *   Let's check another possibility: The user meant "The value of y varies directly as $\sqrt{x}$". In that case, $y = k\sqrt{x}$. Then for $x=24, y=15 \implies 15 = k(24)^{0.5}$. For $y=3$, we find $x$.  
-                    *   $3 = k\sqrt{x}$. If $k = 15 / \sqrt{24}$, then $3 = (15/\sqrt{24})\sqrt{x} \implies \sqrt{x} = 3 \cdot \sqrt{24} / 15 = \frac{\sqrt{72}}{5}$.  
+                *   $3 = k\sqrt{x}$. If $k = 15 / \sqrt{24}$, then $3 = (15/\sqrt{24})\sqrt{x} \implies \sqrt{x} = 3 \cdot \sqrt{24} / 15 = \frac{\sqrt{72}}{5}$.  
                     *   Wait. $\sqrt{72} \approx 8.48$. $x$ would be approx $(8.48/5)^2 \approx (1.69)^2 \approx 2.86$. This looks like a nice number ($x=28.6$?). No, maybe not.  
             *   Let's try another interpretation: The user meant $y$ varies inversely as $\sqrt{x}$. Inverse variation is defined by $xy = k$. But wait. If I write "inverse of", it means reciprocal.  
                 *   "varies inversely" usually implies the product of variables is constant? Or one variable is in the denominator and the other is 1?  
@@ -650,8 +650,8 @@ Here's a thinking process that leads to the solution:
                             *   So "y varies inversely as $\sqrt x$" means "variable y varies inversely as term $\sqrt x$". Does this mean $y \propto 1/\sqrt{x}$? Or does it mean "x" varies inversely as $\sqrt x$? (Same as above).  
                     *   If it means $xy=k$, then answer is 120.  
             *   However, there is a strong possibility that the phrase "as sqrt x" means the relationship is $y = C / \sqrt{x}$. Let's check if this is a valid interpretation of "inverse as". Inverse usually refers to reciprocal relation. If $A$ varies inversely as $B$, it implies $AB=k$? No, $1/AB$? No.  
-                        *   Wait. Let me think of the phrase "Inverse Variation". The law is inverse variation: $y \cdot x = C$. So "Variable X varies inversely as Variable Y" means $xy = k$.  
-                        *   Therefore, "Variable y varies inversely as $\sqrt x$" would mean $xy=k$ again. Wait. If I say "x varies inversely as y", it implies $xy=k$. Then if I write "$y$ varies inversely as $\sqrt{x}$", I am implicitly assuming that the variable name in the equation is just "inverse" and maybe they meant to write "$x$" instead of "$\sqrt x$"? Or maybe "as $\sqrt x$" means something else.  
+                *   Wait. Let me think of the phrase "Inverse Variation". The law is inverse variation: $y \cdot x = C$. So "Variable X varies inversely as Variable Y" means $xy = k$.  
+                    *   Therefore, "Variable y varies inversely as $\sqrt x$" would mean $xy=k$ again. Wait. If I say "x varies inversely as y", it implies $xy=k$. Then if I write "$y$ varies inversely as $\sqrt{x}$", I am implicitly assuming that the variable name in the equation is just "inverse" and maybe they meant to write "$x$" instead of "$\sqrt x$"? Or maybe "as $\sqrt x$" means something else.  
             *   However, if it's $xy=k$, then why mention $\sqrt x$? Maybe it's just confusing text.  
             *   But wait! Let me look at the problem again. "The value of y varies inversely as $\sqrt x$ and when $x=24$, $y=15$."  
             *   If I assume $xy=k$, then $C=360$. Then $x=120$.  

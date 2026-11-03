@@ -551,9 +551,9 @@ $$ AB x^2 + (3A - 8B)x - 24 $$
 
 We are comparing this expanded polynomial with the given expression $10x^2 - x - 24$. For the two polynomials to be equal, their coefficients must match. We have three conditions for equality of coefficients:  
 1.  The coefficient of $x^2$ must match.  
-    $$ AB = 10 $$  
+$$ AB = 10 $$  
 2.  The coefficient of $x$ must match.  
-    $$ 3A - 8B = -1 $$  
+$$ 3A - 8B = -1 $$  
 3.  The constant term must match (already satisfied as it is $-24$, but we can also derive it).  
 
 Now we need to find integers $A$ and $B$ that satisfy the system of equations:  

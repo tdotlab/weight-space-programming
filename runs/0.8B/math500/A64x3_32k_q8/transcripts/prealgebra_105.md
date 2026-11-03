@@ -24,8 +24,8 @@ Here's a thinking process that leads to the solution:
     *   *Clarification:* In geometry and vector terms, turning to the "right" from an upright position usually means rotating clockwise relative to the viewer (looking up) OR counter-clockwise depending on how you visualize the spin.  
     *   Let's use the standard orientation: North is up (y-axis), East is right (x-axis). If I am at the origin, facing north, turning to my right... Imagine holding a "north" flag and turning it clockwise. So, rotation is counter-clockwise? No.  
 
-    Let's stick to standard math notation (clocks face up):  
-    *   Facing North (y-axis up).  
+Let's stick to standard math notation (clocks face up):  
+*   Facing North (y-axis up).  
     *   Turn Right -> Rotate Counter-Clockwise.  
     *   Let's visualize a clock face. If I am at 12 o'clock, turning "right" usually means turning towards the East side of the page, or West side depending on direction? No, looking North, turning right is towards the East. (Imagine holding a stick and turning it to my right).  
     *   So, rotation $R$ is defined such that it rotates the position vector relative to the original direction.  
@@ -493,17 +493,17 @@ Here's a thinking process that leads to the solution:
                                                                                                 *   If she spins "Right", maybe she ends up facing South?  
                                                                                                 *   If "Right" means turning towards the side perpendicular to North? That would be East/West (East/30?). No.  
 
-    **Let's try a different angle:**  
-    Maybe it's about the direction of spin on the map.  
-    - "Spins 2250 degrees"  
-    - If she spins, she rotates the direction vector around her body axis? No, the problem implies she is spinning *relative to an observer* or just a rotation on a plane?  
+**Let's try a different angle:**  
+Maybe it's about the direction of spin on the map.  
+- "Spins 2250 degrees"  
+  - If she spins, she rotates the direction vector around her body axis? No, the problem implies she is spinning *relative to an observer* or just a rotation on a plane?  
     - "Facing north... spins to her right." This implies she turns her body.  
     - In many puzzles of this type (like from math competitions), the answer depends on whether you count "Right" as a specific direction change.  
     - Let's calculate $2250$. $2250 = 7.5$ revolutions? No, it's an integer.  
     - If she starts at North ($y$-axis). She rotates to East ($x$-axis)? That would be a $90^\circ$ change.  
     - Or maybe she spins $4 \times 360 + 780$? No, that's not standard.  
     - Let's assume the simplest mapping: Facing North $\to$ Right $\to$ South. (Imagine N=Up. Right turns South). Why?  
-        *   Imagine a clock face. N is 12. S is 6. If you turn "Right", do you go from 12 to 6? Or 12 to 3?  
+      *   Imagine a clock face. N is 12. S is 6. If you turn "Right", do you go from 12 to 6? Or 12 to 3?  
         *   Usually, "Right" in a compass (looking at a map) corresponds to the direction that is on your right side. If you are facing North (0), Right side points West or East.  
         *   Let's assume East is $90^\circ$. Then N $\to$ E? Or N $\to$ S?  
     -   Usually, "Right" means turning towards the "Right" of the clock. So if it's a 12 o'clock position (N), the right side of a clock face is at 3 o'clock (E)? No, that's counter-clockwise rotation on the screen. If you look down from above and rotate the object clockwise?  
@@ -522,8 +522,8 @@ Here's a thinking process that leads to the solution:
                 *   If N $\to$ E is +90 deg. Then if I rotate 2250 degrees, maybe I land at S?  
                 *   Or does it mean she spins around a point?  
 
-    **Let's assume the riddle logic:**  
-    *   The skater faces North.  
+**Let's assume the riddle logic:**  
+*   The skater faces North.  
     *   She turns "Right" (likely meaning to face East/West based on "Right hand rule").  
     *   If she faces North, her right side points West (or South).  
     *   However, "Right Hand Rule" is ambiguous for a general person facing North. But if she spins 2250 degrees, maybe it's a specific number of turns relative to the axis.  

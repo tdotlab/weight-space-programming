@@ -829,10 +829,10 @@ The problem asks for the measure of angle $\angle B$ in a triangle $\triangle AB
         *   $\angle A = 14^\circ$  
         *   $\angle ACB = 90^\circ$  
     *   The third angle, $\angle B$, can be found using the subtraction property:  
-        $$ \angle B = 180^\circ - (\angle A + \angle C) $$  
-        $$ \angle B = 180^\circ - (14^\circ + 90^\circ) $$  
-        $$ \angle B = 180^\circ - 104^\circ $$  
-        $$ \angle B = 76^\circ $$  
+$$ \angle B = 180^\circ - (\angle A + \angle C) $$  
+$$ \angle B = 180^\circ - (14^\circ + 90^\circ) $$  
+$$ \angle B = 180^\circ - 104^\circ $$  
+$$ \angle B = 76^\circ $$  
 
 **Alternative Interpretation Check:**  
 Is it possible that $\angle A$ is subtended by arc $BC$? Yes, and since $\triangle ABC$ is inscribed in a circle with diameter $AB$, this configuration is consistent. The calculation holds regardless of the exact position of $C$ on the major or minor arc, as long as the vertex $C$ forms a valid triangle with side $AB$ being a diameter, which forces $\angle ACB = 90^\circ$.  

@@ -494,33 +494,33 @@ So my values:
 At $\theta=\pi$: $z=-1 \implies T_1(0) + T_2(-1)$? No.  
 Let's tabulate carefully.  
 1. $\theta=0 \implies z=1$.  
-   $T_1 = |1+1| = 2$.  
-   $T_2 = |1^2+1-1| = 1$.  
-   Sum = 3.  
+$T_1 = |1+1| = 2$.  
+$T_2 = |1^2+1-1| = 1$.  
+Sum = 3.  
 
 2. $\theta=\pi/2 \implies z=i$.  
-   $T_1 = |1+i| = \sqrt{2}$.  
-   $T_2 = |-2+i|$? No, $z^2+z-1$.  
-   Substitute $z=i$: $(-1) + i - 1 = -2+i$? Wait.  
-   $z^2 = (i)^2 = -1$.  
-   So term is $-1 + i - 1 = -2 + i$. Modulus $\sqrt{(-2)^2+1^2} = \sqrt{5}$.  
-   Sum = $\sqrt{2}+\sqrt{5} \approx 3.647$.  
+$T_1 = |1+i| = \sqrt{2}$.  
+$T_2 = |-2+i|$? No, $z^2+z-1$.  
+Substitute $z=i$: $(-1) + i - 1 = -2+i$? Wait.  
+$z^2 = (i)^2 = -1$.  
+So term is $-1 + i - 1 = -2 + i$. Modulus $\sqrt{(-2)^2+1^2} = \sqrt{5}$.  
+Sum = $\sqrt{2}+\sqrt{5} \approx 3.647$.  
 
 3. $\theta=\pi \implies z=-1$ (angle is $\pi$, which corresponds to $z=-1$ in circle notation).  
-   $T_1 = |1-1| = 0$.  
-   $T_2 = |-1+1+1-1 + 1|^2 = |-1-1-1+1|$? No.  
-   $z^2+z-1 = (-1)^2 + (-1) - 1 = 1-1-1 = -1$. Modulus 1.  
-   Sum = $0+1 = 1$.  
-   Wait, I calculated sum as 3 earlier? Ah, at $\theta=\pi/4$ or something? No, $\pi=180$, angle is negative.  
-   Let's check $\theta=\pi \implies z=-1$.  
-   My previous calculation was $T_2=3$. Why?  
-   Ah, $z=-1$ leads to term 2 being 3?  
-   Wait, if $z=-1$, then $|z+1| = |0| = 0$.  
-   $T_2 = |-1^2 + (-1) - 1| = |1-1-1| = |-1| = 1$.  
-   Sum is 1.  
-   But for $\theta=0$ (which corresponds to $z=1$), sum was 3.  
-   So sum 3 vs sum 3.64 vs sum 1.  
-   The maximum seems to be at $\theta=\pi/2$.  
+$T_1 = |1-1| = 0$.  
+$T_2 = |-1+1+1-1 + 1|^2 = |-1-1-1+1|$? No.  
+$z^2+z-1 = (-1)^2 + (-1) - 1 = 1-1-1 = -1$. Modulus 1.  
+Sum = $0+1 = 1$.  
+Wait, I calculated sum as 3 earlier? Ah, at $\theta=\pi/4$ or something? No, $\pi=180$, angle is negative.  
+Let's check $\theta=\pi \implies z=-1$.  
+My previous calculation was $T_2=3$. Why?  
+Ah, $z=-1$ leads to term 2 being 3?  
+Wait, if $z=-1$, then $|z+1| = |0| = 0$.  
+$T_2 = |-1^2 + (-1) - 1| = |1-1-1| = |-1| = 1$.  
+Sum is 1.  
+But for $\theta=0$ (which corresponds to $z=1$), sum was 3.  
+So sum 3 vs sum 3.64 vs sum 1.  
+The maximum seems to be at $\theta=\pi/2$.  
 
 But I need to check if my substitution $z=i$ is valid.  
 Yes, $|z|=1$ for any $z \in S^1$.  

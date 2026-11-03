@@ -843,7 +843,7 @@ Here's a thinking process that leads to the solution:
         *   What if the quadrilateral is **isosceles**? No.  
         *   What if "largest" and "smallest" refer to **sum** of opposite angles? No.  
     *   Wait! Let's look at the wording again. "measure of the largest angle is twice the measure of the smallest angle".  
-            *   Maybe it means: $\angle A > \angle B$? And $\angle A = 2\angle B$.  
+        *   Maybe it means: $\angle A > \angle B$? And $\angle A = 2\angle B$.  
             *   Then we have angles $\angle A, \angle B, \angle C, \angle D$.  
             *   We are told "other two angles" (say $\angle C, \angle D$) are right.  
             *   If so, then $\angle C=90$ and $\angle D=90$.  

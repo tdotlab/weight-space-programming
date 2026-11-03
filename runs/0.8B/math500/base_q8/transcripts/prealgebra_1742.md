@@ -51,9 +51,9 @@ Here's a thinking process that leads to the solution:
             *   6
 ```
 
-            *   ...  
-            *   3k <= 100 => $k <= 33$.  
-            *   Total count is 33.  
+*   ...  
+    *   3k <= 100 => $k <= 33$.  
+        *   Total count is 33.  
     *   Let's double check the arithmetic again.  
     *   $\frac{100}{3} = 33.33$. Integer part is 33. The number of multiples is 33? No, wait.  
     *   Wait, let me think about this carefully.  
@@ -95,8 +95,8 @@ Here's a thinking process that leads to the solution:
         *   6 (2)
 ```
 
-        *   ...  
-        *   98 (no, 97/3 is not integer)  
+*   ...  
+    *   98 (no, 97/3 is not integer)  
         *   Wait, multiples are $x$. $x \equiv 0 \pmod 3$.  
         *   Count of terms $\{1, \dots, 100\}$ where $x \% 3 == 0$.  
         *   The numbers are $\{3, 6, 9, ..., 99\}$.  
@@ -186,12 +186,12 @@ Here's a thinking process that leads to the solution:
                     3. 9
 ```
 
-                    ...  
-                    *   Let $k=1$, term is 3.  
-                    *   $k$ goes up to such that $3k \le 100$. Max $k = 33.33$. So max $k = 33$.  
-                    *   The terms are $3, 6, ..., 99$.  
-                    *   Count is the number of integers in $\{1, ..., 33\}$. Which is 33. Wait.  
-                    *   Why did I think it was $\lfloor \frac{100}{3} \rfloor$?  
+...  
+*   Let $k=1$, term is 3.  
+    *   $k$ goes up to such that $3k \le 100$. Max $k = 33.33$. So max $k = 33$.  
+        *   The terms are $3, 6, ..., 99$.  
+            *   Count is the number of integers in $\{1, ..., 33\}$. Which is 33. Wait.  
+                *   Why did I think it was $\lfloor \frac{100}{3} \rfloor$?  
                     *   Wait, $n/d = 100/3 = 33.33$. The number of multiples is not just the integer part if we consider divisibility by $d$.  
                     *   Let's re-evaluate "number of integers in [1, n] divisible by $d$".  
                         *   It is $\lfloor n/d \rfloor$.  
@@ -251,7 +251,7 @@ Here's a thinking process that leads to the solution:
                             *   $\lfloor 4/3 \rfloor = 1$. Correct.  
                         *   Wait, did I just assume $\lfloor n/d \rfloor$? No, it gave me 1.  
                     *   Let's check $n=5, d=3$. Range [1, 5]. Multiples: {3}. Count is 1.  
-                            *   $\lfloor 5/3 \rfloor = 1$. Correct.  
+                        *   $\lfloor 5/3 \rfloor = 1$. Correct.  
                         *   Wait, is there any case where $\lfloor n/d \rfloor$ undercounts?  
                             *   Consider $n=6$. Range [1, 6]. Multiples: {3, 6}. Count is 2.  
                             *   $\lfloor 6/3 \rfloor = 2$. Correct.  
@@ -579,8 +579,8 @@ Here's a thinking process that leads to the solution:
         *   9
 ```
 
-        *   ...  
-        *   ...  
+*   ...  
+    *   ...  
         *   Wait. $100/3 = 33$. So there are 33 multiples?  
             *   If $n=3$, range [1, 3]. Multiples: {3}. Count is 1. $\lfloor 3/3 \rfloor = 1$. Correct.  
             *   If $n=4$, range [1, 4]. Multiples: {3}. Count is 1. $\lfloor 4/3 \rfloor = 1$. Correct.  

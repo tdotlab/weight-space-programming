@@ -267,102 +267,102 @@ Here's my thought process for solving this problem:
     *   Is there a possibility that "sides measure 5, 5 and 6" refers to sides in terms of some coordinate system?  
     *   Let's write down the solution steps clearly.  
 
-    **Step 1:** Identify the side lengths as $a=5$, $b=5$, $c=6$.  
-    **Step 2:** Calculate the semi-perimeter $s$.  
-    $s = \frac{a+b+c}{2} = \frac{5+5+6}{2} = \frac{16}{2} = 8$.  
-    **Step 3:** Apply Heron's Formula: $\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$.  
-    **Step 4:** Substitute values.  
-    $s-a = 8 - 5 = 3$.  
-    $s-b = 8 - 5 = 3$.  
-    $s-c = 8 - 6 = 2$.  
-    $\text{Area} = \sqrt{8(3)(3)(2)} = \sqrt{144}$.  
-    **Step 5:** Calculate the square root.  
-    $\sqrt{144} = 12$.  
+**Step 1:** Identify the side lengths as $a=5$, $b=5$, $c=6$.  
+**Step 2:** Calculate the semi-perimeter $s$.  
+$s = \frac{a+b+c}{2} = \frac{5+5+6}{2} = \frac{16}{2} = 8$.  
+**Step 3:** Apply Heron's Formula: $\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$.  
+**Step 4:** Substitute values.  
+$s-a = 8 - 5 = 3$.  
+$s-b = 8 - 5 = 3$.  
+$s-c = 8 - 6 = 2$.  
+$\text{Area} = \sqrt{8(3)(3)(2)} = \sqrt{144}$.  
+**Step 5:** Calculate the square root.  
+$\sqrt{144} = 12$.  
 
-    The result is a clean integer, which seems like the intended answer for this type of problem.  
+The result is a clean integer, which seems like the intended answer for this type of problem.  
 
-    *Self-Correction/Double Check on calculation:*  
-    $8 \times 3 \times 3 \times 2$.  
-    $3 \times 3 = 9$.  
-    $8 \times 2 = 16$.  
-    $16 \times 9 = 144$.  
-    $\sqrt{144} = 12$.  
+*Self-Correction/Double Check on calculation:*  
+$8 \times 3 \times 3 \times 2$.  
+$3 \times 3 = 9$.  
+$8 \times 2 = 16$.  
+$16 \times 9 = 144$.  
+$\sqrt{144} = 12$.  
 
-    The calculation is correct. The interpretation of "number of square units" as area is standard.  
-    The side lengths are integers. Area comes out to an integer. No issues found.  
+The calculation is correct. The interpretation of "number of square units" as area is standard.  
+The side lengths are integers. Area comes out to an integer. No issues found.  
 
-    One distinct possibility: Is there any hidden complexity?  
-    Maybe the problem is from a set where the user asks for a specific geometric property or integer count, but here it's a direct request. I will provide the standard derivation.  
+One distinct possibility: Is there any hidden complexity?  
+Maybe the problem is from a set where the user asks for a specific geometric property or integer count, but here it's a direct request. I will provide the standard derivation.  
 
-    *Note:* The question might be interpreted as asking for the number of square units in a grid that the triangle fits into? Unlikely without more context. Or "how many tiles would fit"? No, usually area implies just "the value".  
+*Note:* The question might be interpreted as asking for the number of square units in a grid that the triangle fits into? Unlikely without more context. Or "how many tiles would fit"? No, usually area implies just "the value".  
 
-    Is it possible the sides are not integers? "5, 5 and 6" implies integers.  
-    Is it possible the user meant "number of square units in a triangle with area..."? That's circular.  
-    Okay, stick with Area = 12.  
+Is it possible the sides are not integers? "5, 5 and 6" implies integers.  
+Is it possible the user meant "number of square units in a triangle with area..."? That's circular.  
+Okay, stick with Area = 12.  
 
-    One edge case: Does "measure 5, 5 and 6" imply specific coordinates (e.g. vertices at some points)? No, just lengths.  
+One edge case: Does "measure 5, 5 and 6" imply specific coordinates (e.g. vertices at some points)? No, just lengths.  
 
-    Final verification of the text "number of square units". This phrasing is common in geometry textbooks asking for the area in square units to ensure students understand the dimensionality.  
-    So, answer is 12.  
+Final verification of the text "number of square units". This phrasing is common in geometry textbooks asking for the area in square units to ensure students understand the dimensionality.  
+So, answer is 12.  
 
-    Let's quickly check if there are similar problems online or common variations.  
-    A triangle with sides 3, 4, 5 has area $\sqrt{9 \cdot 4} = \sqrt{36}$? No. $s=6$. $(6)(3)(1)(1)$.  
-    Area = $\sqrt{6 \cdot 3 \cdot 1 \cdot 1} = \sqrt{18}$.  
-    Triangle with sides 5, 5, 6 has area 12.  
-    Is there a relation to Pythagorean triples?  
-    $(5, 5, 6)$ is not a primitive Pythagorean triple. $5+5=10 \neq 6\sqrt{3}$.  
-    However, $5^2 + 5^2 = 50$ and $6^2 = 36$. The angle between sides of length 5 and 5 is not right angled ($10 < 36$, no). The angle between sides 5 and 6? Cosine rule: $c^2 = a^2 + b^2 - 2ab \cos C$.  
-    $6^2 = 25 + 25 - 2(5)(5) \cos C$.  
-    $36 = 50 - 50 \cos C$.  
-    $-14 = -50 \cos C$.  
-    $\cos C = 14/50 = 7/25$.  
-    Since angle is not 90, it's a non-right triangle.  
+Let's quickly check if there are similar problems online or common variations.  
+A triangle with sides 3, 4, 5 has area $\sqrt{9 \cdot 4} = \sqrt{36}$? No. $s=6$. $(6)(3)(1)(1)$.  
+Area = $\sqrt{6 \cdot 3 \cdot 1 \cdot 1} = \sqrt{18}$.  
+Triangle with sides 5, 5, 6 has area 12.  
+Is there a relation to Pythagorean triples?  
+$(5, 5, 6)$ is not a primitive Pythagorean triple. $5+5=10 \neq 6\sqrt{3}$.  
+However, $5^2 + 5^2 = 50$ and $6^2 = 36$. The angle between sides of length 5 and 5 is not right angled ($10 < 36$, no). The angle between sides 5 and 6? Cosine rule: $c^2 = a^2 + b^2 - 2ab \cos C$.  
+$6^2 = 25 + 25 - 2(5)(5) \cos C$.  
+$36 = 50 - 50 \cos C$.  
+$-14 = -50 \cos C$.  
+$\cos C = 14/50 = 7/25$.  
+Since angle is not 90, it's a non-right triangle.  
 
-    The question is straightforward geometry application.  
+The question is straightforward geometry application.  
 
-    *Alternative interpretation:*  
-    Could "sides measure 5, 5 and 6 units" be interpreted as the numbers themselves being "units", but maybe referring to a specific set of integer coordinates? No.  
+*Alternative interpretation:*  
+Could "sides measure 5, 5 and 6 units" be interpreted as the numbers themselves being "units", but maybe referring to a specific set of integer coordinates? No.  
 
-    I will proceed with Area = 12.  
+I will proceed with Area = 12.  
 
-    Let's do a sanity check on "number of square units".  
-    Does it mean the number of squares that fit inside? That would be $\lfloor \text{Area} / \text{Area of small unit square} \rfloor$? No, usually it means Area in terms of square units. If we are talking about a grid, then it's just 12.  
-    So "What is the number of square units" = "What is the area".  
+Let's do a sanity check on "number of square units".  
+Does it mean the number of squares that fit inside? That would be $\lfloor \text{Area} / \text{Area of small unit square} \rfloor$? No, usually it means Area in terms of square units. If we are talking about a grid, then it's just 12.  
+So "What is the number of square units" = "What is the area".  
 
-    One tiny check: Did I make a mistake assuming $a,b,c$ are lengths? Yes, "sides measure...".  
-    Is it possible that sides 5, 5, 6 form a triangle *only* if one side is larger than sum of others? No, $5+5=10 > 6$.  
-    If the sides were 5, 5, 2: impossible.  
+One tiny check: Did I make a mistake assuming $a,b,c$ are lengths? Yes, "sides measure...".  
+Is it possible that sides 5, 5, 6 form a triangle *only* if one side is larger than sum of others? No, $5+5=10 > 6$.  
+If the sides were 5, 5, 2: impossible.  
 
-    Okay, the logic holds up.  
+Okay, the logic holds up.  
 
-    Final Answer seems to be 12.  
+Final Answer seems to be 12.  
 
-    Structure of the response:  
-    1. Identify given side lengths ($a=5, b=5, c=6$).  
-    2. Explain method (Heron's Formula).  
+Structure of the response:  
+1. Identify given side lengths ($a=5, b=5, c=6$).  
+   2. Explain method (Heron's Formula).  
     3. Show calculation of semi-perimeter $s$.  
     4. Show calculation of subtractions from semi-perimeter $(s-a), (s-b), (s-c)$.  
     5. Calculate product and square root.  
     6. State the final integer area.  
 
-    Wait, I should verify if there is any hidden catch. "What is the number of square units" might be interpreted as counting grid points? No, usually area. If it's a 2D geometry problem on a plane (Cartesian), it would be the standard Area calculation.  
-    Is there a chance it refers to "counting how many unit squares are in the shape"?  
-    If we draw the triangle, say with vertices at $(0,0), (5,0), (?,?)$.  
-    Actually, let's visualize. A right-angled isosceles triangle would have hypotenuse $\sqrt{2} \times 5 \approx 7.07$. Not a 6.  
-    If it was a right triangle with sides $x, x, y$ (legs), area is $x^2/2$. Here sides are 5, 5, 6. So no, it's not legs of a right triangle.  
+Wait, I should verify if there is any hidden catch. "What is the number of square units" might be interpreted as counting grid points? No, usually area. If it's a 2D geometry problem on a plane (Cartesian), it would be the standard Area calculation.  
+Is there a chance it refers to "counting how many unit squares are in the shape"?  
+If we draw the triangle, say with vertices at $(0,0), (5,0), (?,?)$.  
+Actually, let's visualize. A right-angled isosceles triangle would have hypotenuse $\sqrt{2} \times 5 \approx 7.07$. Not a 6.  
+If it was a right triangle with sides $x, x, y$ (legs), area is $x^2/2$. Here sides are 5, 5, 6. So no, it's not legs of a right triangle.  
 
-    Okay, just calculate.  
+Okay, just calculate.  
 
-    Recalculate:  
-    $a=5, b=5, c=6$.  
-    $s = (5+5+6)/2 = 8$.  
-    $s-a = 3$.  
-    $s-b = 3$.  
-    $s-c = 2$.  
-    $Area^2 = s(s-a)(s-b)(s-c) = 8(3)(3)(2) = 144$.  
-    $Area = \sqrt{144} = 12$.  
+Recalculate:  
+$a=5, b=5, c=6$.  
+$s = (5+5+6)/2 = 8$.  
+$s-a = 3$.  
+$s-b = 3$.  
+$s-c = 2$.  
+$Area^2 = s(s-a)(s-b)(s-c) = 8(3)(3)(2) = 144$.  
+$Area = \sqrt{144} = 12$.  
 
-    The answer is robust.  
+The answer is robust.  
 
 
 ## Answer

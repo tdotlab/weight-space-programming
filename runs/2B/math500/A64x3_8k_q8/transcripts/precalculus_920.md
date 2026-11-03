@@ -137,7 +137,7 @@ Let's recompute the sequence $I, A, A^2, A^3, A^4, A^5$.
 1. $I$  
 2. $A$  
 3. $-I+A = -I + 1 \cdot A = I-A$ (No $A-I$).  
-   $A^2 = A-I$.  
+$A^2 = A-I$.  
 4. $A^3 = A(A^2) = A(A-I) = A^2 - A = (A-I) - A = -I$.  
 5. $A^4 = A(A^3) = -A$.  
 6. $A^5 = A(-A) = -A^2 = -(A-I) = I-A$.  

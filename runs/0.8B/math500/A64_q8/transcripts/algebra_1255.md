@@ -69,15 +69,15 @@ Here is my thought process for evaluating $\log_2 64$:
     *   Could it be $1.36$ or something weird? $\log_{base} x \approx y$. If $x=64$, base=2.  
     *   $2^6 = 2 \times 2 \times 2 \times 2 \times 2 \times 2 = 64$. Correct.  
 
-    Let's write it down clearly.  
+Let's write it down clearly.  
 
-    Step 1: Identify the expression $\log_2 64$. This asks for the exponent $n$ such that $2^n = 64$.  
-    Step 2: Express 64 as a power of 2. Note that $64 = 2^6$.  
-    Step 3: Substitute this back into the equation: $\log_2(2^6)$.  
-    Step 4: Apply the log rule $\log_b(b^n) = n$.  
-    Step 5: The result is 6.  
+Step 1: Identify the expression $\log_2 64$. This asks for the exponent $n$ such that $2^n = 64$.  
+Step 2: Express 64 as a power of 2. Note that $64 = 2^6$.  
+Step 3: Substitute this back into the equation: $\log_2(2^6)$.  
+Step 4: Apply the log rule $\log_b(b^n) = n$.  
+Step 5: The result is 6.  
 
-    Final check complete. Ready to generate output.  
+Final check complete. Ready to generate output.  
 
 
 ## Answer
@@ -87,14 +87,14 @@ To evaluate $\log_2 64$, we need to find the value of $n$ such that the base $2$
 1.  **Understand the Logarithm Definition:** The definition of a logarithm states that for any positive real numbers $a, b$, and $x \neq 0$: $\log_b x = n$ if and only if $b^n = x$.  
 
 2.  **Express 64 as a power of the base:** We can write 64 in terms of the base (2) by factoring it or recognizing powers of 2.  
-    $$64 = 2^6$$  
-    Since $2 \times 2 \times 2 \times 2 \times 2 \times 2 = 64$.  
+$$64 = 2^6$$  
+Since $2 \times 2 \times 2 \times 2 \times 2 \times 2 = 64$.  
 
 3.  **Apply the definition to the original expression:** We have the expression $\log_2 64$, which can now be rewritten as:  
-    $$\log_2 (2^6)$$  
+$$\log_2 (2^6)$$  
 
 4.  **Use the power of a logarithm property:** For any positive base $b$, if $n$ is a natural exponent such that $b^n = x$, then $\log_b x = n$. Applying this to our specific case where the base is 2 and the result argument is $2^6$:  
-    $$ \log_2 (2^6) = 6 $$  
+$$ \log_2 (2^6) = 6 $$  
 
 Thus, $\log_2 64 = 6$.  
 

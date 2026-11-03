@@ -192,10 +192,10 @@ Here's my thought process for determining the domain of the function $f(x) = \fr
 
     *   **Summary of steps:**  
         1. Identify domain for square root: Argument must be non-negative ($x^2 - 5x + 6 \ge 0$).  
-            *   Roots are $2, 3$. Parabola opens up.  
+           *   Roots are $2, 3$. Parabola opens up.  
             *   Region outside $[2, 3]$? No. $x^2-5x+6$ is positive for $x < 2$ and $x > 3$.  
         2. However, we also have the restriction that $\sqrt{u}$ must be defined as real numbers.  
-            *   If $u=0$, then $f(x)$ is undefined (division by zero).  
+           *   If $u=0$, then $f(x)$ is undefined (division by zero).  
         3. Therefore, the domain is $\mathbb{R} \setminus [2, 3]$.  
 
     *   **Let's double check: Are there any restrictions on $x$ from outside?**  

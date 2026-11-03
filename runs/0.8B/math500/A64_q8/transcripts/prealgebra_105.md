@@ -306,39 +306,39 @@ Here's a thinking process that leads to the solution:
                                                                                                 *   Okay, let's assume standard: Facing North ($0^\circ$) $\rightarrow$ Bearing change is $90^{\circ}$ (CCW or CW).  
                                                                                                 *   Let's try the simplest interpretation for these riddles.  
 
-                                                                                                **Problem:** "A figure skater faces north... spins to her right... 2250 degrees."  
-                                                                                                **Solution Path:**  
-                                                                                                1.  Identify Initial Bearing: North ($0^\circ$).  
-                                                                                                2.  Interpret "Spins to her right": In standard 2D kinematics, facing North (Heading $0^\circ$) and turning to the Right (Clockwise or CCW?) moves you from North towards... West? Or East?  
-                                                                                                    Let's assume it means a rotation of angle $\theta = 90^{\circ}$ relative to the body.  
-                                                                                                    If she turns right, she must move away from the North side? No.  
-                                                                                                *   Let's check if "spins to her right" implies an additional rotation around the axis.  
+**Problem:** "A figure skater faces north... spins to her right... 2250 degrees."  
+**Solution Path:**  
+1.  Identify Initial Bearing: North ($0^\circ$).  
+    2.  Interpret "Spins to her right": In standard 2D kinematics, facing North (Heading $0^\circ$) and turning to the Right (Clockwise or CCW?) moves you from North towards... West? Or East?  
+Let's assume it means a rotation of angle $\theta = 90^{\circ}$ relative to the body.  
+If she turns right, she must move away from the North side? No.  
+        *   Let's check if "spins to her right" implies an additional rotation around the axis.  
 
-                                                                                                **Let's use the property of "Right" and "North":**  
-                                                                                                *   Facing North (Heading $0^\circ$).  
-                                                                                                *   If I spin to my Right, I am effectively rotating about the vertical axis.  
-                                                                                                *   Let's assume "Right" corresponds to a change in direction by $180^{\circ}$ or something?  
-                                                                                                *   No, that doesn't seem right with 2250.  
-                                                                                                *   Let's consider the bearing $\Delta \theta$.  
-                                                                                                *   If I face North ($0^\circ$), and I spin to my Right (Clockwise). In standard geometry (clock on a plane):  
-                                                                                                    *   12 is North.  
-                                                                                                    *   Clockwise means $0 \rightarrow -90$? Or $0 \rightarrow +90$?  
-                                                                                                    *   Usually, if you face North, and you spin to the right (Clockwise), you go from North towards East ($+90^\circ$)? No.  
-                                                                                                    *   If I face North. My Left hand points West. My Right hand points East.  
-                                                                                                    *   So "Spins to her right" means she rotates towards the East direction?  
-                                                                                                *   But that would mean she is facing East. Then "facing north" implies she turned 90 degrees counter-clockwise (to the left) to face East? No, if I turn right, I am looking at the East side of my body.  
-                                                                                                *   If I face North and spin right (CW). This usually means turning towards West (if you are facing a circle and looking down)?  
-                                                                                                *   Let's try this:  
-                                                                                                    *   Start Bearing: $0^\circ$ (North).  
-                                                                                                    *   Change in bearing due to "Spins to her right" is $\theta_{change}$.  
-                                                                                                    *   If she spins right, usually $\theta_{change}$ is related to the angle of rotation around the body axis.  
-                                                                                                *   Let's assume the question implies a specific direction change. The phrase "Spins to her right" suggests an additional $90^\circ$ rotation? Or maybe it just means she rotates by $2250^{\circ}$.  
-                                                                                                *   If we interpret "Spins to her right" as a rotation in the plane of the sky (horizontal), facing North.  
-                                                                                                    *   She faces North ($+y$).  
-                                                                                                    *   Spins Right (CCW? No, usually Right hand rule implies clockwise).  
-                                                                                                    *   Clockwise from North is towards West ($270^\circ$) or South? No.  
-                                                                                                    *   Let's assume she spins $2250$ degrees.  
-                                                                                                    *   We need to know the "Right" direction.  
+**Let's use the property of "Right" and "North":**  
+*   Facing North (Heading $0^\circ$).  
+    *   If I spin to my Right, I am effectively rotating about the vertical axis.  
+        *   Let's assume "Right" corresponds to a change in direction by $180^{\circ}$ or something?  
+            *   No, that doesn't seem right with 2250.  
+                *   Let's consider the bearing $\Delta \theta$.  
+                    *   If I face North ($0^\circ$), and I spin to my Right (Clockwise). In standard geometry (clock on a plane):  
+                        *   12 is North.  
+                            *   Clockwise means $0 \rightarrow -90$? Or $0 \rightarrow +90$?  
+                                *   Usually, if you face North, and you spin to the right (Clockwise), you go from North towards East ($+90^\circ$)? No.  
+                                    *   If I face North. My Left hand points West. My Right hand points East.  
+                                        *   So "Spins to her right" means she rotates towards the East direction?  
+                                            *   But that would mean she is facing East. Then "facing north" implies she turned 90 degrees counter-clockwise (to the left) to face East? No, if I turn right, I am looking at the East side of my body.  
+                                                *   If I face North and spin right (CW). This usually means turning towards West (if you are facing a circle and looking down)?  
+                                                    *   Let's try this:  
+                                                        *   Start Bearing: $0^\circ$ (North).  
+                                                            *   Change in bearing due to "Spins to her right" is $\theta_{change}$.  
+                                                                *   If she spins right, usually $\theta_{change}$ is related to the angle of rotation around the body axis.  
+                                                                    *   Let's assume the question implies a specific direction change. The phrase "Spins to her right" suggests an additional $90^\circ$ rotation? Or maybe it just means she rotates by $2250^{\circ}$.  
+                                                                        *   If we interpret "Spins to her right" as a rotation in the plane of the sky (horizontal), facing North.  
+                                                                            *   She faces North ($+y$).  
+                                                                                *   Spins Right (CCW? No, usually Right hand rule implies clockwise).  
+                                                                                    *   Clockwise from North is towards West ($270^\circ$) or South? No.  
+                                                                                        *   Let's assume she spins $2250$ degrees.  
+                                                                                            *   We need to know the "Right" direction.  
                                                                                                 *   If we assume "Spins to her right" means a rotation of angle $\Delta \theta = 90^{\circ}$ in the horizontal plane? No, that would mean she rotates around the vertical axis? No, that would be spin about axis perpendicular to body.  
                                                                                                     *   Let's reconsider: If I face North and rotate my body 180 degrees, I face South. If I rotate by 90 degrees, I face East/West.  
                                                                                                 *   Usually, in these problems, the phrasing "Right" is used to mean **Clockwise** rotation relative to the vertical axis.  

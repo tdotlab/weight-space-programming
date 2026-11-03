@@ -29,12 +29,12 @@ $d: 4$
 The term with $c$ has exponent 3, and $d$ has 4. Usually, to maximize a product under a sum, we distribute the mass to variables with higher exponents (because they have more freedom in "spending" units). However, since $a,b,c,d > 0$, this doesn't imply a specific distribution. Let's test boundaries first.  
 
 *   **Case 1: One variable is 0.**  
-    Since $b, c, d$ are positive (implied by the problem statement "positive real numbers" but usually variables in optimization problems imply we check non-negative), if one is zero, say $c=0$, then $ab^2(0)^3(0)^4 = 0$. To get a maximum, variables must be strictly positive, but we can have $a=b=c=d=1.5$ (for example).  
-    The function $ab^2c^3d^4$ vanishes at $c=0$. So the maximum cannot be attained at the boundary where any single variable is zero.  
+Since $b, c, d$ are positive (implied by the problem statement "positive real numbers" but usually variables in optimization problems imply we check non-negative), if one is zero, say $c=0$, then $ab^2(0)^3(0)^4 = 0$. To get a maximum, variables must be strictly positive, but we can have $a=b=c=d=1.5$ (for example).  
+The function $ab^2c^3d^4$ vanishes at $c=0$. So the maximum cannot be attained at the boundary where any single variable is zero.  
 
 *   **Case 2: One variable equals 0.** Since we found that one variable being 0 implies $f=0$, and to get a non-zero maximum, we need all terms to remain positive. Thus, no variable can be exactly zero in an interior maximization problem if the exponents allow for such a distribution? No, let's re-read carefully.  
-    The problem states "positive real numbers". So $a,b,c,d \in (0, \infty)$.  
-    This means we look at the maximum strictly inside the domain $a,b,c,d > 0$. If we approach one variable to 0, it goes to 0.  
+The problem states "positive real numbers". So $a,b,c,d \in (0, \infty)$.  
+This means we look at the maximum strictly inside the domain $a,b,c,d > 0$. If we approach one variable to 0, it goes to 0.  
 
 **4. Use Lagrange Multipliers:**  
 This is a constrained optimization problem. Let $L(a, b, c, d, \lambda) = ab^2c^3d^4 - \lambda(a+b+c+d-10)$.  
@@ -526,18 +526,18 @@ $f(a,b,c,d) = ab^2 c^3 d^4$.
 So $\frac{\partial f}{\partial a} = b^2 c^3 d^4$.  
 2. $\frac{\partial f}{\partial b}$: Term $b^2$. $\frac{\partial}{\partial b}(b^2) = 2b$. So term is $1 \cdot (a)(2b)(c^3)(d^4)$? No, this assumes derivative of $b^2$ wrt $b$ is $2b$, and it's multiplied by the rest.  
 So $\frac{\partial f}{\partial b} = 2ab c^3 d^4$. (Since $a,b,c,d$ are variables in expression).  
-   Wait, if I vary $b$, then $a$ is fixed, $c$ is fixed, etc.  
-   Then derivative of $b^2$ wrt $b$ is $2b$. But there's no variable $b$ inside the product? No.  
-   It's just a function of $b$. The term $b^2$ exists in $f(a,b,c,d)$.  
-   So $\frac{\partial}{\partial b} f = \frac{d}{db}(ab^2c^3d^4)$ where $a$ is constant.  
-   This gives $a(2b)(c^3)d^4$? No, $a$ does not appear in the expression other than as a multiplier for $b$.  
-   Yes, $\frac{d}{db} (ab^2 c^3 d^4) = a(2b)(c^3)d^4$? No.  
-   The derivative of product rule is sum of products.  
-   So $f = (a \cdot b^2 \cdot c^3 \cdot d^4)$.  
-   Derivative wrt $b$: $\frac{\partial}{\partial b} (a \cdot (b^2 \dots))$.  
-   This is $a(2b)(\dots)$. Yes.  
-   So $\nabla f = (b^2 c^3 d^4, 2ab c^3 d^4, 3ac^2 d^4, 4ad^3 b c^3)$.  
-   This seems correct if I treat $a$ as a coefficient.  
+Wait, if I vary $b$, then $a$ is fixed, $c$ is fixed, etc.  
+Then derivative of $b^2$ wrt $b$ is $2b$. But there's no variable $b$ inside the product? No.  
+It's just a function of $b$. The term $b^2$ exists in $f(a,b,c,d)$.  
+So $\frac{\partial}{\partial b} f = \frac{d}{db}(ab^2c^3d^4)$ where $a$ is constant.  
+This gives $a(2b)(c^3)d^4$? No, $a$ does not appear in the expression other than as a multiplier for $b$.  
+Yes, $\frac{d}{db} (ab^2 c^3 d^4) = a(2b)(c^3)d^4$? No.  
+The derivative of product rule is sum of products.  
+So $f = (a \cdot b^2 \cdot c^3 \cdot d^4)$.  
+Derivative wrt $b$: $\frac{\partial}{\partial b} (a \cdot (b^2 \dots))$.  
+This is $a(2b)(\dots)$. Yes.  
+So $\nabla f = (b^2 c^3 d^4, 2ab c^3 d^4, 3ac^2 d^4, 4ad^3 b c^3)$.  
+This seems correct if I treat $a$ as a coefficient.  
 
 But then I realize that the partial derivative of a term like $a \cdot (\dots)$ depends on whether it's inside the function $f(a,b,c,d)$ or not?  
 Wait, $\frac{\partial}{\partial a}$ means varying the variable $a$ in the expression.  

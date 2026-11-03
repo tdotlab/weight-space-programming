@@ -164,30 +164,30 @@ Let's use these to find $a,b$.
 Recall $P(x) = (x^2 - 5x + 4)(x+q) + ax+b$.  
 We have:  
 1) $P(2) = 4a+2b$  
-   Substitute $x=2$ into formula for $P$:  
-   $P(2) = (4 - 10 + 4)(2+q) + a(2) + b$  
-   $P(2) = (-2)(2+q) + 2a + b$  
-   $P(2) = -4 - 2q + 2a + b$  
-   So, $-4 - 2q + 2a + b = 4a + 2b$.  
-   Rearranging: $-8a - 3b + q - 4 = 0$ or something.  
-   $-4 - 2q + 2a + b = 4a + 2b$  
-   $-2q - 4 + 2a + b = 4a + 2b$? No, coefficients of $a,b$.  
-   LHS has term $2a+b$ from substitution? No, $P(x)$ has term $a x + b$. At $x=2$, it's $2a+b$.  
-   RHS is $4a+2b$.  
-   So $-2q + 2a + b - 4 = 4a + 2b$  
-   $-2q + 2a + b - 4 - 4a - 2b = 0$? No.  
-   $-4 - 2q + 2a + b = 4a + 2b$  
-   $\Rightarrow 2a + b - 4 - 2q = 4a + 2b$  
-   $\Rightarrow -2a - b - 4 - 2q = 0$. (Eq 1)  
+Substitute $x=2$ into formula for $P$:  
+$P(2) = (4 - 10 + 4)(2+q) + a(2) + b$  
+$P(2) = (-2)(2+q) + 2a + b$  
+$P(2) = -4 - 2q + 2a + b$  
+So, $-4 - 2q + 2a + b = 4a + 2b$.  
+Rearranging: $-8a - 3b + q - 4 = 0$ or something.  
+$-4 - 2q + 2a + b = 4a + 2b$  
+$-2q - 4 + 2a + b = 4a + 2b$? No, coefficients of $a,b$.  
+LHS has term $2a+b$ from substitution? No, $P(x)$ has term $a x + b$. At $x=2$, it's $2a+b$.  
+RHS is $4a+2b$.  
+So $-2q + 2a + b - 4 = 4a + 2b$  
+$-2q + 2a + b - 4 - 4a - 2b = 0$? No.  
+$-4 - 2q + 2a + b = 4a + 2b$  
+$\Rightarrow 2a + b - 4 - 2q = 4a + 2b$  
+$\Rightarrow -2a - b - 4 - 2q = 0$. (Eq 1)  
 
 2) $P(3) = 6a + 2b$  
-   Substitute $x=3$ into formula for $P$:  
-   $P(3) = (9 - 15 + 4)(3+q) + a(3) + b$  
-   $P(3) = (-2)(3+q) + 3a + b$  
-   $P(3) = -6 - 2q + 3a + b$  
-   So, $-6 - 2q + 3a + b = 6a + 2b$.  
-   $\Rightarrow -6 - 2q + 3a + b - 6a - 2b = 0$  
-   $\Rightarrow -3a - b - 6 - 2q = 0$. (Eq 2)  
+Substitute $x=3$ into formula for $P$:  
+$P(3) = (9 - 15 + 4)(3+q) + a(3) + b$  
+$P(3) = (-2)(3+q) + 3a + b$  
+$P(3) = -6 - 2q + 3a + b$  
+So, $-6 - 2q + 3a + b = 6a + 2b$.  
+$\Rightarrow -6 - 2q + 3a + b - 6a - 2b = 0$  
+$\Rightarrow -3a - b - 6 - 2q = 0$. (Eq 2)  
 
 Let's solve system for $a,b,q$:  
 (1) $-2a - b - 4 - 2q = 0$  

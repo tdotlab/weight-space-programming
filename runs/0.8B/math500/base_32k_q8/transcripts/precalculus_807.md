@@ -26,14 +26,14 @@ Here's my thought process for converting the point $(0,3)$ to polar coordinates.
 
     *   **Given:** Point $(x, y) = (0, 3)$.  
     *   **Calculate $r$:**  
-        $$r = \sqrt{x^2 + y^2}$$  
-        Substitute $x=0$ and $y=3$:  
-        $$r = \sqrt{0^2 + 3^2}$$  
-        $$r = \sqrt{0 + 9}$$  
-        $$r = \sqrt{9}$$  
-        $$r = 3$$  
+$$r = \sqrt{x^2 + y^2}$$  
+Substitute $x=0$ and $y=3$:  
+$$r = \sqrt{0^2 + 3^2}$$  
+$$r = \sqrt{0 + 9}$$  
+$$r = \sqrt{9}$$  
+$$r = 3$$  
     *   **Calculate $\theta$:**  
-        I have $x=0$ and $y=3$. The point lies on the positive Y-axis (since $r>0$).  
+I have $x=0$ and $y=3$. The point lies on the positive Y-axis (since $r>0$).  
         *   If the point were at $(0, y)$ with $y>0$, the angle is $\pi/2$.  
         *   Why? Imagine a right triangle. Vertices are $(x,y)=(0,3)$. The projection of this vector onto the x-axis would be 0. So it's on the vertical line $x=0$.  
         *   However, there's another angle to think about depending on quadrant conventions, but in the context of polar coordinates usually:  

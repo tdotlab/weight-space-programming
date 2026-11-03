@@ -322,13 +322,13 @@ Pairs $(B, D)$ of $\{ \pm 1, \pm 2, \pm 7, \pm 14 \}$ such that $BD = -14$:
 Let's check Eq 1: $BD = -14$.  
 Possible values for $B$ and $D$:  
 - Case A: $(2, -7)$ or $(-2, 7)$. Since $x^2(x^2+...)$? No. The variable is $B$, the constant term of one quadratic factor? Yes. So $BD = -14$.  
-  Possibilities: $\{ \pm 1, \mp 14\}$ or $\{ \pm 2, \mp 7\}$.  
+Possibilities: $\{ \pm 1, \mp 14\}$ or $\{ \pm 2, \mp 7\}$.  
 
   - If $B=2, D=-7$ (Wait, no $D$ here is constant term. The variable $x^2$ has coeff $A$. No).  
-    Let's stick to the expansion formula where $B, D$ are constants multiplying $x^0$.  
-    $(Ax^2+B)(Cx^2+D) \implies x^4 + (A+C)x^3 + (AC+B+D)x^2 + (AD+BC)x + BD$.  
-    So $BD = -14$.  
-    Coefficients are:  
+Let's stick to the expansion formula where $B, D$ are constants multiplying $x^0$.  
+$(Ax^2+B)(Cx^2+D) \implies x^4 + (A+C)x^3 + (AC+B+D)x^2 + (AD+BC)x + BD$.  
+So $BD = -14$.  
+Coefficients are:  
     1. $x^3$: $A+C=5$  
     2. $x^2$: $AC+B+D=9$  
     3. $x^1$: $AD+BC=-1$  

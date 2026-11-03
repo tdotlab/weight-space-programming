@@ -201,27 +201,23 @@ Here is the thought process to solve the problem:
         *   Usually, such problems define $S$ as an auxiliary point. If $SS = (-2,0)$, maybe $S$ is the origin? No, $P$ is origin.  
     *   Let's reconsider the text "In the diagram below". The prompt provided Asymptote code to me.  
     *   Code:  
-        ```asy  
-        pair R,P,Q,SS;  
+```asy
+        pair R,P,Q,SS;
 
-        SS = (-2,0);  
-
-```text
+        SS = (-2,0);
         P = (0,0);
         Q = (2,0);
+        R = rotate(aSin(7/25))*(1.5,0);
+
+        dot("$S$",SS,S);
+        dot("$Q$",Q,S);
+        dot("$R$",R,N);
+        dot("$P$",P,S);
+
+        draw(Q--SS); // Q to S?
+        draw(P--R);   // P to R
 ```
-
-        R = rotate(aSin(7/25))*(1.5,0);  
-
-        dot("$S$",SS,S);  
-        dot("$Q$",Q,S);  
-        dot("$R$",R,N);  
-        dot("$P$",P,S);  
-
-        draw(Q--SS); // Q to S?  
-        draw(P--R);   // P to R  
-        ```  
-    *   There is a problem "Let $S, P, Q$ be points on x-axis...". If $P$ and $Q$ are vertices.  
+*   There is a problem "Let $S, P, Q$ be points on x-axis...". If $P$ and $Q$ are vertices.  
     *   Let's check the angle $\angle RPS$. This means the angle at vertex $P$ between line segments $PR$ and $PS$.  
     *   The vector $\vec{PS}$ is $(0,0 - SS_x) = (0,0 - (-2,0)) = (2,0)$.  
     *   If the coordinate system origin of the diagram is at $O(0,0)$?  

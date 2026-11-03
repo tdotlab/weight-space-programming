@@ -510,10 +510,10 @@ Here, $n = 6$ and $k = 5$:
     *   $(n-k)! = (6-5)! = 1! = 1$  
 
 2.  Substitute these values into the formula:  
-    $$ \binom{6}{5} = \frac{6!}{5!(6-5)!} = \frac{720}{120 \times 1} $$  
+$$ \binom{6}{5} = \frac{6!}{5!(6-5)!} = \frac{720}{120 \times 1} $$  
 
 3.  Calculate the result:  
-    $$ \frac{720}{120 \times 1} = \frac{720}{120} = 6 $$  
+$$ \frac{720}{120 \times 1} = \frac{720}{120} = 6 $$  
 
 Alternatively, using the property $\binom{n}{k} = \binom{n}{n-k}$:  
 $$ \binom{6}{5} = \binom{6}{1} = \frac{6!}{1!(5)!} = \frac{720}{120} = 6 $$  

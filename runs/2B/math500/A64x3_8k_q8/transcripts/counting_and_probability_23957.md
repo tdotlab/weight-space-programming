@@ -65,8 +65,8 @@ Here's a thinking process that leads to the solution:
               210
 ```
 
-        *   $30 \times 6 = 180$.  
-        *   $5 \times 6 = 30$.  
+*   $30 \times 6 = 180$.  
+    *   $5 \times 6 = 30$.  
         *   $180 + 30 = 210$.  
         *   Alternatively: $\binom{7}{3} = 35$, $\binom{4}{2} = 6$. $35 \times 6 = 210$.  
 
@@ -91,76 +91,76 @@ Here's a thinking process that leads to the solution:
     *   Multiply.  
     *   Box result.  
 
-    Double check: Are there any restrictions? "Statistics class" - standard problem phrasing. 7 boys, 4 girls. Pick 3 B, 2 G. No overlaps mentioned (one cannot be picked twice). Order doesn't matter. Everything looks correct.  
+Double check: Are there any restrictions? "Statistics class" - standard problem phrasing. 7 boys, 4 girls. Pick 3 B, 2 G. No overlaps mentioned (one cannot be picked twice). Order doesn't matter. Everything looks correct.  
 
-    Final Answer: 210.  
+Final Answer: 210.  
 
-    Let's quickly re-read the prompt to ensure no "trick".  
-    "order ... does not matter" -> Combinations, not Permutations. Correct.  
-    "7 boys and 4 girls" -> Finite set selection. Correct.  
-    "pick 3 boys and 2 girls" -> Specific numbers. Correct.  
+Let's quickly re-read the prompt to ensure no "trick".  
+"order ... does not matter" -> Combinations, not Permutations. Correct.  
+"7 boys and 4 girls" -> Finite set selection. Correct.  
+"pick 3 boys and 2 girls" -> Specific numbers. Correct.  
 
-    Calculations:  
-    Boys: $C(7,3) = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$.  
-    Girls: $C(4,2) = \frac{4 \times 3}{2 \times 1} = 6$.  
-    Total: $35 \times 6 = 210$.  
+Calculations:  
+Boys: $C(7,3) = \frac{7 \times 6 \times 5}{3 \times 2 \times 1} = 35$.  
+Girls: $C(4,2) = \frac{4 \times 3}{2 \times 1} = 6$.  
+Total: $35 \times 6 = 210$.  
 
-    The logic is sound.  
+The logic is sound.  
 
-    Wait, did I mess up arithmetic on $\binom{7}{3}$ in my thought process?  
-    $7 \times 6 \times 5 / 6$ ...  
-    $7 \times 5 = 35$.  
-    $35 / 1$ (from the 6 and 2 canceling with each other... no, $3! = 6$, $5!$ doesn't help here).  
-    Let's write it out: $\frac{7 \times 6 \times 5}{3 \times 2 \times 1}$.  
-    6 divided by 2 is 3. The denominator becomes 1, the term 3 removed from numerator... no that's confusing mental arithmetic.  
-    $3 \times 2 \times 1 = 6$.  
-    $7 \times 5 = 35$.  
-    $6 \times 35 / 6$? No.  
-    Numerator is $7, 6, 5$. Denominator is $3, 2, 1$.  
-    $6/ (2 \times 3)$ is 1. So $7 \times 1 \times 5 = 35$. Correct.  
+Wait, did I mess up arithmetic on $\binom{7}{3}$ in my thought process?  
+$7 \times 6 \times 5 / 6$ ...  
+$7 \times 5 = 35$.  
+$35 / 1$ (from the 6 and 2 canceling with each other... no, $3! = 6$, $5!$ doesn't help here).  
+Let's write it out: $\frac{7 \times 6 \times 5}{3 \times 2 \times 1}$.  
+6 divided by 2 is 3. The denominator becomes 1, the term 3 removed from numerator... no that's confusing mental arithmetic.  
+$3 \times 2 \times 1 = 6$.  
+$7 \times 5 = 35$.  
+$6 \times 35 / 6$? No.  
+Numerator is $7, 6, 5$. Denominator is $3, 2, 1$.  
+$6/ (2 \times 3)$ is 1. So $7 \times 1 \times 5 = 35$. Correct.  
 
-    For girls: $\binom{4}{2}$. Numerator $4 \times 3 = 12$. Denominator 2.  
-    $12 / 2 = 6$. Correct.  
+For girls: $\binom{4}{2}$. Numerator $4 \times 3 = 12$. Denominator 2.  
+$12 / 2 = 6$. Correct.  
 
-    Multiplication: $35 \times 6$.  
-    $30 \times 6 = 180$.  
-    $5 \times 6 = 30$.  
-    $180 + 30 = 210$. Correct.  
+Multiplication: $35 \times 6$.  
+$30 \times 6 = 180$.  
+$5 \times 6 = 30$.  
+$180 + 30 = 210$. Correct.  
 
-    Ready to write the solution.  
+Ready to write the solution.  
 
-    **Structure:**  
-    1. Introduction of variables (Boys, Girls, pick counts).  
-    2. Combination formula definition.  
+**Structure:**  
+1. Introduction of variables (Boys, Girls, pick counts).  
+   2. Combination formula definition.  
     3. Calculation for boys.  
     4. Calculation for girls.  
     5. Multiplication of results.  
     6. Final Answer box.  
 
-    No special constraints on formatting requested other than reasoning and \boxed{} at the end. I will follow the standard mathematical explanation style.  
+No special constraints on formatting requested other than reasoning and \boxed{} at the end. I will follow the standard mathematical explanation style.  
 
-    Step 1: Choose boys. $C(7,3) = \frac{7!}{3!(4)!} = 35$.  
-    Step 2: Choose girls. $C(4,2) = \frac{4!}{2!(2)!} = 6$.  
-    Step 3: Multiply. $35 \times 6 = 210$.  
+Step 1: Choose boys. $C(7,3) = \frac{7!}{3!(4)!} = 35$.  
+Step 2: Choose girls. $C(4,2) = \frac{4!}{2!(2)!} = 6$.  
+Step 3: Multiply. $35 \times 6 = 210$.  
 
-    The reasoning is complete.  
+The reasoning is complete.  
 
-    Just to be absolutely sure, let's write out the combinations notation explicitly as it looks better. $\binom{n}{k}$.  
-    Boys: 7 choose 3.  
-    Girls: 4 choose 2.  
-    Product.  
+Just to be absolutely sure, let's write out the combinations notation explicitly as it looks better. $\binom{n}{k}$.  
+Boys: 7 choose 3.  
+Girls: 4 choose 2.  
+Product.  
 
-    Looks solid. No pitfalls detected.  
-    (Self-correction: If someone thought they need to arrange them, they would get a much higher number or permutation based answer, but the problem explicitly states order doesn't matter).  
+Looks solid. No pitfalls detected.  
+(Self-correction: If someone thought they need to arrange them, they would get a much higher number or permutation based answer, but the problem explicitly states order doesn't matter).  
 
-    Final check of the numbers.  
-    Boys = 7. Need 3. $\frac{7 \cdot 6 \cdot 5}{6} = 35$. Correct.  
-    Girls = 4. Need 2. $\frac{4 \cdot 3}{2} = 6$. Correct.  
-    $35 \cdot 6$.  
-    $35 \cdot 3 = 105$.  
-    $105 \cdot 2 = 210$. Correct.  
+Final check of the numbers.  
+Boys = 7. Need 3. $\frac{7 \cdot 6 \cdot 5}{6} = 35$. Correct.  
+Girls = 4. Need 2. $\frac{4 \cdot 3}{2} = 6$. Correct.  
+$35 \cdot 6$.  
+$35 \cdot 3 = 105$.  
+$105 \cdot 2 = 210$. Correct.  
 
-    The solution is 210.  
+The solution is 210.  
 
 
 ## Answer

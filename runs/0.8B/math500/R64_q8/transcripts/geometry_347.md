@@ -405,14 +405,14 @@ Here's my thought process for solving this geometry problem:
                                                                                                 *   Wait. $C=(0,R), A=(-R,0), B=(R,0)$.  
                                                                                                 *   $\vec{CA} = (-2, -R)$. $\vec{CB} = (0, -R)$. No. $C$ to B is $(r-R, 0)$? No.  
                                                                                                 *   Wait. Let's draw coordinates properly.  
-                                                                                                \*   A=(-1,0), B=(1,0). C=(0,1).  
+\*   A=(-1,0), B=(1,0). C=(0,1).  
                                                                                                 *   $\vec{CA} = (-2, -1)$. $\vec{CB} = (2, 0)$? No. B is $(1,0)$. $C(0,1)$. Vector from C to B is $(1-0, 0-1) = (1, -1)$.  
                                                                                                 *   Wait. Angle at C? Angle between vector from C to A and C to B.  
                                                                                                 *   $\vec{CA} = (-1-0, 0-1)$? No, $C$ is origin in local coordinates?  
                                                                                                 *   Let's use vectors from origin O(0,0).  
                                                                                                 *   $A=(-1,0)$. $B=(1,0)$. $C=(0,1)$.  
                                                                                                 *   Wait. Triangle ABC:  
-                                                                                            \*   A=(-1,0), B=(1,0), C=(0,1).  
+\*   A=(-1,0), B=(1,0), C=(0,1).  
                                                                                                 *   Side AB is on x-axis from -1 to 1. It's a diameter.  
                                                                                                 *   Check triangle right angle at C?  
                                                                                                 *   Vector CA = A-C = (-1-0, 0-1) = (-1, -1)? No. $A=(-1,0)$, $C=(0,1)$. $\vec{CA} = (-1, -1)$. (No, vector from C to A is $A-C$? Or $C-A$?)  
@@ -447,7 +447,7 @@ Here's my thought process for solving this geometry problem:
                                                                                                 *   Usually, if $AB$ is a side of the triangle, and we have $\angle CAB$, then $\angle CAB$ subtends arc $CB$. But wait, vertices $A,B,C$ are on circle. So side $AB$ is a chord.  
                                                                                                 *   Is it possible for side $AB$ to be a diameter? If so, does $\angle ACB = 90^\circ$?  
                                                                                                 *   Let's check with coordinate example again.  
-                                                                                                \*   A=(-1,0), B=(1,0). C=(0,1).  
+\*   A=(-1,0), B=(1,0). C=(0,1).  
                                                                                                 *   $\vec{AC} = (1, -1)$. $\vec{AB} = (2, 0)$. $\angle CAB$ is angle between $(1,-1)$ and $(2,0)$? No. Angle at vertex A between vector $CA$ and vector $CB$?  
                                                                                                 *   Wait, vertices are $A, B, C$. The angle is at A. So it's the angle formed by lines $AB$ and $AC$.  
                                                                                                 *   Line $AB$ is horizontal (vector $(2,0)$). Line $AC$ connects A to C. Vector $C-A = (1-(-1), 0-0) = (2,0)$? No.  

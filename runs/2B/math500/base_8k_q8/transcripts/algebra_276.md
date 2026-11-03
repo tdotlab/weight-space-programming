@@ -31,7 +31,7 @@ Possible pairs of integers $\{A, B\}$:
 2. $A = -1, B = -10$  
 3. $A = 2, B = 5$  
 4. $A = -2, B = -5$ (Wait, no, $(-2) \cdot (-5) = 10$, check sign in equation).  
-   Let's write the coefficient of $x$: $3A - 8B = -1$.  
+Let's write the coefficient of $x$: $3A - 8B = -1$.  
 
 Case 1: $A = 10, B = 1$  
 Coefficient of x: $3(10) - 8(1) = 30 - 8 = 22 \neq -1$.  

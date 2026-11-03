@@ -20,15 +20,15 @@ Here's my thought process for solving this problem:
     *   The sides are specific integers: $5, 5, 6$. This looks like an isosceles triangle.  
 
 3.  **Choose the Method:**  
-    There are several standard ways to calculate the area of a triangle:  
+There are several standard ways to calculate the area of a triangle:  
     *   Heron's Formula.  
     *   SAS (Side-Angle-Sine) or ASA formula using trigonometry (Law of Cosines).  
     *   Coordinate Geometry (Place vertices, find base and height).  
 
-    Let's look at the given numbers first. Since two sides are equal ($5$ and $5$), it is an **Isosceles Triangle**. The area can also be calculated using Heron's Formula because side lengths are readily available. This seems like the most direct "plug-and-chug" method without needing to figure out what angle is between the 5s first, though finding that angle would also work.  
+Let's look at the given numbers first. Since two sides are equal ($5$ and $5$), it is an **Isosceles Triangle**. The area can also be calculated using Heron's Formula because side lengths are readily available. This seems like the most direct "plug-and-chug" method without needing to figure out what angle is between the 5s first, though finding that angle would also work.  
 
-    *Method Selection:* **Heron's Formula**. It's often considered the gold standard for problems given only side lengths.  
-    *   Method 2 (Alternative): Find the altitude from one of the equal sides to the base, split the triangle into two right-angled triangles using the perpendicular bisector property of an isosceles triangle.  
+*Method Selection:* **Heron's Formula**. It's often considered the gold standard for problems given only side lengths.  
+*   Method 2 (Alternative): Find the altitude from one of the equal sides to the base, split the triangle into two right-angled triangles using the perpendicular bisector property of an isosceles triangle.  
 
 4.  **Execute Heron's Formula:**  
 
@@ -177,15 +177,15 @@ Here's my thought process for solving this problem:
     *   Ensure LaTeX formatting for math expressions.  
     *   Make sure the boxed answer contains just the number or number with unit? Usually, just the number or "12" is safest if not specified, but standard convention in these prompts often accepts just the number or $x$. I will write 12. The prompt asks "What is the number...". So the number is the primary target.  
 
-    Let's check for any potential pitfalls.  
-    *   Did I swap a side? No, 5, 5, 6.  
+Let's check for any potential pitfalls.  
+*   Did I swap a side? No, 5, 5, 6.  
     *   Is triangle inequality satisfied? $5+5 > 6$, $10>6$. Yes.  
     *   Calculation is robust.  
 
-    The prompt asks: "What is the number of square units...". So "12" is the answer.  
+The prompt asks: "What is the number of square units...". So "12" is the answer.  
 
-    Let's quickly try calculating using sine rule just to be absolutely sure about arithmetic in the head logic.  
-    *   Side $a=5, b=5, c=6$.  
+Let's quickly try calculating using sine rule just to be absolutely sure about arithmetic in the head logic.  
+*   Side $a=5, b=5, c=6$.  
     *   Use Law of Cosines to find angle $\theta$ opposite side $c=6$.  
     *   $c^2 = a^2 + b^2 - 2ab \cos C$  
     *   $36 = 25 + 25 - 2(25) \cos C$ (since it's an isosceles triangle, angles at A and B are equal).  
@@ -202,32 +202,32 @@ Here's my thought process for solving this problem:
     *   Area $= 12$.  
     *   Confirmed. The geometric interpretation holds up perfectly with trigonometry too.  
 
-    **Plan:**  
-    1.  State Heron's Formula.  
+**Plan:**  
+1.  State Heron's Formula.  
     2.  Compute semi-perimeter.  
     3.  Compute area using formula.  
     4.  Conclude.  
 
-    Step-by-step writing:  
-    - Identify sides $a=5, b=5, c=6$.  
-    - Calculate semi-perimeter $s = (5+5+6)/2 = 8$.  
+Step-by-step writing:  
+- Identify sides $a=5, b=5, c=6$.  
+  - Calculate semi-perimeter $s = (5+5+6)/2 = 8$.  
     - Apply Heron's formula $A = \sqrt{s(s-a)(s-b)(s-c)}$.  
     - Substitute: $A = \sqrt{8(3)(3)(2)}$.  
     - Calculate product: $\sqrt{144}$.  
     - Result: 12.  
 
-    The user asked for "number of square units". I will put "12" inside the box. The context implies "number", so just the integer. If they wanted full sentence, usually text is outside. But standard for these outputs is `\boxed{12}` or `\boxed{12 \text{ sq units}}`. The prompt says "put your final answer within \boxed{}". I will put just 12 to be safe, or maybe 12 units? It asks "What is the number". Okay, just the number.  
+The user asked for "number of square units". I will put "12" inside the box. The context implies "number", so just the integer. If they wanted full sentence, usually text is outside. But standard for these outputs is `\boxed{12}` or `\boxed{12 \text{ sq units}}`. The prompt says "put your final answer within \boxed{}". I will put just 12 to be safe, or maybe 12 units? It asks "What is the number". Okay, just the number.  
 
-    Let me double check if there are any trick interpretations.  
-    "number of square units" = Area.  
-    Sides: 5, 5, 6.  
-    Straightforward.  
+Let me double check if there are any trick interpretations.  
+"number of square units" = Area.  
+Sides: 5, 5, 6.  
+Straightforward.  
 
-    Final check of the text generation constraints:  
-    - Reason step by step.  
-    - Put final answer in `\boxed{}`.  
+Final check of the text generation constraints:  
+- Reason step by step.  
+  - Put final answer in `\boxed{}`.  
 
-    Ready to write.  
+Ready to write.  
 
 
 ## Answer

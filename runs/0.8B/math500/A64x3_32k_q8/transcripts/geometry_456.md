@@ -29,20 +29,20 @@ Here's a thinking process that leads to the solution:
 4.  **Substitute and Solve:**  
     *   $\frac{4}{3}\pi r^3 = 4\pi r^2$  
     *   Divide both sides by $\pi$:  
-        $\frac{4}{3}r^3 = 4r^2$  
+$\frac{4}{3}r^3 = 4r^2$  
     *   Divide by $r^2$ (assuming $r \neq 0$, which makes physical sense for a sphere):  
-        $\frac{4}{3}r = 4$  
+$\frac{4}{3}r = 4$  
     *   Solve for $r$:  
-        $r^2 = \frac{4}{3}$ ... No, let's just divide by 4:  
-        $\frac{1}{3}r^3 = r^2 \implies r = 3$ (if we take the non-zero case).  
+$r^2 = \frac{4}{3}$ ... No, let's just divide by 4:  
+$\frac{1}{3}r^3 = r^2 \implies r = 3$ (if we take the non-zero case).  
     *   Check the calculation again.  
     *   $V = \frac{4}{3}r^3$, $A = 4r^2$.  
     *   $\frac{4}{3}r^3 = 4r^2$  
     *   Divide by $4r^2$: $\frac{1}{3}r = 1 \implies r = 3$.  
     *   Alternatively: $r = 4 / (4/3) \times r...$  
-        Let's rearrange: $\frac{4}{3}r^3 = 4r^2 \Rightarrow \frac{r^3}{3r^2} = \frac{4}{3}$? No.  
-        Divide by $r^2$: $\frac{4}{3}r = 4$.  
-        Then divide by $4$: $r/3 = 1 \implies r=3$ or simply $r=3$.  
+Let's rearrange: $\frac{4}{3}r^3 = 4r^2 \Rightarrow \frac{r^3}{3r^2} = \frac{4}{3}$? No.  
+Divide by $r^2$: $\frac{4}{3}r = 4$.  
+Then divide by $4$: $r/3 = 1 \implies r=3$ or simply $r=3$.  
 
     *   Let's re-read carefully: "radius of a sphere whose volume and surface area, in cubic units and square units respectively, are numerically equal".  
     *   This translates to: $\frac{4}{3}\pi r^3 = 4\pi r^2 \implies \text{Volume} = \text{Area}$ (numerically).  

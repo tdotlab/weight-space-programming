@@ -46,12 +46,12 @@ Let's use the first equation for both cases later. The second equation is crucia
 
 Case 1: Positive factors  
 1. $(A=1, B=10)$  
-   $3A - 8B = 3(1) - 8(10) = 3 - 80 = -77$.  
-   This does not equal $-1$. So this solution is invalid.  
+$3A - 8B = 3(1) - 8(10) = 3 - 80 = -77$.  
+This does not equal $-1$. So this solution is invalid.  
 
 2. $(A=2, B=5)$  
-   $3A - 8B = 3(2) - 8(5) = 6 - 40 = -34$.  
-   This does not equal $-1$. So this solution is invalid.  
+$3A - 8B = 3(2) - 8(5) = 6 - 40 = -34$.  
+This does not equal $-1$. So this solution is invalid.  
 
 Case 2: Negative factors (where $AB=10$, so if one is positive, the other must be negative to keep product positive? No, product can be positive or negative. If both are negative, product is positive.)  
 The equation $(3A-8B)=-1$ involves signs.  
@@ -305,44 +305,44 @@ So $-3k + 8j = -1 \implies 8j - 3k = 1$.
 
 Check pairs:  
 1. $(1, 10)$: $k=1, j=10$.  
-   $8(10) - 3(1) = 80 - 3 = 77 \neq 1$. No.  
+$8(10) - 3(1) = 80 - 3 = 77 \neq 1$. No.  
 2. $(2, 5)$: $k=2, j=5$.  
-   $8(5) - 3(2) = 40 - 6 = 34 \neq 1$. No.  
+$8(5) - 3(2) = 40 - 6 = 34 \neq 1$. No.  
 3. $(5, 2)$: $k=5, j=2$. (Same as previous but swapping order).  
-   $8(2) - 3(5) = 16 - 15 = 1$. YES!  
-   So $p=k=-5$ or $q=j=2$?  
-   If $k=5$, then $j=2$. The product is $5 \times 2 = 10$. So this corresponds to factor pair $(p,q) = (-5, -2)$.  
-   Let's check this again.  
-   We want $3A - 8B = -1$ where A is the first factor and B is the second factor? No, factors are $(Ax-8)$ and $(Bx+3)$.  
-   The linear term is $Ax \cdot 3 + A(-8) + (-8)(B)x$? No.  
-   Expansion: $A(Bx+3) - 8(Bx+3)$. No.  
-   $(Ax-8)(Bx+3) = (AB)x^2 + 3Ax - 8Bx - 24$.  
-   Linear coeff is $3A - 8B$.  
-   The pairs we found for solution were $(5,2)$.  
-   If factors are $p$ and $q$, then $AB=10$, but in the problem statement it says "Ax-8" and "Bx+3".  
-   So the coefficients of x are just the terms inside brackets? No.  
-   Let's re-read: $(Ax-8)(Bx+3)$. This implies linear factor is $(Ax-8)$ and linear factor is $(Bx+3)$.  
-   The term "A" is a coefficient of $x$.  
-   The term "B" is a coefficient of $x$ (from the other factor).  
-   So we have $(Ax-8)(Bx+3)$.  
-   Let's check linear term again.  
-   Term $x$: comes from:  
+$8(2) - 3(5) = 16 - 15 = 1$. YES!  
+So $p=k=-5$ or $q=j=2$?  
+If $k=5$, then $j=2$. The product is $5 \times 2 = 10$. So this corresponds to factor pair $(p,q) = (-5, -2)$.  
+Let's check this again.  
+We want $3A - 8B = -1$ where A is the first factor and B is the second factor? No, factors are $(Ax-8)$ and $(Bx+3)$.  
+The linear term is $Ax \cdot 3 + A(-8) + (-8)(B)x$? No.  
+Expansion: $A(Bx+3) - 8(Bx+3)$. No.  
+$(Ax-8)(Bx+3) = (AB)x^2 + 3Ax - 8Bx - 24$.  
+Linear coeff is $3A - 8B$.  
+The pairs we found for solution were $(5,2)$.  
+If factors are $p$ and $q$, then $AB=10$, but in the problem statement it says "Ax-8" and "Bx+3".  
+So the coefficients of x are just the terms inside brackets? No.  
+Let's re-read: $(Ax-8)(Bx+3)$. This implies linear factor is $(Ax-8)$ and linear factor is $(Bx+3)$.  
+The term "A" is a coefficient of $x$.  
+The term "B" is a coefficient of $x$ (from the other factor).  
+So we have $(Ax-8)(Bx+3)$.  
+Let's check linear term again.  
+Term $x$: comes from:  
    - $A \cdot 0 = 0$ ? No, expansion.  
-   First part: $(Ax-8)$ gives $Ax^2 + (-8)x \dots$ no.  
-   Second part: $(Bx+3)$ gives $Bx^2 + 3x$.  
-   Multiply out:  
-   $A(Bx)(x) = ABx^2$.  
-   $A(x) = Ax$. No, it's linear term from the first factor multiplied by second constant.  
-   $(Ax-8)$ contributes $Ax$ when multiplied by... what?  
-   The term is a product of two expressions: $f(x) = Ax-8$ and $g(x) = Bx+3$.  
-   So we have $A(Bx^2 + 3x - 8(Bx+3))$? No.  
-   Expansion is $(Ax)(Bx) + (Ax)(3) + (-8)(Bx) + (-8)(3)$.  
-   $= AB x^2 + 3 Ax - 8 B x - 24$.  
-   Yes.  
-   So linear term is $3A - 8B$.  
-   The coefficients are fixed by factors $A, B$.  
-   In this problem, the factorization given by $AB+3$ implies terms with $(Ax-8)$ and $(Bx+3)$.  
-   So $A=5, B=2$ gives linear term $3(5) - 8(2) = -1$. This is correct.  
+First part: $(Ax-8)$ gives $Ax^2 + (-8)x \dots$ no.  
+Second part: $(Bx+3)$ gives $Bx^2 + 3x$.  
+Multiply out:  
+$A(Bx)(x) = ABx^2$.  
+$A(x) = Ax$. No, it's linear term from the first factor multiplied by second constant.  
+$(Ax-8)$ contributes $Ax$ when multiplied by... what?  
+The term is a product of two expressions: $f(x) = Ax-8$ and $g(x) = Bx+3$.  
+So we have $A(Bx^2 + 3x - 8(Bx+3))$? No.  
+Expansion is $(Ax)(Bx) + (Ax)(3) + (-8)(Bx) + (-8)(3)$.  
+$= AB x^2 + 3 Ax - 8 B x - 24$.  
+Yes.  
+So linear term is $3A - 8B$.  
+The coefficients are fixed by factors $A, B$.  
+In this problem, the factorization given by $AB+3$ implies terms with $(Ax-8)$ and $(Bx+3)$.  
+So $A=5, B=2$ gives linear term $3(5) - 8(2) = -1$. This is correct.  
 
 Is it possible that I should consider negative factors?  
 In the equation $3p - 8q = -1$, we tested all pairs of integers $(p,q)$ such that $pq=10$.  
@@ -854,24 +854,24 @@ I will formulate the response steps:
 2. Expand the RHS: $ABx^2 + (3A - 8B)x - 24$.  
 3. Equate to LHS ($10x^2 - x - 24$): $AB = 10$, $(3A - 8B) = -1$.  
 4. Analyze integer pairs $(A, B)$ such that $AB=10$. There are pairs like $\{1, 10\}, \{2, 5\}, \{-1, -10\}, \dots$ with same product.  
-   Note: $AB$ must be 10. So $A,B$ can be $(1,10), (-1,-10), (2,5), (-2, -5)$.  
-   Also $(5,2)$ and $(-5,-2)$ are not in the set of pairs with product 10 if we consider negative signs? No.  
-   Let's list systematically:  
-   Factors of 10: $\pm 1, \pm 2, \pm 5, \pm 10$.  
-   Pairs $(A,B)$ with $AB=10$:  
+Note: $AB$ must be 10. So $A,B$ can be $(1,10), (-1,-10), (2,5), (-2, -5)$.  
+Also $(5,2)$ and $(-5,-2)$ are not in the set of pairs with product 10 if we consider negative signs? No.  
+Let's list systematically:  
+Factors of 10: $\pm 1, \pm 2, \pm 5, \pm 10$.  
+Pairs $(A,B)$ with $AB=10$:  
    - $(1, 10)$ -> linear term: $3(1) - 8(10) = -77$. (Reject)  
    - $(2, 5)$ -> linear term: $3(2) - 8(5) = -34$. (Reject)  
    - $(5, 2)$ -> linear term: $3(5) - 8(2) = -1$. (Accept)  
    - $(-1, -10)$ -> product is 10. But let's check sign again. If A=-1, B=-10. Then $AB=10$.  
-     Linear term: $3(-1) - 8(-10) = -3 + 80 = 77$. (Reject)  
+Linear term: $3(-1) - 8(-10) = -3 + 80 = 77$. (Reject)  
    - $(-5, -2)$ -> linear term: $3(-5) - 8(-2) = -15 + 16 = 1$. (Reject)  
-     Or if A=-5, B=2? Product is -10. Not allowed for $AB=10$.  
+Or if A=-5, B=2? Product is -10. Not allowed for $AB=10$.  
 
-   So the unique pair of coefficients is $(A, B) = (5, 2)$.  
-   Thus $AB + B = 10 + 2 = 12$.  
+So the unique pair of coefficients is $(A, B) = (5, 2)$.  
+Thus $AB + B = 10 + 2 = 12$.  
 
-   The question is "What is AB+B?".  
-   Answer 12.  
+The question is "What is AB+B?".  
+Answer 12.  
 
 The question might be a trick where there are multiple pairs but A and B are integers? No.  
 If $(A,B) = (5, -2)$ is considered valid factorization $Ax-8$ and $Bx+3$. Then $AB = -10 \neq 10$.  

@@ -174,8 +174,8 @@ Here is a thinking process to solve the problem:
         *   The asymptotes $L_1, L_2$ are the polar curves of the points on the hyperbola. Or related to conjugate diameters? No.  
         *   Let's recall a standard property: If asymptotes are intersecting at center $(h,k)$, and slopes $m_1, m_2$, then for hyperbola $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$? No.  
         *   Let's consider the equation:  
-            $$ \left(\frac{x-h}{a}\right)^2 - \left(\frac{y-k}{b}\right)^2 = 1 $$  
-            or something similar with $F(x,y)$ for foci? No.  
+$$ \left(\frac{x-h}{a}\right)^2 - \left(\frac{y-k}{b}\right)^2 = 1 $$  
+or something similar with $F(x,y)$ for foci? No.  
         *   Actually, asymptotes define the shape. The locus of a point on the hyperbola is determined by distance to center and angle.  
         *   Let's check if there is a relation between $a,b$ and slopes.  
             *   Slopes are $\pm 2$. So $\tan \theta = \frac{b}{a}$? No, that's for horizontal/vertical.  
@@ -186,11 +186,11 @@ Here is a thinking process to solve the problem:
             *   This implies $\frac{b}{a} = 2$.  
             *   However, for a hyperbola centered at $(h,k)$? No, if it's not centered at origin.  
             *   Let's try to write the general equation:  
-                $$ \frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1 $$  
-                (Wait, vertices are on x-axis? No, just foci).  
-                The asymptotes are $y = k \pm \frac{b}{a}(x-h)$.  
-                So slope is $\pm \sqrt{\frac{b^2-a^2}{...}}$? No.  
-                If it's rotated, slopes are not constant. But we have real numbers 2 and -2.  
+$$ \frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1 $$  
+(Wait, vertices are on x-axis? No, just foci).  
+The asymptotes are $y = k \pm \frac{b}{a}(x-h)$.  
+So slope is $\pm \sqrt{\frac{b^2-a^2}{...}}$? No.  
+If it's rotated, slopes are not constant. But we have real numbers 2 and -2.  
             *   Let's try to assume the hyperbola is of form $x^2/a^2 - y^2/b^2 = 1$ rotated by $\alpha$.  
                 *   Then asymptotes are lines through origin with slope $\tan \theta$ where $\tan \theta = b/a$. No.  
             *   If the hyperbola passes through $(4,7)$, does that help?  
@@ -221,8 +221,8 @@ Here is a thinking process to solve the problem:
                 4.  Let's use the property that for any hyperbola with asymptotes $y = m_1 x + k_1$ and $y = m_2 x + k_2$, we can calculate $a,b$.  
                     *   Slope relation is usually determined by $\tan \theta = \dots$. But let's look at the given point $(4,7)$.  
                     *   Let's assume the hyperbola equation is of the form:  
-                        $$ x^2/a^2 - y^2/b^2 = 1 \quad (\text{centered at origin}) $$  
-                        and its asymptotes are $y = \pm (b/a) x$. This means $m_1 = m_2$ if centered? No. $m_1, m_2$ must be $\pm b/a$. If slopes given are $2, -2$, then $b/a = 2$.  
+$$ x^2/a^2 - y^2/b^2 = 1 \quad (\text{centered at origin}) $$  
+and its asymptotes are $y = \pm (b/a) x$. This means $m_1 = m_2$ if centered? No. $m_1, m_2$ must be $\pm b/a$. If slopes given are $2, -2$, then $b/a = 2$.  
                         *   BUT, the asymptotes are defined for a rotated hyperbola or specific orientation.  
                         *   Actually, maybe I'm missing something simpler. Let's look at the point coordinates and check if it's on the "focal conjugate".  
 
@@ -237,8 +237,8 @@ Here is a thinking process to solve the problem:
             *   If so, then $(h,k) = (5,7)$.  
             *   But for a hyperbola centered at $(5,7)$ with asymptotes passing through origin? No. Asymptotes are lines $y=mx \pm c$ or $x = \dots$. No, for standard position $\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1$, asymptotes pass through $(0,0)$.  
             *   If the hyperbola is centered at $(5,7)$, its equation could be in the form:  
-                $$ (x-5)^2/a'^2 - (y-7)^2/b'^2 = \text{something} $$  
-                Or maybe rotated. But let's assume it's a "hyperbola" which might be an ellipse? No.  
+$$ (x-5)^2/a'^2 - (y-7)^2/b'^2 = \text{something} $$  
+Or maybe rotated. But let's assume it's a "hyperbola" which might be an ellipse? No.  
             *   Let's check if $(4,7)$ lies on the line connecting center $(5,7)$ and foci $F_1, F_2$.  
             *   Is there any relation between slopes of asymptotes for hyperbola centered at $(h,k)$? Yes, for a rotated hyperbola.  
             *   However, usually "Asymptotes of a hyperbola" refers to the lines connecting vertices and co-vertices. If it's standard position $x^2/a^2 - y^2/b^2 = 1$, asymptotes are $y = \pm (b/a) x$. They pass through origin.  
@@ -273,9 +273,9 @@ Here is a thinking process to solve the problem:
                 *   The foci distance $2c$ is the major axis length? No, just foci.  
                 *   If center is $(h,k)$ and foci are on conjugate hyperbola...  
             *   Actually, let's use the property:  
-                $$ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 $$  
-                Asymptotes: $y = \pm b/a x$. (This is for center origin).  
-                If center is not origin, but let's denote it $(h,k)$, then equation of hyperbola can be written as $\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$? No. The asymptotes are lines tangent to the foci?  
+$$ \frac{x^2}{a^2} - \frac{y^2}{b^2} = 1 $$  
+Asymptotes: $y = \pm b/a x$. (This is for center origin).  
+If center is not origin, but let's denote it $(h,k)$, then equation of hyperbola can be written as $\frac{(x-h)^2}{a^2} - \frac{(y-k)^2}{b^2} = 1$? No. The asymptotes are lines tangent to the foci?  
             *   Let's try a different approach.  
             *   Assume hyperbola is of form $Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0$.  
                 *   Asymptotes equation: If asymptotes intersect at $(x_1, y_1)$, they have slopes $\pm b/a$ relative to axes? No.  

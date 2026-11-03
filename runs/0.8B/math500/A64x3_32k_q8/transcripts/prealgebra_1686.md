@@ -481,10 +481,10 @@ Here's my thought process for solving this problem:
                 *   7
 ```
 
-                *   14 ($6 \times 7$) No, $42/2 = 21$, not 6. $42/6=7$. So $6$ is a factor?  
-            *   Check: $6 \times 7 = 42$. Yes. So 6 is a divisor of 42.  
-            *   Divisors of 14 (to check divisibility):  
-                *   1 | 14. Yes.  
+*   14 ($6 \times 7$) No, $42/2 = 21$, not 6. $42/6=7$. So $6$ is a factor?  
+    *   Check: $6 \times 7 = 42$. Yes. So 6 is a divisor of 42.  
+        *   Divisors of 14 (to check divisibility):  
+            *   1 | 14. Yes.  
                 *   2 | 14. Yes ($2 \times 7 = 14$).  
                 *   3 | 14? No.  
                 *   4 | 14? No.  

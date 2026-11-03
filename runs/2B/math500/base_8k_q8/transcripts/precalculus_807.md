@@ -165,14 +165,14 @@ Steps:
 1. Identify rectangular coordinates $(x, y) = (0, 3)$.  
 2. Formula for polar radius $r$: $r = \sqrt{x^2 + y^2}$.  
 3. Substitute values: $r = \sqrt{0^2 + 3^2} = \sqrt{9} = 3$.  
-   Since $r > 0$, $r=3$ is chosen.  
+Since $r > 0$, $r=3$ is chosen.  
 4. Formula for polar angle $\theta$: $\tan \theta = \frac{y}{x}$ or use quadrant properties.  
-   The point $(0, 3)$ lies on the y-axis where $x=0$.  
-   Since $y > 0$, it is in the positive y-direction (Quadrant II is negative x, Quadrant I and IV are quadrants bounded by axes, actually let's use standard quadrants).  
-   Point $(0,3)$ is "on" the y-axis. The angle from the positive x-axis to the positive y-axis is $\frac{\pi}{2}$ radians ($90^\circ$).  
-   Also $x = r \cos \theta \implies 0 = 3 \cos \theta \implies \cos \theta = 0$.  
-   $y = r \sin \theta \implies 3 = 3 \sin \theta \implies \sin \theta = 1$.  
-   The angle in the range $[0, 2\pi)$ is $\frac{\pi}{2}$.  
+The point $(0, 3)$ lies on the y-axis where $x=0$.  
+Since $y > 0$, it is in the positive y-direction (Quadrant II is negative x, Quadrant I and IV are quadrants bounded by axes, actually let's use standard quadrants).  
+Point $(0,3)$ is "on" the y-axis. The angle from the positive x-axis to the positive y-axis is $\frac{\pi}{2}$ radians ($90^\circ$).  
+Also $x = r \cos \theta \implies 0 = 3 \cos \theta \implies \cos \theta = 0$.  
+$y = r \sin \theta \implies 3 = 3 \sin \theta \implies \sin \theta = 1$.  
+The angle in the range $[0, 2\pi)$ is $\frac{\pi}{2}$.  
 5. The polar coordinates are $(3, \frac{\pi}{2})$.  
 
 Final answer looks consistent.  
@@ -229,13 +229,13 @@ Reasoning:
 1.  The conversion from rectangular $(x, y)$ to polar $(r, \theta)$ involves the formulas $r = \sqrt{x^2 + y^2}$ and $\tan(\theta) = y/x$.  
 2.  Given point is $(0, 3)$, so $x = 0$ and $y = 3$.  
 3.  Calculate $r$:  
-    $r = \sqrt{0^2 + 3^2} = \sqrt{9} = 3$.  
-    The problem specifies $r > 0$, which is satisfied ($3 > 0$).  
+$r = \sqrt{0^2 + 3^2} = \sqrt{9} = 3$.  
+The problem specifies $r > 0$, which is satisfied ($3 > 0$).  
 4.  Determine $\theta$:  
-    Since $\tan(\theta) = y/x = 3/0$ (undefined), we check the quadrants or directly use coordinates.  
-    The point lies on the vertical axis where $x=0$. Since $y > 0$, it is in the positive direction of the y-axis.  
-    In standard position, this corresponds to an angle of $90^\circ$ or $\frac{\pi}{2}$ radians.  
-    Using $\cos(\theta) = \frac{x}{r} = \frac{0}{3} = 0$ and $\sin(\theta) = \frac{y}{r} = \frac{3}{3} = 1$, the angle $\theta$ must satisfy these conditions. In the interval $[0, 2\pi)$, the only value satisfying $\sin(\theta)=1$ is $\theta = \frac{\pi}{2}$.  
+Since $\tan(\theta) = y/x = 3/0$ (undefined), we check the quadrants or directly use coordinates.  
+The point lies on the vertical axis where $x=0$. Since $y > 0$, it is in the positive direction of the y-axis.  
+In standard position, this corresponds to an angle of $90^\circ$ or $\frac{\pi}{2}$ radians.  
+Using $\cos(\theta) = \frac{x}{r} = \frac{0}{3} = 0$ and $\sin(\theta) = \frac{y}{r} = \frac{3}{3} = 1$, the angle $\theta$ must satisfy these conditions. In the interval $[0, 2\pi)$, the only value satisfying $\sin(\theta)=1$ is $\theta = \frac{\pi}{2}$.  
 5.  The polar coordinates are $(r, \theta) = (3, \frac{\pi}{2})$.  
 
 Final Answer seems robust.  

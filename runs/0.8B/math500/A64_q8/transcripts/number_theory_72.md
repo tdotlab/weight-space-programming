@@ -68,20 +68,20 @@ Here's a thinking process that leads to the solution:
     *   So we need to find all positive integers with exactly 3 divisors.  
 
     *   **Step 2a:** Identify the numbers with $\tau(n)=3$.  
-        Let $n$ be an integer.  
-        Divisors are formed by multiplying pairs $(i, j)$ such that $d_i = i \cdot (\text{something})$.  
-        Actually, let's just look at divisors of form $x | n$.  
-        We want $\tau(n) = 3$.  
-        The number of divisors is the product of an integer sequence.  
-        Possible partitions of 3 into positive integers:  
+Let $n$ be an integer.  
+Divisors are formed by multiplying pairs $(i, j)$ such that $d_i = i \cdot (\text{something})$.  
+Actually, let's just look at divisors of form $x | n$.  
+We want $\tau(n) = 3$.  
+The number of divisors is the product of an integer sequence.  
+Possible partitions of 3 into positive integers:  
         *   Partition 1 into a single number (i.e., term $(e+1)$).  
         *   So $n$ has prime factorization $p^2$.  
         *   Or, it could be two terms?  
-            $\tau(n) = (e_1+1)(e_2+1)... = 3$.  
-            Factors of 3: 1 and 3.  
-            If $k=2$, factors are $1, 3$. So $n=p^0 q^2$? No.  
-            $\tau(n) = (a+1)(b+1)$. We need $(a+1)(b+1)=3$.  
-            Possible solutions for integers $a, b \ge 1$:  
+$\tau(n) = (e_1+1)(e_2+1)... = 3$.  
+Factors of 3: 1 and 3.  
+If $k=2$, factors are $1, 3$. So $n=p^0 q^2$? No.  
+$\tau(n) = (a+1)(b+1)$. We need $(a+1)(b+1)=3$.  
+Possible solutions for integers $a, b \ge 1$:  
             *   $(1+1)(3-1)$? No.  
             *   Let's try values:  
                 *   $n=4 = 2^2$, $\tau(4) = 3$ (divisors: 1, 2, 4).  
@@ -236,11 +236,11 @@ Here's a thinking process that leads to the solution:
                 *   If $e_1+1=3$, then $n=p^2$.  
                 *   But what if we have multiple factors? No, the number of divisors is determined by the number of prime factors with their exponents. If $\tau(n)=3$, there must be only one set of exponents such that product of factors (which is the sum of primes) results in 3?  
                 *   Let's look at it this way:  
-                    $n$ can be written as $p_1^{e_1} \dots p_k^{e_k}$.  
-                    $\tau(n) = (e_1+1)(e_2+1)\dots(e_k+1)$.  
-                    For $\tau(n)=3$, we must have $(e_1+1)(e_2+1)\dots = 3$.  
-                    Possible integer partitions of 3:  
-                        *   $1 \cdot 1 \cdot 3$? No, terms are integers. The exponents $e_i$ must be integers $\ge 0$. So $(e_i+1)$ can be 1 or a larger number? No. If $e_i \ge 1$, then $e_i+1 \ge 2$.  
+$n$ can be written as $p_1^{e_1} \dots p_k^{e_k}$.  
+$\tau(n) = (e_1+1)(e_2+1)\dots(e_k+1)$.  
+For $\tau(n)=3$, we must have $(e_1+1)(e_2+1)\dots = 3$.  
+Possible integer partitions of 3:  
+                    *   $1 \cdot 1 \cdot 3$? No, terms are integers. The exponents $e_i$ must be integers $\ge 0$. So $(e_i+1)$ can be 1 or a larger number? No. If $e_i \ge 1$, then $e_i+1 \ge 2$.  
                         *   If we have multiple primes, product of terms $\ge 2$ is impossible if any term is strictly greater than 1 (since we need to multiply them up). Unless we have exactly one term? Or a set of factors multiplying to 3.  
                             *   Wait, the number of divisors is not sum of exponents. It's product.  
                         *   If $n=p^2$, $\tau(n)=3$. Correct.  

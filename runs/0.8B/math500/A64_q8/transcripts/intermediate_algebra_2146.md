@@ -16,13 +16,13 @@ For all real numbers $x$, and $x = 11$: $P(11) = 181$. Find $P(16)$.
 The problem gives a condition for the polynomial $P(x)$:  
 1. It's a quadratic. Let's assume $P(x) = ax^2 + bx + c$ with $a \neq 0$. The coefficients are real. Since it's a quadratic, we don't need to worry about coefficients being complex or undefined.  
 2. The inequality is a valid range for the polynomial values at every point in the real line. This constraint implies that $P(x)$ must lie between two quadratic expressions, one of which can be thought of as the upper bound and the other as the lower bound?  
-   Actually, let's rephrase this. The interval defined by $Q_1(x) \le P(x) \le Q_2(x)$ is a standard condition.  
-   So we have:  
-   $$x^2 - 2x + 2 \le P(x) \le 2x^2 - 4x + 3$$  
-   This can be rewritten as $Q_1(x) \le x^2 - 2x + 2 \le Q_2(x)$? No, this is confusing.  
-   Let's rewrite the inequalities:  
-   Lower Bound (LB): $x^2 - 2x + 2$  
-   Upper Bound (UB): $2x^2 - 4x + 3$  
+Actually, let's rephrase this. The interval defined by $Q_1(x) \le P(x) \le Q_2(x)$ is a standard condition.  
+So we have:  
+$$x^2 - 2x + 2 \le P(x) \le 2x^2 - 4x + 3$$  
+This can be rewritten as $Q_1(x) \le x^2 - 2x + 2 \le Q_2(x)$? No, this is confusing.  
+Let's rewrite the inequalities:  
+Lower Bound (LB): $x^2 - 2x + 2$  
+Upper Bound (UB): $2x^2 - 4x + 3$  
 
 The condition says that for all $x \in \mathbb{R}$, $P(x) \in [LB(x), UB(x)]$.  
 So we have a "gap" defined by the difference between LB and UB.  
@@ -35,22 +35,22 @@ $x^2 - 2x + 2 \le P(x) \le 2x^2 - 4x + 3$ for all $x$.
 Since $P(x)$ is quadratic with real coefficients, let's substitute $P(x)$ into the inequalities to find constraints on $a$, $b$, and $c$.  
 Let $f(x) = P(x)$.  
 1. $x^2 - 2x + 2 \le x^2 - 4x + 3$? No, we don't know what happens with equality at boundaries for general $x$.  
-   Let's look at the difference: $(UB - LB)(x) = (2x^2 - 4x + 3) - (x^2 - 2x + 2)$.  
-   Let $D(x)$ be this upper bound lower.  
-   We know that $P(x)$ is bounded below by a quadratic function and above by another.  
-   But if the inequality holds for *all* $x$, then:  
-   For any specific $x$, we have a constraint on $P(x)$.  
-   The constraints must hold for all $x$.  
+Let's look at the difference: $(UB - LB)(x) = (2x^2 - 4x + 3) - (x^2 - 2x + 2)$.  
+Let $D(x)$ be this upper bound lower.  
+We know that $P(x)$ is bounded below by a quadratic function and above by another.  
+But if the inequality holds for *all* $x$, then:  
+For any specific $x$, we have a constraint on $P(x)$.  
+The constraints must hold for all $x$.  
 
-   Let's analyze the "gap" between the lower bound and upper bound functions.  
-   The difference between the functions $LB(x)$ and $UB(x)$ is:  
-   $D(x) = UB(x) - LB(x) = (2x^2 - 4x + 3) - (x^2 - 2x + 2) = x^2 - 2x + 1$.  
-   $(x^2 - 2x + 1) = (x-1)^2$. This is always $\ge 0$, and equals $0$ at $x=1$.  
-   Since $P(x)$ lies between them for all $x$, does this imply any relation between $a, b, c$?  
-   The inequality holds for all real $x$.  
-   If the coefficient of the highest degree term in $P(x)$ (say $ax^2 + bx + c$) is 0 (i.e., it's linear), then we'd have something like $A \le P(x) \le B$, where $A, B$ are polynomials. But $P$ is a quadratic.  
-   If $P(x)$ has the form $ax^2+bx+c$, the inequality must hold.  
-   Let's substitute values of $x$ to determine if such coefficients exist.  
+Let's analyze the "gap" between the lower bound and upper bound functions.  
+The difference between the functions $LB(x)$ and $UB(x)$ is:  
+$D(x) = UB(x) - LB(x) = (2x^2 - 4x + 3) - (x^2 - 2x + 2) = x^2 - 2x + 1$.  
+$(x^2 - 2x + 1) = (x-1)^2$. This is always $\ge 0$, and equals $0$ at $x=1$.  
+Since $P(x)$ lies between them for all $x$, does this imply any relation between $a, b, c$?  
+The inequality holds for all real $x$.  
+If the coefficient of the highest degree term in $P(x)$ (say $ax^2 + bx + c$) is 0 (i.e., it's linear), then we'd have something like $A \le P(x) \le B$, where $A, B$ are polynomials. But $P$ is a quadratic.  
+If $P(x)$ has the form $ax^2+bx+c$, the inequality must hold.  
+Let's substitute values of $x$ to determine if such coefficients exist.  
 
 Wait, there is an implicit interpretation here. The lower bound function $L(x) = x^2 - 2x + 2$ and the upper bound function $U(x) = 2x^2 - 4x + 3$.  
 If $P(x)$ satisfies $L(x) \le P(x) \le U(x)$ for all real $x$, then the maximum possible value of $P(x)$ is determined by $U(x)$ and the minimum possible value of $P(x)$ by $L(x)$.  
@@ -191,33 +191,33 @@ The condition implies that the interval of valid values for $ax^2 + bx + c$ must
 
 So we need:  
 1. $(a-1)x^2 + (b+2)x + (c-2) \ge 0$ is NOT correct.  
-   The inequality is $P(x) - L(x) \ge 0$, i.e., $ax^2 + bx + c - x^2 + 2x - 2 \ge 0$.  
-   This gives $(a-1)x^2 + (b+2)x + (c-2) \ge 0$? No.  
-   Let's recheck the expansion.  
-   $P(x) = ax^2 + bx + c$.  
-   Lower Bound: $x^2 - 2x + 2$.  
-   So, $ax^2 + bx + c \ge x^2 - 2x + 2$ for all $x$.  
-   This is equivalent to:  
-   $(a-1)x^2 + (b+2)x + (c-2) \le 0$? No. The coefficient of $x^2$ must be $\ge 1$ if we want the polynomial to satisfy the inequality for all $x$.  
-   If the leading coefficient is negative, the inequality $(a-1)x^2 \ge - (\dots)$... no, it's impossible to determine signs easily.  
-   Let's look at it differently.  
-   $P(x) \ge x^2 - 2x + 2$ means:  
-   At small $x$, $P(x)$ will be very close to $x^2 - 2x + 2$. If $a < 0$, then $ax^2 \to 0$, so it can't exceed the quadratic.  
-   So for large negative $x$, if $a > 1$, then $ax^2$ dominates. This would be $\ge x^2 - 2x + 2$.  
-   If $P(x)$ has positive leading coefficient, we need to check if this satisfies the inequalities at both ends.  
-   Let's rewrite:  
-   $L(x) \le P(x)$. Since $x^2$ dominates for large negative $x$, the inequality must be checked carefully.  
-   Specifically, consider the range of values attained by $ax^2+bx+c$. The gap between $P(x)$ and $U(x)$ must not exceed the width of the interval defined by $L(x)$? No.  
+The inequality is $P(x) - L(x) \ge 0$, i.e., $ax^2 + bx + c - x^2 + 2x - 2 \ge 0$.  
+This gives $(a-1)x^2 + (b+2)x + (c-2) \ge 0$? No.  
+Let's recheck the expansion.  
+$P(x) = ax^2 + bx + c$.  
+Lower Bound: $x^2 - 2x + 2$.  
+So, $ax^2 + bx + c \ge x^2 - 2x + 2$ for all $x$.  
+This is equivalent to:  
+$(a-1)x^2 + (b+2)x + (c-2) \le 0$? No. The coefficient of $x^2$ must be $\ge 1$ if we want the polynomial to satisfy the inequality for all $x$.  
+If the leading coefficient is negative, the inequality $(a-1)x^2 \ge - (\dots)$... no, it's impossible to determine signs easily.  
+Let's look at it differently.  
+$P(x) \ge x^2 - 2x + 2$ means:  
+At small $x$, $P(x)$ will be very close to $x^2 - 2x + 2$. If $a < 0$, then $ax^2 \to 0$, so it can't exceed the quadratic.  
+So for large negative $x$, if $a > 1$, then $ax^2$ dominates. This would be $\ge x^2 - 2x + 2$.  
+If $P(x)$ has positive leading coefficient, we need to check if this satisfies the inequalities at both ends.  
+Let's rewrite:  
+$L(x) \le P(x)$. Since $x^2$ dominates for large negative $x$, the inequality must be checked carefully.  
+Specifically, consider the range of values attained by $ax^2+bx+c$. The gap between $P(x)$ and $U(x)$ must not exceed the width of the interval defined by $L(x)$? No.  
 
-   The key observation is that $P(x)$ must satisfy $(x-1)^2 \le (UB - LB)$.  
-   Let's calculate the difference between $UB(x)$ and $LB(x)$.  
-   $D(x) = U(x) - L(x) = (x-1)^2 \ge 0$.  
-   So, we know that for any valid quadratic polynomial, the range of values must satisfy $(x-1)^2 \le UB(x) - LB(x)$? No.  
-   We established earlier that $P(x) \in [LB(x), UB(x)]$ for all $x$.  
-   This means $L(x) \le P(x) \le U(x)$.  
-   This implies $(UB(x) - LB(x)) \ge 0$, which is true.  
-   However, it also says that the interval between the two functions must be valid for *all* real numbers $x$.  
-   Let's try to use convexity or simply the properties of polynomials with given values.  
+The key observation is that $P(x)$ must satisfy $(x-1)^2 \le (UB - LB)$.  
+Let's calculate the difference between $UB(x)$ and $LB(x)$.  
+$D(x) = U(x) - L(x) = (x-1)^2 \ge 0$.  
+So, we know that for any valid quadratic polynomial, the range of values must satisfy $(x-1)^2 \le UB(x) - LB(x)$? No.  
+We established earlier that $P(x) \in [LB(x), UB(x)]$ for all $x$.  
+This means $L(x) \le P(x) \le U(x)$.  
+This implies $(UB(x) - LB(x)) \ge 0$, which is true.  
+However, it also says that the interval between the two functions must be valid for *all* real numbers $x$.  
+Let's try to use convexity or simply the properties of polynomials with given values.  
 
 Actually, let's rephrase the condition:  
 $x^2 - 2x + 2 \le ax^2 + bx + c$ and $ax^2 + bx + c \le 2x^2 - 4x + 3$.  
@@ -240,10 +240,10 @@ $a x^2 + b x + c \ge x^2 - 2x + 2$.
 This implies that if we fix $P(x)$, it must not "go below" the line $L(x)$ (the lower bound).  
 But the inequality must hold for all $x$. This means:  
 1. $(a-1)x^2 + (b+2)x + (c-2) \le 0$ if we consider $P(x) - L(x) \ge 0$ and it is non-negative for all $x$.  
-   The condition $P(x) \ge x^2 - 2x + 2$ means that the quadratic $(a-1)x^2 + (b+2)x + (c-2)$ must have minimum value $\le 0$? No.  
-   It means that for all $x$, the inequality holds. If we choose $P(x)$ such that this doesn't hold, we can't use it.  
-   The condition is equivalent to $(a-1)x^2 + (b+2)x + (c-2) \le 0$ for all real numbers? No.  
-   It means the polynomial $f(t) = P(t) - (x_0)^2 - 2x_0 + 2$ must be $\ge 0$. This is not a function of $t$, but for a fixed $x$, we have constraints.  
+The condition $P(x) \ge x^2 - 2x + 2$ means that the quadratic $(a-1)x^2 + (b+2)x + (c-2)$ must have minimum value $\le 0$? No.  
+It means that for all $x$, the inequality holds. If we choose $P(x)$ such that this doesn't hold, we can't use it.  
+The condition is equivalent to $(a-1)x^2 + (b+2)x + (c-2) \le 0$ for all real numbers? No.  
+It means the polynomial $f(t) = P(t) - (x_0)^2 - 2x_0 + 2$ must be $\ge 0$. This is not a function of $t$, but for a fixed $x$, we have constraints.  
 
 Let's rethink this problem.  
 Is it possible that $P(x)$ is simply constrained by the gap between the two bounds?  
@@ -257,37 +257,37 @@ Also $P(x) \ge L(x)$. So $P(x) \ge x^2 - 2x + 2$.
 Let's assume the polynomial is $ax^2+bx+c$.  
 Then we need to find $a, b, c$ such that:  
 1. For all $x$, $(a-1)x^2 + (b+2)x + (c-2) \le 0$? No.  
-   Let's check the coefficients again.  
-   We want $ax^2 + bx + c \ge x^2 - 2x + 2$ for all $x$.  
-   This is equivalent to: $a x^2 + (b+2)x + (c-2) \le 0$? No.  
-   If $P(x)$ must be $\ge L(x)$, then $ax^2 + bx + c \ge x^2 - 2x + 2$.  
-   This is $(a-1)x^2 + (b+2)x + (c-2) \ge 0$ for all real $x$? No.  
-   If $P(x)$ is a polynomial and we require it to be above the line, it must not "go below" the line.  
-   Let's rewrite as:  
-   $a x^2 + (b+2)x + (c-2) \le 0$ if we subtract $L(x)$? No, if we want to ensure $P(x) \ge L(x)$ for all $x$, this is not guaranteed by the condition $(a-1)x^2 + (b+2)x + (c-2) \le 0$.  
-   The correct translation is: $P(x) - L(x)$ must be a non-negative polynomial in $x$? No, that doesn't make sense. $P(x)$ and $L(x)$ are polynomials in $x$. If they satisfy the inequality for all $x$, then the polynomial difference must be non-negative everywhere?  
-   Let's check.  
-   Let $f(x) = ax^2 + bx + c$ and $g(x) = x^2 - 2x + 2$.  
-   We require $f(x) \ge g(x)$ for all $x$.  
-   So $(a-1)x^2 + (b+2)x + (c-2)$ must have minimum value $\le 0$? No.  
-   If $a > 0$, then as $x \to \infty$, $f(x) - g(x) \to \infty$.  
-   As $x \to -\infty$, $(a-1)x^2 + (b+2)x + (c-2)$ will go to $-\infty$ if $a > 0$ and coefficient of $x^2$ is negative? No.  
-   If $a=1$, $f(x) \approx x^2 + bx + c - g(x) \approx x^2 - 2x + 2 - (x^2 - 2x + 2) = 0$. So $P(x) \ge L(x)$ means $(b+2)x + (c-2) \ge 0$? No.  
-   Let's solve for coefficients of $a, b, c$.  
-   We need to ensure that $(ax^2 + bx + c) \ge (x^2 - 2x + 2)$ for all real $x$.  
-   This implies that the difference must be $\ge 0$.  
-   Let's rewrite:  
-   $(a-1)x^2 + (b+2)x + (c-2) \le 0$? No. The sign is correct. If we subtract $g(x)$ from $P(x)$, we get $ax^2 + bx + c - x^2 + 2x - 2$.  
-   This must be $\ge 0$? No, it's equal to 0 or something else?  
-   The condition is $ax^2 + bx + c \ge x^2 - 2x + 2$.  
-   Rearranging terms: $(a-1)x^2 + (b+2)x + (c-2) \ge 0$ for all real $x$.  
-   Since we are looking for the range of coefficients, let's analyze the discriminant or properties.  
-   For this to hold for *all* real numbers, the leading coefficient must be $\le 0$? No, if the leading coeff is positive, it can go to infinity. If leading coeff is negative, it goes to $-\infty$. So the inequality holds only up to a certain point.  
-   Therefore, we cannot simply use this condition for all $x$. We need to find conditions on coefficients that allow $P(x)$ to be bounded from above and below?  
-   No, the condition "for all real numbers x" is satisfied if the difference between the upper bound and lower bound is a non-negative quadratic polynomial.  
-   Specifically, we require: $(a-1)x^2 + (b+2)x + (c-2) \le 0$? No.  
-   The inequality $P(x) \ge L(x)$ for all $x$ means that the minimum of $(P(x) - L(x))$ is $\ge 0$. But we can choose $L(x)$ as a function of $x$, and $P(x)$ as a polynomial.  
-   If we take $L(x) = (x-1)^2 \ge 0$ for all real $x$, and $P(x)$ to be an approximation.  
+Let's check the coefficients again.  
+We want $ax^2 + bx + c \ge x^2 - 2x + 2$ for all $x$.  
+This is equivalent to: $a x^2 + (b+2)x + (c-2) \le 0$? No.  
+If $P(x)$ must be $\ge L(x)$, then $ax^2 + bx + c \ge x^2 - 2x + 2$.  
+This is $(a-1)x^2 + (b+2)x + (c-2) \ge 0$ for all real $x$? No.  
+If $P(x)$ is a polynomial and we require it to be above the line, it must not "go below" the line.  
+Let's rewrite as:  
+$a x^2 + (b+2)x + (c-2) \le 0$ if we subtract $L(x)$? No, if we want to ensure $P(x) \ge L(x)$ for all $x$, this is not guaranteed by the condition $(a-1)x^2 + (b+2)x + (c-2) \le 0$.  
+The correct translation is: $P(x) - L(x)$ must be a non-negative polynomial in $x$? No, that doesn't make sense. $P(x)$ and $L(x)$ are polynomials in $x$. If they satisfy the inequality for all $x$, then the polynomial difference must be non-negative everywhere?  
+Let's check.  
+Let $f(x) = ax^2 + bx + c$ and $g(x) = x^2 - 2x + 2$.  
+We require $f(x) \ge g(x)$ for all $x$.  
+So $(a-1)x^2 + (b+2)x + (c-2)$ must have minimum value $\le 0$? No.  
+If $a > 0$, then as $x \to \infty$, $f(x) - g(x) \to \infty$.  
+As $x \to -\infty$, $(a-1)x^2 + (b+2)x + (c-2)$ will go to $-\infty$ if $a > 0$ and coefficient of $x^2$ is negative? No.  
+If $a=1$, $f(x) \approx x^2 + bx + c - g(x) \approx x^2 - 2x + 2 - (x^2 - 2x + 2) = 0$. So $P(x) \ge L(x)$ means $(b+2)x + (c-2) \ge 0$? No.  
+Let's solve for coefficients of $a, b, c$.  
+We need to ensure that $(ax^2 + bx + c) \ge (x^2 - 2x + 2)$ for all real $x$.  
+This implies that the difference must be $\ge 0$.  
+Let's rewrite:  
+$(a-1)x^2 + (b+2)x + (c-2) \le 0$? No. The sign is correct. If we subtract $g(x)$ from $P(x)$, we get $ax^2 + bx + c - x^2 + 2x - 2$.  
+This must be $\ge 0$? No, it's equal to 0 or something else?  
+The condition is $ax^2 + bx + c \ge x^2 - 2x + 2$.  
+Rearranging terms: $(a-1)x^2 + (b+2)x + (c-2) \ge 0$ for all real $x$.  
+Since we are looking for the range of coefficients, let's analyze the discriminant or properties.  
+For this to hold for *all* real numbers, the leading coefficient must be $\le 0$? No, if the leading coeff is positive, it can go to infinity. If leading coeff is negative, it goes to $-\infty$. So the inequality holds only up to a certain point.  
+Therefore, we cannot simply use this condition for all $x$. We need to find conditions on coefficients that allow $P(x)$ to be bounded from above and below?  
+No, the condition "for all real numbers x" is satisfied if the difference between the upper bound and lower bound is a non-negative quadratic polynomial.  
+Specifically, we require: $(a-1)x^2 + (b+2)x + (c-2) \le 0$? No.  
+The inequality $P(x) \ge L(x)$ for all $x$ means that the minimum of $(P(x) - L(x))$ is $\ge 0$. But we can choose $L(x)$ as a function of $x$, and $P(x)$ as a polynomial.  
+If we take $L(x) = (x-1)^2 \ge 0$ for all real $x$, and $P(x)$ to be an approximation.  
 
 Let's look at the problem again: $x^2 - 2x + 2 \le P(x) \le 2x^2 - 4x + 3$.  
 Let's analyze the difference between the two functions: $(2x^2 - 4x + 3) - (x^2 - 2x + 2) = x^2 - 2x + 1 = (x-1)^2$.  
@@ -298,15 +298,15 @@ $P(x)$ is a quadratic.
 The inequality implies that the minimum value of $P(x) - L(x)$ over all $x$ is $\ge 0$. No, the inequality holds for *all* $x$, so $(a x^2 + b x + c) - (x^2 - 2x + 2) \ge 0$ must hold?  
 No, if $P(x)$ satisfies $L(x) \le P(x) \le U(x)$ for all real $x$, then:  
 1. $\forall x$: $P(x) \ge L(x)$.  
-   This implies that the minimum value of $(P(x) - L(x))$ is $\ge 0$.  
+This implies that the minimum value of $(P(x) - L(x))$ is $\ge 0$.  
 2. $\forall x$: $P(x) \le U(x)$.  
-   This implies that the maximum value of $(U(x) - P(x))$ is $\ge 0$.  
-   Actually, we established $U(x) - L(x) = (x-1)^2 \ge 0$.  
-   So condition 1 and 2 are satisfied if and only if there exists a polynomial such that $P(x)$ stays within this gap.  
-   Let's check the gap between $L(x)$ and $U(x)$ at specific points to see what happens.  
-   At $x=1$, $L(1)=1$ and $U(1)=3$. The interval is length 2.  
-   The polynomial $P(x)$ must satisfy these bounds everywhere.  
-   Does this constrain $a, b, c$?  
+This implies that the maximum value of $(U(x) - P(x))$ is $\ge 0$.  
+Actually, we established $U(x) - L(x) = (x-1)^2 \ge 0$.  
+So condition 1 and 2 are satisfied if and only if there exists a polynomial such that $P(x)$ stays within this gap.  
+Let's check the gap between $L(x)$ and $U(x)$ at specific points to see what happens.  
+At $x=1$, $L(1)=1$ and $U(1)=3$. The interval is length 2.  
+The polynomial $P(x)$ must satisfy these bounds everywhere.  
+Does this constrain $a, b, c$?  
 
 Let's try to determine the range of coefficients $(a,b,c)$.  
 If $L(x) = x^2 - 2x + 2$ and $U(x) = 2x^2 - 4x + 3$.  

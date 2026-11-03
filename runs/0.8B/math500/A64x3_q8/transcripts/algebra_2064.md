@@ -277,7 +277,7 @@ Here's my thought process for solving this problem:
                                 *   The second factor is $(2-x)$.  
                                     *   Terms: $2$ and $-x$.  
                                 *   Product: $(x)(2) + (x)(-x) + (7)(2) + (7)(-x)$? No.  
-                                        *   First term in product of first factor is $x$ times second factor constant term ($2$) is $2x$? Yes.  
+                                    *   First term in product of first factor is $x$ times second factor constant term ($2$) is $2x$? Yes.  
                                         *   Second term: $x$ times second factor variable part ($-x$). That gives $-x^2$.  
                                         *   Third term: $7$ times second factor constant ($2$). No, that's $(2-x)$'s linear term 0 (since it is $-x+2$? No).  
                                             *   Term $(x+7)(2-x) = x(2-x) + 7(2-x)$?  
@@ -493,7 +493,7 @@ Here's my thought process for solving this problem:
                                                                                 *   Simplify: $-x^2 - 5x + 14$.  
                                                                                 *   So expansion is confirmed.  
                                                                         *   Why did I doubt this? Because $2-x$ can be interpreted as $(2)(x)$? No, $(2)(-1)x$? Yes. $2 \cdot (-x) = -2x$. Then $x \cdot 7 = 7x$. Then $x(-x) = -x^2$.  
-                                                                                *   Let's try to factor this correctly again.  
+                                                                            *   Let's try to factor this correctly again.  
                                                                                 *   $(x+7)(2-x) = x(2-x) + 7(2-x)$?  
                                                                                     *   $x(2-x) = 2x - x^2$.  
                                                                                     *   $7(2-x) = 14 - 7x$.  

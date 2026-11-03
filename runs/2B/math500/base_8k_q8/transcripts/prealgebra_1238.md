@@ -83,16 +83,16 @@ The question asks for "What integer $x$". Usually implies uniqueness, though cou
 Step-by-step derivation:  
 1.  Write down the inequality: $\frac{1}{4} < \frac{x}{7} < \frac{1}{3}$.  
 2.  Multiply every term by 7 to clear the denominator on the right side (and scale the middle).  
-    $7 \cdot \left(\frac{1}{4}\right) < 7 \cdot \left(\frac{x}{7}\right) < 7 \cdot \left(\frac{1}{3}\right)$  
-    $\frac{7}{4} < x < \frac{7}{3}$  
+$7 \cdot \left(\frac{1}{4}\right) < 7 \cdot \left(\frac{x}{7}\right) < 7 \cdot \left(\frac{1}{3}\right)$  
+$\frac{7}{4} < x < \frac{7}{3}$  
 3.  Convert the fractional bounds to decimal or mixed number to identify integers.  
-    $\frac{7}{4} = 1.75$  
-    $\frac{7}{3} \approx 2.33$  
-    So, $1.75 < x < 2.33$.  
+$\frac{7}{4} = 1.75$  
+$\frac{7}{3} \approx 2.33$  
+So, $1.75 < x < 2.33$.  
 4.  Identify the integer(s) in this range. The only integers are... wait.  
-    Integers greater than or equal to 1.75: 2, 3, 4...  
-    Integers less than 2.333...: ...1, 2...  
-    Intersection: {2}.  
+Integers greater than or equal to 1.75: 2, 3, 4...  
+Integers less than 2.333...: ...1, 2...  
+Intersection: {2}.  
 5.  Conclude that $x = 2$.  
 
 Wait, is it possible to interpret the inequality differently? No, standard notation.  
@@ -270,28 +270,28 @@ Final Answer is 2.
 To find the integer $x$ that satisfies the inequality $\frac{1}{4} < \frac{x}{7} < \frac{1}{3}$, we can follow these steps:  
 
 1.  **Isolate $x$**: To isolate $x$, multiply all parts of the inequality by 7. Since 7 is positive, the direction of the inequality signs remains unchanged.  
-    $$ 7 \cdot \left( \frac{1}{4} \right) < 7 \cdot \left( \frac{x}{7} \right) < 7 \cdot \left( \frac{1}{3} \right) $$  
+$$ 7 \cdot \left( \frac{1}{4} \right) < 7 \cdot \left( \frac{x}{7} \right) < 7 \cdot \left( \frac{1}{3} \right) $$  
 
 2.  **Simplify the terms**:  
     *   Left side: $7 \cdot \frac{1}{4} = \frac{7}{4}$  
     *   Middle term: $7 \cdot \frac{x}{7} = x$  
     *   Right side: $7 \cdot \frac{1}{3} = \frac{7}{3}$  
 
-    So the inequality becomes:  
-    $$ \frac{7}{4} < x < \frac{7}{3} $$  
+So the inequality becomes:  
+$$ \frac{7}{4} < x < \frac{7}{3} $$  
 
 3.  **Evaluate the numerical bounds**: Convert the fractions into decimal or mixed number forms to see the range for $x$.  
     *   $\frac{7}{4} = 1.75$  
     *   $\frac{7}{3} \approx 2.333\dots$ (or $2\frac{1}{3}$)  
 
-    The inequality now reads:  
-    $$ 1.75 < x < 2.\overline{3} $$  
+The inequality now reads:  
+$$ 1.75 < x < 2.\overline{3} $$  
 
 4.  **Find the integer solution**: We are looking for an integer $x$ strictly between 1.75 and 2.333...  
     *   The integers greater than or equal to 1.75 start from 2 ($1 < 1.75$, so $x \ge 2$).  
     *   The integers less than or equal to 2.333... are ..., 1, 2 ($2 < 2.333$, so $x \le 2$).  
 
-    The only integer that satisfies both conditions is 2.  
+The only integer that satisfies both conditions is 2.  
 
 **Verification**:  
 *   For $x = 2$: $\frac{2}{7} \approx 0.2857$. Is $\frac{1}{4} < \frac{2}{7} < \frac{1}{3}$?  

@@ -203,13 +203,13 @@ Roots: $x=0, \pm 4$.
 Evaluating at these points:  
 1. $x=0$: $g(0) = 81$.  
 2. $x=4$: $g(4) = 64 - 128 + 81 = 17$? No, let's re-evaluate $64 - 128 + 81$.  
-   $64 + 81 = 145$.  
-   $145 - 128 = 17$.  
-   Let's check the function value again.  
-   $g(x) = x^2 + (\frac{1}{2}x^2 - 9)^2$.  
-   At $x=4$:  
-   $y = \frac{1}{2}(16) - 9 = 8 - 9 = -1$.  
-   $d^2 = 4^2 + (-1)^2 = 16 + 1 = 17$. Correct.  
+$64 + 81 = 145$.  
+$145 - 128 = 17$.  
+Let's check the function value again.  
+$g(x) = x^2 + (\frac{1}{2}x^2 - 9)^2$.  
+At $x=4$:  
+$y = \frac{1}{2}(16) - 9 = 8 - 9 = -1$.  
+$d^2 = 4^2 + (-1)^2 = 16 + 1 = 17$. Correct.  
 3. $x=-4$: Symmetry, distance squared is same, 17.  
 
 Comparing values:  

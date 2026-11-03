@@ -22,7 +22,7 @@ Here's my thought process for converting the point $(0,3)$ to polar coordinates.
     *   Cartesian (rectangular) coordinates: $(x, y) = (r \cos \theta, r \sin \theta)$.  
     *   Polar coordinates: $(r, \theta)$ are defined such that $x = r \cos \theta$ and $y = r \sin \theta$.  
     *   The relationship between $(0, 3)$ and $(r, \theta)$ is given by solving the system:  
-        $$
+$$
         \begin{cases}
         x = r \cos \theta \\
         y = r \sin \theta
@@ -38,11 +38,11 @@ Here's my thought process for converting the point $(0,3)$ to polar coordinates.
 4.  **Determine $\theta$:**  
     *   Since the point lies on the y-axis at $(0,3)$ (because $x=0$), we need a polar angle that maps to it.  
     *   The standard position $(r, \theta)$ corresponds to:  
-        $$ x = r \cos \theta $$  
-        $$ y = r \sin \theta $$  
+$$ x = r \cos \theta $$  
+$$ y = r \sin \theta $$  
     *   Substitute the values of $x$ and $y$ into this system to solve for $r$ and $\theta$:  
     *   Given $y = 3$, we have:  
-        $$ r \sin \theta = 3 \implies r = \frac{3}{\sin \theta} $$  
+$$ r \sin \theta = 3 \implies r = \frac{3}{\sin \theta} $$  
     *   Since $x = 0$ in the given point, this implies $r \cos \theta = 0$.  
     *   If $\cos \theta = 0$, then $\theta = \frac{\pi}{2}, \frac{3\pi}{2}$.  
         *   Let's check if both satisfy this.  

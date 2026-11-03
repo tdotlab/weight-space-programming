@@ -102,23 +102,23 @@ Here's a thinking process that leads to the solution:
         *   Leading term: $AB = 10$. Correct.  
 
         *   Let's solve the system properly.  
-            $3A - 8B = -1$  
-            $AB = 10$  
-            $\implies B = 10/A$.  
-            $3A - 8(10/A) = -1$  
-            $3A - 80/A = -1$  
-            Multiply by $A$:  
-            $3A^2 + A - 80 = 0$.  
+$3A - 8B = -1$  
+$AB = 10$  
+$\implies B = 10/A$.  
+$3A - 8(10/A) = -1$  
+$3A - 80/A = -1$  
+Multiply by $A$:  
+$3A^2 + A - 80 = 0$.  
 
         *   Let's find integer roots for $3A^2 + A - 80 = 0$.  
-            Factors of $(-80)$ and $+3$:  
-            Possible pairs $(d_1, d_2)$ such that $d_1 \cdot d_2 = -80$ and sum of product is something... no.  
-            Quadratic formula: $A = \frac{-1 \pm \sqrt{1^2 - 4(3)(-80)}}{6}$? No, discriminant for equation $ax^2+bx+c=0$. Here coefficients are 3, 1, -80.  
-            Discriminant $\Delta = b^2 - 4ac = 1^2 - 4(3)(-80) = 1 + 960 = 961$.  
-            $\sqrt{961} = 31$ (since $30^2=900$, $31^2=961$).  
-            So $A = \frac{-1 \pm 31}{6}$.  
-            Case +: $(-1 + 31) / 6 = 30/6 = 5$.  
-            Case -: $(-1 - 31) / 6 = -32/6$ (not integer).  
+Factors of $(-80)$ and $+3$:  
+Possible pairs $(d_1, d_2)$ such that $d_1 \cdot d_2 = -80$ and sum of product is something... no.  
+Quadratic formula: $A = \frac{-1 \pm \sqrt{1^2 - 4(3)(-80)}}{6}$? No, discriminant for equation $ax^2+bx+c=0$. Here coefficients are 3, 1, -80.  
+Discriminant $\Delta = b^2 - 4ac = 1^2 - 4(3)(-80) = 1 + 960 = 961$.  
+$\sqrt{961} = 31$ (since $30^2=900$, $31^2=961$).  
+So $A = \frac{-1 \pm 31}{6}$.  
+Case +: $(-1 + 31) / 6 = 30/6 = 5$.  
+Case -: $(-1 - 31) / 6 = -32/6$ (not integer).  
         *   So $A=5$.  
         *   Then $B = 10/5 = 2$.  
 
@@ -223,19 +223,19 @@ Here's a thinking process that leads to the solution:
     *   Usually implies uniqueness or asks for sum/product if unique. The problem asks for $AB+B$. If there was a solution with different A,B, it would be weird. But here the quadratic equation gave unique roots.  
 
     *   Final check of arithmetic:  
-        $15 - 16 = -1$. Correct.  
-        $5 \times 2 = 10$. Correct.  
-        Constant $-24$. Correct.  
-        Calculation $AB+B$: $10+2=12$.  
+$15 - 16 = -1$. Correct.  
+$5 \times 2 = 10$. Correct.  
+Constant $-24$. Correct.  
+Calculation $AB+B$: $10+2=12$.  
 
     *   Could the order of A and B swap?  
-        If $A=2, B=5$, then expression is $(2x-8)(5x+3) = 10x^2 + 6x - 40x - 24 = 10x^2 - 34x - 24$. No.  
-        So order matters and A/B values are specific to the factorization of this polynomial.  
+If $A=2, B=5$, then expression is $(2x-8)(5x+3) = 10x^2 + 6x - 40x - 24 = 10x^2 - 34x - 24$. No.  
+So order matters and A/B values are specific to the factorization of this polynomial.  
 
     *   What if $(A, B)$ are swapped? The question asks for $AB + B$.  
-        If I chose the wrong A/B (say from some other interpretation), result might be different.  
-        But math dictates $A=5, B=2$.  
-        Is there any ambiguity in $AB+B$? No, standard notation.  
+If I chose the wrong A/B (say from some other interpretation), result might be different.  
+But math dictates $A=5, B=2$.  
+Is there any ambiguity in $AB+B$? No, standard notation.  
 
     *   Are there complex numbers allowed? "integers" - specified.  
 
@@ -254,26 +254,26 @@ Here's a thinking process that leads to the solution:
 
     *   Just to cover bases, what if the constant term was +24? Or middle term +x? Doesn't matter for this specific problem.  
     *   Is it possible $A$ or $B$ are negative integers and I missed them?  
-        $AB=10$. Integers: $\pm 1, \pm 2, \pm 5, \pm 10$.  
-        Pairs $(A,B)$: $(1,10), (2,5), (-1,-10), (-2,-5), (5,2), (2,5)??$ No, $AB=10$ means if $A=2, B=5$ is one solution.  
-        Check negatives again for middle term condition $3A - 8B = -1$.  
-        Pairs $(A,B)$:  
+$AB=10$. Integers: $\pm 1, \pm 2, \pm 5, \pm 10$.  
+Pairs $(A,B)$: $(1,10), (2,5), (-1,-10), (-2,-5), (5,2), (2,5)??$ No, $AB=10$ means if $A=2, B=5$ is one solution.  
+Check negatives again for middle term condition $3A - 8B = -1$.  
+Pairs $(A,B)$:  
         1. $(1, 10) \to 3(1) - 80 = -77$  
         2. $(2, 5) \to 3(2) - 40 = -34$  
         3. $(-1, -10) \to -3 + 80 = 77$  
         4. $(-2, -5) \to -6 + 40 = 34$  
         5. $(5, 2) \to 15 - 16 = -1$. (Match!)  
         6. $(-5, -2) \to -15 + 16 = 1$.  
-        So only $(5,2)$ is the solution.  
+So only $(5,2)$ is the solution.  
 
     *   Okay, I'm confident.  
 
     *   Final Answer construction:  
-        Start with expanding.  
-        Equate coefficients.  
-        Solve system.  
-        Calculate required value.  
-        Box result.  
+Start with expanding.  
+Equate coefficients.  
+Solve system.  
+Calculate required value.  
+Box result.  
 
     *   Value to box: 12.  
 

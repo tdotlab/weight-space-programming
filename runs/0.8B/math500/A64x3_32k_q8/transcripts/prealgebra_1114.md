@@ -500,22 +500,22 @@ The diagram shows:
   - This draws the area bounded by $(0,0)$ to $(10,0)$ to $(10,3)$ to $(0,3)$.  
     - This is a trapezoid? No. It's a right triangle plus something? No.  
     - Let's calculate area of this polygon using Shoelace again.  
-      $A(0,0), B(10,0), C(10,3), D(0,3)$.  
-      $x_1=0, y_1=0$  
-      $x_2=10, y_2=0$  
-      $x_3=10, y_3=3$  
-      $x_4=0, y_4=3$  
-      Sum 1: $0(0) + 10(3) + 10(3) + 0(0) = 60$.  
-      Sum 2: $0(10) + 0(10) + 3(0) + 3(0) = 0$.  
-      Area = $1/2 \times (60 - 0) = 30$? No, that's area of trapezoid with parallel sides 60 and 60?  
-      Area is $\frac{1}{2} |x_1 y_2 + x_2 y_3 + x_3 y_4 + x_4 y_1 - (y_1 x_2 + ...)|$  
-      $= 0.5 \times | (0+0+3(10)+0) - (0+0+3(0)) |$? No.  
-      Formula: $\frac{1}{2} |x_A(y_B-y_C) + x_B(y_C-y_D) + x_C(y_D-y_A) + x_D(y_A-y_B)|$.  
-      $= 0.5 \times |0(0-3) + 10(3-0) + 0(0-3) + 0(0-3)|$? No.  
-      Vertices are ordered: $(0,0), (10,0), (10,3), (0,3)$.  
-      $S = \frac{1}{2} |x_A(y_B-y_C) + x_B(y_C-y_D) + x_C(y_D-y_A) + x_D(y_A-y_B)|$.  
-      $= 0.5 \times |0(0-3) + 10(3-0) + 10(0-0) + 0(0-0)| = 0.5 \times (30) = 15$.  
-      So the area of this polygon is 15.  
+$A(0,0), B(10,0), C(10,3), D(0,3)$.  
+$x_1=0, y_1=0$  
+$x_2=10, y_2=0$  
+$x_3=10, y_3=3$  
+$x_4=0, y_4=3$  
+Sum 1: $0(0) + 10(3) + 10(3) + 0(0) = 60$.  
+Sum 2: $0(10) + 0(10) + 3(0) + 3(0) = 0$.  
+Area = $1/2 \times (60 - 0) = 30$? No, that's area of trapezoid with parallel sides 60 and 60?  
+Area is $\frac{1}{2} |x_1 y_2 + x_2 y_3 + x_3 y_4 + x_4 y_1 - (y_1 x_2 + ...)|$  
+$= 0.5 \times | (0+0+3(10)+0) - (0+0+3(0)) |$? No.  
+Formula: $\frac{1}{2} |x_A(y_B-y_C) + x_B(y_C-y_D) + x_C(y_D-y_A) + x_D(y_A-y_B)|$.  
+$= 0.5 \times |0(0-3) + 10(3-0) + 0(0-3) + 0(0-3)|$? No.  
+Vertices are ordered: $(0,0), (10,0), (10,3), (0,3)$.  
+$S = \frac{1}{2} |x_A(y_B-y_C) + x_B(y_C-y_D) + x_C(y_D-y_A) + x_D(y_A-y_B)|$.  
+$= 0.5 \times |0(0-3) + 10(3-0) + 10(0-0) + 0(0-0)| = 0.5 \times (30) = 15$.  
+So the area of this polygon is 15.  
 
 Is there a "shaded triangle" formed by `fill`?  
 The fill command `fill((0,0)--(2,3)--(10,0))` defines a shape with vertices $(0,0), (2,3), (10,0)$.  
@@ -1078,48 +1078,48 @@ I'll write down the steps.
 2. This region corresponds to a polygon with vertices $(0,0), (2,3), (10,0)$.  
 3. Apply the shoelace formula or base-height logic to find the area.  
 4. Base on x-axis is from 0 to 10? No, the segment is part of the boundary?  
-   The vertices are $(0,0)$ and $(10,0)$. Yes, both lie on the x-axis. So one side is 10.  
-   Is the height corresponding to this side 3?  
-   The vertex $(2,3)$ is at $x=2, y=3$. Its distance to x-axis is 3.  
-   The vertex $(2,3)$ lies on the line connecting $(0,0)$ and $(10,0)$? No.  
-   The base of this triangle (area) can be treated as $\frac{1}{2} \times \text{base} \times \text{height}$.  
-   If we take side $AC$ from $(0,0)$ to $(10,0)$ as the base, height is distance of vertex $B(2,3)$ to line $y=0$, which is 3.  
-   Area = $\frac{1}{2} \times 10 \times 3 = 15$.  
-   This assumes the region is a triangle with vertices $(0,0), (10,0), (2,3)$.  
-   But the shape is `(0,0)--(2,3)--(10,0)` which encloses area. The base along x-axis from 0 to 10? No.  
-   If we connect vertices in order $P_1 \to P_2 \to P_3 \to P_1$.  
-   $P_1(0,0), P_2(2,3), P_3(10,0)$.  
-   This encloses a region. The vertices are $(0,0)$ and $(10,0)$ which are on the x-axis. So one side is 10.  
-   The vertex $P_2$ is at height 3 (distance from x-axis).  
-   The triangle formed by these points has base 10 and height 3.  
-   Is it a right triangle? No, $(2,3)$ is not on the line $x=10$.  
-   So area = 15.  
+The vertices are $(0,0)$ and $(10,0)$. Yes, both lie on the x-axis. So one side is 10.  
+Is the height corresponding to this side 3?  
+The vertex $(2,3)$ is at $x=2, y=3$. Its distance to x-axis is 3.  
+The vertex $(2,3)$ lies on the line connecting $(0,0)$ and $(10,0)$? No.  
+The base of this triangle (area) can be treated as $\frac{1}{2} \times \text{base} \times \text{height}$.  
+If we take side $AC$ from $(0,0)$ to $(10,0)$ as the base, height is distance of vertex $B(2,3)$ to line $y=0$, which is 3.  
+Area = $\frac{1}{2} \times 10 \times 3 = 15$.  
+This assumes the region is a triangle with vertices $(0,0), (10,0), (2,3)$.  
+But the shape is `(0,0)--(2,3)--(10,0)` which encloses area. The base along x-axis from 0 to 10? No.  
+If we connect vertices in order $P_1 \to P_2 \to P_3 \to P_1$.  
+$P_1(0,0), P_2(2,3), P_3(10,0)$.  
+This encloses a region. The vertices are $(0,0)$ and $(10,0)$ which are on the x-axis. So one side is 10.  
+The vertex $P_2$ is at height 3 (distance from x-axis).  
+The triangle formed by these points has base 10 and height 3.  
+Is it a right triangle? No, $(2,3)$ is not on the line $x=10$.  
+So area = 15.  
 
-   Double check: Is the polygon `fill` actually a triangle or a quadrilateral?  
-   The code defines a region bounded by 3 lines.  
-   Line 1: Segment from $(0,0)$ to $(2,3)$.  
-   Line 2: Segment from $(2,3)$ to $(10,0)$.  
-   Line 3: Segment from $(10,0)$ to $(0,0)$. (Implicitly drawn by `cycle`?). No. `fill((0,0)--(2,3)--(10,0)--cycle)` means edges are $P_1-P_2$, $P_2-P_3$, $P_3-P_1$?  
-   If the cycle closes at $P_1$, then yes.  
-   Edges:  
-   $(0,0) \to (2,3)$  
-   $(2,3) \to (10,0)$  
-   $(10,0) \to (0,0)$  
-   The first vertex $(0,0)$ closes the loop to $P_1$. This means the triangle is formed.  
-   But is it a triangle? It has 3 vertices and edges connecting them in order. Yes.  
-   Area = 15.  
+Double check: Is the polygon `fill` actually a triangle or a quadrilateral?  
+The code defines a region bounded by 3 lines.  
+Line 1: Segment from $(0,0)$ to $(2,3)$.  
+Line 2: Segment from $(2,3)$ to $(10,0)$.  
+Line 3: Segment from $(10,0)$ to $(0,0)$. (Implicitly drawn by `cycle`?). No. `fill((0,0)--(2,3)--(10,0)--cycle)` means edges are $P_1-P_2$, $P_2-P_3$, $P_3-P_1$?  
+If the cycle closes at $P_1$, then yes.  
+Edges:  
+$(0,0) \to (2,3)$  
+$(2,3) \to (10,0)$  
+$(10,0) \to (0,0)$  
+The first vertex $(0,0)$ closes the loop to $P_1$. This means the triangle is formed.  
+But is it a triangle? It has 3 vertices and edges connecting them in order. Yes.  
+Area = 15.  
 
-   Is there any chance that "shaded triangle" refers to `(0,0)--(2,3)` and `(10,0)` only? No, that's not a polygon.  
+Is there any chance that "shaded triangle" refers to `(0,0)--(2,3)` and `(10,0)` only? No, that's not a polygon.  
 
-   Okay, I'll assume the area is 15.  
-   The `label("10 cm",(5,0),S)` might refer to side length?  
-   If base = 10.  
-   If height = 3 (as per y-coordinate of B).  
-   Area = $0.5 \times 10 \times 3 = 15$.  
+Okay, I'll assume the area is 15.  
+The `label("10 cm",(5,0),S)` might refer to side length?  
+If base = 10.  
+If height = 3 (as per y-coordinate of B).  
+Area = $0.5 \times 10 \times 3 = 15$.  
 
-   What if `label("3 cm",(0,1.5),W)` refers to the y-axis? No.  
+What if `label("3 cm",(0,1.5),W)` refers to the y-axis? No.  
 
-   The answer should be 15.  
+The answer should be 15.  
 
 One potential pitfall: Is it a parallelogram or something?  
 Vertices $(0,0), (2,3), (10,0)$.  
@@ -1235,17 +1235,17 @@ Final Answer seems to be 15.
 I'll write down the reasoning clearly.  
 The code defines two regions:  
 1. A polygon defined by vertices $(0,0)$, $(2,3)$, and $(10,0)$. This region is filled with gray (or shaded). The shape is a triangle (since vertices are 3 points and enclose area, assuming `cycle` closes it).  
-   Vertices: $A=(0,0)$, $B=(2,3)$, $C=(10,0)$.  
-   Area calculation using Shoelace formula:  
-   $S = 0.5 | 0(3-0) + 2(0-0) + 10(0-3) | = 0.5 |-30| = 15$.  
+Vertices: $A=(0,0)$, $B=(2,3)$, $C=(10,0)$.  
+Area calculation using Shoelace formula:  
+$S = 0.5 | 0(3-0) + 2(0-0) + 10(0-3) | = 0.5 |-30| = 15$.  
 
 2. Another shape defined by vertices $(0,0)$, $(10,0)$, $(10,3)$ and $(0,3)$.  
-   Area calculation: $S = 1/2 | (0(0-3) + 10(3-3) + 10(3-0)) |$? No.  
-   Using Shoelace: $0.5 | (0*0 + 10*3 + 10*0 + 0*0) - (0*10 + 0*10 + 3*0 + 3*0) | = 0.5 | 30 - 0 | = 15$.  
-   However, `fill` for this polygon is not present in the code. The code draws it but doesn't fill it or define a region to be shaded?  
-   Actually, `draw((0,2.5)--(.5,2.5)--(.5,3))` and `draw((10,2.5)--(9.5,2.5)--(9.5,3))` draw regions.  
-   These are not filled. So they don't contribute to the "shaded" area.  
-   The only shaded region is the polygon defined by `(0,0)--(2,3)--(10,0)`.  
+Area calculation: $S = 1/2 | (0(0-3) + 10(3-3) + 10(3-0)) |$? No.  
+Using Shoelace: $0.5 | (0*0 + 10*3 + 10*0 + 0*0) - (0*10 + 0*10 + 3*0 + 3*0) | = 0.5 | 30 - 0 | = 15$.  
+However, `fill` for this polygon is not present in the code. The code draws it but doesn't fill it or define a region to be shaded?  
+Actually, `draw((0,2.5)--(.5,2.5)--(.5,3))` and `draw((10,2.5)--(9.5,2.5)--(9.5,3))` draw regions.  
+These are not filled. So they don't contribute to the "shaded" area.  
+The only shaded region is the polygon defined by `(0,0)--(2,3)--(10,0)`.  
 
 Thus, the area is 15.  
 
@@ -1374,11 +1374,11 @@ The Asymptote code defines a diagram with the following key elements:
     *   $P_3 = (10,0)$  
 3.  **Shape**: The region is bounded by the lines from $(0,0)$ to $(2,3)$, then from $(2,3)$ to $(10,0)$, and finally back to $(0,0)$. This forms a triangle (or polygon with vertices in cyclic order).  
 4.  **Area Calculation**: Using the Shoelace formula for coordinates $(x_1, y_1), (x_2, y_2), (x_3, y_3)$:  
-    $$ \text{Area} = \frac{1}{2} | x_1y_2 + x_2y_3 + x_3y_1 - (y_1x_2 + y_2x_3 + y_3x_1) | $$  
-    Substituting the coordinates:  
-    $$ \text{Area} = \frac{1}{2} | (0)(3) + (2)(0) + (10)(0) - (0)(2) - (3)(10) - (0)(0) | $$  
-    $$ \text{Area} = \frac{1}{2} | 0 - 30 | = 15 $$  
-    Alternatively, using the base and height method:  
+$$ \text{Area} = \frac{1}{2} | x_1y_2 + x_2y_3 + x_3y_1 - (y_1x_2 + y_2x_3 + y_3x_1) | $$  
+Substituting the coordinates:  
+$$ \text{Area} = \frac{1}{2} | (0)(3) + (2)(0) + (10)(0) - (0)(2) - (3)(10) - (0)(0) | $$  
+$$ \text{Area} = \frac{1}{2} | 0 - 30 | = 15 $$  
+Alternatively, using the base and height method:  
     *   The base can be considered as the segment on the x-axis from $(0,0)$ to $(10,0)$ (length 10).  
     *   However, looking at the polygon vertices, it encloses a region with base 10 (from origin to 10) and height 3 (distance from point $(2,3)$ to x-axis). The area calculation yields the same result.  
 

@@ -19,8 +19,8 @@ Here's my thought process for solving this problem:
     *   The vertices of this rectangle are $(0,0)$, $(8,0)$, $(8,4)$, and $(0,4)$.  
     *   So, $\Omega = \{(x,y) : 0 \le x \le 8, 0 \le y \le 4\}$.  
     *   Since the problem states it's a random point *selected* (implying a uniform distribution), the total volume or area in the sample space is:  
-        $$|\Omega| = (8 - 0) \times (4 - 0)$$  
-        $$|\Omega| = 8 \times 4 = 32$$  
+$$|\Omega| = (8 - 0) \times (4 - 0)$$  
+$$|\Omega| = 8 \times 4 = 32$$  
 
 3.  **Define the Event ($E$):**  
     *   $x+y \le 4$.  

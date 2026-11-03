@@ -302,7 +302,7 @@ To solve this problem, we need to determine the number of ways Mikka can order a
 2.  **Identify the Available Options**: Mikha has 8 distinct toppings available to choose from. Let's call these $n = 8$.  
 3.  **Determine the Type of Selection**: We are looking for a combination (a subset) that contains exactly two items chosen from the 8 available options. Since the order in which we list them or arrange them does not define a unique pizza composition unless specified otherwise (and toppings on a pizza are considered a set), this is a **Combination** problem ($C$).  
 4.  **Apply Combinations Formula**: The formula to find the number of ways to choose $k$ items from a set of $n$ distinct items is:  
-    $$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$  
+$$ \binom{n}{k} = \frac{n!}{k!(n-k)!} $$  
 5.  **Calculate**:  
     *   Total toppings, $n = 8$.  
     *   Items needed to order the pizza = 2 ($k=2$).  

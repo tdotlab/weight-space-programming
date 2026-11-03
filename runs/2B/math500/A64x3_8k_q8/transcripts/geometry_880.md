@@ -30,10 +30,10 @@ Here's a thinking process that leads to the solution:
         *   Jumping is not allowed (or rather, the "shortest path" logic applies to continuous walking across surfaces like a 2D geometry problem).  
 
 2.  **Define Coordinate System:**  
-    Let's place the origin at the bottom of the corner closest to the fly? No, let's just pick an arbitrary origin and stick it to the grid.  
-    Let dimensions be $x$, $y$, $z$.  
-    The room spans $0 \le x \le 12$, $0 \le y \le 10$, $0 \le z \le 8$.  
-    Let's assume standard orientation:  
+Let's place the origin at the bottom of the corner closest to the fly? No, let's just pick an arbitrary origin and stick it to the grid.  
+Let dimensions be $x$, $y$, $z$.  
+The room spans $0 \le x \le 12$, $0 \le y \le 10$, $0 \le z \le 8$.  
+Let's assume standard orientation:  
     *   Back wall (closest to us?): Let's say the "back" is at $x=0$? No, usually "front" is where one is facing.  
     *   Let's define walls based on the dimensions given.  
     *   Side walls are either 10' x 8' or something else?  

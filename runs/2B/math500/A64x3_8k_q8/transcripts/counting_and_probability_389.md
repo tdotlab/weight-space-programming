@@ -36,10 +36,10 @@ Here's a thinking process that leads to the solution:
         *   Calculation: $C(n, k) = \frac{n!}{k!(n-k)!}$, where $n=8$ and $k=2$.  
 
     *   *Calculation:*  
-        $$ C(8, 2) = \frac{8!}{2!(8-2)!} $$  
-        $$ = \frac{8 \times 7}{2 \times 1} $$  
-        $$ = \frac{56}{2} $$  
-        $$ = 28 $$  
+$$ C(8, 2) = \frac{8!}{2!(8-2)!} $$  
+$$ = \frac{8 \times 7}{2 \times 1} $$  
+$$ = \frac{56}{2} $$  
+$$ = 28 $$  
 
     *   *Alternative interpretation check:* Does "different toppings" mean physically different things (e.g., pepperoni vs ham) or just a specific distinct flavor? Yes, in combinatorics, it means distinct items from the set of available items. Since he chooses *two* specific items to add to the base dough/sauce, we are looking at subsets of size 2.  
 
@@ -93,11 +93,11 @@ $$C(8, 2) = \frac{8!}{2!(8-2)!}$$
 
 **Step 3: Calculate.**  
 1.  Simplify the denominator: $2! = 2$ and $(8-2)! = 6!$.  
-    $$C(8, 2) = \frac{8!}{2! \times 6!}$$  
+$$C(8, 2) = \frac{8!}{2! \times 6!}$$  
 2.  Expand the numerator ($8! = 8 \times 7 \times 6!$). The $6!$ terms cancel out.  
-    $$C(8, 2) = \frac{8 \times 7}{2!}$$  
+$$C(8, 2) = \frac{8 \times 7}{2!}$$  
 3.  Calculate the product:  
-    $$C(8, 2) = \frac{56}{2} = 28$$  
+$$C(8, 2) = \frac{56}{2} = 28$$  
 
 Since there are no specific constraints requiring distinctness of toppings (like "distinct" or "unique") other than having different toppings, we simply need to find all possible pairs from the set of 8.  
 

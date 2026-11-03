@@ -347,7 +347,7 @@ Here's a thinking process that leads to the solution:
     *   **Is it possible that the problem is asking for something else?**  
         *   "positive integers with exactly three positive divisors"  
         *   Maybe I should list numbers with $\tau(n)=3$ and check their values.  
-            \*   4, 9, 25...  
+\*   4, 9, 25...  
             *   If the question implies listing these in ascending order, and asks for the fifth one.  
             *   If there is a misunderstanding about "fifth number" or the problem is from a context where $p^2$ are not the only numbers.  
         *   Let's check if there are any *other* numbers with 3 divisors.  

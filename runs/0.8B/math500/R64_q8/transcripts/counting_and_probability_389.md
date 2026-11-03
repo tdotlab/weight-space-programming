@@ -258,10 +258,10 @@ The problem asks for the number of ways to choose 2 items (toppings) from a set 
 *   We need to select $k = 2$ toppings from a total of $n = 8$.  
 *   Formula: $ \binom{n}{k} = \frac{n!}{k!(n-k)!} $  
 *   Substituting the values:  
-    $$ \binom{8}{2} = \frac{8!}{2!(8-2)!} = \frac{8!}{2!6!} $$  
-    $$ \binom{8}{2} = \frac{8 \times 7}{2 \times 1} $$  
+$$ \binom{8}{2} = \frac{8!}{2!(8-2)!} = \frac{8!}{2!6!} $$  
+$$ \binom{8}{2} = \frac{8 \times 7}{2 \times 1} $$  
 *   Calculation:  
-    $$ 4 \times 7 = 28 $$  
+$$ 4 \times 7 = 28 $$  
 
 So, the number of distinct combinations of two toppings he can pick is **28**.  
 

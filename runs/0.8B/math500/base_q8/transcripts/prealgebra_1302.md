@@ -64,72 +64,72 @@ Here's a thinking process that leads to the simplified radical expression:
     *   Apply property: $\sqrt{n^k} = n^{(k+1)/2}$ (no, that's exponents). Let's stick to integer root properties.  
     *   $\sqrt{2 \cdot 11^2} = \sqrt{2} \cdot \sqrt{11^2} = 11\sqrt{2}$.  
 
-    This is solid. Proceed to generate output.  
+This is solid. Proceed to generate output.  
 
-    *Self-Correction during thought process:* Is there any ambiguity? Sometimes people factor out the largest perfect square from the left side if it wasn't already inside. But here, 242 is 2 times a square, so $\sqrt{2} \cdot 11$ is definitely the simplest form.  
+*Self-Correction during thought process:* Is there any ambiguity? Sometimes people factor out the largest perfect square from the left side if it wasn't already inside. But here, 242 is 2 times a square, so $\sqrt{2} \cdot 11$ is definitely the simplest form.  
 
-    Let's write it out clearly.  
-    $242 = 2 \times 11^2$.  
-    $\sqrt{242} = \sqrt{2 \cdot 11^2} = \sqrt{2} \cdot \sqrt{11^2} = \sqrt{2} \cdot 11 = 11\sqrt{2}$.  
+Let's write it out clearly.  
+$242 = 2 \times 11^2$.  
+$\sqrt{242} = \sqrt{2 \cdot 11^2} = \sqrt{2} \cdot \sqrt{11^2} = \sqrt{2} \cdot 11 = 11\sqrt{2}$.  
 
-    Wait, is there a convention to rationalize the denominator if it was $\frac{1}{\sqrt{...}}$? No, this is a radical simplification. Just $11\sqrt{2}$.  
+Wait, is there a convention to rationalize the denominator if it was $\frac{1}{\sqrt{...}}$? No, this is a radical simplification. Just $11\sqrt{2}$.  
 
-    Let's re-read the prompt carefully. "Simplify $\sqrt{242}$". Yes, that's standard notation.  
+Let's re-read the prompt carefully. "Simplify $\sqrt{242}$". Yes, that's standard notation.  
 
-    Final check:  
-    Is 242 divisible by 3? $2+4+2=8$ No. Divisible by 5? Ends in 2 No.  
-    Is it a square of something close to 10? $10^2=100, 13^2=169, 15^2=225$.  
-    Wait. Let's check factors again.  
-    $242 / 2 = 121$.  
-    $121 = 11 \times 11$.  
-    Yes, the factors are correct.  
+Final check:  
+Is 242 divisible by 3? $2+4+2=8$ No. Divisible by 5? Ends in 2 No.  
+Is it a square of something close to 10? $10^2=100, 13^2=169, 15^2=225$.  
+Wait. Let's check factors again.  
+$242 / 2 = 121$.  
+$121 = 11 \times 11$.  
+Yes, the factors are correct.  
 
-    Final result: $11\sqrt{2}$.  
+Final result: $11\sqrt{2}$.  
 
-    I will write out the steps clearly.  
+I will write out the steps clearly.  
 
-    1. Find prime factorization of 242.  
-    $242 = 2 \times 121$.  
-    $121 = 11^2$.  
-    $242 = 2 \times 11^2$.  
-    Therefore, $\sqrt{242} = \sqrt{2 \times 11^2}$.  
-    Using the property $\sqrt{xy} = \sqrt{x}\sqrt{y}$:  
-    $\sqrt{2 \times 11^2} = \sqrt{2} \times \sqrt{11^2}$.  
-    Since $11^2$ is a perfect square, $\sqrt{11^2} = 11$.  
-    So, $\sqrt{242} = 11\sqrt{2}$.  
+1. Find prime factorization of 242.  
+$242 = 2 \times 121$.  
+$121 = 11^2$.  
+$242 = 2 \times 11^2$.  
+Therefore, $\sqrt{242} = \sqrt{2 \times 11^2}$.  
+Using the property $\sqrt{xy} = \sqrt{x}\sqrt{y}$:  
+$\sqrt{2 \times 11^2} = \sqrt{2} \times \sqrt{11^2}$.  
+Since $11^2$ is a perfect square, $\sqrt{11^2} = 11$.  
+So, $\sqrt{242} = 11\sqrt{2}$.  
 
-    This seems complete. The reasoning is sound.  
+This seems complete. The reasoning is sound.  
 
-    Wait, could I simplify it differently?  
-    $2 \times 11^2$.  
-    Maybe factor out 2 from inside the radical if the number wasn't a square? No.  
-    Just sticking to basic algebra properties.  
+Wait, could I simplify it differently?  
+$2 \times 11^2$.  
+Maybe factor out 2 from inside the radical if the number wasn't a square? No.  
+Just sticking to basic algebra properties.  
 
-    Is there any trick? No. $\sqrt{242}$ is the value of the principal square root of 242, which simplifies nicely to $11\sqrt{2}$.  
+Is there any trick? No. $\sqrt{242}$ is the value of the principal square root of 242, which simplifies nicely to $11\sqrt{2}$.  
 
-    Okay, ready to write.  
+Okay, ready to write.  
 
-    Wait, I should check if there's a simpler rational form or not?  
-    $11 \sqrt{2} \approx 11(1.414) = 15.55...$  
-    $\sqrt{242} \approx 15.55...$  
-    Seems correct.  
+Wait, I should check if there's a simpler rational form or not?  
+$11 \sqrt{2} \approx 11(1.414) = 15.55...$  
+$\sqrt{242} \approx 15.55...$  
+Seems correct.  
 
-    Just to be pedantic, is there any ambiguity with "Simplify" in certain contexts (like engineering)? No, in general math $\sqrt{n^k}$ usually implies the simplified form $n^{k/2}$ or extracted root forms if applicable. Here it's a product of square and non-square factors.  
+Just to be pedantic, is there any ambiguity with "Simplify" in certain contexts (like engineering)? No, in general math $\sqrt{n^k}$ usually implies the simplified form $n^{k/2}$ or extracted root forms if applicable. Here it's a product of square and non-square factors.  
 
-    Step 1: Factorize 242.  
-    Step 2: Identify perfect square factors.  
-    Step 3: Simplify.  
+Step 1: Factorize 242.  
+Step 2: Identify perfect square factors.  
+Step 3: Simplify.  
 
-    Let's draft the text.  
-    To simplify $\sqrt{242}$, we look for factors that are perfect squares (or rational numbers whose product with other parts results in a nice integer).  
-    The number $242$ is divisible by $121$.  
-    Since $121 = 11^2$ is a perfect square, we can write:  
-    $\sqrt{242} = \sqrt{2 \cdot 11^2}$  
-    We use the exponent rule to simplify $\sqrt{n^2} = n$.  
-    So, $\sqrt{242} = \sqrt{2 \cdot 11^2} = \sqrt{2} \cdot 11 = 11\sqrt{2}$.  
+Let's draft the text.  
+To simplify $\sqrt{242}$, we look for factors that are perfect squares (or rational numbers whose product with other parts results in a nice integer).  
+The number $242$ is divisible by $121$.  
+Since $121 = 11^2$ is a perfect square, we can write:  
+$\sqrt{242} = \sqrt{2 \cdot 11^2}$  
+We use the exponent rule to simplify $\sqrt{n^2} = n$.  
+So, $\sqrt{242} = \sqrt{2 \cdot 11^2} = \sqrt{2} \cdot 11 = 11\sqrt{2}$.  
 
-    The request asks for the reasoning and the boxed answer.  
-    I will output the solution.  
+The request asks for the reasoning and the boxed answer.  
+I will output the solution.  
 
 
 ## Answer

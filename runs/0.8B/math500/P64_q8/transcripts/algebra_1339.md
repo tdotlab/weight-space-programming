@@ -22,14 +22,14 @@ Here's a thinking process that leads to the solution:
 3.  **Determine the Constant of Proportionality ($k$):**  
     *   We are given that at $x=24$, $y=15$.  
     *   Substitute these values into the equation:  
-        $$15 = k \cdot \frac{1}{\sqrt{24}}$$  
+$$15 = k \cdot \frac{1}{\sqrt{24}}$$  
     *   Solve for $k$:  
-        $$k = 15 \cdot \sqrt{24}$$  
+$$k = 15 \cdot \sqrt{24}$$  
 
 4.  **Substitute Known Variables into the Equation:**  
     *   Now we use the equation with unknown variable $x$ and known value $y=3$.  
     *   The equation becomes:  
-        $$3 = k \cdot \frac{1}{\sqrt{x}}$$  
+$$3 = k \cdot \frac{1}{\sqrt{x}}$$  
     *   Wait, usually inverse variation implies a direct link between $y$ and $\sqrt{x}$. Let's re-verify the phrase "inversely as".  
     *   If $y$ varies inversely as $\sqrt{x}$, then $y = \frac{k}{\sqrt{x}}$. Wait, "inversely" usually means reciprocal. Let's assume standard variable naming where $y_2 = k / y_1$. No, that's not right.  
     *   Let's check the standard definition: If quantity $x$ varies inversely as another quantity, then if $x_2 < x_1$, then $y_2 > y_1$.  
@@ -37,21 +37,21 @@ Here's a thinking process that leads to the solution:
     *   This is ambiguous. It could mean:  
         1. $y = k \cdot \frac{1}{\sqrt{x}}$ (inverse proportional to $\sqrt{x}$) -> Usually written as $y \propto \frac{1}{\sqrt{x}}$.  
         2. Or, maybe the question implies a specific relation $y \propto x^{-1/2}$.  
-        *Let's check standard convention:* If $x$ varies inversely as $y$, that's confusing. "A varies inversely as B" means $\frac{a}{b}$ is constant? No, usually $y = k/x$ or $y=k\sqrt{x}$ (directly proportional).  
-        Actually, "inversely as $\sqrt{x}$" implies $y = C / \sqrt{x}$. Wait, that is "directly proportional to the inverse square root".  
+*Let's check standard convention:* If $x$ varies inversely as $y$, that's confusing. "A varies inversely as B" means $\frac{a}{b}$ is constant? No, usually $y = k/x$ or $y=k\sqrt{x}$ (directly proportional).  
+Actually, "inversely as $\sqrt{x}$" implies $y = C / \sqrt{x}$. Wait, that is "directly proportional to the inverse square root".  
     *   Let's stick to the algebraic definition.  
     *   If $y$ varies inversely as $\sqrt{x}$, then $\frac{y_1}{\sqrt{x_1}} = \frac{y_2}{\sqrt{x_2}}$? No.  
     *   The most standard interpretation of "A varies inversely as B" is: $A/x = k$. Wait, that's usually stated in the context of direct variation.  
     *   Actually, let's look at it differently. "Inversely as $\sqrt{x}$".  
     *   If $y \propto x^{-1/2}$.  
-        At $x=24$, $y=15$.  
-        Then $k = 15 / \sqrt{24}$.  
-        Is this interpretation correct? Yes, "inverse as" means the relationship is $\frac{y}{\sqrt{x}}$ is constant. Wait, let me double-check.  
+At $x=24$, $y=15$.  
+Then $k = 15 / \sqrt{24}$.  
+Is this interpretation correct? Yes, "inverse as" means the relationship is $\frac{y}{\sqrt{x}}$ is constant. Wait, let me double-check.  
     *   Let's re-evaluate:  
-        Let $y = k/x^{1/2}$.  
-        Then $y \propto 1/\sqrt{x}$.  
-        Wait, usually "inversely as" means the proportionality constant is negative or something? No. It means $\frac{y}{k} = x^{-1/2}$?  
-        Or does it mean $x_1 y_1 = c$? No, that's inverse proportional with $x$. If $y \propto \frac{1}{\sqrt{x}}$, then $xy$ is not constant. Wait.  
+Let $y = k/x^{1/2}$.  
+Then $y \propto 1/\sqrt{x}$.  
+Wait, usually "inversely as" means the proportionality constant is negative or something? No. It means $\frac{y}{k} = x^{-1/2}$?  
+Or does it mean $x_1 y_1 = c$? No, that's inverse proportional with $x$. If $y \propto \frac{1}{\sqrt{x}}$, then $xy$ is not constant. Wait.  
     *   Standard variation rules:  
         *   Direct variation: $y = k x^n$.  
         *   Inverse variation: $y = k/x^n$.  

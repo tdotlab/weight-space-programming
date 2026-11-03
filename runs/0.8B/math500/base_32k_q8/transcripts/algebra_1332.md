@@ -161,7 +161,7 @@ Here's my thought process for solving this problem:
                                                     *   Then Sales $\propto$ Price^(-1) means $P = k \cdot C^{-1}$.
                                                     *   Let's test this interpretation with numbers.
                                                         *   15 sales @ $\$$1500.
-                                                        *   $15 = k / (1500)$.  
+                                                    *   $15 = k / (1500)$.  
                                                         *   $k = 15 \cdot 1500$.  
                                                         *   Wait, if we assume this interpretation ($P \propto 1/C$), then as Cost goes up ($C=2500$), Popularity should go down.  
                                                         *   Is that correct? Usually "more popular" means lower cost? No.  
@@ -224,9 +224,9 @@ Here's my thought process for solving this problem:
                                             *   Let's try another interpretation:
                                                 *   Maybe $C \propto P$? No, that would be direct proportionality of Cost and Popularity (meaning if Popularity goes up, Cost goes up). This would imply as TV gets more popular (e.g., a "popular" toy vs "rare"), Price is higher. So if cost is high, Popularity must be high?
                                                     *   Wait. If I have a TV that costs $\$$1500 and sells 15 customers. Is this a popular one or not?
-                                                    *   Usually, high sales imply popularity. If Cost goes up ($\$$2500), does Sales go down?  
-                                                    *   Let's check standard relationship: Price $\times$ Popularity = Constant.  
-                                                        *   Wait. $P \cdot C = 1500 \cdot P_{pop}$. No, if $C$ and $P_{pop}$ are inversely proportional ($P \propto 1/C$).  
+                                            *   Usually, high sales imply popularity. If Cost goes up ($\$$2500), does Sales go down?  
+                                                *   Let's check standard relationship: Price $\times$ Popularity = Constant.  
+                                                    *   Wait. $P \cdot C = 1500 \cdot P_{pop}$. No, if $C$ and $P_{pop}$ are inversely proportional ($P \propto 1/C$).  
                                                     *   Then if Cost goes up to $\$$2500 (higher), Popularity (Sales) should drop.  
                                                         *   If $P = k / C$, then $k = P \cdot C$.  
                                                         *   Wait, usually we calculate constant from the given data point.  
@@ -283,8 +283,8 @@ Here's my thought process for solving this problem:
                                                                                                                 *   Let's check the math again. $15 \cdot 1500 = 22500$. $k = 22500$.
                                                                                                                 *   Then at $C=2500$, Popularity (sales) = $22500 / 2500 = 9$.
                                                                                                                 *   Wait. But wait, if Cost goes up ($\$$), Popularity should drop? No.
-                                                                                                                    *   If Popularity is inversely proportional to Cost, does it mean as Cost increases, Sales decreases?  
-                                                                                                                        *   Let's check the direction again.  
+                                                                                                                *   If Popularity is inversely proportional to Cost, does it mean as Cost increases, Sales decreases?  
+                                                                                                                    *   Let's check the direction again.  
                                                                                                                         *   If $y_1$ and $y_2$ are inversely proportional, then $y_1 / y_2 = k$. This means if $y_2$ (Cost) increases, $y_1$ (Sales) decreases? No.  
                                                                                                                         *   Let's check the definition again. If $x$ and $y$ are inversely proportional, this usually means that doubling one halves the other. So if $C=2500$, Popularity should be 9 (half of 15)? Or is it half?  
                                                                                                                             *   Wait. Let's re-verify "Inversely proportional".  
@@ -302,9 +302,9 @@ Here's my thought process for solving this problem:
                                                                                                                                             *   So if Cost ($C$) doubles, Sales ($P$) halves? No, that's "Inverse" relationship in terms of values.
                                                                                                                                         *   However, let's check the direction again.
                                                                                                                                             *   If I buy a cheap TV at $\$$1500, I get 15 sales.
-                                                                                                                                            *   Is this consistent with "Inversely proportional"?  
-                                                                                                                                                *   Usually, $C \cdot P = k$? No, that's $P = k/C$.  
-                                                                                                                                                *   Wait, if $C \cdot P = k$, then increasing C decreases P. This makes sense: As Price increases, Demand decreases (Inverse). Wait, no. Inverse proportion usually implies $x \cdot y = k$. If Price increases, Demand drops (Inverse relationship). So "Price $\times$ Sales = Constant" is correct for direct inverse proportion? Wait.  
+                                                                                                                                    *   Is this consistent with "Inversely proportional"?  
+                                                                                                                                        *   Usually, $C \cdot P = k$? No, that's $P = k/C$.  
+                                                                                                                                            *   Wait, if $C \cdot P = k$, then increasing C decreases P. This makes sense: As Price increases, Demand decreases (Inverse). Wait, no. Inverse proportion usually implies $x \cdot y = k$. If Price increases, Demand drops (Inverse relationship). So "Price $\times$ Sales = Constant" is correct for direct inverse proportion? Wait.  
                                                                                                                                                 *   Usually "Direct Proportionality" means if one goes up, other goes up.  
                                                                                                                                                 *   "Inverse Proportionality" means if one goes up, other goes down.  
                                                                                                                                                 *   So as Cost ($C$) increases (e.g. to $\$$2500), Popularity (Sales) should decrease? Or does it go up?  

@@ -552,14 +552,14 @@ Let's re-calculate polynomial coefficients via synthetic division properly.
 Coefficients of $P$: $1, 5, 9, -1, -14$.  
 Synthetic root $r=1$:  
 1. Bring down 1. (This represents the constant term in quotient? No, the first digit is coefficient of lowest degree term in quotient).  
-   Usually we bring down 1, which means the next coefficient is the product with 1. The "next" coefficient is not necessarily added, it's multiplied by $r$.  
-   Let's trace:  
-   Coefficients list: $c_4 x^4 + c_3 x^3 + \dots$  
-   Divide by $(x-1)$.  
-   Quotient coefficients $q_k$:  
-   $q_0 = c_4 = 1$ (Leading term of quotient is $1x^3$).  
-   $q_1 = q_0 + c_3 r$? No, that's the step for finding remainder.  
-   Let's just perform synthetic division correctly.  
+Usually we bring down 1, which means the next coefficient is the product with 1. The "next" coefficient is not necessarily added, it's multiplied by $r$.  
+Let's trace:  
+Coefficients list: $c_4 x^4 + c_3 x^3 + \dots$  
+Divide by $(x-1)$.  
+Quotient coefficients $q_k$:  
+$q_0 = c_4 = 1$ (Leading term of quotient is $1x^3$).  
+$q_1 = q_0 + c_3 r$? No, that's the step for finding remainder.  
+Let's just perform synthetic division correctly.  
 
 Standard Synthetic Division:  
 Set up a row $1, 5, 9, -1, -14$. (Divisor is 1).  
@@ -610,10 +610,10 @@ The standard algorithm is:
 1. Bring down the leading coefficient ($c_4$) as a new leading entry in the quotient row. (This represents the degree).  
 2. Multiply this entry by the divisor root ($r=1$).  
 3. Add it to the next coefficient from the dividend polynomial?  
-   The formula for adding is: $a_n + r \cdot (\text{something})$. No.  
-   Let's just write the values of the coefficients $q_0, q_1, \dots, q_{n-1}$ for the quotient.  
-   $P(x) = (x-r)Q(x)$ implies that if we evaluate $P(x)$ at $r$, remainder is 0.  
-   So the product $P(x) + rQ(x)$? No.  
+The formula for adding is: $a_n + r \cdot (\text{something})$. No.  
+Let's just write the values of the coefficients $q_0, q_1, \dots, q_{n-1}$ for the quotient.  
+$P(x) = (x-r)Q(x)$ implies that if we evaluate $P(x)$ at $r$, remainder is 0.  
+So the product $P(x) + rQ(x)$? No.  
 
 Let's try to find factors of -14 again and multiply by $(x-1)$.  
 If I use polynomial division:  
@@ -874,8 +874,8 @@ This gives the coefficients of $Q(x)$.
 Coefficients of $Q(x)$ are $q_0, q_1, q_2, q_3$.  
 The coefficients of $P(x)$ divided by $(x-1)$ are computed as follows:  
 1. Start with the coefficient of $x^4$, which is 1. This is added to the first term of quotient? No.  
-   The remainder of division by $(x-r)$ (where divisor is monic) yields a polynomial.  
-   Actually, if we divide $P(x)$ by $Q_0$, the result is a polynomial with integer coefficients.  
+The remainder of division by $(x-r)$ (where divisor is monic) yields a polynomial.  
+Actually, if we divide $P(x)$ by $Q_0$, the result is a polynomial with integer coefficients.  
 
 Let's just perform synthetic division using the "add to sum" logic on the columns.  
 Dividend coeffs: $1, 5, 9, -1, -14$.  

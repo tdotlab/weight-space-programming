@@ -110,7 +110,7 @@ Here's a thinking process that leads to the solution:
         1. Given: $x^2 - x - 1 = 0$. This implies $x^2 = x + 1$. (Equation A)  
         2. We want to compute the expression $E = x^3 - 2x + 1$.  
         3. Notice that if I can simplify $x^3$, I substitute it.  
-            *   How? Divide $x^3$ by something using (A)? No.  
+           *   How? Divide $x^3$ by something using (A)? No.  
             *   From equation A, we have $x^2 = x+1$.  
             *   Substitute this expression into the term $x^2$ in the expansion of $x^3$.  
                 *   Term is $x \cdot x^2$. No, wait.  

@@ -771,20 +771,20 @@ Now, we use the given piecewise definition for $f(n)$:
 Let's evaluate each term based on these conditions:  
 
 1.  **For $\frac{\pi}{3}$**:  
-    The argument is approximately $1.05$. Since $1.05 < 4$, we use the case "if $n < 4$". Thus, we calculate $\lceil \frac{\pi}{3} \rceil$.  
-    *Note: $\frac{\pi}{3} \approx 1.0472$. The ceiling of a number is the smallest integer greater than or equal to it.*  
-    Since $1 < \frac{\pi}{3} < 2$, and it is not an integer, the value is simply 2.  
-    $$f\left(\frac{\pi}{3}\right) = 2$$  
+The argument is approximately $1.05$. Since $1.05 < 4$, we use the case "if $n < 4$". Thus, we calculate $\lceil \frac{\pi}{3} \rceil$.  
+*Note: $\frac{\pi}{3} \approx 1.0472$. The ceiling of a number is the smallest integer greater than or equal to it.*  
+Since $1 < \frac{\pi}{3} < 2$, and it is not an integer, the value is simply 2.  
+$$f\left(\frac{\pi}{3}\right) = 2$$  
 
 2.  **For $\sqrt{45}$**:  
-    The argument is approximately $6.708$. Since this is greater than 4 ($6.708 \geq 4$), we use the case "if $n \geq 4$". Thus, we calculate $\lfloor \sqrt{45} \rfloor$.  
-    *Note: The floor of a number is the largest integer less than or equal to it.*  
-    Since $6 < \sqrt{45} < 7$, the integer part is 6.  
-    $$f(\sqrt{45}) = 6$$  
+The argument is approximately $6.708$. Since this is greater than 4 ($6.708 \geq 4$), we use the case "if $n \geq 4$". Thus, we calculate $\lfloor \sqrt{45} \rfloor$.  
+*Note: The floor of a number is the largest integer less than or equal to it.*  
+Since $6 < \sqrt{45} < 7$, the integer part is 6.  
+$$f(\sqrt{45}) = 6$$  
 
 3.  **For $8^{2/3}$**:  
-    The argument simplifies to 4. Since $4$ is an integer, and we are evaluating $f(n)$ for $n \geq 4$, we use the case "if $n \geq 4$". Thus, we calculate $\lfloor 4 \rfloor$.  
-    $$f(8^{2/3}) = \lfloor 4 \rfloor = 4$$  
+The argument simplifies to 4. Since $4$ is an integer, and we are evaluating $f(n)$ for $n \geq 4$, we use the case "if $n \geq 4$". Thus, we calculate $\lfloor 4 \rfloor$.  
+$$f(8^{2/3}) = \lfloor 4 \rfloor = 4$$  
 
 Finally, we sum these results:  
 $$f\left(\frac{\pi}{3}\right) + f(\sqrt{45}) + f(8^{2/3}) = 2 + 6 + 4 = 12$$  

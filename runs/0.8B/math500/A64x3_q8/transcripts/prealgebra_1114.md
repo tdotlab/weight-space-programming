@@ -88,19 +88,19 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
     *   However, looking at the `draw` command `draw((0,0)--(10,0)--(10,3)--(0,3)--cycle)`. This draws a quadrilateral with vertices $(0,0), (10,0), (10,3), (0,3)$. Area = $0.5 \times 10 \times 3 = 15$.  
     *   But `draw` command is likely drawn *over* the previous fill commands? No, usually `fill` sets a color for the region, and `draw` draws lines.  
     *   The code snippet:  
-        ```asy  
-        fill((0,0)--(2,3)--(10,0)--cycle,gray);  
-        draw((0,0)--(10,0)--(10,3)--(0,3)--cycle,linewidth(1));  
-        draw((0,0)--(2,3)--(10,0),linewidth(1));  
-        label("10 cm",(5,3),N);  
-        label("10 cm",(5,0),S);  
-        label("3 cm",(0,1.5),W);  
-        label("3 cm",(10,1.5),E);  
-        draw((0,2.5)--(.5,2.5)--(.5,3));  
-        draw((10,2.5)--(9.5,2.5)--(9.5,3));  
-        ```  
-    *   The labels suggest: $P_1(0,0)$ is origin.  
-        *   Label `10 cm` at $(5,3)$. Since it's `(x,y)` for 5 units right and 3 up (N is North, S is South, W is West, E is East). So point (5,3) corresponds to a specific point in the diagram.  
+```asy
+        fill((0,0)--(2,3)--(10,0)--cycle,gray);
+        draw((0,0)--(10,0)--(10,3)--(0,3)--cycle,linewidth(1));
+        draw((0,0)--(2,3)--(10,0),linewidth(1));
+        label("10 cm",(5,3),N);
+        label("10 cm",(5,0),S);
+        label("3 cm",(0,1.5),W);
+        label("3 cm",(10,1.5),E);
+        draw((0,2.5)--(.5,2.5)--(.5,3));
+        draw((10,2.5)--(9.5,2.5)--(9.5,3));
+```
+*   The labels suggest: $P_1(0,0)$ is origin.  
+    *   Label `10 cm` at $(5,3)$. Since it's `(x,y)` for 5 units right and 3 up (N is North, S is South, W is West, E is East). So point (5,3) corresponds to a specific point in the diagram.  
         *   Label `10 cm` at $(5,0)$. Point (5,0) is on the x-axis? Or maybe it's a point labeled with y=0 but x=5? Yes.  
     *   Label `3 cm` at `(0,1.5)` and label text `3 cm` and E. This label is placed at (0, 1.5). The shape is likely the triangle $(0,0), (2,3), (10,0)$.  
         *   Let's check the position of vertices. $P_1=(0,0)$ is origin. $P_2=(2,3)$. $P_3=(10,0)$.  
@@ -129,41 +129,41 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
             2. `draw((0,0)--(10,0)--(10,3)--(0,3)--cycle)` - This draws a solid line for a different region. Is it shaded? It's not filled by the `fill` command in that loop.  
             3. The labels: `(5,3), N`, etc. Maybe there are multiple vertices labeled?  
     *   Let's look at the "shaded" part of the code again.  
-        `fill((0,0)--(2,3)--(10,0)--cycle)`.  
-        If I interpret this as an equation or a specific shape: It looks like a triangle. The vertices are $(0,0), (2,3), (10,0)$. This is not a degenerate triangle because $y_2 - y_1 = 3 \neq 0$ and $x_2-x_1 = 2 \neq 0$ and $x_3-x_1 = 10 \neq 0$.  
+`fill((0,0)--(2,3)--(10,0)--cycle)`.  
+If I interpret this as an equation or a specific shape: It looks like a triangle. The vertices are $(0,0), (2,3), (10,0)$. This is not a degenerate triangle because $y_2 - y_1 = 3 \neq 0$ and $x_2-x_1 = 2 \neq 0$ and $x_3-x_1 = 10 \neq 0$.  
         *   So it is a valid triangle.  
         *   The code says "area of the shaded triangle". The shape filled is $(0,0)$ to $(2,3)$ to $(10,0)$. This is the polygon with vertices $A(0,0), B(2,3), C(10,0)$.  
         *   Area calculation using formula:  
-            $$ Area = 0.5 \times | (x_A(y_B - y_C) + x_B(y_C - y_A) + x_C(y_A - y_B)) | $$  
-            $$ A = 0.5 \times | (0(3-0) + 2(0-0) + 10(0-3)) | $$  
-            $$ A = 0.5 \times | 0 + 0 - 30 | = 15 $.  
+$$ Area = 0.5 \times | (x_A(y_B - y_C) + x_B(y_C - y_A) + x_C(y_A - y_B)) | $$  
+$$ A = 0.5 \times | (0(3-0) + 2(0-0) + 10(0-3)) | $$  
+$$ A = 0.5 \times | 0 + 0 - 30 | = 15 $.  
         *   However, let's re-read the problem description carefully. Maybe I am missing something about what constitutes a "triangle" or if it's the other triangle.  
         *   Is it possible the code defines the *same* shape?  
-            `fill((0,0)--(2,3)--(10,0)--cycle)` draws a polygon.  
-            The user might be asking for the area of that polygon.  
-            The answer is likely 15. But let's check if the labels imply something else.  
-            Labels:  
-            `10 cm` at `(5,3), N`. This label is near the point $(5,3)$. Is this a vertex? Or just a point on x=5?  
-            If it were a triangle with vertices $P_1(0,0)$ and some other points.  
-            If I assume standard orientation:  
-                Vertices of the polygon $(0,0), (2,3), (10,0)$ correspond to $A(0,0)$, $B(2,3)$, $C(10,0)$.  
-                This triangle is a right triangle with one leg on the x-axis? No, $(0,0)$ and $(10,0)$ are collinear on x-axis.  
-                So base = 10. Height from $(2,3)$ to x-axis is $y_B - y_A$? No.  
-                The vertices are on the x-axis at $(0,0)$ and $(10,0)$.  
-                One side of the triangle is on the x-axis? Yes. From $(0,0)$ to $(10,0)$. Length 10.  
-                The other two sides must form the "apex".  
-                Is it a right triangle? The coordinates are $A(0,0)$, $B(2,3)$, $C(10,0)$.  
-                Let's check if $\vec{AB} \cdot \vec{AC} = 0$ (if angle C is 90). Vector AB = $(2,3)$. Vector AC = $(10,0)$. Dot product is $20 \neq 0$.  
-                Is it a right triangle? Let's check if $AB^2 + BC^2 = AC^2$?  
-                $AC$ is distance from $(0,0)$ to $(10,0)$ which is 10. So base is 10.  
-                Height of triangle B-C at x=2? No. Let's use coordinates.  
-                Area = $1/2 \times |x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2)|$  
-                $x_1=0, y_1=0$. $x_2=2, y_2=3$. $x_3=10, y_3=0$.  
-                $A = 0.5 | (0(3-0) + 2(0-0) + 10(0-3)) | = 0.5 \times |-30| = 15$.  
+`fill((0,0)--(2,3)--(10,0)--cycle)` draws a polygon.  
+The user might be asking for the area of that polygon.  
+The answer is likely 15. But let's check if the labels imply something else.  
+Labels:  
+`10 cm` at `(5,3), N`. This label is near the point $(5,3)$. Is this a vertex? Or just a point on x=5?  
+If it were a triangle with vertices $P_1(0,0)$ and some other points.  
+If I assume standard orientation:  
+Vertices of the polygon $(0,0), (2,3), (10,0)$ correspond to $A(0,0)$, $B(2,3)$, $C(10,0)$.  
+This triangle is a right triangle with one leg on the x-axis? No, $(0,0)$ and $(10,0)$ are collinear on x-axis.  
+So base = 10. Height from $(2,3)$ to x-axis is $y_B - y_A$? No.  
+The vertices are on the x-axis at $(0,0)$ and $(10,0)$.  
+One side of the triangle is on the x-axis? Yes. From $(0,0)$ to $(10,0)$. Length 10.  
+The other two sides must form the "apex".  
+Is it a right triangle? The coordinates are $A(0,0)$, $B(2,3)$, $C(10,0)$.  
+Let's check if $\vec{AB} \cdot \vec{AC} = 0$ (if angle C is 90). Vector AB = $(2,3)$. Vector AC = $(10,0)$. Dot product is $20 \neq 0$.  
+Is it a right triangle? Let's check if $AB^2 + BC^2 = AC^2$?  
+$AC$ is distance from $(0,0)$ to $(10,0)$ which is 10. So base is 10.  
+Height of triangle B-C at x=2? No. Let's use coordinates.  
+Area = $1/2 \times |x_1(y_2-y_3) + x_2(y_3-y_1) + x_3(y_1-y_2)|$  
+$x_1=0, y_1=0$. $x_2=2, y_2=3$. $x_3=10, y_3=0$.  
+$A = 0.5 | (0(3-0) + 2(0-0) + 10(0-3)) | = 0.5 \times |-30| = 15$.  
             *   So the area is 15.  
 
         *   However, let me double check if the polygon drawn `fill((0,0)--(2,3)--(10,0)--cycle)` actually encloses a single triangle or multiple shapes.  
-            Since vertices are distinct and not collinear with $y$-axis (slope is 3/2), it's a single triangle region.  
+Since vertices are distinct and not collinear with $y$-axis (slope is 3/2), it's a single triangle region.  
         *   However, I should verify if `draw` command lines might interfere or overlap in a way that makes the "shaded triangle" different.  
         *   Looking at the code, there are two gray fill commands.  
             1. `fill(...)` for polygon $(0,0)$ to $(2,3)$ to $(10,0)$. This is a single region.  
@@ -176,7 +176,7 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
             - Vertex `B` (2,3) would be at `(10,3)` if labeled by height. No.  
         *   Maybe the diagram is a grid.  
         - Vertices of grid points: $(0,0), (2,3), (10,0)$? This is $2 \times 3$ block plus offset.  
-            - If vertices are integer coordinates: $(0,0), (2,3), (10,0)$.  
+          - If vertices are integer coordinates: $(0,0), (2,3), (10,0)$.  
             - This forms a right triangle with legs of length $|x|$ and $|y|$ from origin? No.  
             - It has base 10 along x-axis. Height 3? No.  
             - Base is on x-axis. Length = 10. Apex at $(2,3)$.  
@@ -217,14 +217,14 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
         *   Let's re-verify the coordinates.  
             - `fill((0,0)--(2,3)--(10,0)--cycle)` creates a polygon with vertices at $(0,0)$, $(2,3)$, and $(10,0)$.  
             - Area calculation: $Area = 1/2 \times (base \times height)$.  
-                *   The vertices lie on the axes? No.  
+              *   The vertices lie on the axes? No.  
                 *   $C(10,0)$ is on x-axis. $A(0,0)$ is origin. So base is segment from $x=0$ to $x=10$. Length 10.  
                 *   Vertex $B(2,3)$ has height relative to this base of 3 (from y-coordinate 3 to 0). Or is it distance from x-axis? Yes.  
                 *   So Area = $1/2 \times 10 \times 3 = 15$.  
     *   But what if the triangle is not the polygon `(0,0)-(2,3)-(10,0)`.  
         - Let's look at the second `fill` command: `draw((0,2.5)--(.5,2.5)--(.5,3));` -> This draws a line segment from $x=0$ to $x=.5$ (point B(2,3)) and x-axis intersection?  
         - Let's look at the coordinates for labels again. `label("3 cm",(10,1.5),E)`.  
-            - Maybe this label is placed at vertex $(10,1.5)$? Or just a point on the diagram.  
+          - Maybe this label is placed at vertex $(10,1.5)$? Or just a point on the diagram.  
     *   Is there any chance the question refers to a triangle formed by the lines drawn in the diagram that enclose the shaded region, rather than the `fill` command?  
         - The code has `draw(...)` commands for lines. Usually these define the boundary of the filled polygon. If I interpret "triangle" as the shape enclosed by the `draw` line (if the fill command was empty or not drawn). But here it is gray.  
     *   Let's check the text carefully. The text says "In the diagram". The diagram code is what matters.  
@@ -287,7 +287,7 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
 
     *   However, looking closer at the second part of the code `draw((0,2.5)--(.5,2.5)--(.5,3));`. This draws a line segment from $(0,2.5)$ to $(.5,3)$.  
         - If I look at the diagram in the Asymptote renderer (if it's available), I would see:  
-            - A rectangle or triangle at bottom?  
+          - A rectangle or triangle at bottom?  
             - No, `fill` commands apply to regions. The first command is `fill((0,0)--(2,3)--(10,0)--cycle)`.  
             - This fills the polygon. It looks like a large triangle.  
             - Is it possible that `fill` commands overwrite previous lines? No, they are sequential.  
@@ -297,7 +297,7 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
         - Vertices are likely at integer coordinates.  
         - $P_1(0,0)$ and $P_2(2,3)$ and $P_3(10,0)$.  
         - This is consistent with a right triangle?  
-            *   Leg 1 on x-axis: length 10. Length along y-axis from $x=0$ to $x=2$ is 2.  
+          *   Leg 1 on x-axis: length 10. Length along y-axis from $x=0$ to $x=2$ is 2.  
             *   Triangle $ABC$:  
                 - If vertices are $A(0,0)$ and $C(10,0)$. Then base is 10.  
                 - The third vertex is $(2,3)$.  
@@ -305,12 +305,12 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
 
     *   Let me check if there's any other interpretation of coordinates in the Asymptote code.  
         - `label("3 cm",(10,1.5),E)`.  
-            - This is at $x=10, y=1.5$ (relative to center? or $(5,0)$?).  
+          - This is at $x=10, y=1.5$ (relative to center? or $(5,0)$?).  
             - In Asymptote, label coordinates are usually `(x,y)` where `x` and `y` are from the origin.  
             - So it's at $(10, 1.5)$. This means $x=10$, $y=1.5$.  
         - The shape is bounded by vertices $(0,0), (2,3), (10,0)$.  
-            - If this region is the "shaded triangle", then it's a right triangle with legs 3 and 10? No.  
-                *   $y=3$ is altitude?  
+          - If this region is the "shaded triangle", then it's a right triangle with legs 3 and 10? No.  
+            *   $y=3$ is altitude?  
                 *   Base on x-axis from 0 to 10. Height 3? Yes, vertex $(2,3)$ projects onto y-axis at $(2,0)$? No, the triangle vertices are $(0,0), (2,3), (10,0)$.  
                 *   The base is segment connecting $(0,0)$ to $(10,0)$? No.  
                 *   Let's plot points:  
@@ -320,7 +320,7 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
                 - Connect them: Triangle $ABC$.  
                 - It has vertices $(0,0)$, $(2,3)$, $(10,0)$.  
                 - Is it a right triangle?  
-                    - Vector $\vec{AB} = (2-0, 3-0) = (2,3)$.  
+                  - Vector $\vec{AB} = (2-0, 3-0) = (2,3)$.  
                     - Vector $\vec{AC} = (10-0, 0-0) = (10,0)$.  
                     - Dot product $\vec{AB} \cdot \vec{AC} = 2 \times 10 + 3 \times 0 = 20 \neq 0$. Not perpendicular.  
                     - But the height from base $AC$ (x-axis) to point $B(2,3)$ is just the y-coordinate of B? No. The altitude is the perpendicular distance from vertex $B$ to line $y=0$. That's $|y_B - 0| = 3$. This is not an altitude because base is on x-axis.  
@@ -336,7 +336,7 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
         - The code: `fill((0,0)--(2,3)--(10,0)--cycle)` fills a region defined by $A(0,0), B(2,3), C(10,0)$. This triangle is shaded gray.  
         - Is it possible the diagram is drawn in a way that `fill` commands only cover half the area? No, Asymptote fills based on vertices order. The region enclosed by $(0,0) \to (2,3) \to (10,0)$ is one polygon.  
         - Let me double check the coordinates of vertices again to be absolutely sure.  
-            - `fill((0,0)--(2,3)--(10,0)--cycle)`  
+          - `fill((0,0)--(2,3)--(10,0)--cycle)`  
             - This defines a polygon with vertices $P_1=(0,0)$, $P_2=(2,3)$, $P_3=(10,0)$.  
             - The polygon connects $(0,0)$ to $(2,3)$, then to $(10,0)$, and finally back to $(0,0)$.  
             - This is a triangle (non-collinear).  
@@ -351,20 +351,20 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
     *   Is there any possibility that the coordinates `(0,0)` and `(10,0)` are not endpoints of the base but something else?  
         - The code `draw((0,0)--(10,0))` would just connect them.  
         - The polygon is $(0,0)-(2,3)-(10,0)$. The edges are:  
-            - $(0,0)-(2,3)$  
+          - $(0,0)-(2,3)$  
             - $(2,3)-(10,0)$  
             - $(10,0)-(0,0)$  
         - This encloses a region.  
 
     *   Let's check the labels in the code to see if they give any geometric clues about the triangle size or shape that would confirm area = 15.  
         - Label: `(3 cm)`.  
-            - This label is placed at `W` (West). It points to vertex $(0,1.5)$? Or is it a point in space?  
+          - This label is placed at `W` (West). It points to vertex $(0,1.5)$? Or is it a point in space?  
             - The label text "3 cm" usually corresponds to the length of an edge or dimension.  
             - If the triangle has vertices $A(0,0), B(2,3), C(10,0)$.  
             - Does this triangle relate to any other features?  
             - `label("3 cm",(0,1.5),W)` is placed at $(0,1.5)$ relative to origin. This could be a measurement of side $BC$ or something?  
             - If the triangle is in 1 unit cells (grid)?  
-                - The coordinates are integers and half-integers.  
+              - The coordinates are integers and half-integers.  
                 - If grid lines are at $x=1,2,3...$.  
                 - The labels `(0,1.5)` might be on a point $(0,1.5)$?  
                 - But the question is just about area of shaded triangle. The explicit code fills it. So I will calculate based on that shape.  
@@ -381,20 +381,20 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
         - In standard math diagrams, usually $(0,0)$ is top-left or origin.  
         - The `label("10 cm",(5,3),N)`: $N$ stands for North (Up). So $(5,3)$ is a point in the upper right quadrant of the plot? If origin is bottom left? Then $x$ increases to right.  
         - If origin is bottom left, then:  
-            - `(0,0)` is bottom left.  
+          - `(0,0)` is bottom left.  
             - `(10,0)` is bottom right? Or maybe it's on x-axis at 10.  
             - `(2,3)` is a point $x=2$, $y=3$. This is "up" from $(0,0)$. So triangle is in upper half of the base.  
         - If origin is top left:  
-            - `(0,0)` is top left.  
+          - `(0,0)` is top left.  
             - `(10,0)` would be bottom right? Or maybe `y` axis is vertical.  
         - Regardless of orientation (up/down), area calculation depends on absolute coordinates relative to the frame $(x,y)$.  
         - Area formula $A = 0.5 | x_1(y_2-y_3) + \dots |$ works regardless of origin, provided consistent coordinate system (e.g., Euclidean plane).  
         - Here vertices are given as points with coordinates in code. So area is based on those points.  
         - Coordinates: $P_1(0,0)$, $P_2(2,3)$, $P_3(10,0)$.  
-            - Area of triangle = 1/2 * base * height.  
+          - Area of triangle = 1/2 * base * height.  
             - If we consider base as side on x-axis (length 10), then height is distance to line $x=0$? No, distance from $P_2(2,3)$ to $y=0$ is 3. Area = 15.  
         - Is there any reason to doubt this interpretation?  
-            - The code `draw((0,2.5)--(.5,2.5)--(.5,3));` is likely a distractor or part of the diagram drawing (maybe an inset).  
+          - The code `draw((0,2.5)--(.5,2.5)--(.5,3));` is likely a distractor or part of the diagram drawing (maybe an inset).  
             - The label `(5,3)` might correspond to $(2,3)$? If so, the x-coordinate 5 matches the y-coordinate 3 of a point $(x=?,y=3)$. If $x$ was 2. But the label is at `(5,3)`. Maybe it labels a different vertex not drawn? Or maybe `(0,0)` is labeled with `10 cm`? No, label `(5,0),S` says `(5,0)` and S (South).  
             - If `(5,0)` means $(x,y) = (5,0)$. The point is on x-axis.  
             - Label `(3 cm)` points to `(0,1.5)`.  
@@ -404,10 +404,10 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
 
     *   Let me check if there are multiple triangles to consider. The diagram might have a "shaded triangle" inside or related to another part of the drawing.  
         - `draw((0,2.5)--(.5,2.5)--(.5,3));` creates a polygon with vertices $(0,2.5), (.5,2.5), (.5,3)$.  
-            - Let's check if this is a triangle or rectangle? It connects $A$ to $B$. If origin is bottom left (0,0).  
+          - Let's check if this is a triangle or rectangle? It connects $A$ to $B$. If origin is bottom left (0,0).  
             - Vertices are at $(0,2.5)$ (top edge of box?), $(x=0.5, y=2.5)$, $(x=0.5, y=3)$.  
             - This forms a small triangle or quadrilateral?  
-                - $A=(0,2.5)$. $B=(.5, 2.5)$. $C=(.5,3)$.  
+              - $A=(0,2.5)$. $B=(.5, 2.5)$. $C=(.5,3)$.  
                 - Segment AC is horizontal? No. $A=(0,2.5)$, $C=(.5,3)$. $D=(.5,2.5)$ is midpoint? No.  
                 - This looks like a small triangle or part of the grid lines.  
             - But it's not `fill`. It's just drawn. So area is 0 (if filled with transparent) or area enclosed by boundary? The code says `draw` adds lines. If no fill, it's empty space unless the question implies "area bounded by drawn shape". But usually these questions refer to a specific region defined by the code.  
@@ -415,7 +415,7 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
 
     *   However, looking at the labels again:  
         - `label("10 cm",(5,3),N)` -> Points to vertex (5,3).  
-            - Maybe this point $(5,3)$ corresponds to a coordinate that defines something?  
+          - Maybe this point $(5,3)$ corresponds to a coordinate that defines something?  
             - If $y$ increases upwards. $y=3$.  
             - `label("10 cm",(5,0),S)` -> Point at $(5,0)$ is on x-axis (length 10).  
         - `label("3 cm",(0,1.5),W)` -> Point at $(0,1.5)$. This is likely vertex $(0,0)$? No, $y=1.5$ for vertex $(0,0)$ would be on axis. So it might label the x-axis length or some segment.  
@@ -451,13 +451,13 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
         - The polygon vertices are listed as `A(0,0), B(2,3), C(10,0)`.  
         - If I read it as an area problem, maybe the shape is a triangle $ABC$.  
         - Let's verify the legs lengths.  
-            - Side AB: $\sqrt{2^2 + 3^2} = \sqrt{13}$.  
+          - Side AB: $\sqrt{2^2 + 3^2} = \sqrt{13}$.  
             - Side BC: $\sqrt{(10-2)^2 + (0-3)^2} = \sqrt{8^2 + (-3)^2}$? No. $C=(10,0)$, $B=(2,3)$. Distance is $\sqrt{8^2+3^2}$?  
             - $(10-2)^2 = 64$. $(0-3)^2 = 9$. Sum = 73. Not a right triangle at C or A.  
         - Let's calculate Area using Heron's formula on vertices $A(0,0), B(2,3), C(10,0)$.  
-            - Side lengths:  
-                - $a$ (BC): $\sqrt{64+9} = \sqrt{73}$.  
-                - $b$ (AC): 10.  
+          - Side lengths:  
+            - $a$ (BC): $\sqrt{64+9} = \sqrt{73}$.  
+              - $b$ (AC): 10.  
                 - $c$ (AB): $\sqrt{2^2+3^2} = \sqrt{13}$.  
             - $s = (10 + \sqrt{73} + \sqrt{13})/2$.  
             - This seems too complex for the context of a simple problem. The code uses explicit vertices and `fill` commands which imply area is easily calculable or at least given.  
@@ -556,7 +556,7 @@ draw((10,2.5)--(9.5,2.5)--(9.5,3));
     *   The problem asks for the area of this shaded triangle.  
     *   Calculating the area of a triangle with vertices $A(0,0)$, $B(2,3)$, $C(10,0)$.  
         - Base can be treated as the segment from $(0,0)$ to $(10,0)$ (length 10). The third vertex is at height 3 from this base (since it lies on $y=3$ line or something?).  
-            - Height is distance from point $(2,3)$ to line containing $(0,0)-(10,0)$. That line is $y=0$. Distance is $|3-0| = 3$.  
+          - Height is distance from point $(2,3)$ to line containing $(0,0)-(10,0)$. That line is $y=0$. Distance is $|3-0| = 3$.  
         - Area = $1/2 \times \text{base} \times \text{height} = 1/2 \times 10 \times 3 = 15$.  
 
     *   Another potential check: Is the polygon vertices listed in a different order? `cycle` means close back to start. Vertices are ordered. The area is well-defined.  

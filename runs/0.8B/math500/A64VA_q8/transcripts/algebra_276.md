@@ -653,144 +653,144 @@ Wait. The term with $x$ is $Ax \cdot 0$? No, it is multiplied by coefficients of
 The term $x$ appears when multiplying terms like $Ax$ and constant in $Q$? No. $Q = Bx + 3$. So we have $B x$ and $3$.  
 So terms involving $x$ are:  
 1. From $Ax \cdot (Bx)$? No, this is $A(B)x^2$. This term comes from $(Ax)(Bx)$.  
-   This gives coefficient $AB x^2$.  
-   Is it possible I am thinking about coefficients in a wrong way?  
-   Yes. In polynomial multiplication $(A+B)(C+D)$:  
-   Terms are $A C$ (degree 2) + $A D$ (deg 1) + $B C$ (deg 1) + $B D$ (deg 0). No.  
-   $(Ax - 8) \cdot (Bx + 3)$:  
-   Linear term comes from:  
-   $Ax \cdot B$: Wait, $Ax$ is linear in x. $B$ is coeff of x?  
-   $Ax$ is linear term coefficient A. $Bx$ is linear term coefficient B? No.  
-   The factors are $A x$ and $3 x$. (No 0).  
-   So product is $(A)x \cdot (3) = 3 A x$? No, this assumes $B=1$?  
-   Let's write it clearly.  
-   Factor 1: $Ax - 8$. Coefficient of $x$ is $A$. Constant is $-8$.  
-   Factor 2: $Bx + 3$. Coefficient of $x$ is $B$. Constant is $3$.  
-   Term $x$ comes from pairing Coeff(x) in F1 and Const in F2, OR Coeff(-8) in F1 and Coeff(x) in F2.  
-   Let's trace carefully.  
-   $(Ax)(Bx) \to AB x^2$. (Wait, this gives coefficient $AB$ for $x^2$. But the expansion above had term $ABx^2$ from linear product?) No, $x^2$ is $x$ squared. $ABx^2$ is degree 2.  
-   Linear terms come from:  
-   Term 1 of F1: $(Ax) \cdot 3 = 3Ax$. (Coefficient $3A$).  
-   Term 2 of F1: $-8 \cdot Bx$? No.  
-   Let's list products:  
-   $F1(x) \cdot F1(0)$? No, it is product of polynomials.  
-   Term from $Ax$:  
+This gives coefficient $AB x^2$.  
+Is it possible I am thinking about coefficients in a wrong way?  
+Yes. In polynomial multiplication $(A+B)(C+D)$:  
+Terms are $A C$ (degree 2) + $A D$ (deg 1) + $B C$ (deg 1) + $B D$ (deg 0). No.  
+$(Ax - 8) \cdot (Bx + 3)$:  
+Linear term comes from:  
+$Ax \cdot B$: Wait, $Ax$ is linear in x. $B$ is coeff of x?  
+$Ax$ is linear term coefficient A. $Bx$ is linear term coefficient B? No.  
+The factors are $A x$ and $3 x$. (No 0).  
+So product is $(A)x \cdot (3) = 3 A x$? No, this assumes $B=1$?  
+Let's write it clearly.  
+Factor 1: $Ax - 8$. Coefficient of $x$ is $A$. Constant is $-8$.  
+Factor 2: $Bx + 3$. Coefficient of $x$ is $B$. Constant is $3$.  
+Term $x$ comes from pairing Coeff(x) in F1 and Const in F2, OR Coeff(-8) in F1 and Coeff(x) in F2.  
+Let's trace carefully.  
+$(Ax)(Bx) \to AB x^2$. (Wait, this gives coefficient $AB$ for $x^2$. But the expansion above had term $ABx^2$ from linear product?) No, $x^2$ is $x$ squared. $ABx^2$ is degree 2.  
+Linear terms come from:  
+Term 1 of F1: $(Ax) \cdot 3 = 3Ax$. (Coefficient $3A$).  
+Term 2 of F1: $-8 \cdot Bx$? No.  
+Let's list products:  
+$F1(x) \cdot F1(0)$? No, it is product of polynomials.  
+Term from $Ax$:  
    - Coeff of $x$ in $Ax$ is 1 (coefficient of x). Wait.  
-   Let's multiply $(Ax)(Bx+3)$:  
-   $A(Bx^2 + 3x) = AB x^2 + 3Ax$.  
-   So we have $AB x^2 + 3Ax$.  
-   Then add the term from F2: $-8(Bx+3)$?  
-   No, it is $(F1 \cdot F2)$.  
-   $F1 = Ax - 8$.  
-   $F2 = Bx + 3$.  
-   Expand:  
-   $AB x^2 + 3Ax$? No.  
-   $(Ax)(Bx) = AB x^2$. (From $A(Bx)$ term).  
-   $(Ax)(3) = 3Ax$. (Wait. Is this correct?)  
-   $F1$ is $Ax-8$. $F2$ is $Bx+3$.  
-   The product is $AB x^2 + (3A - 8B)x - 24$.  
-   Let's re-check the terms carefully.  
-   Term from $F1$: $(Ax)(3)$?  
-   No, the product of two polynomials.  
-   $x$ comes from $A \cdot Bx$?  
-   Let's expand:  
-   $(Ax)(Bx) = AB x^2$. (Degree 2).  
-   $(Ax)(3)$? This is $3 A x$. (Degree 1).  
-   $(-8)(Bx)$? This is $-8 B x$. (Degree 1).  
-   $(-8)(3)$? This is $-24$. (Degree 0).  
-   Summing them up: $AB x^2 + (3A - 8B)x - 24$.  
-   Yes. This seems consistent and correct.  
-   So the condition $3A - 8B = -1$ is robust.  
+Let's multiply $(Ax)(Bx+3)$:  
+$A(Bx^2 + 3x) = AB x^2 + 3Ax$.  
+So we have $AB x^2 + 3Ax$.  
+Then add the term from F2: $-8(Bx+3)$?  
+No, it is $(F1 \cdot F2)$.  
+$F1 = Ax - 8$.  
+$F2 = Bx + 3$.  
+Expand:  
+$AB x^2 + 3Ax$? No.  
+$(Ax)(Bx) = AB x^2$. (From $A(Bx)$ term).  
+$(Ax)(3) = 3Ax$. (Wait. Is this correct?)  
+$F1$ is $Ax-8$. $F2$ is $Bx+3$.  
+The product is $AB x^2 + (3A - 8B)x - 24$.  
+Let's re-check the terms carefully.  
+Term from $F1$: $(Ax)(3)$?  
+No, the product of two polynomials.  
+$x$ comes from $A \cdot Bx$?  
+Let's expand:  
+$(Ax)(Bx) = AB x^2$. (Degree 2).  
+$(Ax)(3)$? This is $3 A x$. (Degree 1).  
+$(-8)(Bx)$? This is $-8 B x$. (Degree 1).  
+$(-8)(3)$? This is $-24$. (Degree 0).  
+Summing them up: $AB x^2 + (3A - 8B)x - 24$.  
+Yes. This seems consistent and correct.  
+So the condition $3A - 8B = -1$ is robust.  
 
-   My confusion earlier came from thinking about the expansion of terms $Ax \cdot Bx$.  
-   $Ax$ is $A x$. $Bx$ is $B x$.  
-   Product $Ax \cdot Bx = AB x^2$. This is degree 2. Correct.  
-   $Ax \cdot (-8)$? No, that would be in the second factor.  
-   Let's write product: $(Ax - 8)(Bx + 3)$.  
-   $= (A x) \cdot B x + (A x) \cdot 3 + (-8) \cdot B x + (-8) \cdot 3$? No.  
-   Term in $F2$: $+3$. This means coefficient of $x^0$ is 3, coeff of $x$ is 0?  
-   So it is $A x (B x)$? No.  
-   Let's write $Ax - 8 = A(x) + (-8)$.  
-   Multiply by $Bx + 3$.  
-   Product is $(Ax)(Bx) + (Ax)(3) + (-8)(Bx) + (-8)(3)$.  
-   $(Ax)(Bx) \implies AB x^2$.  
-   $(Ax)(3) \implies 3A x$.  
-   $(-8)(Bx) \implies -8B x$.  
-   $(-8)(3) \implies -24$.  
-   The linear term coefficient is indeed $3A - 8B$.  
+My confusion earlier came from thinking about the expansion of terms $Ax \cdot Bx$.  
+$Ax$ is $A x$. $Bx$ is $B x$.  
+Product $Ax \cdot Bx = AB x^2$. This is degree 2. Correct.  
+$Ax \cdot (-8)$? No, that would be in the second factor.  
+Let's write product: $(Ax - 8)(Bx + 3)$.  
+$= (A x) \cdot B x + (A x) \cdot 3 + (-8) \cdot B x + (-8) \cdot 3$? No.  
+Term in $F2$: $+3$. This means coefficient of $x^0$ is 3, coeff of $x$ is 0?  
+So it is $A x (B x)$? No.  
+Let's write $Ax - 8 = A(x) + (-8)$.  
+Multiply by $Bx + 3$.  
+Product is $(Ax)(Bx) + (Ax)(3) + (-8)(Bx) + (-8)(3)$.  
+$(Ax)(Bx) \implies AB x^2$.  
+$(Ax)(3) \implies 3A x$.  
+$(-8)(Bx) \implies -8B x$.  
+$(-8)(3) \implies -24$.  
+The linear term coefficient is indeed $3A - 8B$.  
 
-   So the equation $AB=10$ and $3A-8B=-1$ is correct.  
-   And $(5,2)$ works.  
+So the equation $AB=10$ and $3A-8B=-1$ is correct.  
+And $(5,2)$ works.  
 
-   Let's check if there are any other solutions for integers?  
-   No, I've covered all pairs of factors of 10.  
-   The pair (5,2) works.  
+Let's check if there are any other solutions for integers?  
+No, I've covered all pairs of factors of 10.  
+The pair (5,2) works.  
 
-   So the answer $AB+B$ should be $10+2 = 12$.  
-   Or is it possible $B$ can be negative and satisfy condition?  
-   If $(A,B) = (-5,-2)$, $AB = 10$. $3(-5) - 8(-2) = 1 \neq -1$.  
-   So only positive pair of integers works? Or $(-5,2)$ would be $10x^2...$?  
-   Let's check $(A,B) = (2, -10)$? No product 10. $3(2) - 8(-10) = 84$. No.  
-   So $(A,B) = (5,2)$ is the unique solution for integers.  
+So the answer $AB+B$ should be $10+2 = 12$.  
+Or is it possible $B$ can be negative and satisfy condition?  
+If $(A,B) = (-5,-2)$, $AB = 10$. $3(-5) - 8(-2) = 1 \neq -1$.  
+So only positive pair of integers works? Or $(-5,2)$ would be $10x^2...$?  
+Let's check $(A,B) = (2, -10)$? No product 10. $3(2) - 8(-10) = 84$. No.  
+So $(A,B) = (5,2)$ is the unique solution for integers.  
 
-   What if the question implies $AB+B$?  
-   $AB=10$, $B=2$. $AB+B = 12$.  
-   Is there any ambiguity on which variable corresponds to which value?  
-   "where A and B are integers" -> we assign A=5, B=2.  
-   Then $AB + B = 10 + 2 = 12$.  
+What if the question implies $AB+B$?  
+$AB=10$, $B=2$. $AB+B = 12$.  
+Is there any ambiguity on which variable corresponds to which value?  
+"where A and B are integers" -> we assign A=5, B=2.  
+Then $AB + B = 10 + 2 = 12$.  
 
-   Let's check if I made a mistake in linear term expansion for factorization with non-standard form? No, the structure is clear.  
+Let's check if I made a mistake in linear term expansion for factorization with non-standard form? No, the structure is clear.  
 
-   Double check my calculation of $(Ax-8)(Bx+3)$ coefficients again.  
-   Maybe I swapped A and B?  
-   The problem statement: $10x^2 - x - 24$.  
-   If factorization is $(5x-8)(2x+3)$, then $A=5, B=2$.  
-   Product: $10x^2 + 15x - 16x - 24 = 10x^2 - x - 24$.  
-   It works.  
+Double check my calculation of $(Ax-8)(Bx+3)$ coefficients again.  
+Maybe I swapped A and B?  
+The problem statement: $10x^2 - x - 24$.  
+If factorization is $(5x-8)(2x+3)$, then $A=5, B=2$.  
+Product: $10x^2 + 15x - 16x - 24 = 10x^2 - x - 24$.  
+It works.  
 
-   What if the expression was $(Ax-8)(Bx+C)$?  
-   If it is not $Bx+3$, but just $Bx+C$ where C is part of expression? No, the prompt says $(Ax-8)(Bx+3)$.  
+What if the expression was $(Ax-8)(Bx+C)$?  
+If it is not $Bx+3$, but just $Bx+C$ where C is part of expression? No, the prompt says $(Ax-8)(Bx+3)$.  
 
-   So the solution seems consistent and robust.  
+So the solution seems consistent and robust.  
 
-   Let me quickly verify if there are any trick solutions like factorization into linear terms with different constants.  
-   What if the question was "written as $(2x-4)(5x+3)$"? That is $10x^2 + 6x - 24$? No.  
-   The prompt is specific.  
+Let me quickly verify if there are any trick solutions like factorization into linear terms with different constants.  
+What if the question was "written as $(2x-4)(5x+3)$"? That is $10x^2 + 6x - 24$? No.  
+The prompt is specific.  
 
-   Is it possible that I missed a factor pair with negative signs for A or B?  
-   We checked:  
-   $(A,B) = (5,2)$ works.  
-   $(A,B) = (-5,-2)$ fails $3(-5)-8(-2)=1$.  
-   $(A,B) = (-1,-10)$ fails $3(-1)+80=77$.  
-   So no other integer solutions exist.  
+Is it possible that I missed a factor pair with negative signs for A or B?  
+We checked:  
+$(A,B) = (5,2)$ works.  
+$(A,B) = (-5,-2)$ fails $3(-5)-8(-2)=1$.  
+$(A,B) = (-1,-10)$ fails $3(-1)+80=77$.  
+So no other integer solutions exist.  
 
-   Final check: Is "integers" including 0?  
-   If $A=0$, then $x^2$ term has to be satisfied by 0 and B=0? No, $AB$ term would be 0.  
-   If $A=0$, $(Ax-8)(Bx+3) = -8(Bx+3)$. Degree 1 polynomial or constant. But we have $10x^2$. So A,B cannot be zero if the expression is quadratic. Wait, if $AB \neq 0$ (which it can't be because $A,B$ must satisfy $AB=10$), then neither A nor B can be 0?  
-   If $B=0$, then $3A-8(0)=-1 \implies 3A = -1 \implies A = -1/3$. Not integer.  
-   So no integer solutions with one variable zero.  
-   Thus, both $A,B$ must be non-zero.  
+Final check: Is "integers" including 0?  
+If $A=0$, then $x^2$ term has to be satisfied by 0 and B=0? No, $AB$ term would be 0.  
+If $A=0$, $(Ax-8)(Bx+3) = -8(Bx+3)$. Degree 1 polynomial or constant. But we have $10x^2$. So A,B cannot be zero if the expression is quadratic. Wait, if $AB \neq 0$ (which it can't be because $A,B$ must satisfy $AB=10$), then neither A nor B can be 0?  
+If $B=0$, then $3A-8(0)=-1 \implies 3A = -1 \implies A = -1/3$. Not integer.  
+So no integer solutions with one variable zero.  
+Thus, both $A,B$ must be non-zero.  
 
-   I am fairly confident.  
-   Final Answer seems to be 12.  
-   However, just in case, could there be an interpretation where $AB+B$ is calculated differently? No.  
+I am fairly confident.  
+Final Answer seems to be 12.  
+However, just in case, could there be an interpretation where $AB+B$ is calculated differently? No.  
 
-   Is there any chance the question meant $(Ax^2-8x)(Bx+3)$? No, that would be different.  
+Is there any chance the question meant $(Ax^2-8x)(Bx+3)$? No, that would be different.  
 
-   Let's re-read "integers". Maybe I missed something like $A=-5, B=2$ failing the condition but somehow $10x^2-x-24$ doesn't factor into $(Ax-8)(Bx+3)$?  
-   If A and B are integers. We found one.  
+Let's re-read "integers". Maybe I missed something like $A=-5, B=2$ failing the condition but somehow $10x^2-x-24$ doesn't factor into $(Ax-8)(Bx+3)$?  
+If A and B are integers. We found one.  
 
-   Let me write down the steps clearly.  
-   1. Expand expression $P(x) = (Ax-8)(Bx+3)$.  
-      $P(x) = AB x^2 + 3Ax - 8Bx - 24$.  
-      $P(x) = AB x^2 + (3A - 8B)x - 24$.  
+Let me write down the steps clearly.  
+1. Expand expression $P(x) = (Ax-8)(Bx+3)$.  
+$P(x) = AB x^2 + 3Ax - 8Bx - 24$.  
+$P(x) = AB x^2 + (3A - 8B)x - 24$.  
    2. Match coefficients with given expression $10x^2 - 1x - 24$.  
    3. Equate coefficients:  
       - $AB = 10$.  
       - $3A - 8B = -1$.  
    4. Solve the system for integers A, B.  
-      Pairs $(A,B)$ such that $AB=10$ and $3A-8B=-1$:  
-      List all pairs of factor pairs of 10:  
+Pairs $(A,B)$ such that $AB=10$ and $3A-8B=-1$:  
+List all pairs of factor pairs of 10:  
       - $(1, 10): 3(1) - 80 = -77$. No.  
       - $(-1, -10): -3 + 80 = 77$. No.  
       - $(2, 5): 6 - 40 = -34$. No.  
@@ -799,80 +799,80 @@ So terms involving $x$ are:
    5. Identify the values: $A=5, B=2$.  
    6. Calculate target: $AB + B = 10 + 2 = 12$.  
 
-   Is it possible that order of A and B is swapped in my check?  
-   I checked pairs $\{(1,10), \dots\}$ which I found the pair with correct signs.  
-   If the solution was $(A,B) = (2,5)$, then $AB=10$, condition fails.  
-   So we are confident with result 12.  
+Is it possible that order of A and B is swapped in my check?  
+I checked pairs $\{(1,10), \dots\}$ which I found the pair with correct signs.  
+If the solution was $(A,B) = (2,5)$, then $AB=10$, condition fails.  
+So we are confident with result 12.  
 
-   Let me check if there is any subtle interpretation of "integers" that would allow other solutions? No.  
+Let me check if there is any subtle interpretation of "integers" that would allow other solutions? No.  
 
-   Just to be extremely paranoid, let me verify the linear term expansion formula.  
-   $P(x) = (Ax - 8)(Bx + 3)$  
-   $= A(B)x^2 + 3Ax - 8(Bx) - 24$  
-   $= AB x^2 + 3A x - 8B x - 24$  
-   Coefficient of $x$: $3A - 8B$.  
-   This seems absolutely correct.  
+Just to be extremely paranoid, let me verify the linear term expansion formula.  
+$P(x) = (Ax - 8)(Bx + 3)$  
+$= A(B)x^2 + 3Ax - 8(Bx) - 24$  
+$= AB x^2 + 3A x - 8B x - 24$  
+Coefficient of $x$: $3A - 8B$.  
+This seems absolutely correct.  
 
-   What about my manual verification of $(5x-8)(2x+3)$ yielding $10x^2 - x - 24$?  
-   $5x(2x) = 10x^2$. Correct.  
-   $5x(3) = 15x$. Correct.  
-   $-8(2x) = -16x$. Correct.  
-   $-8(3) = -24$. Correct.  
-   Sum of linear: $15x - 16x = -x$. Correct.  
+What about my manual verification of $(5x-8)(2x+3)$ yielding $10x^2 - x - 24$?  
+$5x(2x) = 10x^2$. Correct.  
+$5x(3) = 15x$. Correct.  
+$-8(2x) = -16x$. Correct.  
+$-8(3) = -24$. Correct.  
+Sum of linear: $15x - 16x = -x$. Correct.  
 
-   Is there any ambiguity about "can be written"? Usually implies uniqueness or existence. Existence is guaranteed by my finding.  
+Is there any ambiguity about "can be written"? Usually implies uniqueness or existence. Existence is guaranteed by my finding.  
 
-   So the answer should be 12.  
+So the answer should be 12.  
 
-   The final question asks for "AB + B".  
-   $A=5, B=2$.  
-   $AB = 10$.  
-   $B = 2$.  
-   Sum = 12.  
+The final question asks for "AB + B".  
+$A=5, B=2$.  
+$AB = 10$.  
+$B = 2$.  
+Sum = 12.  
 
-   Is there any chance I made a mistake in "integers"? Maybe $A$ and $B$ are real numbers? No, question says "integers".  
-   What if the question meant $10x^2+x-24$? Then linear term would be $3A - 8B = 1$.  
-   Pairs: $(5, 2)$ gives -1. If it was +x, no solution for integers?  
-   Wait, let me check if $3A-8B=1$ has integer solutions.  
-   $8B = 3A+1$.  
-   Modulo 3: $B \equiv A+1/3 \implies B \equiv 0$ or something?  
-   Let's look at mod 3 of $3A+1$: $1 \pmod 3$.  
-   If $A=1$, $4 \implies B=4/8=0.5$.  
-   If $A=2$, $7 \implies B=7/8$.  
-   If $A=4$, $13 \implies B=13/8$.  
-   If $A=-1$, $-2 \implies -2/8 = -1/4$.  
-   If $A=0$, $1/8$.  
-   It seems impossible to get integer solution for $AB$ coeff term $x$.  
-   So it's definitely not this case.  
+Is there any chance I made a mistake in "integers"? Maybe $A$ and $B$ are real numbers? No, question says "integers".  
+What if the question meant $10x^2+x-24$? Then linear term would be $3A - 8B = 1$.  
+Pairs: $(5, 2)$ gives -1. If it was +x, no solution for integers?  
+Wait, let me check if $3A-8B=1$ has integer solutions.  
+$8B = 3A+1$.  
+Modulo 3: $B \equiv A+1/3 \implies B \equiv 0$ or something?  
+Let's look at mod 3 of $3A+1$: $1 \pmod 3$.  
+If $A=1$, $4 \implies B=4/8=0.5$.  
+If $A=2$, $7 \implies B=7/8$.  
+If $A=4$, $13 \implies B=13/8$.  
+If $A=-1$, $-2 \implies -2/8 = -1/4$.  
+If $A=0$, $1/8$.  
+It seems impossible to get integer solution for $AB$ coeff term $x$.  
+So it's definitely not this case.  
 
-   Therefore, the factorization must be correct and result in $12$.  
+Therefore, the factorization must be correct and result in $12$.  
 
-   One last thought: Could there be a trick where $A$ is not 5?  
-   Maybe $(Ax-8)(Bx+3)$ isn't unique for integer factors? No, it's an expansion.  
-   Is there a factorization with non-integers? "integers".  
+One last thought: Could there be a trick where $A$ is not 5?  
+Maybe $(Ax-8)(Bx+3)$ isn't unique for integer factors? No, it's an expansion.  
+Is there a factorization with non-integers? "integers".  
 
-   The answer seems solid.  
+The answer seems solid.  
 
-   Let me check the arithmetic for "What is AB+B" again.  
-   If $A=5, B=2$. $AB+B = 10 + 2 = 12$.  
+Let me check the arithmetic for "What is AB+B" again.  
+If $A=5, B=2$. $AB+B = 10 + 2 = 12$.  
 
-   Just to cover bases, what if I factor $10x^2-x-24$ into $(Ax-8)(Bx+3)$ where $B$ is not the coefficient of $x$ in second term?  
-   No, standard notation means coefficient.  
-   What if it's $(Ax - 8)(Bx + 3)$ but with coefficients swapped for terms? No.  
+Just to cover bases, what if I factor $10x^2-x-24$ into $(Ax-8)(Bx+3)$ where $B$ is not the coefficient of $x$ in second term?  
+No, standard notation means coefficient.  
+What if it's $(Ax - 8)(Bx + 3)$ but with coefficients swapped for terms? No.  
 
-   The solution seems to be simply checking integer factors.  
-   If I had any doubt, maybe $10x^2-x-24$ has a root?  
-   $x = [1 \pm \sqrt{1 - 4(10)(-24)}]/20$.  
-   Discriminant $1 + 960 = 961 = 31^2$.  
-   Roots: $(1 \pm 31)/20$.  
-   $x_1 = 32/20 = 8/5 = 1.6$.  
-   $x_2 = -30/20 = -3/2 = -1.5$.  
-   Does it match factors $(Ax-8)$ and $(Bx+3)$?  
-   Let's check values at these roots.  
-   $(Ax-8)(Bx+3) = 0$.  
-   If $A=5, B=2$:  
-   Roots of $5x-8$ are $x=8/5$. Correct!  
-   If $B  
+The solution seems to be simply checking integer factors.  
+If I had any doubt, maybe $10x^2-x-24$ has a root?  
+$x = [1 \pm \sqrt{1 - 4(10)(-24)}]/20$.  
+Discriminant $1 + 960 = 961 = 31^2$.  
+Roots: $(1 \pm 31)/20$.  
+$x_1 = 32/20 = 8/5 = 1.6$.  
+$x_2 = -30/20 = -3/2 = -1.5$.  
+Does it match factors $(Ax-8)$ and $(Bx+3)$?  
+Let's check values at these roots.  
+$(Ax-8)(Bx+3) = 0$.  
+If $A=5, B=2$:  
+Roots of $5x-8$ are $x=8/5$. Correct!  
+If $B  
 
 ## Answer
 
