@@ -1,0 +1,24 @@
+{
+  "name": "base_32k_q8",
+  "gguf": "gguf/original-q8_0.gguf",
+  "preset": "qwen",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5
+  },
+  "n": 100,
+  "max_tokens": 32768,
+  "think": true,
+  "seed": 0,
+  "first": 0,
+  "backend_sampling": true,
+  "acc": 0.15,
+  "truncated": 0.88,
+  "acc_when_finished": 1.0,
+  "n_finished": 12,
+  "mean_tokens": 30971,
+  "mean_waits_per_kchar": 3.803
+}
