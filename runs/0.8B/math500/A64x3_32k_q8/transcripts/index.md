@@ -1,4 +1,4 @@
-# Run: A64x3_32k_q8
+# Run: 0.8B/math500/A64x3_32k_q8
 
 ```json
 {

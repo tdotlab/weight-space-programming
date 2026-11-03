@@ -1,4 +1,4 @@
-# Run: aborted_f16_base_qwen_16k
+# Run: 0.8B/math500/_aborted/f16_base_qwen_16k
 
 | problem | level | correct | finish | tokens | waits/kchar | gold | pred |
 |---|---|---|---|---|---|---|---|

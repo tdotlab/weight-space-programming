@@ -1,8 +1,10 @@
-# Run: base_q8
+# Run: 0.8B/math500/base_q8
 
 ```json
 {
   "name": "base_q8",
+  "model": "0.8B",
+  "task": "math500",
   "gguf": "gguf/original-q8_0.gguf",
   "preset": "qwen",
   "sampling": {
@@ -16,6 +18,7 @@
   "max_tokens": 16384,
   "think": true,
   "seed": 0,
+  "first": 0,
   "backend_sampling": true,
   "acc": 0.05,
   "truncated": 0.94,

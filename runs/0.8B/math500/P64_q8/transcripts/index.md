@@ -1,4 +1,4 @@
-# Run: P64_q8
+# Run: 0.8B/math500/P64_q8
 
 | problem | level | correct | finish | tokens | waits/kchar | gold | pred |
 |---|---|---|---|---|---|---|---|

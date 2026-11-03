@@ -1,4 +1,4 @@
-# Run: base_32k_q8
+# Run: 0.8B/math500/base_32k_q8
 
 ```json
 {
