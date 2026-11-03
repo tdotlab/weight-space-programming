@@ -319,3 +319,18 @@ Queue (`runs/_queue/2B_round1.sh`, log `2B_round1.log`): 2B `A64x3_8k_q8`, then 
    fall and the score rises. Either result is informative. A score well below 13 would mean the brake also cuts useful
    self-correction.
 5. `2B_A64x3N3` vs `2B_A64x3`: same as 4.
+
+## Results, 2B round 1
+
+### Baseline: 26/100 at 8k (runs/2B/math500/base_8k_q8)
+74 truncated at the 8k cap, every finished answer right. First 40 11/40, held-out 60 15/60. 'Wait' 1.55 per kchar,
+'No,' 1.43 (0.8B base: 3.09 and 2.14). Same loop as the 0.8B, less Wait-heavy.
+
+### 2B_A64x3: 26 -> 46 (runs/2B/math500/A64x3_8k_q8). Prediction 1 holds.
+The 0.8B recipe moved over blind: u from the 2B's own post-training delta, top 64 |u.W| columns of L22, u-component
+x3, no 2B eval used to choose anything. Gained 21, lost 1 (sign test p 1e-5). First 40 11 -> 19 (+9/-1), held-out
+60 15 -> 27 (+12/-0, p 5e-4). Truncated 74 -> 55. 'Wait' 1.55 -> 0.04 per kchar (about 40x; predicted >= 5x).
+'No,' unchanged (1.43 -> 1.41), as on the 0.8B, so the No-brake stack is aimed at the right leftover. Gains are
+spread over levels, weighted to the hard end (level 4: 5 -> 11, level 5: 2 -> 8). I expected a smaller gain than the
+0.8B's because there was less 'Wait' to remove; it was +20 points against the 0.8B's +25, so that hedge was mostly
+wrong. This run is cleaner evidence than the 0.8B win: the sign and dose were fixed before any 2B eval.
