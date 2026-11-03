@@ -4,3 +4,4 @@ edited/
 __pycache__/
 gguf/
 runs/server_*.log
+runs/queue.pid

@@ -1,6 +1,8 @@
 #!/bin/bash
 # Run evals one after another (single GPU). Usage: bash src/run_queue.sh NAME:GGUF:PRESET [...]
 cd "$(dirname "$0")/.."
+# Windows: killing the launching shell leaves this script alive. Stop with: taskkill //F //T //PID $(cat runs/queue.pid)
+echo $$ > runs/queue.pid
 for spec in "$@"; do
   IFS=: read name gguf preset <<< "$spec"
   echo "=== $(date '+%H:%M:%S') start $name"

@@ -39,10 +39,14 @@ def load_problems(n, seed):
     return random.Random(seed).sample(rows, n)
 
 
-def start_server(gguf, port, parallel, ctx_per_slot, name="server"):
+def start_server(gguf, port, parallel, ctx_per_slot, name="server", backend_sampling=True):
+    # CPU sampling is single-threaded over the 248k vocab: ~365 tok/s at 40 slots, GPU ~30% busy.
+    # GPU backend sampling (-bs): ~715 tok/s, and same-seed outputs are identical to CPU (logs/bench_sampling.jsonl).
     args = [SERVER, "-m", str(gguf), "--port", str(port), "-ngl", "99",
             "-np", str(parallel), "-c", str(parallel * ctx_per_slot),
             "--jinja", "--no-webui", "-fa", "on", "-ctk", "q8_0", "-ctv", "q8_0"]
+    if backend_sampling:
+        args.append("-bs")
     log = open(ROOT / "runs" / f"server_{name}.log", "w")
     p = subprocess.Popen(args, stdout=log, stderr=subprocess.STDOUT)
     for _ in range(240):
@@ -100,6 +104,7 @@ def main():
     ap.add_argument("--parallel", type=int, default=32)
     ap.add_argument("--no-think", action="store_true")
     ap.add_argument("--port", type=int, default=8091)
+    ap.add_argument("--cpu-sampling", action="store_true", help="sample on CPU instead of GPU (about 2x slower)")
     a = ap.parse_args()
 
     out = ROOT / "runs" / f"{a.name}.jsonl"
@@ -111,7 +116,8 @@ def main():
     print(f"{a.name}: {len(done)} cached, {len(probs)} to run", flush=True)
 
     sampling = PRESETS[a.preset]
-    srv = start_server(ROOT / a.gguf, a.port, a.parallel, a.max_tokens + 1024, a.name) if probs else None
+    srv = start_server(ROOT / a.gguf, a.port, a.parallel, a.max_tokens + 1024, a.name,
+                       backend_sampling=not a.cpu_sampling) if probs else None
     try:
         with open(out, "a", encoding="utf-8") as f, ThreadPoolExecutor(a.parallel) as ex:
             futs = {ex.submit(ask, a.port, r, sampling, a.max_tokens, not a.no_think, a.seed): r for r in probs}
@@ -134,6 +140,7 @@ def main():
     wpk = sum(r["waits_per_kchar"] for r in rs) / n
     meta = dict(name=a.name, gguf=a.gguf, preset=a.preset, sampling=sampling, n=n,
                 max_tokens=a.max_tokens, think=not a.no_think, seed=a.seed,
+                backend_sampling=not a.cpu_sampling,
                 acc=round(acc, 4), truncated=round(trunc, 4), acc_when_finished=round(acc_fin, 4),
                 n_finished=len(fin), mean_tokens=round(toks), mean_waits_per_kchar=round(wpk, 3))
     json.dump(meta, open(ROOT / "runs" / f"{a.name}.summary.json", "w"), indent=2)
