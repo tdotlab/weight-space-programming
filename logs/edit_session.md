@@ -152,3 +152,11 @@ A64 (the waiter kills the A64 rest run the moment it starts and runs A64x5 scree
 algebra/1265, counting_and_probability/803, prealgebra/1686; loses algebra/1339, algebra/2391, algebra/276. A 3-for-3 swap
 is the noise floor (R64 vs baseline showed sampling alone reshuffles text without moving the score). Projecting v_in out of
 L15/L19 does not reach the leftover 'No,' loop, and does not disturb A64's gain either.
+
+### A64VA screen (first 40): the other sign does nothing either
+11/40 correct, 29 truncated, 11/11 finished correct, 'Wait' 0.29, 'No,' 2.34. Against A64 gains algebra/1265, algebra/824,
+prealgebra/1686; loses algebra/276, algebra/907, geometry/347. Both signs of v_in at L15/L19 give A64's exact score with a
+3-for-3 swap. Conclusion: the L15/L19 v_in columns are inert for this loop once the L22 brake is amplified. The upstream
+handle a05 found was weak (logit lens 'equ'/'equivalence'), and the eval agrees.
+Queue swap at 01:47:22 went clean: the A64 rest run was killed 3 s after start, runs/A64_q8.jsonl still has its 40 rows,
+its overwritten console log was restored from git.
