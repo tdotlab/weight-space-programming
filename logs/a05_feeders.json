@@ -1,0 +1,218 @@
+{
+ "sv": [
+  0.008829754777252674,
+  0.007258214987814426,
+  0.006545237731188536,
+  0.005874828435480595,
+  0.005611541215330362,
+  0.005439602769911289,
+  0.005192567128688097,
+  0.005100572016090155
+ ],
+ "v_in_promotes": [
+  "equ",
+  " equ",
+  " Equ",
+  "Equ",
+  "-equ",
+  " eq",
+  "eq",
+  " équ",
+  " equivalence",
+  " EQU",
+  " equal",
+  "_equ"
+ ],
+ "v_in_suppresses": [
+  "세",
+  "impat",
+  "oje",
+  "Virgin",
+  "ARTA",
+  "TECTION",
+  "ervas",
+  "anoi",
+  "้าน",
+  "غه",
+  " organizado",
+  "dei"
+ ],
+ "layers": [
+  {
+   "layer": 0,
+   "full_attn": false,
+   "inst_top64": 1.464,
+   "delta_top64": 0.098,
+   "delta_signed_top64": 0.0013,
+   "delta_energy_share": 1.031
+  },
+  {
+   "layer": 1,
+   "full_attn": false,
+   "inst_top64": 1.513,
+   "delta_top64": 0.1114,
+   "delta_signed_top64": 0.0077,
+   "delta_energy_share": 0.991
+  },
+  {
+   "layer": 2,
+   "full_attn": false,
+   "inst_top64": 1.468,
+   "delta_top64": 0.105,
+   "delta_signed_top64": -0.0003,
+   "delta_energy_share": 0.98
+  },
+  {
+   "layer": 3,
+   "full_attn": true,
+   "inst_top64": 1.448,
+   "delta_top64": 0.1138,
+   "delta_signed_top64": 0.0013,
+   "delta_energy_share": 1.0
+  },
+  {
+   "layer": 4,
+   "full_attn": false,
+   "inst_top64": 1.419,
+   "delta_top64": 0.1145,
+   "delta_signed_top64": 0.0003,
+   "delta_energy_share": 0.973
+  },
+  {
+   "layer": 5,
+   "full_attn": false,
+   "inst_top64": 1.431,
+   "delta_top64": 0.1246,
+   "delta_signed_top64": 0.0001,
+   "delta_energy_share": 1.032
+  },
+  {
+   "layer": 6,
+   "full_attn": false,
+   "inst_top64": 1.538,
+   "delta_top64": 0.123,
+   "delta_signed_top64": -0.005,
+   "delta_energy_share": 1.023
+  },
+  {
+   "layer": 7,
+   "full_attn": true,
+   "inst_top64": 1.496,
+   "delta_top64": 0.1346,
+   "delta_signed_top64": 0.0035,
+   "delta_energy_share": 0.977
+  },
+  {
+   "layer": 8,
+   "full_attn": false,
+   "inst_top64": 1.495,
+   "delta_top64": 0.1455,
+   "delta_signed_top64": -0.0037,
+   "delta_energy_share": 1.024
+  },
+  {
+   "layer": 9,
+   "full_attn": false,
+   "inst_top64": 1.507,
+   "delta_top64": 0.1476,
+   "delta_signed_top64": 0.0087,
+   "delta_energy_share": 1.035
+  },
+  {
+   "layer": 10,
+   "full_attn": false,
+   "inst_top64": 1.458,
+   "delta_top64": 0.138,
+   "delta_signed_top64": 0.0028,
+   "delta_energy_share": 1.049
+  },
+  {
+   "layer": 11,
+   "full_attn": true,
+   "inst_top64": 1.632,
+   "delta_top64": 0.1539,
+   "delta_signed_top64": -0.006,
+   "delta_energy_share": 1.018
+  },
+  {
+   "layer": 12,
+   "full_attn": false,
+   "inst_top64": 1.456,
+   "delta_top64": 0.1564,
+   "delta_signed_top64": 0.009,
+   "delta_energy_share": 1.028
+  },
+  {
+   "layer": 13,
+   "full_attn": false,
+   "inst_top64": 1.545,
+   "delta_top64": 0.1564,
+   "delta_signed_top64": -0.0045,
+   "delta_energy_share": 1.024
+  },
+  {
+   "layer": 14,
+   "full_attn": false,
+   "inst_top64": 1.537,
+   "delta_top64": 0.1418,
+   "delta_signed_top64": 0.0011,
+   "delta_energy_share": 1.037
+  },
+  {
+   "layer": 15,
+   "full_attn": true,
+   "inst_top64": 1.622,
+   "delta_top64": 0.1499,
+   "delta_signed_top64": -0.0023,
+   "delta_energy_share": 1.127
+  },
+  {
+   "layer": 16,
+   "full_attn": false,
+   "inst_top64": 1.645,
+   "delta_top64": 0.1618,
+   "delta_signed_top64": 0.0051,
+   "delta_energy_share": 1.105
+  },
+  {
+   "layer": 17,
+   "full_attn": false,
+   "inst_top64": 1.805,
+   "delta_top64": 0.1581,
+   "delta_signed_top64": -0.0079,
+   "delta_energy_share": 1.083
+  },
+  {
+   "layer": 18,
+   "full_attn": false,
+   "inst_top64": 1.77,
+   "delta_top64": 0.1647,
+   "delta_signed_top64": 0.01,
+   "delta_energy_share": 1.143
+  },
+  {
+   "layer": 19,
+   "full_attn": true,
+   "inst_top64": 1.746,
+   "delta_top64": 0.173,
+   "delta_signed_top64": -0.0031,
+   "delta_energy_share": 1.253
+  },
+  {
+   "layer": 20,
+   "full_attn": false,
+   "inst_top64": 1.878,
+   "delta_top64": 0.1705,
+   "delta_signed_top64": -0.0081,
+   "delta_energy_share": 1.235
+  },
+  {
+   "layer": 21,
+   "full_attn": false,
+   "inst_top64": 1.596,
+   "delta_top64": 0.178,
+   "delta_signed_top64": -0.0042,
+   "delta_energy_share": 1.289
+  }
+ ]
+}

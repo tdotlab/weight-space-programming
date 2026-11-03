@@ -47,3 +47,14 @@ not how much. Writing along u is spread: top-64 columns hold 22.5%, top-1024 hol
 - P64: project u out of the 64 L22 columns with largest |u.W_j| (MIT-style budget). 64.6k weights, rel change 1.37%.
 - R64: control, same as P64 with random direction r (seed 0). 64.1k weights, rel change 1.18%.
 Original checksum verified unchanged after building all three.
+
+### Eval speed change
+F16 on the GTX 1070 (Pascal, crippled FP16) ran 7.8 tok/s/stream at long context. Q8_0 benchmarked 1.7x faster (723 vs 429 tok/s @ 32 streams, 2k ctx).
+Aborted the F16 baseline (kept as runs/aborted_f16_*), quantized original + 3 edits to Q8_0, all evals now Q8_0, 40 streams, 16k budget, Qwen thinking sampling.
+
+### a05: feeders of the L22 Wait writers (src/analysis/a05_feeders.py, logs/a05_feeders.json)
+Targets: 64 L22 neurons post-training pushed toward writing +u. v_in = top singular direction of their (norm-scaled, weighted) gate rows.
+Spectrum flat (0.009, 0.007, 0.007...): weak shared input. 81% of targets have positive drive along v_in.
+v_in logit lens: 'equ', 'equal', 'equivalence' (verification-flavored, weak). Post-training delta energy along v_in by layer:
+~1.0x random for L0-14, rising to 1.13 (L15), 1.1 (L16), 1.08 (L17), 1.14 (L18), 1.25 (L19), 1.24 (L20), 1.29 (L21).
+Consistent with MIT's L15/L19 being in the feeding region; does not single them out.
