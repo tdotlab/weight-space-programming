@@ -187,3 +187,7 @@ The waiter for the 32k reruns keyed on `grep -q "done A64_q8" runs/queue2.log`, 
 ## A64 on all 100: 5 -> 24
 
 A64 (u x2 in the 64 columns) on the full 100: 24/100, 75 truncated, 24 of 25 finished answers correct, 'Wait' 0.28 per kchar. Against the baseline: +21/-2 (sign test p 7e-5). On the held-out last 60: 13/60 vs 1/60, +13/-1 (p 0.002). A64x3 vs A64 on the same 100: +11/-5 (p 0.21; held-out +7/-3, p 0.34). So x3 over x2 is a consistent trend on both the screen and the full set, but 100 problems cannot separate them. Both edits clear the baseline by a wide margin on problems that played no part in choosing them.
+
+## A64x3 at a 32k token cap: 41/100
+
+Same edit, same 100 problems and sampling, max tokens 32768, 20 slots (the 8 GB card cannot hold 40 slots at 33k context). 41/100 correct, 53 truncated at 32k, 41 of 47 finished answers right. Against A64x3 at 16k: +13/-2 (p 0.007); held-out 21/60 vs 17/60 (+5/-1). Against the 16k baseline: +36/-0. 15 runs finished past 16k tokens, 10 of them right; the other gains are problems that finished under 16k this time but not in the 16k run, because same-seed outputs are not reproducible across slot counts (20 vs 40 changes the batch numerics). The first 6 wrong finished answers for this edit appeared (one is (-inf,2]U[3,inf) for an open-interval answer). 'No,' per kchar is unchanged (2.38). Reading: token budget explains part of the gap to MIT's 48.1%, and the rest is loops that run past 32k. MIT's token budget is not known here. The baseline at 32k (running) gives the budget effect without the edit.
