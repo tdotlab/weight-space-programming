@@ -39,11 +39,11 @@ def load_problems(n, seed):
     return random.Random(seed).sample(rows, n)
 
 
-def start_server(gguf, port, parallel, ctx_per_slot):
+def start_server(gguf, port, parallel, ctx_per_slot, name="server"):
     args = [SERVER, "-m", str(gguf), "--port", str(port), "-ngl", "99",
             "-np", str(parallel), "-c", str(parallel * ctx_per_slot),
             "--jinja", "--no-webui", "-fa", "on", "-ctk", "q8_0", "-ctv", "q8_0"]
-    log = open(ROOT / "runs" / f"server_{port}.log", "w")
+    log = open(ROOT / "runs" / f"server_{name}.log", "w")
     p = subprocess.Popen(args, stdout=log, stderr=subprocess.STDOUT)
     for _ in range(240):
         try:
@@ -52,7 +52,7 @@ def start_server(gguf, port, parallel, ctx_per_slot):
         except requests.RequestException:
             pass
         if p.poll() is not None:
-            sys.exit(f"server died, see runs/server_{port}.log")
+            sys.exit(f"server died, see runs/server_{name}.log")
         time.sleep(1)
     p.kill()
     sys.exit("server did not come up")
@@ -111,7 +111,7 @@ def main():
     print(f"{a.name}: {len(done)} cached, {len(probs)} to run", flush=True)
 
     sampling = PRESETS[a.preset]
-    srv = start_server(ROOT / a.gguf, a.port, a.parallel, a.max_tokens + 1024) if probs else None
+    srv = start_server(ROOT / a.gguf, a.port, a.parallel, a.max_tokens + 1024, a.name) if probs else None
     try:
         with open(out, "a", encoding="utf-8") as f, ThreadPoolExecutor(a.parallel) as ex:
             futs = {ex.submit(ask, a.port, r, sampling, a.max_tokens, not a.no_think, a.seed): r for r in probs}

@@ -3,3 +3,4 @@ edited/
 *.gguf
 __pycache__/
 gguf/
+runs/server_*.log
