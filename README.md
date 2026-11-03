@@ -8,6 +8,7 @@ Home replication attempt of MIT CSAIL's "Weight-Space Programming" (Nov 2, 2026)
   sha256 `04b1c301231dd422b8860db31311ab2721511346a32cb1e079c4c4e5f1fe4696`
 - Python env: `uv sync` (uv at `~\tools\uv\0.12.19\uv.exe`). Torch here is CPU-only and is used for weight math only.
 - Inference/eval: llama.cpp at `~\tools\llama.cpp\b11804` (GTX 1070), via GGUF conversions.
+- Paths: scripts find models, llama.cpp and its source under `~/tools`; set `WSP_TOOLS` to use another folder. `pyproject.toml` expects llama.cpp's `gguf-py` at `../../tools/source-code-of-open-source/llama.cpp-b11804/gguf-py` relative to the repo.
 
 ## Protocol
 
