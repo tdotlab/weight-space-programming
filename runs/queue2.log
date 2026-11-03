@@ -15,3 +15,5 @@
 === 01:47:19 start A64_q8
 === 01:47:22 stopped A64_q8 rest (superseded: full 100 goes to A64x3 first)
 === 01:47:38 start A64x5_q8
+=== 02:20:25 done A64x5_q8: "acc":0.325,"truncated":0.675,
+=== 02:20:25 start A64x3_q8

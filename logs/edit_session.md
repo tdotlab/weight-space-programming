@@ -160,3 +160,12 @@ prealgebra/1686; loses algebra/276, algebra/907, geometry/347. Both signs of v_i
 handle a05 found was weak (logit lens 'equ'/'equivalence'), and the eval agrees.
 Queue swap at 01:47:22 went clean: the A64 rest run was killed 3 s after start, runs/A64_q8.jsonl still has its 40 rows,
 its overwritten console log was restored from git.
+
+### A64x5 screen (first 40): the curve flattens
+13/40 correct, 27 truncated, 13/13 finished correct, 'Wait' 0.01, 'Actually' 0.01, 'No,' 2.09. Same score as A64x3;
+against it gains algebra/694, algebra/824, algebra/907, loses algebra/1339, geometry/347, geometry/967 (noise-level swap).
+Finished answers are no shorter (median 8.9k tokens vs 8.5k), and the truncated tails are ordinary doubt loops
+("Let's check if I made a calculation error", "If I pick (A,B) = (5,-2) for a different reason? No"), not degenerate strings.
+Dose curve on the first 40: x1 4, x1.5 9, x2 11, x3 13, x5 13. Reading: the u edit has done all it can once 'Wait' is gone.
+The 27 problems still at the cap loop through other phrasing, and amplifying the brake further neither helps nor hurts
+at 5.5% relative change to L22 down_proj. A64x3 stays the pick for the full 100 (smaller edit, same score).
