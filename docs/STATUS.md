@@ -1,10 +1,14 @@
 # Status
 
-Last updated 2026-11-02 20:45 EST.
+Last updated 2026-11-02 21:10 EST.
 
 ## Where it stands
 
-The weight analysis is done and three edits are built, but no edit has been evaluated yet. The eval queue (baseline plus three edits, 100 MATH-500 problems each) started at 20:43 with GPU sampling. The estimate is about 40 min per run, so about 2.7 h total, and progress is checked every 30 minutes. An earlier launch at 20:23 was stopped to switch to GPU sampling; its partial files are kept as `runs/aborted_*`.
+The weight analysis is done and three edits are built, but no edit has been evaluated yet. The eval queue (baseline plus three edits, 100 MATH-500 problems each) started at 20:43 with GPU sampling. Progress is checked every 30 minutes. An earlier launch at 20:23 was stopped to switch to GPU sampling; its partial files are kept as `runs/aborted_*`.
+
+Revised pace: almost every baseline answer runs to the 16k cap, and per-slot speed falls to about 11 t/s at long context. So problems finish in waves of 40 at about 24 min each, a run takes about 60 min, and the queue should end around 00:45.
+
+Baseline done (21:48): 5/100 correct, 94 truncated at the 16k cap, and 5 of the 6 that finished are correct. The truncated ones are "Wait... No..." self-checking spirals (median 3.4 waits/kchar vs 2.0 for finished ones), not verbatim repeats. That is in line with MIT's 7.9%. Accuracy here is almost entirely capped by looping, so an edit that only stops the spiral should show up directly in acc.
 
 ## Plan
 
@@ -21,7 +25,7 @@ The weight analysis is done and three edits are built, but no edit has been eval
 | run | acc | truncated | acc when finished | waits/kchar | notes |
 |---|---|---|---|---|---|
 | smoke (F16, 8 problems, 8k) | 1/8 | 7/8 | | 1.8 (finished) vs 1.8 to 5.4 (truncated) | loops are "Wait... No..." spirals, not verbatim repeats |
-| base_q8 | pending | | | | |
+| base_q8 | 5/100 | 94/100 | 5/6 | 3.41 (trunc 3.44, fin 2.02) | mean 15.9k tokens; right answers spread over levels 1-4 |
 | P64_q8 | pending | | | | |
 | R64_q8 | pending | | | | |
 | Dfull_q8 | pending | | | | |
