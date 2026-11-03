@@ -146,3 +146,9 @@ only act through whatever else the 64 columns carry.
 u-component x5 in the same 64 columns (scale -4.0): 65305 weights changed, rel change 5.5% of L22 down_proj,
 sha 1bb8b6b7... Original model re-hashed after the build: unchanged. Queue changed so the full 100 goes to A64x3 before
 A64 (the waiter kills the A64 rest run the moment it starts and runs A64x5 screen, A64x3 rest, A64 rest).
+
+### A64VP screen (first 40): MIT's layers add nothing on top of A64
+11/40 correct, 29 truncated, 11/11 finished correct, 'Wait' 0.28, 'No,' 2.44. Same score as A64. Against A64: gains
+algebra/1265, counting_and_probability/803, prealgebra/1686; loses algebra/1339, algebra/2391, algebra/276. A 3-for-3 swap
+is the noise floor (R64 vs baseline showed sampling alone reshuffles text without moving the score). Projecting v_in out of
+L15/L19 does not reach the leftover 'No,' loop, and does not disturb A64's gain either.

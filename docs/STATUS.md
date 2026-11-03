@@ -1,6 +1,6 @@
 # Status
 
-Last updated 2026-11-03 00:55 EST.
+Last updated 2026-11-03 01:20 EST.
 
 ## Where it stands
 
@@ -10,7 +10,7 @@ The MIT-shaped edit P64 backfired. On the first 40 problems it scored 0/40 with 
 
 The random-direction control R64 matches the baseline exactly (4/40, 36 truncated, Wait 3.16 vs 3.22), so P64's effect is specific to u.
 
-A64, the opposite of P64 (u-component in the same 64 L22 columns doubled), is the first edit that helps: 11/40 correct vs 4/40, every finished answer right, 8 problems gained and 1 lost against the baseline (sign test p about 0.04). 'Wait' fell 13x (3.22 to 0.25 per kchar). The half-strength version A64h lands in between (9/40, Wait 0.96, 5 gained and none lost), so the response is graded with dose. But 29/40 still hit the 16k cap: the spiral keeps going on 'No, ...', 'Is this the correct form?', 'Let's re-verify'. 'Wait' was one leg of the loop, not the loop. There is no post-training direction behind 'No,' to grab (a07: best of 160 candidates z 4.5, vs u's z 23 for 'Wait'), so the rest of the loop is not one surgical target. D_full, which reverts post-training's whole u-component in L22, does next to nothing (5/40, Wait 3.22 to 2.51), so the lever is those 64 columns specifically, not post-training's u-writing in general. A64x3 (u-component tripled) keeps the curve rising: 13/40, 9 gained and none lost, 'Wait' practically gone (0.04). Queue (`runs/queue2.log`): A64VP and A64VA (A64 plus the MIT-layer edit: v_in projected out of, or doubled in, the top-64 columns of L15 and L19), then A64x5 (u x5), then A64x3 on all 100, then A64's remaining 60. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
+A64, the opposite of P64 (u-component in the same 64 L22 columns doubled), is the first edit that helps: 11/40 correct vs 4/40, every finished answer right, 8 problems gained and 1 lost against the baseline (sign test p about 0.04). 'Wait' fell 13x (3.22 to 0.25 per kchar). The half-strength version A64h lands in between (9/40, Wait 0.96, 5 gained and none lost), so the response is graded with dose. But 29/40 still hit the 16k cap: the spiral keeps going on 'No, ...', 'Is this the correct form?', 'Let's re-verify'. 'Wait' was one leg of the loop, not the loop. There is no post-training direction behind 'No,' to grab (a07: best of 160 candidates z 4.5, vs u's z 23 for 'Wait'), so the rest of the loop is not one surgical target. D_full, which reverts post-training's whole u-component in L22, does next to nothing (5/40, Wait 3.22 to 2.51), so the lever is those 64 columns specifically, not post-training's u-writing in general. A64x3 (u-component tripled) keeps the curve rising: 13/40, 9 gained and none lost, 'Wait' practically gone (0.04). A64VP (A64 plus v_in projected out of the top-64 columns of MIT's layers 15 and 19) scores exactly A64's 11/40 with a 3-for-3 swap of problems: the MIT-layer edit adds nothing on top. Queue (`runs/queue2.log`): A64VA (the opposite sign at L15/L19), then A64x5 (u x5), then A64x3 on all 100, then A64's remaining 60. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
 
 ## Plan
 
@@ -35,8 +35,8 @@ First-40 numbers compare against the baseline's same 40 problems: 4/40 correct, 
 | Dfull_q8 | first 40 | 5/40 | 35/40 | 5/5 | 2.51 | post-training's u-component reverted across all of L22. +2/-1 vs baseline: noise. Loops unchanged |
 | A64x3_q8 | first 40 | 13/40 | 27/40 | 13/13 | 0.04 | u x3. +9/-0 vs baseline, +4/-2 vs A64. 'Wait' gone; truncated runs still spiral on 'No,' and re-reading the problem |
 | A64x5_q8 | first 40 | queued | | | | u x5: where does the dose curve top out? |
-| A64VP_q8 | first 40 | queued | | | | A64 + v_in projected out of top-64 cols at L15, L19 |
-| A64VA_q8 | first 40 | queued | | | | A64 + v_in doubled in those columns |
+| A64VP_q8 | first 40 | 11/40 | 29/40 | 11/11 | 0.28 | A64 + v_in projected out of top-64 cols at L15, L19. Same score as A64, +3/-3 swap: adds nothing |
+| A64VA_q8 | first 40 | running | | | | A64 + v_in doubled in those columns |
 
 Weight-analysis findings are in `logs/edit_session.md`. In short, post-training's top change to L22's MLP output is a direction u that writes "Wait" (z +23). The neurons feeding it get extra post-training change in L15 to L21, consistent with MIT's 15/19 without singling them out. Weight math alone cannot tell which L22 neurons push u up or down when they fire (gate and up rows are nearly orthogonal, a06), so P64's sign had to be learned from the eval.
 

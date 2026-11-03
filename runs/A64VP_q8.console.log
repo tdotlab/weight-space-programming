@@ -1,0 +1,31 @@
+A64VP_q8: 0 cached, 40 to run
+Timeout is disabled as parsing_timeout is None or <= 0, you must provide                         the logic for timeout interuption yourself to prevent code getting stuck.
+Timeout is disabled as timeout_seconds is None or <= 0, you must provide                         the logic for timeout interuption yourself to prevent code getting stuck.
+  10/40
+  20/40
+  30/40
+  40/40
+{
+  "name": "A64VP_q8",
+  "gguf": "gguf/A64VP-q8_0.gguf",
+  "preset": "qwen",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5
+  },
+  "n": 40,
+  "max_tokens": 16384,
+  "think": true,
+  "seed": 0,
+  "first": 40,
+  "backend_sampling": true,
+  "acc": 0.275,
+  "truncated": 0.725,
+  "acc_when_finished": 1.0,
+  "n_finished": 11,
+  "mean_tokens": 14538,
+  "mean_waits_per_kchar": 0.461
+}
