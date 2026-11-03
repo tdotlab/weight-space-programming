@@ -1,26 +1,24 @@
-"""Export runs/<name>.jsonl to readable Markdown: runs/<name>/index.md plus one file per problem.
+"""Export a run's results.jsonl to readable Markdown: <run>/transcripts/index.md plus one file per problem.
 
 Usage: uv run python src/export_transcripts.py            (all runs)
-       uv run python src/export_transcripts.py base_qwen  (one run)
+       uv run python src/export_transcripts.py A64x3_q8   (one run; bare name or path under runs/)
 """
 import json, re, sys
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-RUNS = ROOT / "runs"
+from runs import RUNS, all_runs, find
 
 
 def slug(uid):
     return re.sub(r"[^a-zA-Z0-9]+", "_", uid.replace("test/", "").replace(".json", ""))
 
 
-def export(name):
-    rows = [json.loads(l) for l in open(RUNS / f"{name}.jsonl", encoding="utf-8")]
+def export(rd):
+    rows = [json.loads(l) for l in open(rd / "results.jsonl", encoding="utf-8")]
     rows.sort(key=lambda r: r["id"])
-    out = RUNS / name
+    out = rd / "transcripts"
     out.mkdir(exist_ok=True)
-    summ = RUNS / f"{name}.summary.json"
-    lines = [f"# Run: {name}\n"]
+    summ = rd / "summary.json"
+    lines = [f"# Run: {rd.relative_to(RUNS).as_posix()}\n"]
     if summ.exists():
         lines.append("```json\n" + summ.read_text(encoding="utf-8") + "\n```\n")
     lines.append("| problem | level | correct | finish | tokens | waits/kchar | gold | pred |")
@@ -38,10 +36,9 @@ def export(name):
         ]
         (out / f"{s}.md").write_text("\n".join(body), encoding="utf-8")
     (out / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    print(f"exported {name}: {len(rows)} transcripts -> {out}")
+    print(f"exported {rd.relative_to(RUNS).as_posix()}: {len(rows)} transcripts")
 
 
 if __name__ == "__main__":
-    names = sys.argv[1:] or [p.stem for p in RUNS.glob("*.jsonl")]
-    for n in names:
-        export(n)
+    for rd in [find(n) for n in sys.argv[1:]] or all_runs():
+        export(rd)

@@ -9,6 +9,8 @@ from pathlib import Path
 import requests
 from math_verify import parse, verify
 
+from runs import model_size, run_dir
+
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS = Path(os.environ.get("WSP_TOOLS", Path.home() / "tools"))  # models, llama.cpp, sources
 SERVER = str(TOOLS / "llama.cpp" / "b11804" / "llama-server.exe")
@@ -40,7 +42,7 @@ def load_problems(n, seed):
     return random.Random(seed).sample(rows, n)
 
 
-def start_server(gguf, port, parallel, ctx_per_slot, name="server", backend_sampling=True):
+def start_server(gguf, port, parallel, ctx_per_slot, log_path, backend_sampling=True):
     # CPU sampling is single-threaded over the 248k vocab: ~365 tok/s at 40 slots, GPU ~30% busy.
     # GPU backend sampling (-bs): ~715 tok/s, and same-seed outputs are identical to CPU (logs/bench_sampling.jsonl).
     args = [SERVER, "-m", str(gguf), "--port", str(port), "-ngl", "99",
@@ -54,7 +56,7 @@ def start_server(gguf, port, parallel, ctx_per_slot, name="server", backend_samp
         sys.exit(f"port {port} is already serving; another eval is running")
     except requests.RequestException:
         pass
-    log = open(ROOT / "runs" / f"server_{name}.log", "w")
+    log = open(log_path, "w")
     p = subprocess.Popen(args, stdout=log, stderr=subprocess.STDOUT)
     for _ in range(240):
         try:
@@ -63,7 +65,7 @@ def start_server(gguf, port, parallel, ctx_per_slot, name="server", backend_samp
         except requests.RequestException:
             pass
         if p.poll() is not None:
-            sys.exit(f"server died, see runs/server_{name}.log")
+            sys.exit(f"server died, see {log_path}")
         time.sleep(1)
     p.kill()
     sys.exit("server did not come up")
@@ -115,7 +117,9 @@ def main():
     ap.add_argument("--first", type=int, default=0, help="only run the first K problems of the --n sample (screening)")
     a = ap.parse_args()
 
-    out = ROOT / "runs" / f"{a.name}.jsonl"
+    rd = run_dir(a.name)  # runs/<model>/math500/<name>/, model from $WSP_MODEL
+    rd.mkdir(parents=True, exist_ok=True)
+    out = rd / "results.jsonl"
     done = {}
     if out.exists():
         for l in open(out, encoding="utf-8"):
@@ -127,7 +131,7 @@ def main():
     print(f"{a.name}: {len(done)} cached, {len(probs)} to run", flush=True)
 
     sampling = PRESETS[a.preset]
-    srv = start_server(ROOT / a.gguf, a.port, a.parallel, a.max_tokens + 1024, a.name,
+    srv = start_server(ROOT / a.gguf, a.port, a.parallel, a.max_tokens + 1024, rd / "server.log",
                        backend_sampling=not a.cpu_sampling) if probs else None
     try:
         with open(out, "a", encoding="utf-8") as f, ThreadPoolExecutor(a.parallel) as ex:
@@ -149,12 +153,12 @@ def main():
     fin = [r for r in rs if r["finish"] != "length"]
     acc_fin = sum(r["correct"] for r in fin) / len(fin) if fin else 0.0
     wpk = sum(r["waits_per_kchar"] for r in rs) / n
-    meta = dict(name=a.name, gguf=a.gguf, preset=a.preset, sampling=sampling, n=n,
+    meta = dict(name=a.name, model=model_size(), task="math500", gguf=a.gguf, preset=a.preset, sampling=sampling, n=n,
                 max_tokens=a.max_tokens, think=not a.no_think, seed=a.seed, first=a.first,
                 backend_sampling=not a.cpu_sampling,
                 acc=round(acc, 4), truncated=round(trunc, 4), acc_when_finished=round(acc_fin, 4),
                 n_finished=len(fin), mean_tokens=round(toks), mean_waits_per_kchar=round(wpk, 3))
-    json.dump(meta, open(ROOT / "runs" / f"{a.name}.summary.json", "w"), indent=2)
+    json.dump(meta, open(rd / "summary.json", "w"), indent=2)
     print(json.dumps(meta, indent=2))
 
 

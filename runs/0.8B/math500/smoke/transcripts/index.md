@@ -1,4 +1,4 @@
-# Run: smoke
+# Run: 0.8B/math500/smoke
 
 ```json
 {

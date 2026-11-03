@@ -1,11 +1,14 @@
 """Compare eval runs on the problems they share (default: those in the first run listed after the reference).
 
 Usage: .venv/Scripts/python.exe src/compare_runs.py base_q8 P64_q8 R64_q8 [...]
+Names are bare run names or paths under runs/ (2B/math500/base_8k_q8) when a name exists for two models.
 Prints acc / truncated / finished and self-doubt marker rates per 1000 reasoning chars, all restricted to the
 problem ids every listed run has completed, so partial runs compare fairly.
 """
 import json, re, statistics as st, sys
 from pathlib import Path
+
+from runs import find
 
 ROOT = Path(__file__).resolve().parents[1]
 MARKERS = {
@@ -19,7 +22,10 @@ MARKERS = {
 
 
 def load(name):
-    p = ROOT / "runs" / f"{name}.jsonl"
+    try:
+        p = find(name) / "results.jsonl"
+    except SystemExit:  # not started yet
+        return {}
     return {d["id"]: d for d in map(json.loads, open(p, encoding="utf-8"))} if p.exists() else {}
 
 

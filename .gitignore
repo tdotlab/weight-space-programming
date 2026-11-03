@@ -3,5 +3,6 @@ edited/
 *.gguf
 __pycache__/
 gguf/
-runs/server_*.log
-runs/queue.pid
+runs/*/*/*/server.log
+runs/_bench/server_*.log
+runs/_queue/queue.pid

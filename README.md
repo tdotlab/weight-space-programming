@@ -18,6 +18,6 @@ Home replication attempt of MIT CSAIL's "Weight-Space Programming" (Nov 2, 2026)
 
 ## Layout
 
-`src/` scripts, `runs/` eval outputs (each run also exported as readable per-problem transcripts in `runs/<name>/`), `edited/` modified weight copies (gitignored), `logs/` edit-session log, `docs/` notes.
+`src/` scripts, `runs/` eval outputs, one folder per run at `runs/<model>/<task>/<run>/` (results.jsonl, summary.json with the exact settings, console.log, readable per-problem transcripts in `transcripts/`), with `runs/INDEX.md` as the table of every run, `edited/` modified weight copies (gitignored), `logs/` edit-session log, `docs/` notes.
 
 Current state, plan and results: [docs/STATUS.md](docs/STATUS.md).
