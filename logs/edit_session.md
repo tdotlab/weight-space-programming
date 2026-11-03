@@ -111,3 +111,9 @@ switches on the L22 neurons post-training taught to write 'Wait'). Top-64 column
 A64VP projects v_in out (scale 1), A64VA doubles it (scale -1). Rel change 1.25% (L15), 1.37% (L19) each.
 Weights cannot tell which sign damps the doubt state (a06), so both are screened. Verified the stacks carry A64's L22
 tensor bit-for-bit and change only L15/L19. Question they answer: does the MIT-layer edit add anything beyond A64?
+
+### A64h screen (first 40): dose response
+u-component x1.5 in the same 64 columns: 9/40 correct, 31 truncated, 9/9 finished answers correct, 'Wait' 0.96/kchar,
+'No,' 2.26. Against the baseline 5 gained, none lost. Against A64: 7 shared, A64h alone gets algebra/1265 (the one A64 lost)
+and geometry/967; A64 alone gets 4. Accuracy and 'Wait' both move monotonically with edit strength
+(base 4/40 at 3.22, A64h 9/40 at 0.96, A64 11/40 at 0.25), which a lucky draw would not produce.

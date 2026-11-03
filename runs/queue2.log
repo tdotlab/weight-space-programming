@@ -3,3 +3,5 @@
 === 22:42:56 start A64_q8
 === 23:12:30 done A64_q8: "acc":0.275,"truncated":0.725,
 === 23:12:30 start A64h_q8
+=== 23:43:49 done A64h_q8: "acc":0.225,"truncated":0.775,
+=== 23:43:49 start Dfull_q8
