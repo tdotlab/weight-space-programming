@@ -58,3 +58,26 @@ Spectrum flat (0.009, 0.007, 0.007...): weak shared input. 81% of targets have p
 v_in logit lens: 'equ', 'equal', 'equivalence' (verification-flavored, weak). Post-training delta energy along v_in by layer:
 ~1.0x random for L0-14, rising to 1.13 (L15), 1.1 (L16), 1.08 (L17), 1.14 (L18), 1.25 (L19), 1.24 (L20), 1.29 (L21).
 Consistent with MIT's L15/L19 being in the feeding region; does not single them out.
+
+## Results and iteration
+
+### P64 backfired (eval, first 40 problems = baseline's first wave)
+P64: 0/40 correct, 40/40 truncated. 'Wait' went from 3.2 to 107.8 per 1000 reasoning chars; 'No,' and 'Actually,' fell.
+Transcripts start normally, then collapse into "Wait, wait, wait. Wait, wait..." for thousands of tokens.
+So u is causal for 'Wait' (a 1.4% change to 64 columns moves it 33x), but those 64 columns were a net brake on it in
+reasoning contexts: removing their u-component released 'Wait'. Run stopped at 40/100 (runs/P64_q8.jsonl); the remaining
+60 would not change the verdict.
+
+### Deviation 4: iterating on eval feedback
+MIT's Astra edited blind. From here on, I use the observed effect of earlier edits to pick the next one. Later edits are
+therefore not blind one-shot edits, and any win among them carries a selection effect (judged on the same 40 problems).
+
+### a06: can weights alone tell promoters from brakes? (src/analysis/a06_signs.py, logs/a06_signs.json)
+Proxy: sign(cos(gate_j, up_j)) * u.W_down[:, j]. In L22, gate and up rows are nearly orthogonal (mean |cos| 0.106 overall,
+0.062 on P64's columns), so the proxy is noise. P64's columns split 29/35 on raw coefficient sign. Weight math cannot
+say which neurons fire with which sign; P64's eval says the 64 together were a net brake.
+
+### A64, A64h: amplify instead of remove
+Same 64 columns as P64, u-component doubled (A64, scale -1, rel change 1.37%) or increased 1.5x (A64h, scale -0.5,
+rel change 0.69%). Prediction if the response is roughly monotone: fewer 'Wait's than baseline. Risk: suppressing
+self-checking entirely could trade loops for confident wrong answers.

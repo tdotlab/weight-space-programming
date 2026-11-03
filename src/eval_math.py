@@ -105,6 +105,7 @@ def main():
     ap.add_argument("--no-think", action="store_true")
     ap.add_argument("--port", type=int, default=8091)
     ap.add_argument("--cpu-sampling", action="store_true", help="sample on CPU instead of GPU (about 2x slower)")
+    ap.add_argument("--first", type=int, default=0, help="only run the first K problems of the --n sample (screening)")
     a = ap.parse_args()
 
     out = ROOT / "runs" / f"{a.name}.jsonl"
@@ -112,7 +113,10 @@ def main():
     if out.exists():
         for l in open(out, encoding="utf-8"):
             d = json.loads(l); done[d["id"]] = d
-    probs = [r for r in load_problems(a.n, a.seed) if r["unique_id"] not in done]
+    pool = load_problems(a.n, a.seed)
+    if a.first:
+        pool = pool[:a.first]  # screen on the first K of the same sample (= the first wave of a full run)
+    probs = [r for r in pool if r["unique_id"] not in done]
     print(f"{a.name}: {len(done)} cached, {len(probs)} to run", flush=True)
 
     sampling = PRESETS[a.preset]
@@ -139,7 +143,7 @@ def main():
     acc_fin = sum(r["correct"] for r in fin) / len(fin) if fin else 0.0
     wpk = sum(r["waits_per_kchar"] for r in rs) / n
     meta = dict(name=a.name, gguf=a.gguf, preset=a.preset, sampling=sampling, n=n,
-                max_tokens=a.max_tokens, think=not a.no_think, seed=a.seed,
+                max_tokens=a.max_tokens, think=not a.no_think, seed=a.seed, first=a.first,
                 backend_sampling=not a.cpu_sampling,
                 acc=round(acc, 4), truncated=round(trunc, 4), acc_when_finished=round(acc_fin, 4),
                 n_finished=len(fin), mean_tokens=round(toks), mean_waits_per_kchar=round(wpk, 3))

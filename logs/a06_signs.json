@@ -1,0 +1,54 @@
+{
+ "note": "eff = sign(cos(gate_j, up_j)) * u.W_down[:, j]; positive = pushes toward Wait when firing",
+ "all_L22": {
+  "cos_gu_mean": -0.005,
+  "cos_gu_abs_mean": 0.106,
+  "frac_cos_gt_0p1": 0.18,
+  "frac_cos_lt_m0p1": 0.194,
+  "eff_sum": -0.5028
+ },
+ "P64": {
+  "set": "P64 columns (top |u.W|)",
+  "n": 64,
+  "coef_pos": 29,
+  "coef_neg": 35,
+  "cos_gu_mean": 0.002,
+  "cos_gu_abs_mean": 0.062,
+  "eff_pos": 32,
+  "eff_neg": 32,
+  "eff_sum": -0.1446,
+  "eff_abs_sum": 1.6502,
+  "coef_sum": -0.0778,
+  "post_training_coef_change_sum": 0.0006
+ },
+ "top64_promoters": {
+  "set": "top-64 by eff (Wait promoters)",
+  "n": 64,
+  "coef_pos": 33,
+  "coef_neg": 31,
+  "cos_gu_mean": -0.014,
+  "cos_gu_abs_mean": 0.078,
+  "eff_pos": 64,
+  "eff_neg": 0,
+  "eff_sum": 1.3491,
+  "eff_abs_sum": 1.3491,
+  "coef_sum": 0.0304,
+  "post_training_coef_change_sum": -0.0267
+ },
+ "top64_suppressors": {
+  "set": "top-64 by -eff (Wait suppressors)",
+  "n": 64,
+  "coef_pos": 31,
+  "coef_neg": 33,
+  "cos_gu_mean": 0.004,
+  "cos_gu_abs_mean": 0.069,
+  "eff_pos": 0,
+  "eff_neg": 64,
+  "eff_sum": -1.5017,
+  "eff_abs_sum": 1.5017,
+  "coef_sum": 0.0071,
+  "post_training_coef_change_sum": 0.0193
+ },
+ "P64_overlap_with_promoters": 32,
+ "P64_overlap_with_suppressors": 32
+}
