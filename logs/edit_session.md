@@ -183,3 +183,7 @@ Accuracy is now bounded by the 70 runs that never finish, not by wrong answers.
 ## 03:19 incident: 32k queue started early
 
 The waiter for the 32k reruns keyed on `grep -q "done A64_q8" runs/queue2.log`, which was already true from the 23:12 A64 screen, so A64x3_32k_q8 started at 03:19 while A64's remaining 60 were running. Its own llama-server was still loading (port 8091 already taken by A64's), and `start_server` accepted A64's server's health check as its own, so the client may have queued requests on A64's server. Stopped at 03:21 via queue.pid with 0 rows written; A64's run was untouched (server healthy, 40 slots busy, 49/100 rows). Its files are kept as `runs/aborted_*A64x3_32k_q8*`. Results cannot be contaminated: each jsonl row is the answer to that client's own request. Fixes: the waiter now matches `^=== HH:MM:SS done A64_q8:` and waits for a second such line; `eval_math.py` now refuses to start if the port already answers.
+
+## A64 on all 100: 5 -> 24
+
+A64 (u x2 in the 64 columns) on the full 100: 24/100, 75 truncated, 24 of 25 finished answers correct, 'Wait' 0.28 per kchar. Against the baseline: +21/-2 (sign test p 7e-5). On the held-out last 60: 13/60 vs 1/60, +13/-1 (p 0.002). A64x3 vs A64 on the same 100: +11/-5 (p 0.21; held-out +7/-3, p 0.34). So x3 over x2 is a consistent trend on both the screen and the full set, but 100 problems cannot separate them. Both edits clear the baseline by a wide margin on problems that played no part in choosing them.

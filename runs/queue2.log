@@ -21,3 +21,5 @@
 === 03:06:55 start A64_q8
 === 03:19:30 start A64x3_32k_q8
 === 03:21:23 stopped A64x3_32k_q8 (waiter fired early on the 23:12 'done A64_q8' line; 0 rows; files moved to aborted_*)
+=== 03:51:56 done A64_q8: "acc":0.24,"truncated":0.75,
+=== 03:52:21 start A64x3_32k_q8
