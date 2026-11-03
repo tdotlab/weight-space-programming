@@ -6,6 +6,7 @@ Edit kinds (all on layer L mlp.down_proj, residual-space unit direction d):
   revert   : for the k columns with largest |d . dW[:, j]| (dW = instruct - base), W[:, j] -= d (d . dW[:, j])
              k=all reverts post-training's component along d in the whole matrix (rank-1).
 Usage: uv run python src/make_edit.py --name D_full --kind revert --dir u --k all
+Stacking: --start A64 applies the edit on top of edited/A64/. --dirfile picks the direction file (default a04).
 """
 import argparse, hashlib, json, shutil, subprocess, sys, time
 from pathlib import Path
@@ -26,7 +27,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
     ap.add_argument("--kind", choices=["project", "revert"], required=True)
-    ap.add_argument("--dir", default="u", help="key in logs/a04_directions.pt (u or r)")
+    ap.add_argument("--dir", default="u", help="key in --dirfile (u or r in a04; v_in in a05)")
+    ap.add_argument("--dirfile", default="logs/a04_directions.pt", help="torch file holding the direction")
+    ap.add_argument("--start", default="", help="stack on an existing edit in edited/<start>/ instead of the original")
     ap.add_argument("--layers", default="22")
     ap.add_argument("--k", default="64")
     ap.add_argument("--scale", type=float, default=1.0, help="1.0 = full removal; >1 overshoots")
@@ -40,16 +43,18 @@ def main():
         if f.is_file() and f.name != FNAME and not f.name.startswith("."):
             shutil.copy2(f, out / f.name)
 
-    dirs = torch.load(ROOT / "logs" / "a04_directions.pt")
+    dirs = torch.load(ROOT / a.dirfile)
     d = dirs[a.dir].float()
     d = d / d.norm()
 
-    src = safe_open(str(ORIG / FNAME), "pt")
+    start = ROOT / "edited" / a.start if a.start else ORIG
+    src = safe_open(str(start / FNAME), "pt")
     tensors = {k: src.get_tensor(k) for k in src.keys()}
     meta = src.metadata()
     base = safe_open(str(BASE / FNAME), "pt") if a.kind == "revert" else None
 
-    record = dict(name=a.name, kind=a.kind, dir=a.dir, layers=a.layers, k=a.k, scale=a.scale,
+    record = dict(name=a.name, kind=a.kind, dir=a.dir, dirfile=a.dirfile, start=a.start or "original",
+                  layers=a.layers, k=a.k, scale=a.scale,
                   time=time.strftime("%Y-%m-%d %H:%M:%S"), per_layer=[])
     changed = 0
     for L in [int(x) for x in a.layers.split(",")]:

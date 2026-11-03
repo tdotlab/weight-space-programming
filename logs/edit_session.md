@@ -97,3 +97,17 @@ elements again."). Reading: 'Wait' is one entry point into the doubt loop. Remov
 gains span levels 1-5) but the loop itself runs on other connectives. Reasoning openers are unchanged (half start
 "Here's a thinking process..." in both), so no register switch.
 Next weight-space question: is there a direction behind 'No,' the way u is behind 'Wait' (a07)?
+
+### a07: is there a 'No,' direction? (src/analysis/a07_no_direction.py, logs/a07_no_direction.json)
+Scanned the top-16 left singular vectors of the post-training delta of down_proj in L14-L23 (160 directions) by logit-lens
+z for 'No'. Best: L22 sv15 z 4.5, L21 sv12 4.45, L23 sv12 4.3, each with under 0.5% of its layer's delta energy and mixed
+side effects. For comparison u writes 'Wait' at z 23 and holds the top singular slot. u itself is neutral on 'No' (z 1.0).
+Reading: post-training built a dedicated 'Wait' writer but not a 'No' writer. 'No,' is either a base-model habit or spread
+thin, so the part of the loop A64 left behind has no single weight-space handle at the output end.
+
+### A64VP, A64VA: the MIT-layer edit stacked on A64
+make_edit.py gained --dirfile and --start (stack on an existing edit). Direction v_in (a05: the input direction that
+switches on the L22 neurons post-training taught to write 'Wait'). Top-64 columns by |v_in . W_j| in L15 and L19 down_proj:
+A64VP projects v_in out (scale 1), A64VA doubles it (scale -1). Rel change 1.25% (L15), 1.37% (L19) each.
+Weights cannot tell which sign damps the doubt state (a06), so both are screened. Verified the stacks carry A64's L22
+tensor bit-for-bit and change only L15/L19. Question they answer: does the MIT-layer edit add anything beyond A64?
