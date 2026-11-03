@@ -53,6 +53,7 @@ Weight-analysis findings are in `logs/edit_session.md`. In short, post-training'
 ## Gotchas
 
 - Stopping the queue: `taskkill //F //T //PID $(cat runs/queue.pid)`. queue.pid holds the Windows PID (from `/proc/$$/winpid`); Git Bash's `$$` is not a Windows PID. Stopping the launching shell does not stop the queue.
+- Queue waiters that grep `runs/queue2.log` must match the exact `^=== HH:MM:SS done NAME:` line and count occurrences: a name screened earlier already has a done line (the 03:19 early start). `eval_math.py` now exits if its port is already serving.
 - `eval_math.py` resumes from `runs/<name>.jsonl`. Move a stale or aborted file aside before rerunning under different settings (prefix `aborted_`), and never delete runs.
 - math-verify needs `parsing_timeout=None` and `timeout_seconds=None` on Windows, and Python output needs `PYTHONIOENCODING=utf-8`.
 - Write scripts with a file editor, not bash heredocs, which mangle backslashes.
