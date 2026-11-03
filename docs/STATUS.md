@@ -51,6 +51,7 @@ Weight-analysis findings are in `logs/edit_session.md`. In short, post-training'
 - F16 is about 1.7x slower than Q8_0 on Pascal, so evals use Q8_0.
 - With CPU sampling, llama-server samples all slots on one CPU core, so throughput tops out near 365 tok/s at 40 slots with the GPU around 30% busy. More slots don't help.
 - GPU backend sampling (`-bs`, the default in `eval_math.py`) does 715 tok/s on the same test. Same-seed outputs are identical to CPU sampling, and presence_penalty is applied. See `src/bench_sampling.py` and `logs/bench_sampling.jsonl`.
+- Cheaper screens, checked against the existing runs (score = finished under the cap and correct): an 8k cap still ranks the edits right (base 2, A64 12, A64x3 15 of 100), while 2k-4k caps score everything near zero. 'Wait' in the first 6k chars of reasoning separates the edits in about a minute (12.8 base vs 0.27 A64x3) but says nothing about accuracy: 'No,' is unchanged there (5.4 vs 5.9).
 - At long context per-slot speed falls to about 11-12 t/s, so a wave of 40 that runs to the 16k cap takes about 24 min, and a full 100-problem run of a looping model takes about 60 min.
 
 ## Gotchas
