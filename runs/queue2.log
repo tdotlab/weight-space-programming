@@ -17,3 +17,5 @@
 === 01:47:38 start A64x5_q8
 === 02:20:25 done A64x5_q8: "acc":0.325,"truncated":0.675,
 === 02:20:25 start A64x3_q8
+=== 03:06:55 done A64x3_q8: "acc":0.3,"truncated":0.7,
+=== 03:06:55 start A64_q8

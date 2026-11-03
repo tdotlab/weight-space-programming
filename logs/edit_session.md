@@ -169,3 +169,13 @@ Finished answers are no shorter (median 8.9k tokens vs 8.5k), and the truncated 
 Dose curve on the first 40: x1 4, x1.5 9, x2 11, x3 13, x5 13. Reading: the u edit has done all it can once 'Wait' is gone.
 The 27 problems still at the cap loop through other phrasing, and amplifying the brake further neither helps nor hurts
 at 5.5% relative change to L22 down_proj. A64x3 stays the pick for the full 100 (smaller edit, same score).
+
+### A64x3 on all 100: 5 -> 30
+30/100 correct, 70 truncated, 30/30 finished correct, 'Wait' 0.03/kchar (base 3.09). Against the baseline 25 gained, none
+lost (two-sided sign test p about 6e-8). Split: the 40 screen problems 4 -> 13 (+9/-0), the 60 held-out problems 1 -> 17
+(+16/-0, p about 3e-5). The held-out split is the cleaner number since every edit choice after P64 was made on the first 40;
+it lands at 28%, close to the screen's 33%, so the selection effect is small. By level (A64x3 vs base): L1 3/5 vs 1,
+L2 11/18 vs 2, L3 9/21 vs 1, L4 4/29 vs 1, L5 3/27 vs 0. The edit unlocks easy and mid problems; hard ones still loop.
+Comparison with MIT (7.9 -> 48.1): same model, same kind of intervention (rank-1 weight edit, no gradients, no forward
+passes during the edit). We reach 30 with an edit at layer 22, not 15/19, and with the sign chosen from an eval (Deviation 4).
+Accuracy is now bounded by the 70 runs that never finish, not by wrong answers.

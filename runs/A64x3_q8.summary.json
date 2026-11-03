@@ -9,16 +9,16 @@
     "min_p": 0.0,
     "presence_penalty": 1.5
   },
-  "n": 40,
+  "n": 100,
   "max_tokens": 16384,
   "think": true,
   "seed": 0,
-  "first": 40,
+  "first": 0,
   "backend_sampling": true,
-  "acc": 0.325,
-  "truncated": 0.675,
+  "acc": 0.3,
+  "truncated": 0.7,
   "acc_when_finished": 1.0,
-  "n_finished": 13,
-  "mean_tokens": 13957,
-  "mean_waits_per_kchar": 0.109
+  "n_finished": 30,
+  "mean_tokens": 14019,
+  "mean_waits_per_kchar": 0.108
 }
