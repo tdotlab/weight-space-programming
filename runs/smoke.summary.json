@@ -1,0 +1,4 @@
+{
+  "name": "smoke",
+  "note": "8 problems, max_tokens 8192, qwen preset, 8 slots, regraded after grader fix"
+}

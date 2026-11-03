@@ -1,0 +1,5 @@
+.venv/
+edited/
+*.gguf
+__pycache__/
+gguf/

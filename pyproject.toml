@@ -1,0 +1,19 @@
+[project]
+name = "weightspaceprogramming"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "datasets>=5.1.0",
+    "gguf",
+    "math-verify>=0.9.0",
+    "numpy>=2.5.4",
+    "protobuf>=7.36.2",
+    "requests>=2.34.2",
+    "safetensors>=0.8.0",
+    "sentencepiece>=0.2.2",
+    "torch>=2.15.0",
+    "transformers>=5.22.1",
+]
+
+[tool.uv.sources]
+gguf = { path = "~/tools/source-code-of-open-source/llama.cpp-b11804/gguf-py" }
