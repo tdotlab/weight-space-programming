@@ -123,3 +123,11 @@ Same 64 L22 columns, u-component tripled (make_edit scale -2.0). 65079 weights c
 (A64 was about 1.4%). sha ca063c6a... Question: does the curve keep rising, flatten, or tip over into a new failure
 (the model never doubting, or a different degenerate string) the way P64 tipped into "Wait, wait"? If it keeps rising,
 the full 100 goes to A64x3 instead of A64. Original model file re-hashed after the build: unchanged (04b1c301...).
+
+### D_full screen (first 40): reverting post-training's u-component everywhere in L22
+5/40 correct, 35 truncated, 5/5 finished correct, 'Wait' 2.51/kchar (base 3.22), 'No,' 2.23. Against the baseline
+2 gained (counting_and_probability/190, /23957), 1 lost (counting_and_probability/389): noise. Truncated tails read like
+the baseline ("Wait! Let me check the denominators again"). Reading: post-training's u-writing summed over all 3584
+columns is roughly neutral; the whole-matrix revert takes out brake and promoter columns alike. A64's effect comes from
+amplifying the specific 64 columns with the largest u-loadings, not from post-training's u-component in general.
+(Interpretation, not separately tested.)
