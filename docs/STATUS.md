@@ -1,6 +1,6 @@
 # Status
 
-Last updated 2026-11-02 22:20 EST.
+Last updated 2026-11-02 22:45 EST.
 
 ## Where it stands
 
@@ -8,7 +8,7 @@ Baseline done: 5/100 correct, 94 truncated at the 16k cap in "Wait... No..." sel
 
 The MIT-shaped edit P64 backfired. On the first 40 problems it scored 0/40 with every answer truncated, and "Wait" rose from 3.2 to 108 per 1000 reasoning chars. Reasoning starts normally and collapses into "Wait, wait, wait..." strings. So the direction u does control "Wait", but the 64 columns it touched were a net brake on it. P64 was stopped at 40/100 since the rest could not change the verdict.
 
-Now screening on the first 40 problems (`FIRST=40`, the same problems as a full run's first wave, about 25 min each): R64 (random-direction control), then A64 and A64h (the opposite of P64: u-component in the same 64 columns doubled, or 1.5x), then D_full. Queue log: `runs/queue2.log`. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
+The random-direction control R64 matches the baseline exactly (4/40, 36 truncated, Wait 3.16 vs 3.22), so P64's effect is specific to u. Now screening on the first 40 problems (`FIRST=40`, the same problems as a full run's first wave, about 25 min each): A64 and A64h (the opposite of P64: u-component in the same 64 columns doubled, or 1.5x), then D_full. Queue log: `runs/queue2.log`. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
 
 ## Plan
 
@@ -26,7 +26,7 @@ First-40 numbers compare against the baseline's same 40 problems: 4/40 correct, 
 | smoke (F16, 8k) | 8 | 1/8 | 7/8 | | 1.8 (finished) vs 1.8 to 5.4 (truncated) | loops are "Wait... No..." spirals, not verbatim repeats |
 | base_q8 | 100 | 5/100 | 94/100 | 5/6 | 3.41 (trunc 3.44, fin 2.02) | mean 15.9k tokens; right answers spread over levels 1-4 |
 | P64_q8 | first 40 | 0/40 | 40/40 | | median 113 | degenerates into "Wait, wait, wait" strings; stopped at 40 |
-| R64_q8 | first 40 | running | | | | |
+| R64_q8 | first 40 | 4/40 | 36/40 | 4/4 | 3.16 (base 3.22) | random-direction control matches baseline: P64's effect is specific to u |
 | A64_q8 | first 40 | queued | | | | |
 | A64h_q8 | first 40 | queued | | | | |
 | Dfull_q8 | first 40 | queued | | | | |

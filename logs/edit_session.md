@@ -81,3 +81,7 @@ say which neurons fire with which sign; P64's eval says the 64 together were a n
 Same 64 columns as P64, u-component doubled (A64, scale -1, rel change 1.37%) or increased 1.5x (A64h, scale -0.5,
 rel change 0.69%). Prediction if the response is roughly monotone: fewer 'Wait's than baseline. Risk: suppressing
 self-checking entirely could trade loops for confident wrong answers.
+
+### R64 control (first 40)
+4/40 correct, 36 truncated, the same 4 problems finished as in the baseline; Wait 3.16/kchar (baseline 3.22), 'No,' 2.29 (2.25).
+A same-budget projection along a random direction changes nothing measurable, so P64's 33x 'Wait' blowup is specific to u.
