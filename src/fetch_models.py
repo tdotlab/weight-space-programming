@@ -24,7 +24,7 @@ def main():
     for name in sys.argv[1:]:
         repo = f"Qwen/{name}"
         dest = MODELS / name
-        print(f"== {repo} -> {dest}", flush=True)
+        print(f"== {repo} -> $WSP_TOOLS/models/{name}", flush=True)  # no absolute paths: logs are public
         snapshot_download(repo, local_dir=dest)
         info = api.model_info(repo, files_metadata=True)
         for s in info.siblings:

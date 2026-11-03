@@ -1,11 +1,27 @@
-== Qwen/Qwen3.5-2B -> C:\Users\ringd\tools\models\Qwen3.5-2B
-Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
-Fetching 13 files:   8%|▊         | 1/13 [00:00<00:02,  4.43it/s]Fetching 13 files:  31%|███       | 4/13 [00:00<00:00, 13.72it/s]Fetching 13 files:  62%|██████▏   | 8/13 [00:00<00:00, 21.46it/s]Fetching 13 files:  85%|████████▍ | 11/13 [00:00<00:00, 21.15it/s]Fetching 13 files:  92%|█████████▏| 12/13 [00:20<00:00, 21.15it/s]Fetching 13 files: 100%|██████████| 13/13 [01:56<00:00, 15.89s/it]Fetching 13 files: 100%|██████████| 13/13 [01:56<00:00,  8.99s/it]
+== Qwen/Qwen3.5-2B -> ~\tools\models\Qwen3.5-2B
+
+Fetching 13 files:   0%|          | 0/13 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 13 files:   8%|▊         | 1/13 [00:00<00:02,  4.43it/s]
+Fetching 13 files:  31%|███       | 4/13 [00:00<00:00, 13.72it/s]
+Fetching 13 files:  62%|██████▏   | 8/13 [00:00<00:00, 21.46it/s]
+Fetching 13 files:  85%|████████▍ | 11/13 [00:00<00:00, 21.15it/s]
+Fetching 13 files:  92%|█████████▏| 12/13 [00:20<00:00, 21.15it/s]
+Fetching 13 files: 100%|██████████| 13/13 [01:56<00:00, 15.89s/it]
+Fetching 13 files: 100%|██████████| 13/13 [01:56<00:00,  8.99s/it]
   model.safetensors-00001-of-00001.safetensors: OK aa33250c4fc64891ddfaba3a314fd9542ea371843c387178b425fbcc5ed680b1
   tokenizer.json: OK 5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42
   revision 15852e8c16360a2fea060d615a32b45270f8a8fc
-== Qwen/Qwen3.5-2B-Base -> C:\Users\ringd\tools\models\Qwen3.5-2B-Base
-Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]Fetching 12 files:   8%|▊         | 1/12 [00:00<00:01,  6.60it/s]Fetching 12 files:  33%|███▎      | 4/12 [00:00<00:00, 13.90it/s]Fetching 12 files:  67%|██████▋   | 8/12 [00:00<00:00, 22.57it/s]Fetching 12 files:  92%|█████████▏| 11/12 [00:01<00:00,  5.99it/s]Fetching 12 files:  92%|█████████▏| 11/12 [00:11<00:00,  5.99it/s]Fetching 12 files: 100%|██████████| 12/12 [01:08<00:00, 10.69s/it]Fetching 12 files: 100%|██████████| 12/12 [01:08<00:00,  5.69s/it]
+== Qwen/Qwen3.5-2B-Base -> ~\tools\models\Qwen3.5-2B-Base
+
+Fetching 12 files:   0%|          | 0/12 [00:00<?, ?it/s]
+Fetching 12 files:   8%|▊         | 1/12 [00:00<00:01,  6.60it/s]
+Fetching 12 files:  33%|███▎      | 4/12 [00:00<00:00, 13.90it/s]
+Fetching 12 files:  67%|██████▋   | 8/12 [00:00<00:00, 22.57it/s]
+Fetching 12 files:  92%|█████████▏| 11/12 [00:01<00:00,  5.99it/s]
+Fetching 12 files:  92%|█████████▏| 11/12 [00:11<00:00,  5.99it/s]
+Fetching 12 files: 100%|██████████| 12/12 [01:08<00:00, 10.69s/it]
+Fetching 12 files: 100%|██████████| 12/12 [01:08<00:00,  5.69s/it]
   model.safetensors-00001-of-00001.safetensors: OK 928acbf11878c32185bbd863514d191769285065ab9ea14fbfe431303f5fdf2d
   tokenizer.json: OK fe000e3ed39ed12b8d2481d527d44f93c65d37e87645d2dcc80d1bf9d50d2927
   revision b1485b2fa6dfa1287294f269f5fb618e03d52d7c

@@ -1,0 +1,16 @@
+{
+ "name": "2B_A64x3N3",
+ "model": "Qwen3.5-2B",
+ "kind": "project",
+ "dir": "brake_No",
+ "dirfile": "logs/2B/a10_directions.pt",
+ "start": "2B_A64x3",
+ "layers": "23",
+ "k": "1",
+ "scale": -2.0,
+ "time": "2026-11-03 17:33:16",
+ "weights_changed_total": 2048,
+ "sha256": "dc0cc8eb69f892240e9d1139606abca57a373b2c8b5d2d2e20d1e3b6cc4323b9"
+}
+  L23: 2048 weights changed, rel change 0.017035
+gguf: ~\CodexProjects\WeightSpaceProgramming\gguf\2B_A64x3N3-f16.gguf 3897388000

@@ -88,7 +88,7 @@ def main():
     gg = ROOT / "gguf" / f"{a.name}-f16.gguf"
     subprocess.run([sys.executable, CONVERT, str(out), "--outtype", "f16", "--outfile", str(gg)], check=True,
                    stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    print("gguf:", gg, gg.stat().st_size)
+    print("gguf:", gg.relative_to(ROOT).as_posix(), gg.stat().st_size)  # relative: logs are public
 
 
 if __name__ == "__main__":

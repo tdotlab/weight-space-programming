@@ -1,0 +1,34 @@
+Qwen3.5-0.8B: self-loop strength |cos(gate,d)|*|cos(up,d)| over 86016 neurons: median 0.0398, p99.9 0.4377
+top 20 (the concept is s*d; a brake writes against it, an amplifier with it):
+  L23 col   263  0.642 brake     cos g +0.82 up -0.78  top ['avn', 'கள', ' चाहिए', 'суль', '手が', 'handel']  |z|>=3: 
+  L18 col    53  0.612 brake     cos g -0.78 up -0.78  top ['的人来说', 'もありますが', '?”,', 'きましたが', "?',", 'ませんが']  |z|>=3: 
+  L18 col    71  0.612 brake     cos g +0.80 up -0.76  top ["':''", ')?$', '}`).', '\'>"', '">\'.', ')").']  |z|>=3: 
+  L20 col    59  0.605 brake     cos g +0.76 up -0.79  top ['乎', 'aming', ' ise', '=?",', ']bool', '了对']  |z|>=3: '\n\n' +3.0
+  L17 col    84  0.595 brake     cos g +0.76 up -0.78  top ['那样的', '从而影响', '从而导致', '在内的', '的了', '而无法']  |z|>=3: 
+  L 2 col    39  0.594 brake     cos g -0.79 up -0.75  top ['RAD', '感', 'reservation', '理', 'čer', 'ather']  |z|>=3: 
+  L23 col    87  0.589 brake     cos g +0.78 up -0.76  top [' Conheça', '<tool_response>', '<|object_ref_start|>', ' Confira', '꽤', ' Следу']  |z|>=3: 
+  L21 col   255  0.582 brake     cos g -0.78 up -0.74  top [' sake', '人来说', '到的', '而言', ' purposes', ' verantwortlich']  |z|>=3: 
+  L23 col  1853  0.579 brake     cos g -0.70 up -0.83  top ['的', 'ه', '의', 'ся', 'の', 'nya']  |z|>=3: 
+  L22 col   169  0.576 brake     cos g +0.76 up -0.76  top ['いう', '到', 'товая', '时', '处的', '话']  |z|>=3: 
+  L20 col   108  0.572 brake     cos g +0.74 up -0.77  top ['лизован', 'ologista', 'astique', 'alista', 'ковый', 'apeuta']  |z|>=3: 
+  L 4 col     7  0.570 brake     cos g -0.72 up -0.79  top ['atamente', '属性和', 'kaar', ')#', '感和', ' тю']  |z|>=3: 
+  L12 col    86  0.567 brake     cos g -0.75 up -0.76  top ['-solving', '-padding', '...",', '-being', '-$', '-box']  |z|>=3: 
+  L16 col    39  0.560 brake     cos g -0.74 up -0.76  top [' €.', '€.', '……。', '…。', ' **«', '!:']  |z|>=3: '\n\n' +3.2
+  L 6 col  1367  0.559 amplifier cos g +0.67 up +0.83  top ['对幼儿', ' Format', ' vorstellen', 'водит', 'ически', ' diar']  |z|>=3: 
+  L18 col   235  0.546 brake     cos g +0.68 up -0.80  top ['看到了', '抓住了', '学到了', ' öffnet', '引入了', '能为']  |z|>=3: 
+  L19 col   143  0.541 brake     cos g +0.71 up -0.76  top [' ويكون', 'くなります', ' }</', ' };', 'ается', "'];"]  |z|>=3: 
+  L21 col   106  0.540 brake     cos g +0.71 up -0.76  top ['alba', 'ourced', 'viron', 'renom', ' качестве', ' behalf']  |z|>=3: 
+  L 1 col     8  0.537 brake     cos g -0.66 up -0.81  top ['中行', 'DTD', '有四', 'itud', ' TD', ' regulator']  |z|>=3: 
+  L21 col   152  0.533 brake     cos g +0.69 up -0.78  top [' **「', ' dna', ' **‘', " **'", ' **«', 'idla']  |z|>=3: 
+
+best self-braking neuron per token (score = z * strength, brakes only, any layer):
+  'Wait'       L22 c573 z +14.9 s 0.20  L23 c477 z +4.9 s 0.39  L20 c315 z +4.7 s 0.40  L23 c346 z +6.9 s 0.22  L8 c551 z +3.0 s 0.49
+  ' Wait'      L22 c573 z +14.3 s 0.20  L23 c477 z +5.4 s 0.39  L8 c551 z +3.5 s 0.49  L20 c315 z +4.2 s 0.40  L23 c346 z +6.4 s 0.22
+  'No'         L23 c613 z +25.4 s 0.37  L22 c1777 z +22.0 s 0.10  L23 c2856 z +12.0 s 0.15  L21 c172 z +7.7 s 0.22  L22 c1502 z +10.4 s 0.14
+  ' No'        L23 c613 z +25.6 s 0.37  L22 c1777 z +22.2 s 0.10  L23 c2856 z +12.2 s 0.15  L21 c172 z +8.0 s 0.22  L22 c1502 z +11.3 s 0.14
+  'Hmm'        L23 c727 z +6.3 s 0.31  L19 c380 z +5.6 s 0.33  L23 c799 z +4.1 s 0.32  L23 c303 z +3.3 s 0.39  L23 c569 z +4.0 s 0.32
+  ' Actually'  L22 c787 z +16.1 s 0.31  L23 c477 z +4.5 s 0.39  L23 c211 z +8.7 s 0.18  L23 c2100 z +4.4 s 0.31  L23 c722 z +7.8 s 0.17
+  '</think>'   L23 c1116 z +7.7 s 0.39  L23 c854 z +3.9 s 0.44  L23 c2025 z +7.4 s 0.17  L1 c8 z +2.1 s 0.54  L16 c343 z +3.8 s 0.29
+  ' Therefore' L22 c311 z +13.3 s 0.29  L22 c2001 z +16.8 s 0.19  L23 c489 z +5.9 s 0.37  L23 c211 z +9.7 s 0.18  L23 c521 z +4.4 s 0.37
+  '\n\n'       L21 c371 z +32.7 s 0.49  L23 c985 z +37.1 s 0.30  L23 c1669 z +31.7 s 0.14  L23 c879 z +20.3 s 0.20  L22 c1877 z +22.8 s 0.17
+saved ~\CodexProjects\WeightSpaceProgramming\logs\a10_directions.pt {'brake_Wait_where': [22, 573], 'brake_No_where': [23, 613], 'brake_Actually_where': [22, 787], 'brake_Therefore_where': [22, 311], 'brake_think_where': [23, 1116]}

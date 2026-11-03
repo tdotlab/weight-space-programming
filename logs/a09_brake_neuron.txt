@@ -1,0 +1,6 @@
+Qwen3.5-0.8B L22 col 573
+  instruct cos(gate,u) +0.647  cos(up,u) -0.494  cos(down,u) +0.547  u-write +0.1432  self-gain -0.8882  |g| 0.528 |up| 0.301 |down| 0.262
+  base     cos(gate,u) +0.640  cos(up,u) -0.486  cos(down,u) +0.539  u-write +0.1436  self-gain -0.8801  |g| 0.530 |up| 0.305 |down| 0.267
+  layer self-gain along u: instruct -0.9456, base -0.9592
+  this column's share of sigma_0^2 (post-training delta along u): 0.0% (rank 2796); cos(delta column, u) -0.016
+  relative post-training change: gate 0.038  up 0.073  down 0.100 (median down column 0.085)

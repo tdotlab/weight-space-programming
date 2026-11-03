@@ -1,0 +1,34 @@
+{
+ "name": "2B_A64x3",
+ "model": "Qwen3.5-2B",
+ "kind": "project",
+ "dir": "u",
+ "dirfile": "logs/2B/a04_directions.pt",
+ "start": "original",
+ "layers": "22",
+ "k": "64",
+ "scale": -2.0,
+ "time": "2026-11-03 17:24:07",
+ "weights_changed_total": 129267,
+ "sha256": "82a19cabfb36d0e13bfe21fd778cdb2308614eef41edf36da2a2a889c9e42174"
+}
+  L22: 129267 weights changed, rel change 0.017003
+gguf: ~\CodexProjects\WeightSpaceProgramming\gguf\2B_A64x3-f16.gguf 3897388000
+quantized 2B_A64x3
+{
+ "name": "2B_A1x3",
+ "model": "Qwen3.5-2B",
+ "kind": "project",
+ "dir": "u",
+ "dirfile": "logs/2B/a04_directions.pt",
+ "start": "original",
+ "layers": "22",
+ "k": "1",
+ "scale": -2.0,
+ "time": "2026-11-03 17:27:26",
+ "weights_changed_total": 2045,
+ "sha256": "6979dee39d11eeffe3fcd0931a343d34be6206a8ba70059a30bdbb1fec6b9428"
+}
+  L22: 2045 weights changed, rel change 0.01096
+gguf: ~\CodexProjects\WeightSpaceProgramming\gguf\2B_A1x3-f16.gguf 3897388000
+quantized 2B_A1x3

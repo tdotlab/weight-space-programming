@@ -1,0 +1,15 @@
+alpha  0.1*sqrt(H): top64 -0.6780 = 97% of layer (neg 0.50, top5 carry 99%); random64 95% [-0.0019, +0.0004]  top110 -0.6814  post-training delta +0.0148  r-control -0.0011
+alpha 0.25*sqrt(H): top64 -4.5942 = 96% of layer (neg 0.50, top5 carry 99%); random64 95% [-0.0141, +0.0027]  top110 -4.6198  post-training delta +0.1058  r-control -0.0089
+alpha  0.5*sqrt(H): top64 -18.4324 = 96% of layer (neg 0.50, top5 carry 99%); random64 95% [-0.0633, +0.0141]  top110 -18.5559  post-training delta +0.4684  r-control -0.0469
+alpha  1.0*sqrt(H): top64 -73.8077 = 95% of layer (neg 0.50, top5 carry 99%); random64 95% [-0.2430, +0.0577]  top110 -74.3697  post-training delta +2.0327  r-control -0.2561
+
+carriers at alpha 0.25*sqrt(H) (layer sum -4.7729):
+  col  5041 (|u.W| rank   0)  c -4.5732 (96%)  cos(gate,u) +0.646  cos(up,u) -0.590  cos(down,u) +0.562
+  col  5693 (|u.W| rank  99)  c -0.0153 (0%)  cos(gate,u) +0.124  cos(up,u) +0.095  cos(down,u) -0.047
+  col  4137 (|u.W| rank   6)  c -0.0089 (0%)  cos(gate,u) +0.134  cos(up,u) +0.059  cos(down,u) -0.088
+  col  4485 (|u.W| rank 443)  c +0.0084 (-0%)  cos(gate,u) +0.107  cos(up,u) +0.083  cos(down,u) +0.033
+  col  1079 (|u.W| rank 503)  c -0.0082 (0%)  cos(gate,u) +0.085  cos(up,u) -0.082  cos(down,u) +0.042
+  col  5831 (|u.W| rank 127)  c -0.0070 (0%)  cos(gate,u) +0.073  cos(up,u) +0.095  cos(down,u) -0.054
+  col  3805 (|u.W| rank 629)  c -0.0059 (0%)  cos(gate,u) +0.085  cos(up,u) +0.080  cos(down,u) -0.042
+  col  2560 (|u.W| rank 422)  c -0.0056 (0%)  cos(gate,u) +0.098  cos(up,u) +0.087  cos(down,u) -0.048
+  typical |cos(gate,u)|: median 0.016, p99 0.064

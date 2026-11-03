@@ -1,0 +1,8 @@
+u z-scores: {'Wait': 31.65, ' Wait': 31.66, 'Hmm': 5.22, 'Actually': 8.14, '</think>': 1.97, '<|im_end|>': -0.68, 'Therefore': 0.12, ' So': -0.29, '\n\n': -1.88}
+share of L22 down_proj energy along u: 0.00042 (random expectation 0.00049)
+  top-16 columns hold 0.105 of the u-writing
+  top-64 columns hold 0.171 of the u-writing
+  top-256 columns hold 0.337 of the u-writing
+  top-2048 columns hold 0.858 of the u-writing
+base L22 energy along u: 0.00045
+random r z-scores: {'Wait': -1.61, ' Wait': -2.07, 'Hmm': -1.16, 'Actually': 0.25, '</think>': -0.74, '<|im_end|>': -2.33, 'Therefore': 0.01, ' So': -1.39, '\n\n': -2.7}

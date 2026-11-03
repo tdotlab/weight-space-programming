@@ -195,3 +195,127 @@ Same edit, same 100 problems and sampling, max tokens 32768, 20 slots (the 8 GB 
 ## Baseline at a 32k cap: 15/100
 
 The unedited model at max tokens 32768 (20 slots): 15/100, 88 truncated, all 12 finished answers right; 7 finished past 16k, all 7 right. Against the baseline at 16k: +11/-1 (p 0.006); held-out 8/60 vs 1/60. 'Wait' per kchar unchanged (3.35). Four-way summary on the same 100: baseline 5 (16k) / 15 (32k); A64x3 30 (16k) / 41 (32k). Doubling the budget adds about 10 to either model, and the edit adds about 25 at either budget: the two effects are close to additive. At equal budget A64x3 vs baseline is +25/-0 at 16k and +26/-0 at 32k (p 3e-8; held-out +13/-0). MIT's 7.9% baseline sits between our 16k and 32k baselines, so their budget is probably in that range, and our matched-budget edited score (30 to 41) is below their 48.1%.
+
+# Qwen3.5-2B (from 2026-11-03)
+
+Same protocol, `WSP_MODEL=Qwen3.5-2B`, logs in `logs/2B/`, runs in `runs/2B/`. The 2B shares the 0.8B's tokenizer (every
+id in `common.TOK` decodes identically), layer count (24), layer types (full attention at 3, 7, 11, 15, 19, 23) and tensor
+names; hidden 2048, MLP 6144, tied embeddings.
+
+### a03 on 2B: the same direction in the same slot (logs/2B/a03_base_diff.txt)
+
+L22 sv0 is again the post-training delta's strongest 'Wait' writer, and stronger than on the 0.8B: doubt +12.11
+(zR +14.08, zEnd +1.97; 0.8B +9.22). Its singular energy share is 0.0032, against about 0.0022 elsewhere. L23 again has a
+promoter/suppressor pair: sv3 writes 'Wait' (+8.69) and sv2 un-writes it (-7.82, + side code/LaTeX openers). The weaker
+writers are L21 sv7 (+5.77), L19 sv6 (+4.94) and L15 sv0 (+4.21). Nothing about the 2B called for looking anywhere else.
+
+### a04 on 2B: u (logs/2B/a04_candidate.txt, a04_directions.pt)
+
+u = L22 sv0. Unembedding z-scores: 'Wait' +31.65 (0.8B +23.3), 'Actually' +8.14, 'Hmm' +5.22, '</think>' +1.97,
+'Therefore' +0.12. Random control r: every |z| < 2.7. u's writing is more spread over columns than on the 0.8B: the
+top-64 columns hold 17.1% of it (0.8B 22.5%), and the top 2048 hold 85.8%. 64 columns are 1.04% of 6144. The same
+fraction as 64 of the 0.8B's 3584 would be 110.
+
+### a08: a weight-only sign proxy that works (src/analysis/a08_self_gain.py; logs/a08_self_gain.txt, logs/2B/)
+
+a06's gate/up cosine proxy was noise on the 0.8B, so the edit sign there came from an eval (Deviation 4). a08 asks a
+narrower question that the weights can answer. Put the input to L22's MLP along +u (x = alpha * u through the RMSNorm
+gain) and read each neuron's write back along u: c_j = silu(alpha g_j.u~) (alpha up_j.u~) (u.W_down[:, j]). This is a
+bilinear readout at a chosen input, not a forward pass. A set of columns with sum c < 0 brakes 'Wait' once it is coming.
+Scaling those columns' u-component by (1 + s) changes the brake by s times.
+
+On the 0.8B, two bits are known from evals. The top-64 columns were a strong brake (P64 removed it, 'Wait' x33; A64
+doubled it, 'Wait' /13). Post-training's u-delta was a weak promoter (D_full reverted it, 'Wait' 3.22 -> 2.51). a08 gets
+both: top-64 sum -0.89 (alpha = 0.25 sqrt(H)), random 64-column sets 95% in [-0.006, +0.002], and post-training's delta
++0.015. A coin gets both 25% of the time, so this is weak calibration, but the 2B reads the same way at every alpha
+tried (0.1 to 1.0 sqrt(H)): top-64 -4.59, random [-0.014, +0.003], post-training delta +0.106, r control ~0.
+Prediction from weights alone: on the 2B, amplifying (A64) cuts 'Wait' and removing (P64) feeds it, as on the 0.8B.
+
+The top-64 sum is 94-97% of the whole layer's self-gain on both models. Almost all of it is one neuron:
+
+| | column | rank by abs(u.W) | share of layer self-gain | cos(gate, u) | cos(up, u) | cos(down, u) |
+|---|---|---|---|---|---|---|
+| 0.8B | 573 | 0 | 94% | +0.647 | -0.494 | +0.547 |
+| 2B | 5041 | 0 | 96% | +0.646 | -0.590 | +0.562 |
+
+The typical |cos(gate, u)| is 0.02 (p99 0.09 on the 0.8B, 0.06 on the 2B). The next-largest carrier holds under 1%.
+The two models carry the same neuron at the same geometry: the gate fires on +u, up is negative on +u, so the activation
+is negative and the down column (+u) writes -u. It is a one-sided negative-feedback loop on 'Wait'.
+
+### a09: the brake is a pretraining feature (src/analysis/a09_brake_neuron.py)
+
+The same column in the base model has the same geometry (0.8B base cosines +0.640 / -0.486 / +0.539; 2B +0.638 / -0.579
+/ +0.562), the same u-write (0.8B 0.1436 base vs 0.1432 instruct; 2B 0.1903 vs 0.1883) and the same self-gain within 1%.
+Post-training changed it no more than a typical column (down 0.100 vs median 0.085 on the 0.8B; 0.099 vs 0.080 on
+the 2B). It also holds about none of post-training's u-delta: 0.0% of sigma_0^2, rank 2796 of 3584 on the 0.8B and
+1707 of 6144 on the 2B. So u was not built from this neuron. Post-training wrote its 'Wait' direction across many
+columns, and that direction lines up (cos 0.55) with a brake the base model already had. The whole-layer brake got
+slightly weaker in post-training (0.8B -0.959 -> -0.946, 2B -4.81 -> -4.77), too little to be the story by itself.
+
+Rereading the 0.8B results in this light: A64 doubled a pretraining brake on the post-training 'Wait' direction, and P64
+removed its u-write, which is why P64 ran away ('Wait' x33). This is a hypothesis about what the edit does. The test is an
+edit that touches only that column.
+
+### Edits built for the 2B round (logs/build_A1x3.log, logs/2B/build_edits.log)
+
+- `2B_A64x3`: L22, top-64 columns by |u.W|, u-component x3 (scale -2). This is the 0.8B winner moved over blind, with the
+  same k and scale. The 2B gets no proportional-k tweak and no sign check by eval first.
+- `2B_A1x3`: L22, the top-1 column (5041, the brake), u-component x3. Relative change to L22 down_proj is tiny.
+- `A1x3` (0.8B): column 573 only, x3. It calibrates the single-neuron claim on the model where A64x3 is known.
+
+### Predictions, written before any 2B edit was evaluated
+
+Eval plan: the 2B edits run all 100 at 8k with the same sampling, slots and seed as `runs/2B/math500/base_8k_q8`.
+`A1x3` (0.8B) runs the first 40 at 16k like every 0.8B screen. On the 2B no edit choice used an eval, so all 100
+problems count as held-out.
+
+1. `2B_A64x3` vs 2B baseline: 'Wait' per kchar falls at least 5x, truncations fall, and more problems are gained than
+   lost, with sign-test p < 0.05.
+2. If the brake neuron carries the effect, `A1x3` on the 0.8B gets 'Wait' per kchar under 1.0 (base 3.47 on these 40,
+   A64x3 0.11) and at least 8/40 correct (base 4, A64x3 13). If it stays near base ('Wait' above 2.5, 6/40 or fewer),
+   the one-neuron story is wrong and A64 works through the other 63 columns' direct writes, which the weights can't sign.
+3. `2B_A1x3` lands between the 2B baseline and `2B_A64x3` on both 'Wait' and accuracy, and closer to `2B_A64x3`.
+
+### a10: a bank of token brakes in L22-L23 (src/analysis/a10_self_loops.py; logs/a10_self_loops.txt, logs/2B/)
+
+The brake is one of a class. A SwiGLU neuron with down column d forms a self-loop when its gate and up rows (times the
+RMSNorm gain) line up with d. Fed from the side that opens its gate, it writes against its input iff up.d < 0 (a brake)
+and with it iff up.d > 0 (an amplifier), whatever the gate's sign. Strength = |cos(gate, d)| |cos(up, d)|. Over all
+86k neurons of the 0.8B the median strength is 0.040 and the 99.9th percentile is 0.44. Among the 20 strongest, 19 are
+brakes; they sit mostly at column indices under 300 and read as multilingual junk through the unembedding.
+
+Searching by token instead (score = z of the token for the neuron's concept times its strength, brakes only, all
+layers) needs no u. For 'Wait' it returns L22 col 573 first on the 0.8B and L22 col 5041 first on the 2B. Those are the
+neurons a08 found through u, so the search checks out. Both models carry one brake per discourse token, in the same
+layers:
+
+| token | 0.8B brake (z, strength) | 2B brake (z, strength) |
+|---|---|---|
+| Wait | L22 c573 (+14.9, 0.20) | L22 c5041 (+19.3, 0.20) |
+| No | L23 c613 (+25.4, 0.37); L22 c1777 (+22.0, 0.10) | L23 c2014 (+35.4, 0.39); L22 c4317 (+27.5, 0.12) |
+| Actually | L22 c787 (+16.1, 0.31) | L22 c4604 (+22.8, 0.31) |
+| Therefore | L22 c311 (+13.3, 0.29) | L22 c3552 (+19.2, 0.29) |
+| </think> | L23 c1116 (+7.7, 0.39) | L23 c2464 (+14.1, 0.39) |
+| \n\n | L21 c371 / L23 c985 | L23 c3548 / L21 c3523 |
+
+The 'No' brake is the lead for what A64x3 leaves behind. a07 found no post-training direction behind 'No,', but a
+pretraining brake on it exists, and it is stronger than the Wait brake in both z and strength. Its column is the top
+|d.W| column at L23 on both models, so a k=1 project edit along its own column with scale -2 triples exactly that
+column. Brake directions are saved in `a10_directions.pt` (keys `brake_Wait`, `brake_No`, `brake_Actually`,
+`brake_Therefore`, `brake_think`, each with a `_where` = (layer, col)). Note the opposite lever too: weakening the
+`</think>` or 'Therefore' brakes should make committing easier. It is untested.
+
+### No-brake stacks (logs/build_A64x3N3.log, logs/2B/build_A64x3N3.log)
+
+- `A64x3N3` (0.8B): A64x3 plus L23 col 613 tripled.
+- `2B_A64x3N3`: 2B_A64x3 plus L23 col 2014 tripled.
+
+Queue (`runs/_queue/2B_round1.sh`, log `2B_round1.log`): 2B `A64x3_8k_q8`, then 0.8B `A1x3_q8` and `A64x3N3_q8` (first 40,
+16k), then 2B `A1x3_8k_q8` and `A64x3N3_8k_q8`.
+
+4. `A64x3N3` vs `A64x3` on the 0.8B's first 40 (A64x3: 13/40, 27 truncated, 'No,' 2.40 per kchar): 'No,' per kchar
+   falls at least 2x. Accuracy is the open question. If the loop is a state that speaks through whatever word is free,
+   it moves to other phrasing and the score stays near 13. If 'No,' is a load-bearing leg as 'Wait' was, truncations
+   fall and the score rises. Either result is informative. A score well below 13 would mean the brake also cuts useful
+   self-correction.
+5. `2B_A64x3N3` vs `2B_A64x3`: same as 4.

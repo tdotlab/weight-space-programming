@@ -1,0 +1,42 @@
+{'layer': 0, 'full_attn': False, 'down_proj_rel': 0.07852, 'gate_proj_rel': 0.06855, 'up_proj_rel': 0.07789, 'top1_energy': 0.0027, 'top4_energy': 0.0093, 'sv_doubt_scores': [0.43, -2.86, 1.97, 1.87, 0.9, -0.39, 0.45, -0.67]}
+{'layer': 1, 'full_attn': False, 'down_proj_rel': 0.08542, 'gate_proj_rel': 0.07133, 'up_proj_rel': 0.08398, 'top1_energy': 0.0028, 'top4_energy': 0.0103, 'sv_doubt_scores': [0.75, 0.83, 0.52, 0.74, -0.44, -0.19, 2.06, -1.12]}
+{'layer': 2, 'full_attn': False, 'down_proj_rel': 0.08313, 'gate_proj_rel': 0.06229, 'up_proj_rel': 0.08202, 'top1_energy': 0.0021, 'top4_energy': 0.0081, 'sv_doubt_scores': [1.42, 0.56, 0.31, 1.79, -0.32, -2.55, 0.63, -0.08]}
+{'layer': 3, 'full_attn': True, 'down_proj_rel': 0.08816, 'gate_proj_rel': 0.06959, 'up_proj_rel': 0.08546, 'top1_energy': 0.0025, 'top4_energy': 0.0086, 'sv_doubt_scores': [-0.91, 1.1, 3.33, 0.33, 1.44, -0.09, -1.62, -2.9]}
+{'layer': 4, 'full_attn': False, 'down_proj_rel': 0.08721, 'gate_proj_rel': 0.07347, 'up_proj_rel': 0.08449, 'top1_energy': 0.0022, 'top4_energy': 0.0079, 'sv_doubt_scores': [-2.31, 1.19, -0.49, 1.27, 0.02, -1.79, 1.96, -1.98]}
+{'layer': 5, 'full_attn': False, 'down_proj_rel': 0.08766, 'gate_proj_rel': 0.07661, 'up_proj_rel': 0.08422, 'top1_energy': 0.0022, 'top4_energy': 0.0081, 'sv_doubt_scores': [-3.38, 0.65, 1.29, -2.33, 0.84, -0.38, 1.14, -1.57]}
+{'layer': 6, 'full_attn': False, 'down_proj_rel': 0.08781, 'gate_proj_rel': 0.08076, 'up_proj_rel': 0.08517, 'top1_energy': 0.0022, 'top4_energy': 0.008, 'sv_doubt_scores': [-0.78, 1.48, -0.5, 0.78, 3.05, -2.1, 0.97, -0.79]}
+{'layer': 7, 'full_attn': True, 'down_proj_rel': 0.09156, 'gate_proj_rel': 0.09254, 'up_proj_rel': 0.08835, 'top1_energy': 0.002, 'top4_energy': 0.0074, 'sv_doubt_scores': [0.88, -2.51, 0.68, -2.32, -1.35, -2.21, -2.27, -0.09]}
+{'layer': 8, 'full_attn': False, 'down_proj_rel': 0.09506, 'gate_proj_rel': 0.10003, 'up_proj_rel': 0.09261, 'top1_energy': 0.0021, 'top4_energy': 0.0077, 'sv_doubt_scores': [2.96, 0.91, 1.44, -2.36, 1.64, 0.61, -0.03, -0.09]}
+{'layer': 9, 'full_attn': False, 'down_proj_rel': 0.09856, 'gate_proj_rel': 0.10701, 'up_proj_rel': 0.09673, 'top1_energy': 0.0023, 'top4_energy': 0.0083, 'sv_doubt_scores': [-3.03, 0.39, 3.21, 2.48, -2.74, 3.41, -0.74, 0.1]}
+{'layer': 10, 'full_attn': False, 'down_proj_rel': 0.09357, 'gate_proj_rel': 0.10779, 'up_proj_rel': 0.09528, 'top1_energy': 0.0024, 'top4_energy': 0.009, 'sv_doubt_scores': [2.04, -2.1, -1.12, -0.26, 1.55, -0.7, -3.02, -2.47]}
+{'layer': 11, 'full_attn': True, 'down_proj_rel': 0.10188, 'gate_proj_rel': 0.11101, 'up_proj_rel': 0.10133, 'top1_energy': 0.0022, 'top4_energy': 0.0084, 'sv_doubt_scores': [-3.12, -0.95, -0.4, -0.59, 2.97, 3.05, 0.36, -1.06]}
+{'layer': 12, 'full_attn': False, 'down_proj_rel': 0.1044, 'gate_proj_rel': 0.11022, 'up_proj_rel': 0.10565, 'top1_energy': 0.0025, 'top4_energy': 0.009, 'sv_doubt_scores': [5.06, 2.22, -0.81, 1.63, 0.37, -2.17, 0.46, 0.76]}
+{'layer': 13, 'full_attn': False, 'down_proj_rel': 0.10392, 'gate_proj_rel': 0.10942, 'up_proj_rel': 0.10608, 'top1_energy': 0.0024, 'top4_energy': 0.0089, 'sv_doubt_scores': [3.87, 5.49, -0.96, 1.44, -1.15, 0.18, -0.17, 1.75]}
+{'layer': 14, 'full_attn': False, 'down_proj_rel': 0.09724, 'gate_proj_rel': 0.10138, 'up_proj_rel': 0.10411, 'top1_energy': 0.0022, 'top4_energy': 0.0083, 'sv_doubt_scores': [4.76, 0.87, 0.65, -2.1, 0.24, 0.66, 1.22, 0.78]}
+{'layer': 15, 'full_attn': True, 'down_proj_rel': 0.09464, 'gate_proj_rel': 0.10044, 'up_proj_rel': 0.09755, 'top1_energy': 0.0022, 'top4_energy': 0.0085, 'sv_doubt_scores': [4.21, -0.87, -3.54, 0.73, 0.65, -0.91, -3.67, -0.73]}
+{'layer': 16, 'full_attn': False, 'down_proj_rel': 0.09427, 'gate_proj_rel': 0.0914, 'up_proj_rel': 0.09705, 'top1_energy': 0.0022, 'top4_energy': 0.0083, 'sv_doubt_scores': [0.94, -1.22, 3.08, -1.26, 0.4, 0.99, 0.46, 3.13]}
+{'layer': 17, 'full_attn': False, 'down_proj_rel': 0.09487, 'gate_proj_rel': 0.08407, 'up_proj_rel': 0.09617, 'top1_energy': 0.0022, 'top4_energy': 0.0083, 'sv_doubt_scores': [-2.4, -0.12, 0.43, -2.8, 0.45, -0.31, 0.63, 2.09]}
+{'layer': 18, 'full_attn': False, 'down_proj_rel': 0.09249, 'gate_proj_rel': 0.07921, 'up_proj_rel': 0.09345, 'top1_energy': 0.0022, 'top4_energy': 0.0082, 'sv_doubt_scores': [1.18, -1.19, 2.37, -2.77, 2.9, -0.08, -1.99, -5.68]}
+{'layer': 19, 'full_attn': True, 'down_proj_rel': 0.09177, 'gate_proj_rel': 0.07981, 'up_proj_rel': 0.0921, 'top1_energy': 0.0023, 'top4_energy': 0.0085, 'sv_doubt_scores': [0.58, 1.06, 2.45, -0.76, 3.64, -0.59, 4.94, -0.07]}
+{'layer': 20, 'full_attn': False, 'down_proj_rel': 0.09173, 'gate_proj_rel': 0.08172, 'up_proj_rel': 0.09155, 'top1_energy': 0.0024, 'top4_energy': 0.0087, 'sv_doubt_scores': [1.21, 4.46, -0.67, -3.09, 1.04, -2.09, 2.22, -4.36]}
+{'layer': 21, 'full_attn': False, 'down_proj_rel': 0.08959, 'gate_proj_rel': 0.08149, 'up_proj_rel': 0.08955, 'top1_energy': 0.0024, 'top4_energy': 0.0088, 'sv_doubt_scores': [-0.09, -3.21, -1.61, -1.77, 0.61, -2.95, 4.15, 5.77]}
+{'layer': 22, 'full_attn': False, 'down_proj_rel': 0.08246, 'gate_proj_rel': 0.07825, 'up_proj_rel': 0.08358, 'top1_energy': 0.0032, 'top4_energy': 0.0113, 'sv_doubt_scores': [12.11, 3.24, -1.31, -1.45, 0.06, 0.2, 1.33, -0.57]}
+{'layer': 23, 'full_attn': True, 'down_proj_rel': 0.06502, 'gate_proj_rel': 0.0619, 'up_proj_rel': 0.06335, 'top1_energy': 0.0046, 'top4_energy': 0.016, 'sv_doubt_scores': [0.66, -1.31, -7.82, 8.69, 3.93, 1.69, 0.8, 2.16]}
+
+Top singular directions of post-training delta by |restart - </think>| z:
+L22 sv0 energy 0.003 doubt +12.11 zR +14.08 zEnd +1.97 | + [' wait', ' Wait', 'Wait', 'wait', '等待', ' waits', ' waiting'] | - ['БОУ', '�', 'ie', ' ', '.shortcuts', 'ets', ' perv']
+L23 sv3 energy 0.003 doubt  +8.69 zR +9.99 zEnd +1.30 | + [' Wait', ' wait', 'Wait', 'wait', '等待', ' WAIT', ' waiting'] | - ['\n', '\n\n', '\n \n', ' \n', '\r\n', '\n\n\n', '\n   \n']
+L23 sv2 energy 0.004 doubt  -7.82 zR -9.81 zEnd -1.99 | + [' $\\', ' `', ' `\\', ' `(', ' `[', ' (`', ' `$'] | - [' wait', 'Wait', ' Wait', 'wait', ' WAIT', ' waits', '等待']
+L21 sv7 energy 0.002 doubt  +5.77 zR +6.55 zEnd +0.79 | + [' wait', ' Wait', ' let', 'Wait', 'wait', ' Let', ' WAIT'] | - ['.', ' is', ',', ';', ' at', '.`', ':']
+L18 sv7 energy 0.002 doubt  -5.68 zR -6.08 zEnd -0.40 | + ['大约有', '小结', '有几', '—a', ' suerte', ' thereby', '没有了'] | - [' wait', ' Wait', 'Wait', 'wait', '等待', 'WAIT', ' waits']
+L13 sv1 energy 0.002 doubt  +5.49 zR +2.08 zEnd -3.41 | + ['reja', ' Kühls', '潤', 'пита', 'ubile', ' <<<', '眼前一亮'] | - ['‑', '#endif', '不求', '不发', 'apas', '葫芦', 'assel']
+L12 sv0 energy 0.002 doubt  +5.06 zR +1.86 zEnd -3.20 | + ['ceria', '?\\', 'advert', 'EFE', ' **¿', '定的', ' <<<'] | - ['‑', 'ro', 'acen', 'ucat', 'ato', ' echo', ' Oscar']
+L19 sv6 energy 0.002 doubt  +4.94 zR +3.89 zEnd -1.05 | + [' Wait', ' wait', 'wait', 'Wait', 'WAIT', ' nope', 'warten'] | - [' the', ' check', 'check', '-p', '"f', '_check', 'the']
+L14 sv0 energy 0.002 doubt  +4.76 zR +3.56 zEnd -1.19 | + ['?!', '...*', '...\\', ' **—', '...)', ' HOWEVER', ' **"'] | - ['�', 'awan', ' ', ' local', 'alu', 'ro', ' wish']
+L20 sv1 energy 0.002 doubt  +4.46 zR +1.65 zEnd -2.81 | + [' spoko', 'Israeli', 'иден', '力道', '.ot', 'мия', 'жен'] | - [' $', ' `', ' \\(', '《', '\\(', ' `$', ' $$$']
+L20 sv7 energy 0.002 doubt  -4.36 zR -2.26 zEnd +2.10 | + ['（', ' (', ' （', ' are', '——', ' being', ' were'] | - [' logic', ' Logic', '逻辑', '邏輯', 'Logic', 'logic', '的逻辑']
+L15 sv0 energy 0.002 doubt  +4.21 zR +5.93 zEnd +1.72 | + [' wait', ' Wait', 'Wait', 'wait', ' Actually', '但实际上', 'Actually'] | - [' *"', ' *', '：**', '身为', ' (*', ' *\\', '颌']
+L21 sv6 energy 0.002 doubt  +4.15 zR +1.74 zEnd -2.41 | + [' *', ' *–', '*$', ' (*', ' *,', ' -$', ' *.*'] | - [' "', '“', ' “', ' „', '「', ' «', '，“']
+L23 sv4 energy 0.003 doubt  +3.93 zR +2.32 zEnd -1.61 | + [' "', ' \\', ' $\\', ' "\\', ' *', '\n', ' **"'] | - ['`', '$', ':`', '.`', '`).', '`s', '`.']
+L13 sv0 energy 0.002 doubt  +3.87 zR +2.09 zEnd -1.78 | + ['...*', '?).', '…).', '…*', '或者其他', '不过这', '?]'] | - ['2', ' call', ' therefore', '\n', ' \u200b\u200b', '7', '其次']
+L15 sv6 energy 0.002 doubt  -3.67 zR -2.44 zEnd +1.22 | + [' my', 'my', '我无法', 'My', '我认为', '我必须', 'ir'] | - [' actually', ":')", '具体如下', '呢', '來看看', '?):', '才对']

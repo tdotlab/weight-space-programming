@@ -1,0 +1,922 @@
+{
+ "model": "Qwen3.5-2B",
+ "median": 0.03539787232875824,
+ "p99_9": 0.3815685212612152,
+ "top": [
+  {
+   "layer": 20,
+   "col": 926,
+   "strength": 0.5941889882087708,
+   "cos_gate": 0.7554812431335449,
+   "cos_up": -0.7865039706230164,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.35414060950279236,
+   "z": {
+    "Wait": -0.18,
+    " Wait": 0.19,
+    "No": -0.91,
+    " No": -0.61,
+    "Hmm": -0.27,
+    " Actually": -0.1,
+    "</think>": 0.44,
+    " Therefore": 0.47,
+    "\n\n": 2.05
+   },
+   "top_tokens": [
+    "\u7684\u8d28\u91cf\u548c",
+    "\u7684\u8bbe\u8ba1\u548c",
+    "\u7684\u65b9\u6cd5\u548c",
+    "\u7ed3\u6784\u4e0e",
+    "\u7406\u8bba\u4e0e",
+    "\u6750\u6599\u4e0e"
+   ]
+  },
+  {
+   "layer": 23,
+   "col": 640,
+   "strength": 0.5757207274436951,
+   "cos_gate": 0.769151508808136,
+   "cos_up": -0.7485140562057495,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.3110573887825012,
+   "z": {
+    "Wait": -0.38,
+    " Wait": -0.15,
+    "No": 0.02,
+    " No": -0.05,
+    "Hmm": 0.93,
+    " Actually": -0.21,
+    "</think>": 0.57,
+    " Therefore": 0.33,
+    "\n\n": -0.24
+   },
+   "top_tokens": [
+    "[keys",
+    "[frame",
+    "[group",
+    "</tool_call>",
+    "[token",
+    "(fabs"
+   ]
+  },
+  {
+   "layer": 20,
+   "col": 812,
+   "strength": 0.5629728436470032,
+   "cos_gate": 0.726110577583313,
+   "cos_up": -0.7753266096115112,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.4286961555480957,
+   "z": {
+    "Wait": -0.65,
+    " Wait": 0.6,
+    "No": -0.43,
+    " No": -0.25,
+    "Hmm": 0.03,
+    " Actually": 0.57,
+    "</think>": 1.33,
+    " Therefore": 1.66,
+    "\n\n": 0.93
+   },
+   "top_tokens": [
+    "\u7684",
+    "\u0647",
+    "nya",
+    "\uc758",
+    "\u0441\u044f",
+    "\u306e"
+   ]
+  },
+  {
+   "layer": 18,
+   "col": 1948,
+   "strength": 0.5424502491950989,
+   "cos_gate": -0.7294281125068665,
+   "cos_up": -0.7436651587486267,
+   "kind": "brake",
+   "side": -1,
+   "down_norm": 0.30585700273513794,
+   "z": {
+    "Wait": 1.15,
+    " Wait": 1.4,
+    "No": 0.39,
+    " No": 0.05,
+    "Hmm": -1.5,
+    " Actually": 0.66,
+    "</think>": 0.5,
+    " Therefore": 1.45,
+    "\n\n": 2.36
+   },
+   "top_tokens": [
+    " }):",
+    ";**",
+    "?):",
+    "**),",
+    "();)",
+    ":**"
+   ]
+  },
+  {
+   "layer": 18,
+   "col": 5554,
+   "strength": 0.5339625477790833,
+   "cos_gate": 0.7159930467605591,
+   "cos_up": -0.7457650303840637,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.3255932331085205,
+   "z": {
+    "Wait": 0.56,
+    " Wait": 0.97,
+    "No": -0.41,
+    " No": -0.63,
+    "Hmm": -0.35,
+    " Actually": -0.08,
+    "</think>": 0.47,
+    " Therefore": -1.01,
+    "\n\n": -0.92
+   },
+   "top_tokens": [
+    "\":\"\"",
+    "':''",
+    "()?",
+    "':'",
+    "\u2019:",
+    "\"):"
+   ]
+  },
+  {
+   "layer": 12,
+   "col": 1014,
+   "strength": 0.528442919254303,
+   "cos_gate": -0.6990121603012085,
+   "cos_up": -0.7559853196144104,
+   "kind": "brake",
+   "side": -1,
+   "down_norm": 0.27572542428970337,
+   "z": {
+    "Wait": 2.37,
+    " Wait": 0.14,
+    "No": 0.04,
+    " No": -0.79,
+    "Hmm": 0.59,
+    " Actually": -1.63,
+    "</think>": 0.8,
+    " Therefore": 1.75,
+    "\n\n": -0.57
+   },
+   "top_tokens": [
+    " Furthermore",
+    " hardcoded",
+    " anymore",
+    " escalate",
+    " onwards",
+    " Previous"
+   ]
+  },
+  {
+   "layer": 20,
+   "col": 2569,
+   "strength": 0.5238281488418579,
+   "cos_gate": 0.7289403080940247,
+   "cos_up": -0.7186160087585449,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.3695744574069977,
+   "z": {
+    "Wait": -0.87,
+    " Wait": -1.21,
+    "No": -0.43,
+    " No": -0.19,
+    "Hmm": -0.73,
+    " Actually": -0.24,
+    "</think>": -0.65,
+    " Therefore": -0.08,
+    "\n\n": -0.21
+   },
+   "top_tokens": [
+    "\u6216\u591a\u4e2a",
+    "\u03bb\u03b9\u03ba",
+    " tecnol\u00f3g",
+    " \u0441\u0447\u0435\u0442\u0443",
+    "\u5e38\u89c1\u95ee\u9898",
+    "\u4e00\u5bb6\u4e09\u53e3"
+   ]
+  },
+  {
+   "layer": 21,
+   "col": 1119,
+   "strength": 0.5115562081336975,
+   "cos_gate": -0.6937710642814636,
+   "cos_up": -0.7373559474945068,
+   "kind": "brake",
+   "side": -1,
+   "down_norm": 0.38379743695259094,
+   "z": {
+    "Wait": 0.58,
+    " Wait": -2.37,
+    "No": -0.22,
+    " No": -2.87,
+    "Hmm": 0.24,
+    " Actually": -2.59,
+    "</think>": 0.28,
+    " Therefore": -0.81,
+    "\n\n": -0.14
+   },
+   "top_tokens": [
+    " skl",
+    " submits",
+    " freiwill",
+    " presto",
+    "\u6545\u9009",
+    " synth"
+   ]
+  },
+  {
+   "layer": 18,
+   "col": 3689,
+   "strength": 0.5114524364471436,
+   "cos_gate": -0.7492324113845825,
+   "cos_up": -0.6826351881027222,
+   "kind": "brake",
+   "side": -1,
+   "down_norm": 0.37763696908950806,
+   "z": {
+    "Wait": -0.0,
+    " Wait": 0.33,
+    "No": -0.4,
+    " No": -0.6,
+    "Hmm": -2.05,
+    " Actually": -0.14,
+    "</think>": 0.13,
+    " Therefore": 0.36,
+    "\n\n": -0.29
+   },
+   "top_tokens": [
+    "uck",
+    "ide",
+    "hood",
+    "KP",
+    " li\u1ec7u",
+    "\u0633\u0647"
+   ]
+  },
+  {
+   "layer": 18,
+   "col": 4854,
+   "strength": 0.5099669098854065,
+   "cos_gate": 0.6664362549781799,
+   "cos_up": -0.7652148604393005,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.3349931240081787,
+   "z": {
+    "Wait": 0.48,
+    " Wait": -0.51,
+    "No": -0.97,
+    " No": -0.86,
+    "Hmm": -0.17,
+    " Actually": -0.41,
+    "</think>": -0.82,
+    " Therefore": -0.82,
+    "\n\n": 0.33
+   },
+   "top_tokens": [
+    "\u770b\u5411\u4e86",
+    "\u843d\u5728\u4e86",
+    "\u4fdd\u969c\u4e86",
+    "\u63d0\u9ad8\u4e86",
+    "\u56de\u5230\u4e86",
+    "\u8fbe\u5230\u4e86"
+   ]
+  },
+  {
+   "layer": 12,
+   "col": 4598,
+   "strength": 0.5084014534950256,
+   "cos_gate": 0.6430211067199707,
+   "cos_up": -0.7906450629234314,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.30348730087280273,
+   "z": {
+    "Wait": -0.09,
+    " Wait": 0.44,
+    "No": 0.11,
+    " No": 0.67,
+    "Hmm": 0.07,
+    " Actually": -0.58,
+    "</think>": 1.12,
+    " Therefore": -0.22,
+    "\n\n": -0.58
+   },
+   "top_tokens": [
+    " zza",
+    " determ",
+    " thems",
+    "\u9488\u5bf9\u6027\u7684",
+    " sugges",
+    " appre"
+   ]
+  },
+  {
+   "layer": 19,
+   "col": 3141,
+   "strength": 0.506544291973114,
+   "cos_gate": 0.6626713275909424,
+   "cos_up": -0.7643975019454956,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.36344486474990845,
+   "z": {
+    "Wait": -0.0,
+    " Wait": -0.52,
+    "No": 0.2,
+    " No": -0.55,
+    "Hmm": 1.21,
+    " Actually": -0.52,
+    "</think>": 2.52,
+    " Therefore": -0.79,
+    "\n\n": 0.4
+   },
+   "top_tokens": [
+    "\u304f\u306a\u308a\u307e\u3059",
+    "\u307e\u308a\u307e\u3059",
+    " };",
+    " \"\");",
+    "\u0d30\u0d3f\u0d15\u0d4d\u0d15",
+    "\u5efa\u7acb\u4e00\u4e2a"
+   ]
+  },
+  {
+   "layer": 17,
+   "col": 2252,
+   "strength": 0.5030640959739685,
+   "cos_gate": 0.6835939884185791,
+   "cos_up": -0.7359106540679932,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.2924608886241913,
+   "z": {
+    "Wait": -0.56,
+    " Wait": -0.31,
+    "No": 1.69,
+    " No": 0.95,
+    "Hmm": 0.82,
+    " Actually": 0.34,
+    "</think>": 0.73,
+    " Therefore": 0.76,
+    "\n\n": -0.57
+   },
+   "top_tokens": [
+    "\u7684\u4eba\u4e86",
+    "\u7684\u5417",
+    "\u800c\u4e0d\u80fd",
+    " gewesen",
+    "\u4ece\u800c\u5bfc\u81f4",
+    "\u800c\u4e14\u662f"
+   ]
+  },
+  {
+   "layer": 16,
+   "col": 1846,
+   "strength": 0.5019178986549377,
+   "cos_gate": -0.6504564881324768,
+   "cos_up": -0.7716394662857056,
+   "kind": "brake",
+   "side": -1,
+   "down_norm": 0.305368572473526,
+   "z": {
+    "Wait": -1.44,
+    " Wait": -1.03,
+    "No": -3.88,
+    " No": -3.21,
+    "Hmm": -0.82,
+    " Actually": 0.57,
+    "</think>": -1.0,
+    " Therefore": -0.17,
+    "\n\n": -0.93
+   },
+   "top_tokens": [
+    "\u20ac.",
+    " **\u00ab",
+    " '';",
+    " ();",
+    " (**",
+    " \u20ac."
+   ]
+  },
+  {
+   "layer": 21,
+   "col": 725,
+   "strength": 0.5011880397796631,
+   "cos_gate": 0.6875198483467102,
+   "cos_up": -0.7289797067642212,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.33928772807121277,
+   "z": {
+    "Wait": 0.19,
+    " Wait": 0.09,
+    "No": 0.3,
+    " No": -0.55,
+    "Hmm": 0.3,
+    " Actually": -0.31,
+    "</think>": 0.0,
+    " Therefore": 0.57,
+    "\n\n": 1.0
+   },
+   "top_tokens": [
+    "roud",
+    "\ubd80\ub85c",
+    "herited",
+    " hurry",
+    "richtet",
+    "enes"
+   ]
+  },
+  {
+   "layer": 21,
+   "col": 4249,
+   "strength": 0.4992014765739441,
+   "cos_gate": -0.7110868692398071,
+   "cos_up": -0.7020260095596313,
+   "kind": "brake",
+   "side": -1,
+   "down_norm": 0.3434509336948395,
+   "z": {
+    "Wait": 1.64,
+    " Wait": 1.01,
+    "No": 3.03,
+    " No": 2.75,
+    "Hmm": 0.06,
+    " Actually": 0.73,
+    "</think>": 2.89,
+    " Therefore": -0.07,
+    "\n\n": -30.95
+   },
+   "top_tokens": [
+    "\n",
+    "\r\n",
+    " \n",
+    "<|object_ref_end|>",
+    " \r\n",
+    "\u81ea\u5df2"
+   ]
+  },
+  {
+   "layer": 14,
+   "col": 605,
+   "strength": 0.4969502091407776,
+   "cos_gate": 0.6724660396575928,
+   "cos_up": -0.7389967441558838,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.26969650387763977,
+   "z": {
+    "Wait": -0.81,
+    " Wait": -1.01,
+    "No": -1.63,
+    " No": -1.31,
+    "Hmm": -0.56,
+    " Actually": -0.07,
+    "</think>": -0.27,
+    " Therefore": 0.42,
+    "\n\n": 2.67
+   },
+   "top_tokens": [
+    " (**",
+    " **\u00ab",
+    " (\u00ab",
+    " \u20ac.",
+    " ?.",
+    " *\u00ab"
+   ]
+  },
+  {
+   "layer": 23,
+   "col": 4353,
+   "strength": 0.495730459690094,
+   "cos_gate": -0.6069509387016296,
+   "cos_up": -0.8167554140090942,
+   "kind": "brake",
+   "side": -1,
+   "down_norm": 0.4520265758037567,
+   "z": {
+    "Wait": -0.77,
+    " Wait": 0.09,
+    "No": -0.55,
+    " No": -0.4,
+    "Hmm": -1.08,
+    " Actually": 0.8,
+    "</think>": 0.58,
+    " Therefore": -0.45,
+    "\n\n": -0.03
+   },
+   "top_tokens": [
+    "\u7684",
+    "\u0647",
+    "\uc758",
+    "\u306e",
+    "nya",
+    "\u0441\u044f"
+   ]
+  },
+  {
+   "layer": 10,
+   "col": 582,
+   "strength": 0.4949890077114105,
+   "cos_gate": 0.6220064163208008,
+   "cos_up": -0.7957940697669983,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.2781044542789459,
+   "z": {
+    "Wait": -1.83,
+    " Wait": -1.62,
+    "No": -0.45,
+    " No": -1.21,
+    "Hmm": -2.2,
+    " Actually": 0.19,
+    "</think>": -1.11,
+    " Therefore": -0.7,
+    "\n\n": -0.82
+   },
+   "top_tokens": [
+    " Catar",
+    "atar",
+    "\u2026\"",
+    "\u2026I",
+    "\u201d\u2026",
+    "\u2026\u201d"
+   ]
+  },
+  {
+   "layer": 21,
+   "col": 2946,
+   "strength": 0.4881535768508911,
+   "cos_gate": 0.6352577209472656,
+   "cos_up": -0.7684339284896851,
+   "kind": "brake",
+   "side": 1,
+   "down_norm": 0.3641902208328247,
+   "z": {
+    "Wait": -0.23,
+    " Wait": 0.45,
+    "No": 0.87,
+    " No": -0.04,
+    "Hmm": -1.75,
+    " Actually": 0.67,
+    "</think>": 1.58,
+    " Therefore": -0.1,
+    "\n\n": 0.95
+   },
+   "top_tokens": [
+    "IRD",
+    "\u0438\u0441\u044c",
+    "benh",
+    " Auft",
+    "');\"",
+    "ater"
+   ]
+  }
+ ],
+ "by_token": {
+  "Wait": [
+   {
+    "layer": 22,
+    "col": 5041,
+    "z": 19.28,
+    "strength": 0.197,
+    "rank_by_strength": 3162
+   },
+   {
+    "layer": 23,
+    "col": 3638,
+    "z": 5.92,
+    "strength": 0.323,
+    "rank_by_strength": 502
+   },
+   {
+    "layer": 23,
+    "col": 4441,
+    "z": 5.38,
+    "strength": 0.245,
+    "rank_by_strength": 1632
+   },
+   {
+    "layer": 20,
+    "col": 3748,
+    "z": 13.88,
+    "strength": 0.095,
+    "rank_by_strength": 23485
+   },
+   {
+    "layer": 20,
+    "col": 2341,
+    "z": 4.83,
+    "strength": 0.267,
+    "rank_by_strength": 1187
+   }
+  ],
+  " Wait": [
+   {
+    "layer": 22,
+    "col": 5041,
+    "z": 19.28,
+    "strength": 0.197,
+    "rank_by_strength": 3162
+   },
+   {
+    "layer": 23,
+    "col": 3638,
+    "z": 6.06,
+    "strength": 0.323,
+    "rank_by_strength": 502
+   },
+   {
+    "layer": 23,
+    "col": 5464,
+    "z": 7.2,
+    "strength": 0.224,
+    "rank_by_strength": 2190
+   },
+   {
+    "layer": 20,
+    "col": 2341,
+    "z": 5.39,
+    "strength": 0.267,
+    "rank_by_strength": 1187
+   },
+   {
+    "layer": 23,
+    "col": 1027,
+    "z": 4.8,
+    "strength": 0.281,
+    "rank_by_strength": 971
+   }
+  ],
+  "No": [
+   {
+    "layer": 23,
+    "col": 2014,
+    "z": 35.4,
+    "strength": 0.394,
+    "rank_by_strength": 117
+   },
+   {
+    "layer": 22,
+    "col": 4317,
+    "z": 27.48,
+    "strength": 0.122,
+    "rank_by_strength": 11909
+   },
+   {
+    "layer": 23,
+    "col": 411,
+    "z": 13.95,
+    "strength": 0.212,
+    "rank_by_strength": 2608
+   },
+   {
+    "layer": 21,
+    "col": 4249,
+    "z": 3.03,
+    "strength": 0.499,
+    "rank_by_strength": 15
+   },
+   {
+    "layer": 23,
+    "col": 4932,
+    "z": 7.72,
+    "strength": 0.188,
+    "rank_by_strength": 3614
+   }
+  ],
+  " No": [
+   {
+    "layer": 23,
+    "col": 2014,
+    "z": 35.82,
+    "strength": 0.394,
+    "rank_by_strength": 117
+   },
+   {
+    "layer": 22,
+    "col": 4317,
+    "z": 27.33,
+    "strength": 0.122,
+    "rank_by_strength": 11909
+   },
+   {
+    "layer": 23,
+    "col": 411,
+    "z": 14.05,
+    "strength": 0.212,
+    "rank_by_strength": 2608
+   },
+   {
+    "layer": 21,
+    "col": 4249,
+    "z": 2.75,
+    "strength": 0.499,
+    "rank_by_strength": 15
+   },
+   {
+    "layer": 22,
+    "col": 5741,
+    "z": 7.32,
+    "strength": 0.176,
+    "rank_by_strength": 4217
+   }
+  ],
+  "Hmm": [
+   {
+    "layer": 23,
+    "col": 1661,
+    "z": 8.39,
+    "strength": 0.274,
+    "rank_by_strength": 1080
+   },
+   {
+    "layer": 23,
+    "col": 4310,
+    "z": 4.61,
+    "strength": 0.333,
+    "rank_by_strength": 400
+   },
+   {
+    "layer": 19,
+    "col": 5407,
+    "z": 6.61,
+    "strength": 0.22,
+    "rank_by_strength": 2321
+   },
+   {
+    "layer": 23,
+    "col": 5534,
+    "z": 3.33,
+    "strength": 0.359,
+    "rank_by_strength": 244
+   },
+   {
+    "layer": 10,
+    "col": 6071,
+    "z": 2.82,
+    "strength": 0.388,
+    "rank_by_strength": 136
+   }
+  ],
+  " Actually": [
+   {
+    "layer": 22,
+    "col": 4604,
+    "z": 22.77,
+    "strength": 0.313,
+    "rank_by_strength": 591
+   },
+   {
+    "layer": 23,
+    "col": 5464,
+    "z": 10.22,
+    "strength": 0.224,
+    "rank_by_strength": 2190
+   },
+   {
+    "layer": 23,
+    "col": 306,
+    "z": 6.19,
+    "strength": 0.297,
+    "rank_by_strength": 756
+   },
+   {
+    "layer": 20,
+    "col": 5504,
+    "z": 14.05,
+    "strength": 0.101,
+    "rank_by_strength": 20000
+   },
+   {
+    "layer": 23,
+    "col": 5829,
+    "z": 8.43,
+    "strength": 0.148,
+    "rank_by_strength": 6751
+   }
+  ],
+  "</think>": [
+   {
+    "layer": 23,
+    "col": 2464,
+    "z": 14.11,
+    "strength": 0.386,
+    "rank_by_strength": 138
+   },
+   {
+    "layer": 21,
+    "col": 4249,
+    "z": 2.89,
+    "strength": 0.499,
+    "rank_by_strength": 15
+   },
+   {
+    "layer": 21,
+    "col": 3523,
+    "z": 3.18,
+    "strength": 0.416,
+    "rank_by_strength": 74
+   },
+   {
+    "layer": 19,
+    "col": 3141,
+    "z": 2.52,
+    "strength": 0.507,
+    "rank_by_strength": 11
+   },
+   {
+    "layer": 23,
+    "col": 333,
+    "z": 4.55,
+    "strength": 0.279,
+    "rank_by_strength": 1007
+   }
+  ],
+  " Therefore": [
+   {
+    "layer": 22,
+    "col": 3552,
+    "z": 19.2,
+    "strength": 0.287,
+    "rank_by_strength": 880
+   },
+   {
+    "layer": 23,
+    "col": 5464,
+    "z": 10.9,
+    "strength": 0.224,
+    "rank_by_strength": 2190
+   },
+   {
+    "layer": 22,
+    "col": 3895,
+    "z": 16.94,
+    "strength": 0.131,
+    "rank_by_strength": 9705
+   },
+   {
+    "layer": 23,
+    "col": 5172,
+    "z": 5.15,
+    "strength": 0.4,
+    "rank_by_strength": 100
+   },
+   {
+    "layer": 20,
+    "col": 2476,
+    "z": 21.01,
+    "strength": 0.098,
+    "rank_by_strength": 21880
+   }
+  ],
+  "\n\n": [
+   {
+    "layer": 23,
+    "col": 3548,
+    "z": 50.36,
+    "strength": 0.331,
+    "rank_by_strength": 427
+   },
+   {
+    "layer": 21,
+    "col": 3523,
+    "z": 31.59,
+    "strength": 0.416,
+    "rank_by_strength": 74
+   },
+   {
+    "layer": 22,
+    "col": 5935,
+    "z": 22.46,
+    "strength": 0.17,
+    "rank_by_strength": 4660
+   },
+   {
+    "layer": 23,
+    "col": 5602,
+    "z": 15.5,
+    "strength": 0.23,
+    "rank_by_strength": 2035
+   },
+   {
+    "layer": 23,
+    "col": 2760,
+    "z": 18.38,
+    "strength": 0.148,
+    "rank_by_strength": 6764
+   }
+  ]
+ }
+}
