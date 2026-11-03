@@ -85,3 +85,15 @@ self-checking entirely could trade loops for confident wrong answers.
 ### R64 control (first 40)
 4/40 correct, 36 truncated, the same 4 problems finished as in the baseline; Wait 3.16/kchar (baseline 3.22), 'No,' 2.29 (2.25).
 A same-budget projection along a random direction changes nothing measurable, so P64's 33x 'Wait' blowup is specific to u.
+
+### A64 screen (first 40)
+11/40 correct, 29 truncated, 11/11 finished answers correct (baseline 4/40, 36 truncated). Against the baseline: 8 gained,
+1 lost (test/algebra/1265), sign test p about 0.04. R64's texts diverge from the baseline's within a few hundred chars yet it
+got the same 4 problems right, so per-problem noise at this budget looks low.
+'Wait' 3.22 -> 0.25 per kchar; 'No,' 2.25 -> 2.29, 'Let me re' and 'Actually,' about the same. In the last 4000 chars of the
+29 truncated runs, sentences opening with 'Wait' fell 313 -> 16 and nothing took their place; 'No' (284 vs 284), 'Let', 'If',
+'Is' are unchanged. The truncated transcripts still go around in circles ("Is this the correct form? ... No, let's look at the
+elements again."). Reading: 'Wait' is one entry point into the doubt loop. Removing it is enough on easier problems (the
+gains span levels 1-5) but the loop itself runs on other connectives. Reasoning openers are unchanged (half start
+"Here's a thinking process..." in both), so no register switch.
+Next weight-space question: is there a direction behind 'No,' the way u is behind 'Wait' (a07)?

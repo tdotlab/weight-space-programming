@@ -1,6 +1,6 @@
 # Status
 
-Last updated 2026-11-02 22:45 EST.
+Last updated 2026-11-02 23:25 EST.
 
 ## Where it stands
 
@@ -8,14 +8,17 @@ Baseline done: 5/100 correct, 94 truncated at the 16k cap in "Wait... No..." sel
 
 The MIT-shaped edit P64 backfired. On the first 40 problems it scored 0/40 with every answer truncated, and "Wait" rose from 3.2 to 108 per 1000 reasoning chars. Reasoning starts normally and collapses into "Wait, wait, wait..." strings. So the direction u does control "Wait", but the 64 columns it touched were a net brake on it. P64 was stopped at 40/100 since the rest could not change the verdict.
 
-The random-direction control R64 matches the baseline exactly (4/40, 36 truncated, Wait 3.16 vs 3.22), so P64's effect is specific to u. Now screening on the first 40 problems (`FIRST=40`, the same problems as a full run's first wave, about 25 min each): A64 and A64h (the opposite of P64: u-component in the same 64 columns doubled, or 1.5x), then D_full. Queue log: `runs/queue2.log`. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
+The random-direction control R64 matches the baseline exactly (4/40, 36 truncated, Wait 3.16 vs 3.22), so P64's effect is specific to u.
+
+A64, the opposite of P64 (u-component in the same 64 L22 columns doubled), is the first edit that helps: 11/40 correct vs 4/40, every finished answer right, 8 problems gained and 1 lost against the baseline (sign test p about 0.04). 'Wait' fell 13x (3.22 to 0.25 per kchar). But 29/40 still hit the 16k cap: the spiral keeps going on 'No, ...', 'Is this the correct form?', 'Let's re-verify'. 'Wait' was one leg of the loop, not the loop. Screening A64h (1.5x) and D_full next (`runs/queue2.log`), then A64 gets the full 100. From here on edits use eval feedback, which MIT's blind setup did not (Deviation 4 in `logs/edit_session.md`).
 
 ## Plan
 
 1. Done: baseline on 100 MATH-500 problems (seed 0), qwen preset, thinking on, 16k max tokens.
 2. Screens on the first 40: R64 (is P64's effect specific to u?), A64/A64h (does amplifying the brake cut loops?), D_full (revert post-training's u-component across L22).
-3. Any edit that beats the baseline's first 40 (4/40 correct, 36 truncated) gets the full 100, and R64 too if it hasn't.
-4. Then: an L15+L19 edit along v_in (`logs/a05_vin.pt`), a greedy baseline, and later a slightly bigger Qwen.
+3. Any edit that beats the baseline's first 40 (4/40 correct, 36 truncated) gets the full 100. A64 qualifies; it resumes from its 40 after the screens.
+4. The remaining loop runs on 'No,': look for a weight-space direction behind it (a07), as u was found for 'Wait'.
+5. Then: an L15+L19 edit along v_in (`logs/a05_vin.pt`), a greedy baseline, and later a slightly bigger Qwen.
 
 ## Results
 
@@ -27,8 +30,8 @@ First-40 numbers compare against the baseline's same 40 problems: 4/40 correct, 
 | base_q8 | 100 | 5/100 | 94/100 | 5/6 | 3.41 (trunc 3.44, fin 2.02) | mean 15.9k tokens; right answers spread over levels 1-4 |
 | P64_q8 | first 40 | 0/40 | 40/40 | | median 113 | degenerates into "Wait, wait, wait" strings; stopped at 40 |
 | R64_q8 | first 40 | 4/40 | 36/40 | 4/4 | 3.16 (base 3.22) | random-direction control matches baseline: P64's effect is specific to u |
-| A64_q8 | first 40 | queued | | | | |
-| A64h_q8 | first 40 | queued | | | | |
+| A64_q8 | first 40 | 11/40 | 29/40 | 11/11 | 0.25 | u doubled in P64's columns. +8/-1 vs baseline. 'No,' unchanged (2.29); truncated runs still spiral without 'Wait' |
+| A64h_q8 | first 40 | running | | | | |
 | Dfull_q8 | first 40 | queued | | | | |
 
 Weight-analysis findings are in `logs/edit_session.md`. In short, post-training's top change to L22's MLP output is a direction u that writes "Wait" (z +23). The neurons feeding it get extra post-training change in L15 to L21, consistent with MIT's 15/19 without singling them out. Weight math alone cannot tell which L22 neurons push u up or down when they fire (gate and up rows are nearly orthogonal, a06), so P64's sign had to be learned from the eval.
