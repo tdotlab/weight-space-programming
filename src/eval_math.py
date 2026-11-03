@@ -47,6 +47,12 @@ def start_server(gguf, port, parallel, ctx_per_slot, name="server", backend_samp
             "--jinja", "--no-webui", "-fa", "on", "-ctk", "q8_0", "-ctv", "q8_0"]
     if backend_sampling:
         args.append("-bs")
+    # A server already on this port would pass the health check below and silently serve another model.
+    try:
+        requests.get(f"http://127.0.0.1:{port}/health", timeout=2)
+        sys.exit(f"port {port} is already serving; another eval is running")
+    except requests.RequestException:
+        pass
     log = open(ROOT / "runs" / f"server_{name}.log", "w")
     p = subprocess.Popen(args, stdout=log, stderr=subprocess.STDOUT)
     for _ in range(240):

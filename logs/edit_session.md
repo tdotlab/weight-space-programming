@@ -179,3 +179,7 @@ L2 11/18 vs 2, L3 9/21 vs 1, L4 4/29 vs 1, L5 3/27 vs 0. The edit unlocks easy a
 Comparison with MIT (7.9 -> 48.1): same model, same kind of intervention (rank-1 weight edit, no gradients, no forward
 passes during the edit). We reach 30 with an edit at layer 22, not 15/19, and with the sign chosen from an eval (Deviation 4).
 Accuracy is now bounded by the 70 runs that never finish, not by wrong answers.
+
+## 03:19 incident: 32k queue started early
+
+The waiter for the 32k reruns keyed on `grep -q "done A64_q8" runs/queue2.log`, which was already true from the 23:12 A64 screen, so A64x3_32k_q8 started at 03:19 while A64's remaining 60 were running. Its own llama-server was still loading (port 8091 already taken by A64's), and `start_server` accepted A64's server's health check as its own, so the client may have queued requests on A64's server. Stopped at 03:21 via queue.pid with 0 rows written; A64's run was untouched (server healthy, 40 slots busy, 49/100 rows). Its files are kept as `runs/aborted_*A64x3_32k_q8*`. Results cannot be contaminated: each jsonl row is the answer to that client's own request. Fixes: the waiter now matches `^=== HH:MM:SS done A64_q8:` and waits for a second such line; `eval_math.py` now refuses to start if the port already answers.
