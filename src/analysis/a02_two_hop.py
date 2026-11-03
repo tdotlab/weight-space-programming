@@ -28,7 +28,8 @@ flat = late.flatten()
 K = 40
 doubt_idx = torch.topk(flat, K).indices
 close_idx = torch.topk(-flat, K).indices
-to_lj = lambda i: (14 + i // 3584, i % 3584)
+M = late.shape[1]
+to_lj = lambda i: (14 + i // M, i % M)
 doubters = [to_lj(i.item()) + (flat[i].item(),) for i in doubt_idx]
 closers = [to_lj(i.item()) + (flat[i].item(),) for i in close_idx]
 

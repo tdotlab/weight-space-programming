@@ -45,7 +45,7 @@ for L in range(L22):
                      inst_top64=round(torch.topk(pi.abs(), 64).values.sum().item(), 3),
                      delta_top64=round(torch.topk(pd.abs(), 64).values.sum().item(), 4),
                      delta_signed_top64=round(torch.topk(pd, 64).values.sum().item() - torch.topk(-pd, 64).values.sum().item(), 4),
-                     delta_energy_share=round(((pd ** 2).sum() / (dWL ** 2).sum()).item() * 1024, 3)))
+                     delta_energy_share=round(((pd ** 2).sum() / (dWL ** 2).sum()).item() * G.shape[1], 3)))
 for r in sorted(rows, key=lambda r: -r["delta_energy_share"])[:10]:
     print(r)
 print("--- by layer order (delta_energy_share: 1.0 = random) ---")

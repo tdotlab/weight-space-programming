@@ -27,8 +27,8 @@ proj = u @ Wi  # per-column write along u
 tot = (proj ** 2).sum()
 frac = lambda k: (torch.topk(proj.abs(), k).values ** 2).sum() / tot
 share_of_layer = (tot / (Wi ** 2).sum()).item()
-print(f"share of L22 down_proj energy along u: {share_of_layer:.5f} (random expectation {1/1024:.5f})")
-for k in (16, 64, 256, 1024):
+print(f"share of L22 down_proj energy along u: {share_of_layer:.5f} (random expectation {1/Wi.shape[0]:.5f})")
+for k in (16, 64, 256, Wi.shape[0]):
     print(f"  top-{k} columns hold {frac(k).item():.3f} of the u-writing")
 
 # base model's writing along u, for comparison
@@ -36,7 +36,7 @@ pb = u @ Wbase
 print(f"base L22 energy along u: {((pb**2).sum()/(Wbase**2).sum()).item():.5f}")
 
 gen = torch.Generator().manual_seed(0)
-r = torch.randn(1024, generator=gen)
+r = torch.randn(Wi.shape[0], generator=gen)
 r = r / r.norm()
 zr = token_z(r[:, None], list(ids.values()))[:, 0]
 print("random r z-scores:", {k: round(v, 2) for k, v in zip(ids, zr.tolist())})

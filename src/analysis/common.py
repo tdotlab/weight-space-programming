@@ -7,11 +7,14 @@ import torch
 from safetensors import safe_open
 
 TOOLS = Path(os.environ.get("WSP_TOOLS", Path.home() / "tools"))  # models, llama.cpp, sources
-MODEL_DIR = TOOLS / "models" / "Qwen3.5-0.8B"
-BASE_WEIGHTS = TOOLS / "models" / "Qwen3.5-0.8B-Base" / "model.safetensors-00001-of-00001.safetensors"
+MODEL = os.environ.get("WSP_MODEL", "Qwen3.5-0.8B")  # instruct model; its base is MODEL + "-Base"
+MODEL_DIR = TOOLS / "models" / MODEL
+BASE_WEIGHTS = TOOLS / "models" / (MODEL + "-Base") / "model.safetensors-00001-of-00001.safetensors"
 WEIGHTS = MODEL_DIR / "model.safetensors-00001-of-00001.safetensors"
 ROOT = Path(__file__).resolve().parents[2]
-LOGS = ROOT / "logs"
+# 0.8B results stay in logs/; other models get logs/<size>/ (e.g. logs/2B/) so nothing is overwritten.
+LOGS = ROOT / "logs" if MODEL == "Qwen3.5-0.8B" else ROOT / "logs" / MODEL.split("-")[-1]
+LOGS.mkdir(exist_ok=True)
 P = "model.language_model."
 N_LAYERS = 24
 FULL_ATTN = {3, 7, 11, 15, 19, 23}

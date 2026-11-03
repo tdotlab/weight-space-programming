@@ -1,4 +1,4 @@
-"""Build an edited copy of Qwen3.5-0.8B in edited/<name>/ and convert it to gguf/<name>-f16.gguf.
+"""Build an edited copy of $WSP_MODEL (default Qwen3.5-0.8B) in edited/<name>/ and convert it to gguf/<name>-f16.gguf.
 The original model directory is only read. Every edit is recorded in edited/<name>/EDIT.json and logs/edits.jsonl.
 
 Edit kinds (all on layer L mlp.down_proj, residual-space unit direction d):
@@ -17,8 +17,10 @@ from safetensors.torch import save_file
 
 ROOT = Path(__file__).resolve().parents[1]
 TOOLS = Path(os.environ.get("WSP_TOOLS", Path.home() / "tools"))  # models, llama.cpp, sources
-ORIG = TOOLS / "models" / "Qwen3.5-0.8B"
-BASE = TOOLS / "models" / "Qwen3.5-0.8B-Base"
+MODEL = os.environ.get("WSP_MODEL", "Qwen3.5-0.8B")
+ORIG = TOOLS / "models" / MODEL
+BASE = TOOLS / "models" / (MODEL + "-Base")
+LOGDIR = "logs" if MODEL == "Qwen3.5-0.8B" else "logs/" + MODEL.split("-")[-1]
 FNAME = "model.safetensors-00001-of-00001.safetensors"
 CONVERT = str(TOOLS / "source-code-of-open-source" / "llama.cpp-b11804" / "convert_hf_to_gguf.py")
 P = "model.language_model."
@@ -29,7 +31,7 @@ def main():
     ap.add_argument("--name", required=True)
     ap.add_argument("--kind", choices=["project", "revert"], required=True)
     ap.add_argument("--dir", default="u", help="key in --dirfile (u or r in a04; v_in in a05)")
-    ap.add_argument("--dirfile", default="logs/a04_directions.pt", help="torch file holding the direction")
+    ap.add_argument("--dirfile", default=LOGDIR + "/a04_directions.pt", help="torch file holding the direction")
     ap.add_argument("--start", default="", help="stack on an existing edit in edited/<start>/ instead of the original")
     ap.add_argument("--layers", default="22")
     ap.add_argument("--k", default="64")
@@ -54,7 +56,7 @@ def main():
     meta = src.metadata()
     base = safe_open(str(BASE / FNAME), "pt") if a.kind == "revert" else None
 
-    record = dict(name=a.name, kind=a.kind, dir=a.dir, dirfile=a.dirfile, start=a.start or "original",
+    record = dict(name=a.name, model=MODEL, kind=a.kind, dir=a.dir, dirfile=a.dirfile, start=a.start or "original",
                   layers=a.layers, k=a.k, scale=a.scale,
                   time=time.strftime("%Y-%m-%d %H:%M:%S"), per_layer=[])
     changed = 0
