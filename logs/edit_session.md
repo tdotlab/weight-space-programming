@@ -343,3 +343,13 @@ the other 63 columns may add a few points through their direct writes; 40 proble
 same as A64x3's 2.40, and 29 truncated against 27. One finished answer is wrong (prealgebra/1686), the first
 finished-wrong answer in any 16k screen. Reading: the mechanism story from a08/a09 survives its first test. The
 lever is a pretraining brake neuron, and the weights found it without an eval choosing it.
+
+### A64x3N3 (0.8B, plus the No brake): 12/40 (runs/0.8B/math500/A64x3N3_q8). Prediction 4 holds on 'No,'; the score does not move.
+A64x3 plus L23 col 613, the 'No' brake, tripled. 'No,' 2.40 -> 0.03 per kchar, 80x down (predicted at least 2x).
+'Wait' stays at 0.04. But the score is 12/40 against A64x3's 13 (+3/-4, p 1), and 28 still truncate against 27. Every
+finished answer is right (12/12). Vs baseline +8/-0 (p 0.008). This is the first branch of the prediction: the loop is
+a state that speaks through whatever word is free. With 'Wait' and 'No' both gone, the truncated tails wander through
+"Let's check", "Is it", "Is there", "Maybe", "Or maybe" and re-derivations of the same quantity, never committing. Not
+well below 13, so the No brake does not visibly cut useful self-correction either. Reading: the discourse markers are
+symptoms. Silencing them one at a time is done; the next lever has to act on the decision to stop, which points at the
+`</think>` / 'Therefore' brakes from a10 (weaken them so committing gets easier).

@@ -1,0 +1,26 @@
+{
+  "name": "A64x3N3_q8",
+  "model": "0.8B",
+  "task": "math500",
+  "gguf": "gguf/A64x3N3-q8_0.gguf",
+  "preset": "qwen",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5
+  },
+  "n": 40,
+  "max_tokens": 16384,
+  "think": true,
+  "seed": 0,
+  "first": 40,
+  "backend_sampling": true,
+  "acc": 0.3,
+  "truncated": 0.7,
+  "acc_when_finished": 1.0,
+  "n_finished": 12,
+  "mean_tokens": 14829,
+  "mean_waits_per_kchar": 0.124
+}
