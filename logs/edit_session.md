@@ -334,3 +334,12 @@ x3, no 2B eval used to choose anything. Gained 21, lost 1 (sign test p 1e-5). Fi
 spread over levels, weighted to the hard end (level 4: 5 -> 11, level 5: 2 -> 8). I expected a smaller gain than the
 0.8B's because there was less 'Wait' to remove; it was +20 points against the 0.8B's +25, so that hedge was mostly
 wrong. This run is cleaner evidence than the 0.8B win: the sign and dose were fixed before any 2B eval.
+
+### A1x3 (0.8B, one column): 4 -> 10 on the first 40 (runs/0.8B/math500/A1x3_q8). Prediction 2 holds.
+Only L22 col 573, the Wait brake, tripled: 1 column instead of A64x3's 64, about 1k weights. 'Wait' 3.22 -> 0.02 per
+kchar, as low as A64x3's 0.04, so the one neuron carries essentially all of the Wait suppression (predicted under
+1.0). Gained 6, lost 0 vs baseline (p 0.03). Against A64x3 it is 10 vs 13 (+2/-5, p 0.45): no significant gap, but
+the other 63 columns may add a few points through their direct writes; 40 problems can't tell. 'No,' 2.38 per kchar,
+same as A64x3's 2.40, and 29 truncated against 27. One finished answer is wrong (prealgebra/1686), the first
+finished-wrong answer in any 16k screen. Reading: the mechanism story from a08/a09 survives its first test. The
+lever is a pretraining brake neuron, and the weights found it without an eval choosing it.
