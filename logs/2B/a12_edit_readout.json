@@ -101,6 +101,80 @@
    }
   },
   {
+   "name": "2B_A64x3F0",
+   "spec": {
+    "kind": "project",
+    "dir": "brake_Final",
+    "start": "2B_A64x3",
+    "layers": "23",
+    "k": "1",
+    "scale": 1.0
+   },
+   "changed_layers": [
+    22,
+    23
+   ],
+   "gain": {
+    "Wait": -15.265310566290282,
+    "No": -12.748010516399518,
+    "Final": -3.3479866292327642,
+    "Therefore": -5.85251946374774
+   },
+   "observed": {
+    "run": "A64x3F0_8k_q8",
+    "n": 100,
+    "edit": {
+     "Wait": 0.035,
+     "No": 1.433,
+     "Final": 0.171,
+     "Therefore": 0.046
+    },
+    "base": {
+     "Wait": 1.546,
+     "No": 1.426,
+     "Final": 0.062,
+     "Therefore": 0.028
+    }
+   }
+  },
+  {
+   "name": "2B_A64x3Fh",
+   "spec": {
+    "kind": "project",
+    "dir": "brake_Final",
+    "start": "2B_A64x3",
+    "layers": "23",
+    "k": "1",
+    "scale": 0.5
+   },
+   "changed_layers": [
+    22,
+    23
+   ],
+   "gain": {
+    "Wait": -15.265313308103941,
+    "No": -12.748024821514264,
+    "Final": -7.869609763845801,
+    "Therefore": -5.852415274828672
+   },
+   "observed": {
+    "run": "A64x3Fh_8k_q8",
+    "n": 100,
+    "edit": {
+     "Wait": 0.037,
+     "No": 1.392,
+     "Final": 0.171,
+     "Therefore": 0.051
+    },
+    "base": {
+     "Wait": 1.546,
+     "No": 1.426,
+     "Final": 0.062,
+     "Therefore": 0.028
+    }
+   }
+  },
+  {
    "name": "2B_A64x3N3",
    "spec": {
     "kind": "project",
@@ -128,6 +202,78 @@
      "No": 0.298,
      "Final": 0.121,
      "Therefore": 0.048
+    },
+    "base": {
+     "Wait": 1.546,
+     "No": 1.426,
+     "Final": 0.062,
+     "Therefore": 0.028
+    }
+   }
+  },
+  {
+   "name": "2B_A64x3T0",
+   "spec": {
+    "kind": "project",
+    "dir": "brake_Therefore",
+    "start": "2B_A64x3",
+    "layers": "22",
+    "k": "1",
+    "scale": 1.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -15.26527408824768,
+    "No": -12.74805486225523,
+    "Final": -12.389275839552283,
+    "Therefore": -2.3237659446895123
+   },
+   "observed": {
+    "run": "A64x3T0_8k_q8",
+    "n": 100,
+    "edit": {
+     "Wait": 0.043,
+     "No": 1.41,
+     "Final": 0.124,
+     "Therefore": 0.062
+    },
+    "base": {
+     "Wait": 1.546,
+     "No": 1.426,
+     "Final": 0.062,
+     "Therefore": 0.028
+    }
+   }
+  },
+  {
+   "name": "2B_Fh",
+   "spec": {
+    "kind": "project",
+    "dir": "brake_Final",
+    "start": "original",
+    "layers": "23",
+    "k": "1",
+    "scale": 0.5
+   },
+   "changed_layers": [
+    23
+   ],
+   "gain": {
+    "Wait": -5.579624335630797,
+    "No": -12.748334765667096,
+    "Final": -7.869323899969459,
+    "Therefore": -5.852316092699766
+   },
+   "observed": {
+    "run": "Fh_8k_q8",
+    "n": 100,
+    "edit": {
+     "Wait": 1.533,
+     "No": 1.423,
+     "Final": 0.081,
+     "Therefore": 0.034
     },
     "base": {
      "Wait": 1.546,

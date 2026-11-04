@@ -584,3 +584,29 @@ stopping where it was, as the Final edits did; the Final brake did no better tha
 Second, it settles a doubt left under F0: under T0 'Final' stays at 0.124 per kchar (2B_A64x3: 0.130), so the x1.3
 rise under Fh and F0 is the Final brake's doing, not drift on the A64x3 base. The rise is real, saturating, and inert.
 On the 2B 'Therefore' answered its brake more than 'Final' did (x1.63 at x0 against x1.31).
+
+### Round 2 summary
+Six predictions, written before the evals. 6 passed 6 of 7 clauses but failed the one that mattered (the word barely
+moved); 7, 8 and 9 failed; 10 passed 2 of 3 (dose order held, the predicted runaway did not come); the control, 11,
+held 4 of 4. No round-2 edit changed accuracy beyond the churn of about 15 coin-flip problems on the 2B and 6 on the
+0.8B's first 40: 48, 46, 22 (base 26), 11, 11 (A64x3 13), 45.
+
+What this establishes: the Final brake neuron (L23, one per size) controls how often 'Final' is said, x1.6 to x3.3 on
+the 0.8B in dose order and a fixed x1.3 on the 2B, and the control shows the rise is the edit's own. Saying it more does
+not end the reasoning. The extra 'Final's are mostly premature "Final Answer" labels (doubled on both sizes) that the
+model writes and then keeps checking past. Stopping is not gated by a commit word's self-brake, as looping on 'Wait'
+was by its brake; the loop that remains is a state of not committing that any word can carry (round 1's finding), and
+the label is one more word it carries.
+
+What it says about the readout: a12 got the sign of every rate change right and the order right on the 0.8B. It missed
+on size in both directions: the 2B saturates at x1.3 where a12 predicted a dose-proportional rise, and the 0.8B's full
+dose stopped at 2.45 per kchar where a12, calibrated on 'Wait', put it near runaway. The runaway threshold depends on
+the token: 'Wait' fits almost any sentence start, 'Final' only near an end.
+
+Limits: t01 already capped what any stop lever could gain (12 of the 2B_A64x3's 55 truncated runs had the answer in
+hand), and the answer-in-hand clause turned out to have the wrong chance baseline (the caveat above). Every round-2
+eval ran on RAM later found corrupting cached file pages (STATUS, Gotchas). The builds and GGUFs were checked bit for
+bit afterwards (`logs/verify_artifacts.txt`), but a fault while llama-server loaded a GGUF leaves no trace. The
+conclusions rest on six nulls that agree with each other and with the control, a pattern a random load-time fault
+is unlikely to produce; the replication set after the RAM fix (2B baseline, 2B_A64x3, 0.8B A64x3 first 40) checks the references
+they were scored against.

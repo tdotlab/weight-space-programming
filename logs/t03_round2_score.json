@@ -717,5 +717,157 @@
   "notes": [
    "No run ran away: by the pre-registered reading, the runaway threshold depends on the token, and the readout's dose limit is too cautious for rare tokens."
   ]
+ },
+ "11": {
+  "run": "2B/math500/A64x3T0_8k_q8",
+  "ref": "2B/math500/A64x3_8k_q8",
+  "shared": 100,
+  "run_m": {
+   "n": 100,
+   "acc": 45,
+   "trunc": 55,
+   "fin": 45,
+   "fin_wrong": 1,
+   "tokens_median": 8192,
+   "fin_chars_median": 10302,
+   "per_kchar": {
+    "Final": 0.124,
+    "Therefore": 0.062,
+    "Final check": 0.048,
+    "Final Answer": 0.042,
+    "Wait": 0.043,
+    "No,": 1.41
+   },
+   "Final_max_run": [
+    1.07,
+    3,
+    2810,
+    "test/counting_and_probability/389.json"
+   ],
+   "Final_runaways": [],
+   "Therefore_max_run": [
+    0.74,
+    5,
+    6726,
+    "test/intermediate_algebra/1714.json"
+   ],
+   "Therefore_runaways": [],
+   "fin_saying_Final": 45,
+   "fin_first_Final_at_median": 0.5,
+   "fin_chars_after_first_Final_median": 4653,
+   "premature_Final_Answer": 44,
+   "runs_with_premature_Final_Answer": 28
+  },
+  "ref_m": {
+   "n": 100,
+   "acc": 46,
+   "trunc": 55,
+   "fin": 45,
+   "fin_wrong": 0,
+   "tokens_median": 8192,
+   "fin_chars_median": 10643,
+   "per_kchar": {
+    "Final": 0.13,
+    "Therefore": 0.038,
+    "Final check": 0.043,
+    "Final Answer": 0.049,
+    "Wait": 0.043,
+    "No,": 1.41
+   },
+   "Final_max_run": [
+    1.04,
+    4,
+    3855,
+    "test/counting_and_probability/190.json"
+   ],
+   "Final_runaways": [],
+   "Therefore_max_run": [
+    0.39,
+    2,
+    5167,
+    "test/intermediate_algebra/1714.json"
+   ],
+   "Therefore_runaways": [],
+   "fin_saying_Final": 44,
+   "fin_first_Final_at_median": 0.54,
+   "fin_chars_after_first_Final_median": 5076,
+   "premature_Final_Answer": 52,
+   "runs_with_premature_Final_Answer": 29
+  },
+  "cmp": {
+   "gained": [
+    "test/algebra/187.json",
+    "test/algebra/824.json",
+    "test/geometry/347.json",
+    "test/prealgebra/105.json",
+    "test/prealgebra/1227.json"
+   ],
+   "lost": [
+    "test/algebra/2264.json",
+    "test/algebra/2570.json",
+    "test/algebra/305.json",
+    "test/number_theory/931.json",
+    "test/prealgebra/1238.json",
+    "test/prealgebra/1423.json"
+   ],
+   "p": 1.0,
+   "newly_finished": [
+    "test/algebra/187.json",
+    "test/algebra/634.json",
+    "test/algebra/824.json",
+    "test/geometry/347.json",
+    "test/prealgebra/105.json",
+    "test/prealgebra/1227.json"
+   ],
+   "newly_truncated": [
+    "test/algebra/2264.json",
+    "test/algebra/2570.json",
+    "test/algebra/305.json",
+    "test/intermediate_algebra/834.json",
+    "test/number_theory/931.json",
+    "test/prealgebra/1238.json"
+   ]
+  },
+  "ratio": 1.63,
+  "answer_in_hand": {
+   "list": 12,
+   "of_ref_truncated": 55,
+   "gained_from_list": [
+    "test/algebra/187.json",
+    "test/algebra/824.json",
+    "test/geometry/347.json",
+    "test/prealgebra/1227.json"
+   ],
+   "share": 0.8
+  },
+  "clauses": [
+   [
+    "'Therefore' per kchar up 1.5x-10x: 0.038 -> 0.062 (x1.63)",
+    true
+   ],
+   [
+    "no run runs away ('Therefore' >= 5.0/kchar): densest [0.74, 5, 6726]",
+    true
+   ],
+   [
+    "accuracy unchanged within +-5: 46 -> 45 (-1)",
+    true
+   ],
+   [
+    "truncation unchanged within +-5: 55 -> 55 (+0)",
+    true
+   ]
+  ],
+  "notes": [
+   "Fh moved accuracy +2, T0 -1. T0 moved it less than Fh."
+  ],
+  "heldout": {
+   "run": 26,
+   "ref": 27,
+   "n": 60,
+   "gained": 3,
+   "lost": 4,
+   "p": 1.0
+  }
  }
 }

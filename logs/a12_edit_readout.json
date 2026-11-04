@@ -249,6 +249,80 @@
    }
   },
   {
+   "name": "A64x3F0",
+   "spec": {
+    "kind": "project",
+    "dir": "brake_Final",
+    "start": "A64x3",
+    "layers": "23",
+    "k": "1",
+    "scale": 1.0
+   },
+   "changed_layers": [
+    22,
+    23
+   ],
+   "gain": {
+    "Wait": -4.039461126434617,
+    "No": -3.728553526569158,
+    "Final": -1.310083755175583,
+    "Therefore": -1.6418096791021526
+   },
+   "observed": {
+    "run": "A64x3F0_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.033,
+     "No": 2.306,
+     "Final": 0.136,
+     "Therefore": 0.024
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "A64x3Fh",
+   "spec": {
+    "kind": "project",
+    "dir": "brake_Final",
+    "start": "A64x3",
+    "layers": "23",
+    "k": "1",
+    "scale": 0.5
+   },
+   "changed_layers": [
+    22,
+    23
+   ],
+   "gain": {
+    "Wait": -4.039490690338425,
+    "No": -3.7285697390325367,
+    "Final": -2.2115057789487764,
+    "Therefore": -1.6417029718868434
+   },
+   "observed": {
+    "run": "A64x3Fh_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.04,
+     "No": 2.361,
+     "Final": 0.066,
+     "Therefore": 0.039
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
    "name": "A64x3N3",
    "spec": {
     "kind": "project",

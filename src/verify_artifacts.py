@@ -246,6 +246,33 @@ def rebuild_gguf(src, f16, q8):
     return sha256(q8)
 
 
+def raw_copy(src, dst):
+    """Copy a model folder's top-level files into dst, the weight file through cache-bypassing reads, so the converter
+    never sees Windows' cached copy of the source (a bad cached page there would make every rebuild agree with
+    itself and blame the evaluated GGUF). The copy is rehashed from disk against the source; None if they match."""
+    dst.parent.mkdir(parents=True, exist_ok=True)
+    for d in dst.parent.iterdir():  # only one copy at a time in the temp folder (they are 1.5-4.5 GB each)
+        for old in d.iterdir():
+            old.unlink()
+        d.rmdir()
+    dst.mkdir()
+    for p in src.iterdir():
+        if not p.is_file():
+            continue
+        if p.name != FNAME:
+            (dst / p.name).write_bytes(p.read_bytes())
+            continue
+        f, off, size = RawFile(p), 0, os.path.getsize(p)
+        with open(dst / p.name, "wb") as out:
+            while off < size:
+                b = f.read(off, min(1 << 24, size - off))
+                out.write(b)
+                off += len(b)
+        f.close()
+    a, b = sha256(src / FNAME), sha256(dst / FNAME)
+    return None if a == b else f"copy {b[:12]} != source {a[:12]}"
+
+
 def stage_c(only, tmp):
     say("\n== C. GGUFs: evaluated Q8_0 vs a fresh f16 conversion + Q8_0 quantization of its safetensors (disk bytes)")
     tmp.mkdir(parents=True, exist_ok=True)
@@ -259,10 +286,18 @@ def stage_c(only, tmp):
                else ROOT / "edited" / name)
         t0 = time.time()
         want = sha256(g)
-        first = rebuild_gguf(src, f16, q8)
+        copy = tmp / "src" / src.name  # the converter writes the folder name into the GGUF's metadata
+        err = raw_copy(src, copy)
+        if err:  # the copy was hit on its way to disk; one retry, then report
+            err = raw_copy(src, copy)
+        if err:
+            say(f"  {name:12s} could not make a clean copy of the source ({err}); skipped")
+            bad += 1
+            continue
+        first = rebuild_gguf(copy, f16, q8)
         note = ""
         if first != want:  # the rebuild ran on the same RAM; a second one decides
-            second = rebuild_gguf(src, f16, q8)
+            second = rebuild_gguf(copy, f16, q8)
             note = (" (first rebuild differed, second matches: the fault was in the rebuild)" if second == want else
                     " (two rebuilds agree with each other)" if second == first else " (the two rebuilds disagree too)")
             same = second == want
@@ -273,6 +308,7 @@ def stage_c(only, tmp):
             continue
         bad += 1
         A, B = gguf_tensors(g), gguf_tensors(q8)
+        n_t = 0
         for k in sorted(set(A) | set(B)):
             if k not in A or k not in B:
                 say(f"      {k}: only in {'evaluated' if k in A else 'rebuild'}")
@@ -282,11 +318,14 @@ def stage_c(only, tmp):
             if a.shape != b.shape:
                 say(f"      {k}: sizes differ")
             elif (a != b).any():
+                n_t += 1
                 if A[k].tensor_type.name == "Q8_0":
                     blk, dmax, nw = q8_blocks(a, b)
                     say(f"      {k}: {blk.size} Q8_0 blocks differ, {nw} weights, max |change| {dmax:.4g}")
                 else:
                     say(f"      {k}: {A[k].tensor_type.name}, {int((a != b).sum())} bytes differ")
+        if not n_t:
+            say("      every tensor identical: the difference is in the metadata")
     return bad
 
 
