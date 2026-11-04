@@ -574,3 +574,13 @@ on the token, and the readout's dose limit, calibrated on 'Wait', is too cautiou
 Reading for the Final brake on both sizes: the readout predicts the direction of the rate change and, on the 0.8B, its
 order; on the 2B the rate saturates at x1.3. On neither model does more 'Final' mean more finishing. The brake
 controls how often the word is said, and the word is not what ends the reasoning.
+
+### 2B_A64x3T0 (control): 45/100 (runs/2B/math500/A64x3T0_8k_q8). Prediction 11 holds, 4 of 4 clauses.
+Zeroing the 'Therefore' brake column (L22 col 3895) on top of 2B_A64x3. 'Therefore' 0.038 -> 0.062 per kchar (x1.63),
+no runaway (densest 0.74), accuracy 46 -> 45 (+5/-6, p 1), truncated 55 -> 55, finished wrong 1, held-out 26/60.
+The same coin-flip churn as the Final edits, about 11 problems changing sides, and no net movement.
+The control does two jobs. First, a brake removal of the same kind on a commit word that does not end runs leaves
+stopping where it was, as the Final edits did; the Final brake did no better than a word chosen not to matter.
+Second, it settles a doubt left under F0: under T0 'Final' stays at 0.124 per kchar (2B_A64x3: 0.130), so the x1.3
+rise under Fh and F0 is the Final brake's doing, not drift on the A64x3 base. The rise is real, saturating, and inert.
+On the 2B 'Therefore' answered its brake more than 'Final' did (x1.63 at x0 against x1.31).

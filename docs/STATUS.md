@@ -1,6 +1,6 @@
 # Status
 
-Last updated 2026-11-03 22:45 EST.
+Last updated 2026-11-04 00:59 EST.
 
 ## Round 2: the commit side (running since 2026-11-03 21:30)
 
@@ -12,7 +12,7 @@ Round 1 left 55-60% of problems at the token cap, and on both models nearly ever
 
 Queue (`runs/_queue/round2.sh`, log `round2.log`): 2B_A64x3Fh and 2B_A64x3F0 ('Final' brake x0.5 and x0 on 2B_A64x3), 2B_Fh (x0.5 on the original 2B), A64x3Fh and A64x3F0 (0.8B, first 40), 2B_A64x3T0 ('Therefore' brake x0, a control). About four hours; rows land in the table below as runs finish.
 
-So far: 2B_A64x3Fh (x0.5) is a near-null, 48 vs 46 (+8/-6, p 0.79), with 'Final' up only x1.3: the 2B barely responds to this brake at half dose. F0 was the real test, and it is null too: zeroing the brake column leaves 'Final' at exactly x0.5's rate and the score at 46 (+5/-5 vs 2B_A64x3). On the 2B the Final brake is not a stop lever; the readout's dose-to-rate mapping fails for the first time, on a word the model places by plan rather than holds back in a loop. 2B_Fh, the same half dose on the original 2B, gives the same x1.3 and 22 vs 26 (+2/-6, p 0.29): prediction 8 fails too. The 0.8B half dose (A64x3Fh) is the same story: 'Final' x1.6, 11/40 vs 13/40 (+2/-4), prediction 9 fails. The 0.8B full dose (A64x3F0) keeps the dose order, 'Final' x3.3, but no runaway and no gain (11/40): the brake sets how often the word is said, and the word is not what ends the reasoning.
+So far: 2B_A64x3Fh (x0.5) is a near-null, 48 vs 46 (+8/-6, p 0.79), with 'Final' up only x1.3: the 2B barely responds to this brake at half dose. F0 was the real test, and it is null too: zeroing the brake column leaves 'Final' at exactly x0.5's rate and the score at 46 (+5/-5 vs 2B_A64x3). On the 2B the Final brake is not a stop lever; the readout's dose-to-rate mapping fails for the first time, on a word the model places by plan rather than holds back in a loop. 2B_Fh, the same half dose on the original 2B, gives the same x1.3 and 22 vs 26 (+2/-6, p 0.29): prediction 8 fails too. The 0.8B half dose (A64x3Fh) is the same story: 'Final' x1.6, 11/40 vs 13/40 (+2/-4), prediction 9 fails. The 0.8B full dose (A64x3F0) keeps the dose order, 'Final' x3.3, but no runaway and no gain (11/40): the brake sets how often the word is said, and the word is not what ends the reasoning. The 'Therefore' control (2B_A64x3T0, 45/100, prediction 11 holds 4/4) moves its own word x1.6 and nothing else, and leaves 'Final' flat, so the Final edits' x1.3 is real but does not stop runs.
 
 ## Qwen3.5-2B (round 1 done)
 
@@ -83,6 +83,7 @@ First-40 numbers compare against the baseline's same 40 problems: 4/40 correct, 
 | 2B Fh_8k_q8 | 100 (8k) | 22/100 | 78/100 | 22/22 | 0.03 | Original 2B plus L23 col 6022 x0.5. 'Final' 0.062 -> 0.081 per kchar (x1.3 again). vs base +2/-6 (p 0.29). Held-out 14/60. Prediction 8: 3/6 clauses, fails |
 | A64x3Fh_q8 | first 40 | 11/40 | 29/40 | 11/11 | 0.04 | A64x3 plus L23 col 1238 (the 0.8B Final brake) x0.5. 'Final' 0.041 -> 0.066 per kchar (x1.6; predicted 2-16x). vs A64x3 +2/-4 (p 0.69). Prediction 9: 2/5 clauses, fails |
 | A64x3F0_q8 | first 40 | 11/40 | 30/40 | 11/11 | 0.04 | A64x3 plus L23 col 1238 zeroed. 'Final' 0.136 per kchar: the dose order holds on the 0.8B (0.041, 0.066, 0.136), but no runaway (densest 2.45, line 5.0). vs Fh +3/-3. Prediction 10: 2/3 clauses |
+| 2B A64x3T0_8k_q8 | 100 (8k) | 45/100 | 55/100 | 44/45 | 0.04 | Control: 2B_A64x3 plus L22 col 3895 (the Therefore brake) zeroed. 'Therefore' 0.038 -> 0.062 (x1.63); 'Final' flat at 0.124, so the Final edits' x1.3 is their own. vs 2B_A64x3 +5/-6 (p 1). Held-out 26/60. Prediction 11: 4/4 clauses |
 
 Weight-analysis findings are in `logs/edit_session.md`. In short, post-training's top change to L22's MLP output is a direction u that writes "Wait" (z +23). The neurons feeding it get extra post-training change in L15 to L21, consistent with MIT's 15/19 without singling them out. The gate/up cosine proxy (a06) could not tell which L22 neurons push u up or down, so P64's sign had to be learned from the eval. The later self-gain readout (a08) gets that sign from weights. But it was built after the evals and is calibrated on only two known signs, so the 0.8B's Deviation 4 stands.
 

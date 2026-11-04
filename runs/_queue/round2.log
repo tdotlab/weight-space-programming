@@ -1,0 +1,25 @@
+=== 21:14:04 build 2B_A64x3Fh (2B, start 2B_A64x3, L23 col 6022, scale 0.5)
+    edited L23 columns [6022]
+=== 21:16:30 build 2B_A64x3F0 (2B, start 2B_A64x3, L23 col 6022, scale 1.0)
+    edited L23 columns [6022]
+=== 21:18:50 build 2B_Fh (2B, start original, L23 col 6022, scale 0.5)
+    edited L23 columns [6022]
+=== 21:21:16 build A64x3Fh (0.8B, start A64x3, L23 col 1238, scale 0.5)
+    edited L23 columns [1238]
+=== 21:22:17 build A64x3F0 (0.8B, start A64x3, L23 col 1238, scale 1.0)
+    edited L23 columns [1238]
+=== 21:23:21 build 2B_A64x3T0 (2B, start 2B_A64x3, L22 col 3895, scale 1.0)
+    edited L22 columns [3895]
+=== 21:27:13 start A64x3Fh_8k_q8
+=== 22:01:44 done A64x3Fh_8k_q8: "acc":0.48,"truncated":0.52,
+=== 22:01:44 start A64x3F0_8k_q8
+=== 22:38:05 done A64x3F0_8k_q8: "acc":0.46,"truncated":0.55,
+=== 22:38:05 start Fh_8k_q8
+=== 23:17:33 done Fh_8k_q8: "acc":0.22,"truncated":0.78,
+=== 23:17:33 start A64x3Fh_q8
+=== 23:49:43 done A64x3Fh_q8: "acc":0.275,"truncated":0.725,
+=== 23:49:44 start A64x3F0_q8
+=== 00:22:27 done A64x3F0_q8: "acc":0.275,"truncated":0.75,
+=== 00:22:28 start A64x3T0_8k_q8
+=== 00:57:46 done A64x3T0_8k_q8: "acc":0.45,"truncated":0.55,
+=== 00:57:46 round 2 done

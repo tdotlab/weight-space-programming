@@ -71,4 +71,18 @@ Prediction 10: 0.8B/math500/A64x3F0_q8 vs 0.8B/math500/A64x3Fh_q8 (40 shared pro
   gained ['test/algebra/2391.json', 'test/counting_and_probability/1114.json', 'test/geometry/967.json']
   lost ['test/algebra/1098.json', 'test/algebra/824.json', 'test/geometry/347.json']
 
-Prediction 11: 2B/math500/A64x3T0_8k_q8 has 0/100 results, not scored yet.
+Prediction 11: 2B/math500/A64x3T0_8k_q8 vs 2B/math500/A64x3_8k_q8 (100 shared problems). 4/4 clauses hold.
+  PASS  'Therefore' per kchar up 1.5x-10x: 0.038 -> 0.062 (x1.63)
+  PASS  no run runs away ('Therefore' >= 5.0/kchar): densest [0.74, 5, 6726]
+  PASS  accuracy unchanged within +-5: 46 -> 45 (-1)
+  PASS  truncation unchanged within +-5: 55 -> 55 (+0)
+  note: Fh moved accuracy +2, T0 -1. T0 moved it less than Fh.
+  accuracy 46 -> 45 (+5/-6, sign test p 1); truncated 55 -> 55 (newly finished 6, newly truncated 6); finished wrong 0 -> 1
+  held-out 60: 27 -> 26 (+3/-4, p 1)
+  answer-in-hand (12 of the reference's 55 truncated): gains from it 4/5 ['test/algebra/187.json', 'test/algebra/824.json', 'test/geometry/347.json', 'test/prealgebra/1227.json']
+  per kchar: {'Final': 0.13, 'Therefore': 0.038, 'Final check': 0.043, 'Final Answer': 0.049, 'Wait': 0.043, 'No,': 1.41} -> {'Final': 0.124, 'Therefore': 0.062, 'Final check': 0.048, 'Final Answer': 0.042, 'Wait': 0.043, 'No,': 1.41}
+  finished runs saying 'Final' 44/45 -> 45/45; first 'Final' at 0.54 -> 0.5 of the text, then 5076 -> 4653 chars to the end; finished median length 10643 -> 10302 chars; median tokens 8192 -> 8192
+  premature 'Final Answer' (>2000 chars before the end): 52 in 29 runs -> 44 in 28 runs; densest 'Final' run [1.04, 4, 3855] -> [1.07, 3, 2810]
+  gained ['test/algebra/187.json', 'test/algebra/824.json', 'test/geometry/347.json', 'test/prealgebra/105.json', 'test/prealgebra/1227.json']
+  lost ['test/algebra/2264.json', 'test/algebra/2570.json', 'test/algebra/305.json', 'test/number_theory/931.json', 'test/prealgebra/1238.json', 'test/prealgebra/1423.json']
+st/number_theory/931.json', 'test/prealgebra/1238.json', 'test/prealgebra/1423.json']
