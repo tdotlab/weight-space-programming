@@ -314,5 +314,153 @@
    "p": 0.75390625
   },
   "branch": "neither"
+ },
+ "8": {
+  "run": "2B/math500/Fh_8k_q8",
+  "ref": "2B/math500/base_8k_q8",
+  "shared": 100,
+  "run_m": {
+   "n": 100,
+   "acc": 22,
+   "trunc": 78,
+   "fin": 22,
+   "fin_wrong": 0,
+   "tokens_median": 8192,
+   "fin_chars_median": 10885,
+   "per_kchar": {
+    "Final": 0.081,
+    "Therefore": 0.034,
+    "Final check": 0.026,
+    "Final Answer": 0.032,
+    "Wait": 1.533,
+    "No,": 1.423
+   },
+   "Final_max_run": [
+    1.2,
+    19,
+    15854,
+    "test/algebra/1098.json"
+   ],
+   "Final_runaways": [],
+   "Therefore_max_run": [
+    0.28,
+    2,
+    7061,
+    "test/intermediate_algebra/1714.json"
+   ],
+   "Therefore_runaways": [],
+   "fin_saying_Final": 22,
+   "fin_first_Final_at_median": 0.47,
+   "fin_chars_after_first_Final_median": 6123,
+   "premature_Final_Answer": 51,
+   "runs_with_premature_Final_Answer": 17
+  },
+  "ref_m": {
+   "n": 100,
+   "acc": 26,
+   "trunc": 74,
+   "fin": 26,
+   "fin_wrong": 0,
+   "tokens_median": 8192,
+   "fin_chars_median": 9326,
+   "per_kchar": {
+    "Final": 0.062,
+    "Therefore": 0.028,
+    "Final check": 0.023,
+    "Final Answer": 0.021,
+    "Wait": 1.546,
+    "No,": 1.426
+   },
+   "Final_max_run": [
+    0.9,
+    5,
+    5569,
+    "test/algebra/251.json"
+   ],
+   "Final_runaways": [],
+   "Therefore_max_run": [
+    0.27,
+    1,
+    3740,
+    "test/counting_and_probability/190.json"
+   ],
+   "Therefore_runaways": [],
+   "fin_saying_Final": 26,
+   "fin_first_Final_at_median": 0.55,
+   "fin_chars_after_first_Final_median": 3802,
+   "premature_Final_Answer": 24,
+   "runs_with_premature_Final_Answer": 18
+  },
+  "cmp": {
+   "gained": [
+    "test/algebra/1031.json",
+    "test/prealgebra/2057.json"
+   ],
+   "lost": [
+    "test/algebra/1339.json",
+    "test/algebra/170.json",
+    "test/algebra/1934.json",
+    "test/algebra/2043.json",
+    "test/algebra/694.json",
+    "test/geometry/347.json"
+   ],
+   "p": 0.2890625,
+   "newly_finished": [
+    "test/algebra/1031.json",
+    "test/prealgebra/2057.json"
+   ],
+   "newly_truncated": [
+    "test/algebra/1339.json",
+    "test/algebra/170.json",
+    "test/algebra/1934.json",
+    "test/algebra/2043.json",
+    "test/algebra/694.json",
+    "test/geometry/347.json"
+   ]
+  },
+  "ratio": 1.31,
+  "answer_in_hand": {
+   "list": 20,
+   "of_ref_truncated": 74,
+   "gained_from_list": [
+    "test/prealgebra/2057.json"
+   ],
+   "share": 0.5
+  },
+  "clauses": [
+   [
+    "'Final' per kchar up 1.5x-10x: 0.062 -> 0.081 (x1.31)",
+    false
+   ],
+   [
+    "no run runs away ('Final' >= 5.0/kchar): densest [1.2, 19, 15854]",
+    true
+   ],
+   [
+    "accuracy >= 26: 22",
+    false
+   ],
+   [
+    "gained >= lost: +2/-6",
+    false
+   ],
+   [
+    "finished wrong <= 2: 0",
+    true
+   ],
+   [
+    "at least half the gains from the 20 answer-in-hand problems: 1/2",
+    true
+   ]
+  ],
+  "notes": [],
+  "heldout": {
+   "run": 14,
+   "ref": 15,
+   "n": 60,
+   "gained": 1,
+   "lost": 2,
+   "p": 1.0
+  }
  }
 }

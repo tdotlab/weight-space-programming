@@ -28,7 +28,21 @@ Prediction 7: 2B/math500/A64x3F0_8k_q8 vs 2B/math500/A64x3Fh_8k_q8 (100 shared p
   gained ['test/algebra/2264.json', 'test/counting_and_probability/1114.json', 'test/geometry/456.json', 'test/geometry/802.json', 'test/geometry/967.json', 'test/number_theory/931.json', 'test/precalculus/807.json']
   lost ['test/algebra/1143.json', 'test/algebra/2043.json', 'test/algebra/276.json', 'test/algebra/305.json', 'test/algebra/972.json', 'test/counting_and_probability/803.json', 'test/intermediate_algebra/834.json', 'test/prealgebra/1807.json', 'test/precalculus/580.json']
 
-Prediction 8: 2B/math500/Fh_8k_q8 has 0/100 results, not scored yet.
+Prediction 8: 2B/math500/Fh_8k_q8 vs 2B/math500/base_8k_q8 (100 shared problems). 3/6 clauses hold.
+  FAIL  'Final' per kchar up 1.5x-10x: 0.062 -> 0.081 (x1.31)
+  PASS  no run runs away ('Final' >= 5.0/kchar): densest [1.2, 19, 15854]
+  FAIL  accuracy >= 26: 22
+  FAIL  gained >= lost: +2/-6
+  PASS  finished wrong <= 2: 0
+  PASS  at least half the gains from the 20 answer-in-hand problems: 1/2
+  accuracy 26 -> 22 (+2/-6, sign test p 0.289); truncated 74 -> 78 (newly finished 2, newly truncated 6); finished wrong 0 -> 0
+  held-out 60: 15 -> 14 (+1/-2, p 1)
+  answer-in-hand (20 of the reference's 74 truncated): gains from it 1/2 ['test/prealgebra/2057.json']
+  per kchar: {'Final': 0.062, 'Therefore': 0.028, 'Final check': 0.023, 'Final Answer': 0.021, 'Wait': 1.546, 'No,': 1.426} -> {'Final': 0.081, 'Therefore': 0.034, 'Final check': 0.026, 'Final Answer': 0.032, 'Wait': 1.533, 'No,': 1.423}
+  finished runs saying 'Final' 26/26 -> 22/22; first 'Final' at 0.55 -> 0.47 of the text, then 3802 -> 6123 chars to the end; finished median length 9326 -> 10885 chars; median tokens 8192 -> 8192
+  premature 'Final Answer' (>2000 chars before the end): 24 in 18 runs -> 51 in 17 runs; densest 'Final' run [0.9, 5, 5569] -> [1.2, 19, 15854]
+  gained ['test/algebra/1031.json', 'test/prealgebra/2057.json']
+  lost ['test/algebra/1339.json', 'test/algebra/170.json', 'test/algebra/1934.json', 'test/algebra/2043.json', 'test/algebra/694.json', 'test/geometry/347.json']
 
 Prediction 9: 0.8B/math500/A64x3Fh_q8 has 0/40 results, not scored yet.
 

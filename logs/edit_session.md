@@ -549,3 +549,11 @@ plan of the solution places, and this neuron does not decide when that happens. 
 about the size of the base-to-A64x3 rise (0.06 to 0.13), which came with no edit to 'Final' at all, so it may not be
 the brake edit's doing. On the 2B the Final brake is not a stop lever at any dose the readout allows.
 
+### 2B_Fh: 22/100 (runs/2B/math500/Fh_8k_q8). Prediction 8 fails, 3 of 6 clauses.
+The same half-dose edit on the original 2B, without the Wait fix underneath. 'Final' 0.062 -> 0.081 per kchar (x1.31,
+below the 1.5x floor), the same x1.3 the half dose gave on 2B_A64x3. Accuracy 22 vs the baseline's 26 (+2/-6, p 0.29),
+truncated 78 vs 74, finished wrong 0, held-out 14/60 vs 15/60. Premature 'Final Answer' doubles (24 -> 51) without
+any more runs finishing: the model labels a final answer earlier and then keeps going. Read with the two A64x3 doses,
+the 2B's 'Final' answers this neuron by a fixed x1.3 that does not grow with dose and does not turn into stopping.
+RAM caveat (STATUS, Gotchas): this build's file carries one flipped bit (L7 up_proj), and the machine's RAM was found
+corrupting cached file pages during this run, so a load-time fault in this or any run cannot be ruled out after the fact.
