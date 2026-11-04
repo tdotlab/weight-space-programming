@@ -5,4 +5,4 @@ __pycache__/
 gguf/
 runs/*/*/*/server.log
 runs/_bench/server_*.log
-runs/_queue/queue.pid
+runs/_queue/*.pid

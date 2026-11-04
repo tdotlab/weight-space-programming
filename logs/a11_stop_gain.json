@@ -1,0 +1,2077 @@
+{
+ "model": "Qwen3.5-0.8B",
+ "tokens": {
+  "Wait": {
+   "token_id": 13784,
+   "layers": [
+    {
+     "layer": 0,
+     "sum": -0.0003,
+     "neg": -0.0783,
+     "pos": 0.078
+    },
+    {
+     "layer": 1,
+     "sum": 0.0231,
+     "neg": -0.0887,
+     "pos": 0.1118
+    },
+    {
+     "layer": 2,
+     "sum": 0.0263,
+     "neg": -0.1289,
+     "pos": 0.1552
+    },
+    {
+     "layer": 3,
+     "sum": 0.0146,
+     "neg": -0.1132,
+     "pos": 0.1279
+    },
+    {
+     "layer": 4,
+     "sum": -0.0124,
+     "neg": -0.1195,
+     "pos": 0.1071
+    },
+    {
+     "layer": 5,
+     "sum": 0.0042,
+     "neg": -0.1086,
+     "pos": 0.1128
+    },
+    {
+     "layer": 6,
+     "sum": -0.0167,
+     "neg": -0.111,
+     "pos": 0.0943
+    },
+    {
+     "layer": 7,
+     "sum": 0.0015,
+     "neg": -0.0894,
+     "pos": 0.0909
+    },
+    {
+     "layer": 8,
+     "sum": -0.0085,
+     "neg": -0.0923,
+     "pos": 0.0838
+    },
+    {
+     "layer": 9,
+     "sum": -0.0082,
+     "neg": -0.0811,
+     "pos": 0.0729
+    },
+    {
+     "layer": 10,
+     "sum": 0.0052,
+     "neg": -0.066,
+     "pos": 0.0712
+    },
+    {
+     "layer": 11,
+     "sum": -0.0015,
+     "neg": -0.0707,
+     "pos": 0.0692
+    },
+    {
+     "layer": 12,
+     "sum": 0.0007,
+     "neg": -0.0803,
+     "pos": 0.081
+    },
+    {
+     "layer": 13,
+     "sum": 0.0203,
+     "neg": -0.0804,
+     "pos": 0.1007
+    },
+    {
+     "layer": 14,
+     "sum": 0.0099,
+     "neg": -0.1062,
+     "pos": 0.116
+    },
+    {
+     "layer": 15,
+     "sum": 0.063,
+     "neg": -0.1229,
+     "pos": 0.1859
+    },
+    {
+     "layer": 16,
+     "sum": 0.041,
+     "neg": -0.1619,
+     "pos": 0.203
+    },
+    {
+     "layer": 17,
+     "sum": -0.0147,
+     "neg": -0.2286,
+     "pos": 0.214
+    },
+    {
+     "layer": 18,
+     "sum": 0.104,
+     "neg": -0.2468,
+     "pos": 0.3508
+    },
+    {
+     "layer": 19,
+     "sum": 0.0088,
+     "neg": -0.2459,
+     "pos": 0.2547
+    },
+    {
+     "layer": 20,
+     "sum": -0.1715,
+     "neg": -0.387,
+     "pos": 0.2155
+    },
+    {
+     "layer": 21,
+     "sum": -0.1465,
+     "neg": -0.4109,
+     "pos": 0.2645
+    },
+    {
+     "layer": 22,
+     "sum": -1.4615,
+     "neg": -1.7107,
+     "pos": 0.2493
+    },
+    {
+     "layer": 23,
+     "sum": -0.2779,
+     "neg": -0.5093,
+     "pos": 0.2314
+    }
+   ],
+   "carriers": [
+    {
+     "layer": 22,
+     "col": 573,
+     "c": -1.3462094068527222,
+     "layer_sum": -1.4614601135253906,
+     "z_down": 14.87,
+     "down_promotes": [
+      " wait",
+      "等待",
+      " waiting",
+      "wait",
+      "waiting",
+      " waits"
+     ],
+     "down_suppresses": [
+      "ogh",
+      "enez",
+      "六一",
+      "bricas",
+      "ENE",
+      "ener"
+     ],
+     "share_of_layer": 0.921,
+     "by_alpha": {
+      "0.1*sqrt(H)": {
+       "c": -0.17474,
+       "layer": -0.18749
+      },
+      "0.25*sqrt(H)": {
+       "c": -1.34621,
+       "layer": -1.46146
+      },
+      "0.5*sqrt(H)": {
+       "c": -5.61164,
+       "layer": -6.22642
+      }
+     }
+    },
+    {
+     "layer": 18,
+     "col": 881,
+     "c": 0.07864370197057724,
+     "layer_sum": 0.1040126383304596,
+     "z_down": 12.98,
+     "down_promotes": [
+      " waiting",
+      " wait",
+      "等待",
+      "waiting",
+      " Waiting",
+      "wait"
+     ],
+     "down_suppresses": [
+      "lare",
+      "cly",
+      "remen",
+      "manifest",
+      "umin",
+      " آسیب"
+     ],
+     "share_of_layer": 0.756
+    },
+    {
+     "layer": 23,
+     "col": 66,
+     "c": -0.0659368634223938,
+     "layer_sum": -0.27786314487457275,
+     "z_down": 5.81,
+     "down_promotes": [
+      "Theme",
+      "Challenge",
+      "Decision",
+      "Phrase",
+      "Register",
+      "Candidate"
+     ],
+     "down_suppresses": [
+      "到高",
+      "不大的",
+      "λιο",
+      "íp",
+      "лт",
+      "ầm"
+     ],
+     "share_of_layer": 0.237
+    },
+    {
+     "layer": 20,
+     "col": 405,
+     "c": -0.06270350515842438,
+     "layer_sum": -0.17150169610977173,
+     "z_down": 8.05,
+     "down_promotes": [
+      " delays",
+      "延迟",
+      " delay",
+      " wait",
+      "delay",
+      " Delay"
+     ],
+     "down_suppresses": [
+      " absoluta",
+      "urian",
+      " World",
+      "绝对",
+      "World",
+      " extreme"
+     ],
+     "share_of_layer": 0.366
+    },
+    {
+     "layer": 23,
+     "col": 58,
+     "c": -0.05580068752169609,
+     "layer_sum": -0.27786314487457275,
+     "z_down": -7.13,
+     "down_promotes": [
+      "mensagem",
+      "aiss",
+      "uttur",
+      "bolehkan",
+      "ảm",
+      "orestation"
+     ],
+     "down_suppresses": [
+      "Is",
+      "J",
+      "As",
+      "Z",
+      "H",
+      "ID"
+     ],
+     "share_of_layer": 0.201
+    },
+    {
+     "layer": 17,
+     "col": 1915,
+     "c": -0.05541244149208069,
+     "layer_sum": -0.014669595286250114,
+     "z_down": 13.43,
+     "down_promotes": [
+      " wait",
+      " waiting",
+      "等待",
+      "wait",
+      " waits",
+      " waited"
+     ],
+     "down_suppresses": [
+      "_orientation",
+      "inic",
+      "atics",
+      "ariam",
+      "occan",
+      "πτωση"
+     ],
+     "share_of_layer": 3.777
+    },
+    {
+     "layer": 22,
+     "col": 75,
+     "c": -0.0534282848238945,
+     "layer_sum": -1.4614601135253906
+    },
+    {
+     "layer": 23,
+     "col": 3041,
+     "c": -0.046931855380535126,
+     "layer_sum": -0.27786314487457275
+    },
+    {
+     "layer": 20,
+     "col": 315,
+     "c": -0.027308624237775803,
+     "layer_sum": -0.17150169610977173
+    },
+    {
+     "layer": 21,
+     "col": 46,
+     "c": -0.016384869813919067,
+     "layer_sum": -0.1464509665966034
+    }
+   ],
+   "all_layers_sum": -1.7969,
+   "embedding": {
+    "norm_instruct": 0.5573992729187012,
+    "norm_base": 0.5640309453010559,
+    "cos_instruct_base": 0.9984250068664551
+   }
+  },
+  "</think>": {
+   "token_id": 248069,
+   "layers": [
+    {
+     "layer": 0,
+     "sum": 0.0005,
+     "neg": -0.0837,
+     "pos": 0.0842
+    },
+    {
+     "layer": 1,
+     "sum": 0.0079,
+     "neg": -0.095,
+     "pos": 0.1028
+    },
+    {
+     "layer": 2,
+     "sum": 0.0454,
+     "neg": -0.1175,
+     "pos": 0.1629
+    },
+    {
+     "layer": 3,
+     "sum": 0.0091,
+     "neg": -0.122,
+     "pos": 0.1311
+    },
+    {
+     "layer": 4,
+     "sum": 0.0304,
+     "neg": -0.1105,
+     "pos": 0.1408
+    },
+    {
+     "layer": 5,
+     "sum": 0.0353,
+     "neg": -0.1007,
+     "pos": 0.136
+    },
+    {
+     "layer": 6,
+     "sum": 0.0216,
+     "neg": -0.0907,
+     "pos": 0.1123
+    },
+    {
+     "layer": 7,
+     "sum": 0.0166,
+     "neg": -0.097,
+     "pos": 0.1136
+    },
+    {
+     "layer": 8,
+     "sum": 0.0171,
+     "neg": -0.0778,
+     "pos": 0.0949
+    },
+    {
+     "layer": 9,
+     "sum": -0.0095,
+     "neg": -0.084,
+     "pos": 0.0745
+    },
+    {
+     "layer": 10,
+     "sum": -0.0048,
+     "neg": -0.0736,
+     "pos": 0.0688
+    },
+    {
+     "layer": 11,
+     "sum": 0.0002,
+     "neg": -0.0725,
+     "pos": 0.0727
+    },
+    {
+     "layer": 12,
+     "sum": 0.0054,
+     "neg": -0.0787,
+     "pos": 0.0841
+    },
+    {
+     "layer": 13,
+     "sum": -0.0148,
+     "neg": -0.0923,
+     "pos": 0.0775
+    },
+    {
+     "layer": 14,
+     "sum": -0.0191,
+     "neg": -0.1119,
+     "pos": 0.0928
+    },
+    {
+     "layer": 15,
+     "sum": 0.0539,
+     "neg": -0.1349,
+     "pos": 0.1888
+    },
+    {
+     "layer": 16,
+     "sum": -0.0052,
+     "neg": -0.1666,
+     "pos": 0.1613
+    },
+    {
+     "layer": 17,
+     "sum": -0.0112,
+     "neg": -0.1969,
+     "pos": 0.1857
+    },
+    {
+     "layer": 18,
+     "sum": 0.0233,
+     "neg": -0.1981,
+     "pos": 0.2214
+    },
+    {
+     "layer": 19,
+     "sum": -0.0268,
+     "neg": -0.2769,
+     "pos": 0.2501
+    },
+    {
+     "layer": 20,
+     "sum": -0.0291,
+     "neg": -0.2724,
+     "pos": 0.2433
+    },
+    {
+     "layer": 21,
+     "sum": -0.0564,
+     "neg": -0.3247,
+     "pos": 0.2684
+    },
+    {
+     "layer": 22,
+     "sum": -0.0576,
+     "neg": -0.3241,
+     "pos": 0.2665
+    },
+    {
+     "layer": 23,
+     "sum": 0.0163,
+     "neg": -0.3845,
+     "pos": 0.4008
+    }
+   ],
+   "carriers": [
+    {
+     "layer": 19,
+     "col": 31,
+     "c": -0.020308295264840126,
+     "layer_sum": -0.02676122821867466,
+     "z_down": 3.78,
+     "down_promotes": [
+      "grund",
+      "пон",
+      "新加坡",
+      "глу",
+      "óp",
+      "weed"
+     ],
+     "down_suppresses": [
+      "ne",
+      "izes",
+      "ent",
+      "ist",
+      "en",
+      " d"
+     ],
+     "share_of_layer": 0.759,
+     "by_alpha": {
+      "0.1*sqrt(H)": {
+       "c": -0.00258,
+       "layer": -0.00349
+      },
+      "0.25*sqrt(H)": {
+       "c": -0.02031,
+       "layer": -0.02676
+      },
+      "0.5*sqrt(H)": {
+       "c": -0.09535,
+       "layer": -0.12356
+      }
+     },
+     "origin": {
+      "c_base": -0.01471023540943861,
+      "layer_sum_base": -0.017714139074087143,
+      "rel_change_gate": 0.03415701910853386,
+      "rel_change_up": 0.08157848566770554,
+      "rel_change_down": 0.08930838108062744,
+      "median_rel_change_down": 0.08995784819126129
+     }
+    },
+    {
+     "layer": 22,
+     "col": 2835,
+     "c": -0.01739143393933773,
+     "layer_sum": -0.05762467905879021,
+     "z_down": 5.58,
+     "down_promotes": [
+      "<|endoftext|>",
+      "<|im_end|>",
+      "')</",
+      "<think>",
+      "');</",
+      "'</"
+     ],
+     "down_suppresses": [
+      "`.",
+      ").",
+      "\".",
+      " ",
+      "()).",
+      " `"
+     ],
+     "share_of_layer": 0.302,
+     "origin": {
+      "c_base": -0.01741073839366436,
+      "layer_sum_base": -0.0560898520052433,
+      "rel_change_gate": 0.0686710849404335,
+      "rel_change_up": 0.09095660597085953,
+      "rel_change_down": 0.047045592218637466,
+      "median_rel_change_down": 0.08463101834058762
+     }
+    },
+    {
+     "layer": 23,
+     "col": 51,
+     "c": 0.013677659444510937,
+     "layer_sum": 0.01628510095179081,
+     "z_down": -2.63,
+     "down_promotes": [
+      "”…",
+      "*“.",
+      " degusta",
+      " erotisch",
+      "$j",
+      "*”,"
+     ],
+     "down_suppresses": [
+      " ",
+      " (",
+      " \"",
+      ",",
+      "/",
+      "1"
+     ],
+     "share_of_layer": 0.84
+    },
+    {
+     "layer": 23,
+     "col": 7,
+     "c": -0.012807538732886314,
+     "layer_sum": 0.01628510095179081,
+     "z_down": 2.8,
+     "down_promotes": [
+      "woke",
+      "prene",
+      "theless",
+      "manda",
+      "isable",
+      "lesia"
+     ],
+     "down_suppresses": [
+      " in",
+      " to",
+      " for",
+      " the",
+      " as",
+      " on"
+     ],
+     "share_of_layer": -0.786,
+     "origin": {
+      "c_base": -0.01247826311737299,
+      "layer_sum_base": 0.02032375894486904,
+      "rel_change_gate": 0.03000851348042488,
+      "rel_change_up": 0.04030568525195122,
+      "rel_change_down": 0.04033229127526283,
+      "median_rel_change_down": 0.06792498379945755
+     }
+    },
+    {
+     "layer": 23,
+     "col": 1386,
+     "c": 0.010151575319468975,
+     "layer_sum": 0.01628510095179081,
+     "z_down": 2.27,
+     "down_promotes": [
+      "sg",
+      "lg",
+      "dy",
+      "有关",
+      "Qu",
+      "启发"
+     ],
+     "down_suppresses": [
+      "XM",
+      "此时",
+      "享受",
+      "yu",
+      "承担",
+      "调"
+     ],
+     "share_of_layer": 0.623
+    },
+    {
+     "layer": 22,
+     "col": 532,
+     "c": -0.008484643884003162,
+     "layer_sum": -0.05762467905879021,
+     "z_down": -4.29,
+     "down_promotes": [
+      " أيضاً",
+      "γγελμα",
+      "تما",
+      "μένη",
+      "يميا",
+      "σματα"
+     ],
+     "down_suppresses": [
+      "`",
+      "}`",
+      " `",
+      "`,",
+      "`.",
+      ".`"
+     ],
+     "share_of_layer": 0.147
+    },
+    {
+     "layer": 21,
+     "col": 1022,
+     "c": 0.008481960743665695,
+     "layer_sum": -0.05636407807469368
+    },
+    {
+     "layer": 21,
+     "col": 239,
+     "c": -0.007027698215097189,
+     "layer_sum": -0.05636407807469368
+    },
+    {
+     "layer": 22,
+     "col": 1955,
+     "c": -0.007004597224295139,
+     "layer_sum": -0.05762467905879021
+    },
+    {
+     "layer": 20,
+     "col": 112,
+     "c": -0.005412200465798378,
+     "layer_sum": -0.02909078262746334
+    }
+   ],
+   "all_layers_sum": 0.0483,
+   "embedding": {
+    "norm_instruct": 0.5706068873405457,
+    "norm_base": 0.567439615726471,
+    "cos_instruct_base": 0.9989573359489441
+   }
+  },
+  " Therefore": {
+   "token_id": 14833,
+   "layers": [
+    {
+     "layer": 0,
+     "sum": 0.0211,
+     "neg": -0.0751,
+     "pos": 0.0962
+    },
+    {
+     "layer": 1,
+     "sum": 0.004,
+     "neg": -0.1049,
+     "pos": 0.1089
+    },
+    {
+     "layer": 2,
+     "sum": 0.0027,
+     "neg": -0.1295,
+     "pos": 0.1322
+    },
+    {
+     "layer": 3,
+     "sum": 0.0416,
+     "neg": -0.098,
+     "pos": 0.1396
+    },
+    {
+     "layer": 4,
+     "sum": 0.0813,
+     "neg": -0.0861,
+     "pos": 0.1674
+    },
+    {
+     "layer": 5,
+     "sum": 0.0619,
+     "neg": -0.0821,
+     "pos": 0.144
+    },
+    {
+     "layer": 6,
+     "sum": 0.0411,
+     "neg": -0.0755,
+     "pos": 0.1166
+    },
+    {
+     "layer": 7,
+     "sum": 0.0515,
+     "neg": -0.073,
+     "pos": 0.1245
+    },
+    {
+     "layer": 8,
+     "sum": 0.053,
+     "neg": -0.0663,
+     "pos": 0.1193
+    },
+    {
+     "layer": 9,
+     "sum": 0.0299,
+     "neg": -0.0722,
+     "pos": 0.1021
+    },
+    {
+     "layer": 10,
+     "sum": 0.0407,
+     "neg": -0.0588,
+     "pos": 0.0995
+    },
+    {
+     "layer": 11,
+     "sum": 0.0364,
+     "neg": -0.07,
+     "pos": 0.1065
+    },
+    {
+     "layer": 12,
+     "sum": 0.0175,
+     "neg": -0.088,
+     "pos": 0.1055
+    },
+    {
+     "layer": 13,
+     "sum": 0.0764,
+     "neg": -0.0755,
+     "pos": 0.152
+    },
+    {
+     "layer": 14,
+     "sum": 0.107,
+     "neg": -0.0821,
+     "pos": 0.1891
+    },
+    {
+     "layer": 15,
+     "sum": 0.0445,
+     "neg": -0.1038,
+     "pos": 0.1483
+    },
+    {
+     "layer": 16,
+     "sum": 0.0442,
+     "neg": -0.1205,
+     "pos": 0.1647
+    },
+    {
+     "layer": 17,
+     "sum": 0.3137,
+     "neg": -0.1643,
+     "pos": 0.478
+    },
+    {
+     "layer": 18,
+     "sum": -0.0378,
+     "neg": -0.2319,
+     "pos": 0.1942
+    },
+    {
+     "layer": 19,
+     "sum": -0.1369,
+     "neg": -0.336,
+     "pos": 0.1991
+    },
+    {
+     "layer": 20,
+     "sum": -0.7058,
+     "neg": -0.9226,
+     "pos": 0.2168
+    },
+    {
+     "layer": 21,
+     "sum": -0.2272,
+     "neg": -0.4462,
+     "pos": 0.219
+    },
+    {
+     "layer": 22,
+     "sum": -1.9547,
+     "neg": -2.174,
+     "pos": 0.2193
+    },
+    {
+     "layer": 23,
+     "sum": -0.1528,
+     "neg": -0.3387,
+     "pos": 0.1859
+    }
+   ],
+   "carriers": [
+    {
+     "layer": 22,
+     "col": 2001,
+     "c": -1.4507094621658325,
+     "layer_sum": -1.9547144174575806,
+     "z_down": 16.82,
+     "down_promotes": [
+      " therefore",
+      "因此",
+      " Therefore",
+      "因此在",
+      "Therefore",
+      "因而"
+     ],
+     "down_suppresses": [
+      " favori",
+      "erma",
+      ".shtml",
+      "мени",
+      "主业",
+      "ฟ้า"
+     ],
+     "share_of_layer": 0.742,
+     "by_alpha": {
+      "0.1*sqrt(H)": {
+       "c": -0.18735,
+       "layer": -0.25107
+      },
+      "0.25*sqrt(H)": {
+       "c": -1.45071,
+       "layer": -1.95471
+      },
+      "0.5*sqrt(H)": {
+       "c": -6.07423,
+       "layer": -8.29979
+      }
+     },
+     "origin": {
+      "c_base": -1.4332743883132935,
+      "layer_sum_base": -1.9490950107574463,
+      "rel_change_gate": 0.06688777357339859,
+      "rel_change_up": 0.11543932557106018,
+      "rel_change_down": 0.09870791435241699,
+      "median_rel_change_down": 0.08463101834058762
+     }
+    },
+    {
+     "layer": 20,
+     "col": 189,
+     "c": -0.5564693212509155,
+     "layer_sum": -0.705765962600708,
+     "z_down": 14.22,
+     "down_promotes": [
+      "因此",
+      " therefore",
+      "故",
+      " thus",
+      "所以",
+      "因此在"
+     ],
+     "down_suppresses": [
+      "deles",
+      "tures",
+      "ggio",
+      "ropri",
+      "tus",
+      "лл"
+     ],
+     "share_of_layer": 0.788,
+     "origin": {
+      "c_base": -0.5974215865135193,
+      "layer_sum_base": -0.7639757394790649,
+      "rel_change_gate": 0.05647723749279976,
+      "rel_change_up": 0.09845265746116638,
+      "rel_change_down": 0.10454223304986954,
+      "median_rel_change_down": 0.08839981257915497
+     }
+    },
+    {
+     "layer": 22,
+     "col": 311,
+     "c": -0.4460360109806061,
+     "layer_sum": -1.9547144174575806,
+     "z_down": -13.27,
+     "down_promotes": [
+      "ally",
+      "étr",
+      "ulement",
+      "şk",
+      "erlo",
+      "(()"
+     ],
+     "down_suppresses": [
+      " thus",
+      " Thus",
+      " therefore",
+      "thus",
+      " thereby",
+      "Thus"
+     ],
+     "share_of_layer": 0.228,
+     "origin": {
+      "c_base": -0.45160290598869324,
+      "layer_sum_base": -1.9490950107574463,
+      "rel_change_gate": 0.08834906667470932,
+      "rel_change_up": 0.11520474404096603,
+      "rel_change_down": 0.05023923143744469,
+      "median_rel_change_down": 0.08463101834058762
+     }
+    },
+    {
+     "layer": 17,
+     "col": 987,
+     "c": 0.15141338109970093,
+     "layer_sum": 0.31370776891708374,
+     "z_down": -18.08,
+     "down_promotes": [
+      "ół",
+      "wohl",
+      "alties",
+      "々と",
+      "oons",
+      "íss"
+     ],
+     "down_suppresses": [
+      " thus",
+      " therefore",
+      "因此",
+      " Thus",
+      " Therefore",
+      "因此在"
+     ],
+     "share_of_layer": 0.483
+    },
+    {
+     "layer": 20,
+     "col": 297,
+     "c": -0.14181743562221527,
+     "layer_sum": -0.705765962600708,
+     "z_down": 8.98,
+     "down_promotes": [
+      " therefore",
+      " thus",
+      " hence",
+      " quindi",
+      " consequently",
+      " however"
+     ],
+     "down_suppresses": [
+      "чны",
+      "ska",
+      "kker",
+      " haven",
+      "detect",
+      "uté"
+     ],
+     "share_of_layer": 0.201
+    },
+    {
+     "layer": 17,
+     "col": 3064,
+     "c": 0.09956975281238556,
+     "layer_sum": 0.31370776891708374,
+     "z_down": 15.55,
+     "down_promotes": [
+      " therefore",
+      "因此",
+      " thus",
+      " Therefore",
+      "因此在",
+      "所以"
+     ],
+     "down_suppresses": [
+      "ني",
+      "然",
+      "ović",
+      "ly",
+      "的是什么",
+      "izm"
+     ],
+     "share_of_layer": 0.317
+    },
+    {
+     "layer": 21,
+     "col": 2266,
+     "c": -0.07031021267175674,
+     "layer_sum": -0.22720161080360413
+    },
+    {
+     "layer": 23,
+     "col": 211,
+     "c": -0.06437016278505325,
+     "layer_sum": -0.15279439091682434
+    },
+    {
+     "layer": 18,
+     "col": 888,
+     "c": -0.05618144944310188,
+     "layer_sum": -0.03776475414633751
+    },
+    {
+     "layer": 17,
+     "col": 2429,
+     "c": 0.055302198976278305,
+     "layer_sum": 0.31370776891708374
+    }
+   ],
+   "all_layers_sum": -2.1466,
+   "embedding": {
+    "norm_instruct": 0.5466201901435852,
+    "norm_base": 0.5449328422546387,
+    "cos_instruct_base": 0.9973918199539185
+   }
+  },
+  "Therefore": {
+   "token_id": 52971,
+   "layers": [
+    {
+     "layer": 0,
+     "sum": 0.0141,
+     "neg": -0.0743,
+     "pos": 0.0884
+    },
+    {
+     "layer": 1,
+     "sum": -0.0089,
+     "neg": -0.1041,
+     "pos": 0.0953
+    },
+    {
+     "layer": 2,
+     "sum": 0.0044,
+     "neg": -0.1252,
+     "pos": 0.1297
+    },
+    {
+     "layer": 3,
+     "sum": 0.0457,
+     "neg": -0.0908,
+     "pos": 0.1365
+    },
+    {
+     "layer": 4,
+     "sum": 0.0754,
+     "neg": -0.085,
+     "pos": 0.1604
+    },
+    {
+     "layer": 5,
+     "sum": 0.0651,
+     "neg": -0.0766,
+     "pos": 0.1418
+    },
+    {
+     "layer": 6,
+     "sum": 0.0417,
+     "neg": -0.0729,
+     "pos": 0.1146
+    },
+    {
+     "layer": 7,
+     "sum": 0.0282,
+     "neg": -0.0736,
+     "pos": 0.1018
+    },
+    {
+     "layer": 8,
+     "sum": 0.0623,
+     "neg": -0.0611,
+     "pos": 0.1233
+    },
+    {
+     "layer": 9,
+     "sum": 0.0301,
+     "neg": -0.0679,
+     "pos": 0.098
+    },
+    {
+     "layer": 10,
+     "sum": 0.0397,
+     "neg": -0.0572,
+     "pos": 0.0969
+    },
+    {
+     "layer": 11,
+     "sum": 0.0432,
+     "neg": -0.0636,
+     "pos": 0.1069
+    },
+    {
+     "layer": 12,
+     "sum": 0.0252,
+     "neg": -0.0806,
+     "pos": 0.1057
+    },
+    {
+     "layer": 13,
+     "sum": 0.0691,
+     "neg": -0.0767,
+     "pos": 0.1458
+    },
+    {
+     "layer": 14,
+     "sum": 0.1228,
+     "neg": -0.0734,
+     "pos": 0.1962
+    },
+    {
+     "layer": 15,
+     "sum": 0.0546,
+     "neg": -0.0958,
+     "pos": 0.1504
+    },
+    {
+     "layer": 16,
+     "sum": 0.0636,
+     "neg": -0.11,
+     "pos": 0.1736
+    },
+    {
+     "layer": 17,
+     "sum": 0.3218,
+     "neg": -0.1552,
+     "pos": 0.477
+    },
+    {
+     "layer": 18,
+     "sum": -0.0318,
+     "neg": -0.2038,
+     "pos": 0.172
+    },
+    {
+     "layer": 19,
+     "sum": -0.056,
+     "neg": -0.2501,
+     "pos": 0.1941
+    },
+    {
+     "layer": 20,
+     "sum": -0.5075,
+     "neg": -0.7342,
+     "pos": 0.2267
+    },
+    {
+     "layer": 21,
+     "sum": -0.1677,
+     "neg": -0.3784,
+     "pos": 0.2107
+    },
+    {
+     "layer": 22,
+     "sum": -1.8111,
+     "neg": -1.9982,
+     "pos": 0.187
+    },
+    {
+     "layer": 23,
+     "sum": -0.1662,
+     "neg": -0.3501,
+     "pos": 0.1839
+    }
+   ],
+   "carriers": [
+    {
+     "layer": 22,
+     "col": 2001,
+     "c": -1.3215830326080322,
+     "layer_sum": -1.811134934425354,
+     "z_down": 15.54,
+     "down_promotes": [
+      " therefore",
+      "因此",
+      " Therefore",
+      "因此在",
+      "Therefore",
+      "因而"
+     ],
+     "down_suppresses": [
+      " favori",
+      "erma",
+      ".shtml",
+      "мени",
+      "主业",
+      "ฟ้า"
+     ],
+     "share_of_layer": 0.73,
+     "by_alpha": {
+      "0.1*sqrt(H)": {
+       "c": -0.17125,
+       "layer": -0.23375
+      },
+      "0.25*sqrt(H)": {
+       "c": -1.32158,
+       "layer": -1.81113
+      },
+      "0.5*sqrt(H)": {
+       "c": -5.51686,
+       "layer": -7.69537
+      }
+     }
+    },
+    {
+     "layer": 20,
+     "col": 189,
+     "c": -0.4349192678928375,
+     "layer_sum": -0.5075288414955139,
+     "z_down": 12.8,
+     "down_promotes": [
+      "因此",
+      " therefore",
+      "故",
+      " thus",
+      "所以",
+      "因此在"
+     ],
+     "down_suppresses": [
+      "deles",
+      "tures",
+      "ggio",
+      "ropri",
+      "tus",
+      "лл"
+     ],
+     "share_of_layer": 0.857
+    },
+    {
+     "layer": 22,
+     "col": 311,
+     "c": -0.3500746786594391,
+     "layer_sum": -1.811134934425354,
+     "z_down": -11.62,
+     "down_promotes": [
+      "ally",
+      "étr",
+      "ulement",
+      "şk",
+      "erlo",
+      "(()"
+     ],
+     "down_suppresses": [
+      " thus",
+      " Thus",
+      " therefore",
+      "thus",
+      " thereby",
+      "Thus"
+     ],
+     "share_of_layer": 0.193
+    },
+    {
+     "layer": 17,
+     "col": 987,
+     "c": 0.16851815581321716,
+     "layer_sum": 0.32182589173316956,
+     "z_down": -16.63,
+     "down_promotes": [
+      "ół",
+      "wohl",
+      "alties",
+      "々と",
+      "oons",
+      "íss"
+     ],
+     "down_suppresses": [
+      " thus",
+      " therefore",
+      "因此",
+      " Thus",
+      " Therefore",
+      "因此在"
+     ],
+     "share_of_layer": 0.524
+    },
+    {
+     "layer": 20,
+     "col": 297,
+     "c": -0.09660119563341141,
+     "layer_sum": -0.5075288414955139,
+     "z_down": 8.21,
+     "down_promotes": [
+      " therefore",
+      " thus",
+      " hence",
+      " quindi",
+      " consequently",
+      " however"
+     ],
+     "down_suppresses": [
+      "чны",
+      "ska",
+      "kker",
+      " haven",
+      "detect",
+      "uté"
+     ],
+     "share_of_layer": 0.19
+    },
+    {
+     "layer": 17,
+     "col": 3064,
+     "c": 0.0829886719584465,
+     "layer_sum": 0.32182589173316956,
+     "z_down": 14.01,
+     "down_promotes": [
+      " therefore",
+      "因此",
+      " thus",
+      " Therefore",
+      "因此在",
+      "所以"
+     ],
+     "down_suppresses": [
+      "ني",
+      "然",
+      "ović",
+      "ly",
+      "的是什么",
+      "izm"
+     ],
+     "share_of_layer": 0.258
+    },
+    {
+     "layer": 21,
+     "col": 2266,
+     "c": -0.0657031312584877,
+     "layer_sum": -0.16771329939365387
+    },
+    {
+     "layer": 17,
+     "col": 2429,
+     "c": 0.06185442581772804,
+     "layer_sum": 0.32182589173316956
+    },
+    {
+     "layer": 22,
+     "col": 75,
+     "c": -0.049285806715488434,
+     "layer_sum": -1.811134934425354
+    },
+    {
+     "layer": 18,
+     "col": 888,
+     "c": -0.048962291330099106,
+     "layer_sum": -0.0318145789206028
+    }
+   ],
+   "all_layers_sum": -1.6422
+  },
+  "Final": {
+   "token_id": 18770,
+   "layers": [
+    {
+     "layer": 0,
+     "sum": 0.012,
+     "neg": -0.0785,
+     "pos": 0.0905
+    },
+    {
+     "layer": 1,
+     "sum": 0.0032,
+     "neg": -0.1072,
+     "pos": 0.1103
+    },
+    {
+     "layer": 2,
+     "sum": 0.0218,
+     "neg": -0.1384,
+     "pos": 0.1602
+    },
+    {
+     "layer": 3,
+     "sum": -0.0298,
+     "neg": -0.1553,
+     "pos": 0.1255
+    },
+    {
+     "layer": 4,
+     "sum": 0.0039,
+     "neg": -0.1268,
+     "pos": 0.1307
+    },
+    {
+     "layer": 5,
+     "sum": -0.0082,
+     "neg": -0.1324,
+     "pos": 0.1242
+    },
+    {
+     "layer": 6,
+     "sum": -0.0115,
+     "neg": -0.1179,
+     "pos": 0.1064
+    },
+    {
+     "layer": 7,
+     "sum": 0.0092,
+     "neg": -0.1007,
+     "pos": 0.1099
+    },
+    {
+     "layer": 8,
+     "sum": -0.0001,
+     "neg": -0.0967,
+     "pos": 0.0966
+    },
+    {
+     "layer": 9,
+     "sum": -0.0072,
+     "neg": -0.0921,
+     "pos": 0.0849
+    },
+    {
+     "layer": 10,
+     "sum": 0.0103,
+     "neg": -0.0831,
+     "pos": 0.0934
+    },
+    {
+     "layer": 11,
+     "sum": -0.0005,
+     "neg": -0.0849,
+     "pos": 0.0844
+    },
+    {
+     "layer": 12,
+     "sum": 0.0051,
+     "neg": -0.088,
+     "pos": 0.093
+    },
+    {
+     "layer": 13,
+     "sum": 0.0231,
+     "neg": -0.0837,
+     "pos": 0.1068
+    },
+    {
+     "layer": 14,
+     "sum": 0.0475,
+     "neg": -0.11,
+     "pos": 0.1575
+    },
+    {
+     "layer": 15,
+     "sum": 0.0353,
+     "neg": -0.1382,
+     "pos": 0.1735
+    },
+    {
+     "layer": 16,
+     "sum": 0.2182,
+     "neg": -0.146,
+     "pos": 0.3643
+    },
+    {
+     "layer": 17,
+     "sum": 0.4023,
+     "neg": -0.162,
+     "pos": 0.5643
+    },
+    {
+     "layer": 18,
+     "sum": 0.0559,
+     "neg": -0.2369,
+     "pos": 0.2928
+    },
+    {
+     "layer": 19,
+     "sum": -0.2624,
+     "neg": -0.5005,
+     "pos": 0.2381
+    },
+    {
+     "layer": 20,
+     "sum": -0.0207,
+     "neg": -0.2343,
+     "pos": 0.2136
+    },
+    {
+     "layer": 21,
+     "sum": -0.6669,
+     "neg": -0.914,
+     "pos": 0.2471
+    },
+    {
+     "layer": 22,
+     "sum": -0.1703,
+     "neg": -0.3957,
+     "pos": 0.2254
+    },
+    {
+     "layer": 23,
+     "sum": -2.7829,
+     "neg": -2.9971,
+     "pos": 0.2142
+    }
+   ],
+   "carriers": [
+    {
+     "layer": 23,
+     "col": 1238,
+     "c": -1.8028438091278076,
+     "layer_sum": -2.782892942428589,
+     "z_down": 22.61,
+     "down_promotes": [
+      " final",
+      "final",
+      " Final",
+      "Final",
+      "最终",
+      "_final"
+     ],
+     "down_suppresses": [
+      "اع",
+      "chenkt",
+      "oros",
+      "igni",
+      "chenken",
+      "lemen"
+     ],
+     "share_of_layer": 0.648,
+     "by_alpha": {
+      "0.1*sqrt(H)": {
+       "c": -0.22934,
+       "layer": -0.35161
+      },
+      "0.25*sqrt(H)": {
+       "c": -1.80284,
+       "layer": -2.78289
+      },
+      "0.5*sqrt(H)": {
+       "c": -7.68394,
+       "layer": -12.03308
+      }
+     }
+    },
+    {
+     "layer": 23,
+     "col": 1156,
+     "c": -0.792004406452179,
+     "layer_sum": -2.782892942428589,
+     "z_down": 18.66,
+     "down_promotes": [
+      "最终",
+      " finally",
+      " ultimately",
+      " final",
+      "最終",
+      "最终的"
+     ],
+     "down_suppresses": [
+      "heter",
+      "-disable",
+      "opsis",
+      " dint",
+      " diri",
+      "كثر"
+     ],
+     "share_of_layer": 0.285
+    },
+    {
+     "layer": 21,
+     "col": 294,
+     "c": -0.4193016588687897,
+     "layer_sum": -0.6669141054153442,
+     "z_down": -10.95,
+     "down_promotes": [
+      "adaran",
+      "omento",
+      " суток",
+      "DoubleClick",
+      " selec",
+      "باء"
+     ],
+     "down_suppresses": [
+      " end",
+      " End",
+      " ends",
+      " fin",
+      " ending",
+      "终"
+     ],
+     "share_of_layer": 0.629
+    },
+    {
+     "layer": 17,
+     "col": 838,
+     "c": 0.31075844168663025,
+     "layer_sum": 0.40229368209838867,
+     "z_down": 19.22,
+     "down_promotes": [
+      " final",
+      "final",
+      "最终",
+      " Final",
+      "Final",
+      "最终的"
+     ],
+     "down_suppresses": [
+      "分左右",
+      "oros",
+      "eced",
+      "lemen",
+      "remen",
+      " marque"
+     ],
+     "share_of_layer": 0.772
+    },
+    {
+     "layer": 19,
+     "col": 734,
+     "c": -0.2587532103061676,
+     "layer_sum": -0.26239824295043945,
+     "z_down": -18.51,
+     "down_promotes": [
+      "eger",
+      "eraus",
+      "erah",
+      "uchu",
+      "中国家",
+      "和林"
+     ],
+     "down_suppresses": [
+      " final",
+      "final",
+      "最终",
+      "最后",
+      "Final",
+      " Final"
+     ],
+     "share_of_layer": 0.986
+    },
+    {
+     "layer": 21,
+     "col": 663,
+     "c": -0.19053035974502563,
+     "layer_sum": -0.6669141054153442,
+     "z_down": -8.38,
+     "down_promotes": [
+      " conven",
+      "vention",
+      "orris",
+      "abilia",
+      "aux",
+      "umus"
+     ],
+     "down_suppresses": [
+      " last",
+      "last",
+      " Last",
+      "Last",
+      "最后",
+      " LAST"
+     ],
+     "share_of_layer": 0.286
+    },
+    {
+     "layer": 16,
+     "col": 1070,
+     "c": 0.11792977899312973,
+     "layer_sum": 0.2182360589504242
+    },
+    {
+     "layer": 16,
+     "col": 3157,
+     "c": 0.059077609330415726,
+     "layer_sum": 0.2182360589504242
+    },
+    {
+     "layer": 22,
+     "col": 3279,
+     "c": -0.04719987139105797,
+     "layer_sum": -0.17032139003276825
+    },
+    {
+     "layer": 23,
+     "col": 979,
+     "c": -0.04249238222837448,
+     "layer_sum": -2.782892942428589
+    }
+   ],
+   "all_layers_sum": -3.1129
+  },
+  " Final": {
+   "token_id": 12650,
+   "layers": [
+    {
+     "layer": 0,
+     "sum": 0.0197,
+     "neg": -0.0812,
+     "pos": 0.1009
+    },
+    {
+     "layer": 1,
+     "sum": 0.0032,
+     "neg": -0.1136,
+     "pos": 0.1168
+    },
+    {
+     "layer": 2,
+     "sum": 0.0416,
+     "neg": -0.1441,
+     "pos": 0.1858
+    },
+    {
+     "layer": 3,
+     "sum": -0.0172,
+     "neg": -0.155,
+     "pos": 0.1378
+    },
+    {
+     "layer": 4,
+     "sum": -0.0013,
+     "neg": -0.1434,
+     "pos": 0.142
+    },
+    {
+     "layer": 5,
+     "sum": -0.0255,
+     "neg": -0.1527,
+     "pos": 0.1272
+    },
+    {
+     "layer": 6,
+     "sum": -0.0283,
+     "neg": -0.1358,
+     "pos": 0.1075
+    },
+    {
+     "layer": 7,
+     "sum": -0.0015,
+     "neg": -0.1127,
+     "pos": 0.1113
+    },
+    {
+     "layer": 8,
+     "sum": -0.0153,
+     "neg": -0.1148,
+     "pos": 0.0994
+    },
+    {
+     "layer": 9,
+     "sum": -0.0161,
+     "neg": -0.1001,
+     "pos": 0.084
+    },
+    {
+     "layer": 10,
+     "sum": 0.0092,
+     "neg": -0.0919,
+     "pos": 0.1011
+    },
+    {
+     "layer": 11,
+     "sum": -0.0167,
+     "neg": -0.0999,
+     "pos": 0.0832
+    },
+    {
+     "layer": 12,
+     "sum": -0.0029,
+     "neg": -0.0996,
+     "pos": 0.0967
+    },
+    {
+     "layer": 13,
+     "sum": 0.0143,
+     "neg": -0.0954,
+     "pos": 0.1098
+    },
+    {
+     "layer": 14,
+     "sum": 0.0262,
+     "neg": -0.1189,
+     "pos": 0.145
+    },
+    {
+     "layer": 15,
+     "sum": 0.0281,
+     "neg": -0.1427,
+     "pos": 0.1708
+    },
+    {
+     "layer": 16,
+     "sum": 0.1606,
+     "neg": -0.1661,
+     "pos": 0.3267
+    },
+    {
+     "layer": 17,
+     "sum": 0.3916,
+     "neg": -0.1894,
+     "pos": 0.581
+    },
+    {
+     "layer": 18,
+     "sum": 0.0314,
+     "neg": -0.277,
+     "pos": 0.3083
+    },
+    {
+     "layer": 19,
+     "sum": -0.2616,
+     "neg": -0.5225,
+     "pos": 0.2609
+    },
+    {
+     "layer": 20,
+     "sum": -0.027,
+     "neg": -0.2676,
+     "pos": 0.2405
+    },
+    {
+     "layer": 21,
+     "sum": -0.7115,
+     "neg": -0.9801,
+     "pos": 0.2687
+    },
+    {
+     "layer": 22,
+     "sum": -0.1396,
+     "neg": -0.3862,
+     "pos": 0.2466
+    },
+    {
+     "layer": 23,
+     "sum": -2.9017,
+     "neg": -3.1126,
+     "pos": 0.2109
+    }
+   ],
+   "carriers": [
+    {
+     "layer": 23,
+     "col": 1238,
+     "c": -2.0308213233947754,
+     "layer_sum": -2.901735544204712,
+     "z_down": 23.83,
+     "down_promotes": [
+      " final",
+      "final",
+      " Final",
+      "Final",
+      "最终",
+      "_final"
+     ],
+     "down_suppresses": [
+      "اع",
+      "chenkt",
+      "oros",
+      "igni",
+      "chenken",
+      "lemen"
+     ],
+     "share_of_layer": 0.7,
+     "by_alpha": {
+      "0.1*sqrt(H)": {
+       "c": -0.25976,
+       "layer": -0.37138
+      },
+      "0.25*sqrt(H)": {
+       "c": -2.03082,
+       "layer": -2.90174
+      },
+      "0.5*sqrt(H)": {
+       "c": -8.59089,
+       "layer": -12.44607
+      }
+     }
+    },
+    {
+     "layer": 23,
+     "col": 1156,
+     "c": -0.6476835012435913,
+     "layer_sum": -2.901735544204712,
+     "z_down": 17.83,
+     "down_promotes": [
+      "最终",
+      " finally",
+      " ultimately",
+      " final",
+      "最終",
+      "最终的"
+     ],
+     "down_suppresses": [
+      "heter",
+      "-disable",
+      "opsis",
+      " dint",
+      " diri",
+      "كثر"
+     ],
+     "share_of_layer": 0.223
+    },
+    {
+     "layer": 21,
+     "col": 294,
+     "c": -0.49795693159103394,
+     "layer_sum": -0.7114900350570679,
+     "z_down": -11.88,
+     "down_promotes": [
+      "adaran",
+      "omento",
+      " суток",
+      "DoubleClick",
+      " selec",
+      "باء"
+     ],
+     "down_suppresses": [
+      " end",
+      " End",
+      " ends",
+      " fin",
+      " ending",
+      "终"
+     ],
+     "share_of_layer": 0.7
+    },
+    {
+     "layer": 17,
+     "col": 838,
+     "c": 0.3080882728099823,
+     "layer_sum": 0.3915589451789856,
+     "z_down": 19.73,
+     "down_promotes": [
+      " final",
+      "final",
+      "最终",
+      " Final",
+      "Final",
+      "最终的"
+     ],
+     "down_suppresses": [
+      "分左右",
+      "oros",
+      "eced",
+      "lemen",
+      "remen",
+      " marque"
+     ],
+     "share_of_layer": 0.787
+    },
+    {
+     "layer": 19,
+     "col": 734,
+     "c": -0.2658848762512207,
+     "layer_sum": -0.26155465841293335,
+     "z_down": -18.31,
+     "down_promotes": [
+      "eger",
+      "eraus",
+      "erah",
+      "uchu",
+      "中国家",
+      "和林"
+     ],
+     "down_suppresses": [
+      " final",
+      "final",
+      "最终",
+      "最后",
+      "Final",
+      " Final"
+     ],
+     "share_of_layer": 1.017
+    },
+    {
+     "layer": 21,
+     "col": 663,
+     "c": -0.14423219859600067,
+     "layer_sum": -0.7114900350570679,
+     "z_down": -9.18,
+     "down_promotes": [
+      " conven",
+      "vention",
+      "orris",
+      "abilia",
+      "aux",
+      "umus"
+     ],
+     "down_suppresses": [
+      " last",
+      "last",
+      " Last",
+      "Last",
+      "最后",
+      " LAST"
+     ],
+     "share_of_layer": 0.203
+    },
+    {
+     "layer": 16,
+     "col": 1070,
+     "c": 0.08364427089691162,
+     "layer_sum": 0.16059814393520355
+    },
+    {
+     "layer": 22,
+     "col": 3279,
+     "c": -0.05082640051841736,
+     "layer_sum": -0.1395784318447113
+    },
+    {
+     "layer": 16,
+     "col": 3157,
+     "c": 0.04274363815784454,
+     "layer_sum": 0.16059814393520355
+    },
+    {
+     "layer": 23,
+     "col": 979,
+     "c": -0.041246287524700165,
+     "layer_sum": -2.901735544204712
+    }
+   ],
+   "all_layers_sum": -3.4405
+  }
+ },
+ "alphas": [
+  0.1,
+  0.25,
+  0.5
+ ]
+}

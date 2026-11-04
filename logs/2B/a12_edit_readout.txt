@@ -1,0 +1,30 @@
+Qwen3.5-2B: all-layer self-gain at alpha 0.25*sqrt(H) (negative = the token brakes itself), change vs original,
+and the token's rate per kchar in the edit's eval / baseline on the same problems (n).
+edit            n                          Wait                            No                         Final                     Therefore
+original            -5.580                       -12.748                       -12.391                        -5.852                     
+2B_A1x3       100  -15.204 ( -9.625)   0.03/ 1.55  -12.748 ( +0.000)   1.43/ 1.43  -12.391 ( -0.000)   0.12/ 0.06   -5.852 ( -0.000)   0.04/ 0.03
+2B_A64x3      100  -15.265 ( -9.686)   0.04/ 1.55  -12.748 ( +0.000)   1.41/ 1.43  -12.391 ( -0.000)   0.13/ 0.06   -5.852 ( -0.000)   0.04/ 0.03
+2B_A64x3N3    100  -15.267 ( -9.687)   0.09/ 1.55  -27.254 (-14.506)   0.30/ 1.43  -12.392 ( -0.001)   0.12/ 0.06   -5.852 ( -0.000)   0.05/ 0.03
+
+commit brakes (Qwen3.5-2B); per-token c of each brake neuron in the original:
+  Final     L23 col 6022: c Wait -0.0000  No -0.0000  Final -9.0432  Therefore +0.0002   (rank 0 most negative in its layer for 'Final')
+    original: make_edit selects col 6022 (coef 0.280; runner-up col 3741 at 0.115)
+    2B_A64x3: make_edit selects col 6022 (coef 0.280; runner-up col 3741 at 0.115)
+  Therefore L22 col 3895: c Wait -0.0000  No +0.0000  Final -0.0019  Therefore -3.5285   (rank 0 most negative in its layer for 'Therefore')
+    original: make_edit selects col 3895 (coef 0.348; runner-up col 3552 at 0.065)
+    2B_A64x3: make_edit selects col 3895 (coef 0.348; runner-up col 3552 at 0.065)
+  saved logs/2B/a12_directions.pt
+
+candidates on original: all-layer self-gain after the edit (change)
+  Final x0.5                  Wait   -5.580 ( +0.000)  No  -12.748 ( +0.000)  Final   -7.869 ( +4.522)  Therefore   -5.852 ( -0.000)
+  Final x0                    Wait   -5.580 ( +0.000)  No  -12.748 ( +0.000)  Final   -3.348 ( +9.043)  Therefore   -5.852 ( -0.000)
+  Final x-1                   Wait   -5.580 ( +0.000)  No  -12.748 ( +0.000)  Final   +5.696 (+18.086)  Therefore   -5.853 ( -0.000)
+  Therefore x0                Wait   -5.580 ( +0.000)  No  -12.748 ( -0.000)  Final  -12.389 ( +0.002)  Therefore   -2.324 ( +3.529)
+  Final x0 + Therefore x0     Wait   -5.580 ( +0.000)  No  -12.748 ( +0.000)  Final   -3.346 ( +9.045)  Therefore   -2.324 ( +3.528)
+
+candidates on 2B_A64x3: all-layer self-gain after the edit (change)
+  Final x0.5                  Wait  -15.265 ( +0.000)  No  -12.748 ( +0.000)  Final   -7.870 ( +4.522)  Therefore   -5.852 ( -0.000)
+  Final x0                    Wait  -15.265 ( +0.000)  No  -12.748 ( +0.000)  Final   -3.348 ( +9.043)  Therefore   -5.853 ( -0.000)
+  Final x-1                   Wait  -15.265 ( +0.000)  No  -12.748 ( +0.000)  Final   +5.695 (+18.086)  Therefore   -5.853 ( -0.000)
+  Therefore x0                Wait  -15.265 ( +0.000)  No  -12.748 ( -0.000)  Final  -12.389 ( +0.002)  Therefore   -2.324 ( +3.529)
+  Final x0 + Therefore x0     Wait  -15.265 ( +0.000)  No  -12.748 ( +0.000)  Final   -3.346 ( +9.045)  Therefore   -2.324 ( +3.528)

@@ -1,0 +1,602 @@
+{
+ "2B/math500/base_8k_q8": {
+  "Final": {
+   "stats": {
+    "fin": 26,
+    "fin_with": 26,
+    "fin_count": 85,
+    "fin_with_right": 26,
+    "trunc": 74,
+    "trunc_with": 15,
+    "trunc_count": 39,
+    "fin_without_right": 0
+   },
+   "first_at_median": 0.5598930481283423,
+   "chars_after_first_median": 3948,
+   "chars_after_last_median": 454,
+   "next_words": [
+    [
+     "Final Answer",
+     30
+    ],
+    [
+     "Final check",
+     28
+    ],
+    [
+     "Final check:",
+     12
+    ],
+    [
+     "Final Answer:",
+     6
+    ],
+    [
+     "Final Output:**",
+     5
+    ],
+    [
+     "Final Verification:**",
+     4
+    ],
+    [
+     "Final Polish:**",
+     4
+    ],
+    [
+     "Final answer",
+     4
+    ]
+   ]
+  },
+  "Therefore": {
+   "stats": {
+    "fin": 26,
+    "fin_with": 12,
+    "fin_count": 20,
+    "fin_with_right": 12,
+    "trunc": 74,
+    "trunc_with": 24,
+    "trunc_count": 35,
+    "fin_without_right": 14
+   },
+   "first_at_median": 0.18516532618409293,
+   "chars_after_first_median": 6973,
+   "chars_after_last_median": 3700,
+   "next_words": [
+    [
+     "Therefore, the",
+     19
+    ],
+    [
+     "Therefore, we",
+     4
+    ],
+    [
+     "Therefore, there",
+     2
+    ],
+    [
+     "Therefore, $x",
+     2
+    ],
+    [
+     "Therefore, it",
+     2
+    ],
+    [
+     "Therefore, $1",
+     2
+    ],
+    [
+     "Therefore, $2x",
+     1
+    ],
+    [
+     "Therefore, multiplicatio",
+     1
+    ]
+   ]
+  }
+ },
+ "2B/math500/A64x3_8k_q8": {
+  "Final": {
+   "stats": {
+    "fin": 45,
+    "fin_with": 44,
+    "fin_count": 172,
+    "fin_with_right": 44,
+    "trunc": 55,
+    "trunc_with": 15,
+    "trunc_count": 50,
+    "fin_without_right": 1
+   },
+   "first_at_median": 0.5400509861800618,
+   "chars_after_first_median": 5150,
+   "chars_after_last_median": 256,
+   "next_words": [
+    [
+     "Final check",
+     44
+    ],
+    [
+     "Final Answer",
+     42
+    ],
+    [
+     "Final check:",
+     26
+    ],
+    [
+     "Final Answer:",
+     22
+    ],
+    [
+     "Final answer",
+     16
+    ],
+    [
+     "Final Response:**",
+     5
+    ],
+    [
+     "Final Verification:**",
+     5
+    ],
+    [
+     "Final Formatting:**",
+     4
+    ]
+   ]
+  },
+  "Therefore": {
+   "stats": {
+    "fin": 45,
+    "fin_with": 22,
+    "fin_count": 33,
+    "fin_with_right": 22,
+    "trunc": 55,
+    "trunc_with": 16,
+    "trunc_count": 32,
+    "fin_without_right": 23
+   },
+   "first_at_median": 0.23898858075040783,
+   "chars_after_first_median": 5444,
+   "chars_after_last_median": 4096,
+   "next_words": [
+    [
+     "Therefore, the",
+     22
+    ],
+    [
+     "Therefore, we",
+     5
+    ],
+    [
+     "Therefore, $\\angle",
+     3
+    ],
+    [
+     "Therefore, there",
+     2
+    ],
+    [
+     "Therefore, all",
+     2
+    ],
+    [
+     "Therefore, $x",
+     2
+    ],
+    [
+     "Therefore, she",
+     2
+    ],
+    [
+     "Therefore, $n$",
+     2
+    ]
+   ]
+  }
+ },
+ "2B/math500/A64x3N3_8k_q8": {
+  "Final": {
+   "stats": {
+    "fin": 41,
+    "fin_with": 41,
+    "fin_count": 178,
+    "fin_with_right": 41,
+    "trunc": 59,
+    "trunc_with": 11,
+    "trunc_count": 33,
+    "fin_without_right": 0
+   },
+   "first_at_median": 0.47094430992736075,
+   "chars_after_first_median": 5431,
+   "chars_after_last_median": 487,
+   "next_words": [
+    [
+     "Final check",
+     43
+    ],
+    [
+     "Final Answer",
+     38
+    ],
+    [
+     "Final check:",
+     27
+    ],
+    [
+     "Final Answer:",
+     20
+    ],
+    [
+     "Final Output:**",
+     13
+    ],
+    [
+     "Final answer",
+     6
+    ],
+    [
+     "Final Output",
+     5
+    ],
+    [
+     "Final check.",
+     5
+    ]
+   ]
+  },
+  "Therefore": {
+   "stats": {
+    "fin": 41,
+    "fin_with": 25,
+    "fin_count": 46,
+    "fin_with_right": 25,
+    "trunc": 59,
+    "trunc_with": 23,
+    "trunc_count": 38,
+    "fin_without_right": 16
+   },
+   "first_at_median": 0.2636698831097513,
+   "chars_after_first_median": 8088,
+   "chars_after_last_median": 4595,
+   "next_words": [
+    [
+     "Therefore, the",
+     24
+    ],
+    [
+     "Therefore, we",
+     4
+    ],
+    [
+     "Therefore, $x",
+     3
+    ],
+    [
+     "Therefore, if",
+     3
+    ],
+    [
+     "Therefore, for",
+     2
+    ],
+    [
+     "Therefore, it",
+     2
+    ],
+    [
+     "Therefore, $y_1",
+     1
+    ],
+    [
+     "Therefore, there",
+     1
+    ]
+   ]
+  }
+ },
+ "0.8B/math500/base_q8": {
+  "Final": {
+   "stats": {
+    "fin": 6,
+    "fin_with": 6,
+    "fin_count": 17,
+    "fin_with_right": 5,
+    "trunc": 94,
+    "trunc_with": 13,
+    "trunc_count": 42,
+    "fin_without_right": 0
+   },
+   "first_at_median": 0.3789586688137413,
+   "chars_after_first_median": 4683,
+   "chars_after_last_median": 1267,
+   "next_words": [
+    [
+     "Final check:",
+     10
+    ],
+    [
+     "Final check",
+     8
+    ],
+    [
+     "Final Answer",
+     7
+    ],
+    [
+     "Final Answer:",
+     4
+    ],
+    [
+     "Final answer",
+     3
+    ],
+    [
+     "Final Output:**",
+     2
+    ],
+    [
+     "Final conclusion:",
+     2
+    ],
+    [
+     "Final decision:",
+     2
+    ]
+   ]
+  },
+  "Therefore": {
+   "stats": {
+    "fin": 6,
+    "fin_with": 2,
+    "fin_count": 3,
+    "fin_with_right": 2,
+    "trunc": 94,
+    "trunc_with": 18,
+    "trunc_count": 33,
+    "fin_without_right": 3
+   },
+   "first_at_median": 0.28698164281977206,
+   "chars_after_first_median": 31345,
+   "chars_after_last_median": 31345,
+   "next_words": [
+    [
+     "Therefore, the",
+     9
+    ],
+    [
+     "Therefore, we",
+     4
+    ],
+    [
+     "Therefore, answer",
+     2
+    ],
+    [
+     "Therefore, $x^3",
+     1
+    ],
+    [
+     "Therefore, $\\angle",
+     1
+    ],
+    [
+     "Therefore $\\angle",
+     1
+    ],
+    [
+     "Therefore, $\\theta_1",
+     1
+    ],
+    [
+     "Therefore, it",
+     1
+    ]
+   ]
+  }
+ },
+ "0.8B/math500/A64x3_q8": {
+  "Final": {
+   "stats": {
+    "fin": 30,
+    "fin_with": 29,
+    "fin_count": 138,
+    "fin_with_right": 29,
+    "trunc": 70,
+    "trunc_with": 12,
+    "trunc_count": 30,
+    "fin_without_right": 1
+   },
+   "first_at_median": 0.5057690560552376,
+   "chars_after_first_median": 7836,
+   "chars_after_last_median": 574,
+   "next_words": [
+    [
+     "Final Answer",
+     31
+    ],
+    [
+     "Final check",
+     30
+    ],
+    [
+     "Final check:",
+     30
+    ],
+    [
+     "Final Answer:",
+     16
+    ],
+    [
+     "Final answer",
+     6
+    ],
+    [
+     "Final Output:**",
+     4
+    ],
+    [
+     "Final result",
+     3
+    ],
+    [
+     "Final verification",
+     3
+    ]
+   ]
+  },
+  "Therefore": {
+   "stats": {
+    "fin": 30,
+    "fin_with": 20,
+    "fin_count": 55,
+    "fin_with_right": 20,
+    "trunc": 70,
+    "trunc_with": 16,
+    "trunc_count": 42,
+    "fin_without_right": 10
+   },
+   "first_at_median": 0.2576517950697623,
+   "chars_after_first_median": 11329,
+   "chars_after_last_median": 4040,
+   "next_words": [
+    [
+     "Therefore, the",
+     34
+    ],
+    [
+     "Therefore, we",
+     7
+    ],
+    [
+     "Therefore, there",
+     3
+    ],
+    [
+     "Therefore, I",
+     3
+    ],
+    [
+     "Therefore, answer",
+     2
+    ],
+    [
+     "Therefore, 72",
+     2
+    ],
+    [
+     "Therefore, $n$",
+     2
+    ],
+    [
+     "Therefore, $\\sqrt{242}",
+     2
+    ]
+   ]
+  }
+ },
+ "0.8B/math500/A64x3_32k_q8": {
+  "Final": {
+   "stats": {
+    "fin": 47,
+    "fin_with": 46,
+    "fin_count": 172,
+    "fin_with_right": 40,
+    "trunc": 53,
+    "trunc_with": 8,
+    "trunc_count": 20,
+    "fin_without_right": 1
+   },
+   "first_at_median": 0.6903733563681735,
+   "chars_after_first_median": 10815,
+   "chars_after_last_median": 856,
+   "next_words": [
+    [
+     "Final Answer",
+     41
+    ],
+    [
+     "Final check",
+     40
+    ],
+    [
+     "Final check:",
+     31
+    ],
+    [
+     "Final Answer:",
+     10
+    ],
+    [
+     "Final answer",
+     9
+    ],
+    [
+     "Final check.",
+     5
+    ],
+    [
+     "Final check:**",
+     5
+    ],
+    [
+     "Final sanity",
+     4
+    ]
+   ]
+  },
+  "Therefore": {
+   "stats": {
+    "fin": 47,
+    "fin_with": 29,
+    "fin_count": 84,
+    "fin_with_right": 27,
+    "trunc": 53,
+    "trunc_with": 21,
+    "trunc_count": 51,
+    "fin_without_right": 14
+   },
+   "first_at_median": 0.3065809611264157,
+   "chars_after_first_median": 12910,
+   "chars_after_last_median": 2784,
+   "next_words": [
+    [
+     "Therefore, the",
+     41
+    ],
+    [
+     "Therefore, for",
+     7
+    ],
+    [
+     "Therefore, we",
+     4
+    ],
+    [
+     "Therefore, it",
+     4
+    ],
+    [
+     "Therefore, $\\deg(f)$",
+     4
+    ],
+    [
+     "Therefore, I",
+     3
+    ],
+    [
+     "Therefore, my",
+     3
+    ],
+    [
+     "Therefore, $\\angle",
+     2
+    ]
+   ]
+  }
+ }
+}

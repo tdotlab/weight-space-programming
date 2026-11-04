@@ -1,0 +1,9 @@
+0.8B/math500/base_q8: 94 truncated; 36 state an answer in the reasoning (first one at 0.22 of the text, median; 187 statements). Right: first 9, last 8, any 17. Finished 6 (5 right).
+0.8B/math500/A64x3_q8: 70 truncated; 29 state an answer in the reasoning (first one at 0.4 of the text, median; 129 statements). Right: first 6, last 5, any 9. Finished 30 (30 right).
+0.8B/math500/A64x3_32k_q8: 53 truncated; 33 state an answer in the reasoning (first one at 0.41 of the text, median; 190 statements). Right: first 3, last 4, any 8. Finished 47 (41 right).
+0.8B/math500/base_32k_q8: 88 truncated; 47 state an answer in the reasoning (first one at 0.46 of the text, median; 247 statements). Right: first 13, last 16, any 17. Finished 12 (12 right).
+0.8B/math500/A64x3N3_q8: 28 truncated; 14 state an answer in the reasoning (first one at 0.49 of the text, median; 38 statements). Right: first 4, last 3, any 5. Finished 12 (12 right).
+2B/math500/base_8k_q8: 74 truncated; 24 state an answer in the reasoning (first one at 0.6 of the text, median; 63 statements). Right: first 13, last 19, any 20. Finished 26 (26 right).
+2B/math500/A64x3_8k_q8: 55 truncated; 17 state an answer in the reasoning (first one at 0.53 of the text, median; 87 statements). Right: first 10, last 10, any 12. Finished 45 (45 right).
+2B/math500/A1x3_8k_q8: 58 truncated; 22 state an answer in the reasoning (first one at 0.56 of the text, median; 64 statements). Right: first 10, last 17, any 17. Finished 42 (42 right).
+2B/math500/A64x3N3_8k_q8: 59 truncated; 17 state an answer in the reasoning (first one at 0.32 of the text, median; 58 statements). Right: first 9, last 10, any 12. Finished 41 (41 right).

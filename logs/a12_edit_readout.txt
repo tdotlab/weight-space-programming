@@ -1,0 +1,38 @@
+Qwen3.5-0.8B: all-layer self-gain at alpha 0.25*sqrt(H) (negative = the token brakes itself), change vs original,
+and the token's rate per kchar in the edit's eval / baseline on the same problems (n).
+edit            n                          Wait                            No                         Final                     Therefore
+original            -1.797                        -3.728                        -3.113                        -1.642                     
+A1x3           40   -4.049 ( -2.252)   0.02/ 3.22   -3.728 ( -0.000)   2.38/ 2.25   -3.113 ( +0.000)   0.05/ 0.01   -1.642 ( +0.000)   0.02/ 0.01
+A64           100   -2.918 ( -1.122)   0.28/ 3.09   -3.728 ( -0.000)   2.20/ 2.14   -3.113 ( -0.000)   0.04/ 0.01   -1.642 ( +0.000)   0.02/ 0.01
+A64h           40   -2.358 ( -0.561)   0.96/ 3.22   -3.728 ( -0.000)   2.26/ 2.25   -3.113 ( -0.000)   0.02/ 0.01   -1.642 ( +0.000)   0.01/ 0.01
+A64VA          40   -2.915 ( -1.118)   0.29/ 3.22   -3.728 ( -0.000)   2.34/ 2.25   -3.113 ( -0.000)   0.03/ 0.01   -1.641 ( +0.001)   0.02/ 0.01
+A64VP          40   -2.922 ( -1.125)   0.28/ 3.22   -3.728 ( -0.000)   2.44/ 2.25   -3.113 ( +0.000)   0.04/ 0.01   -1.643 ( -0.001)   0.02/ 0.01
+A64x3         100   -4.040 ( -2.243)   0.03/ 3.09   -3.729 ( -0.001)   2.18/ 2.14   -3.113 ( -0.000)   0.04/ 0.01   -1.642 ( +0.001)   0.02/ 0.01
+A64x3N3        40   -4.040 ( -2.244)   0.04/ 3.22   -7.561 ( -3.834)   0.03/ 2.25   -3.113 ( -0.000)   0.03/ 0.01   -1.642 ( +0.001)   0.03/ 0.01
+A64x5          40   -6.282 ( -4.485)   0.01/ 3.22   -3.729 ( -0.001)   2.09/ 2.25   -3.113 ( -0.000)   0.06/ 0.01   -1.641 ( +0.001)   0.04/ 0.01
+D_full         40   -1.816 ( -0.019)   2.51/ 3.22   -3.729 ( -0.002)   2.23/ 2.25   -3.113 ( -0.000)   0.01/ 0.01   -1.641 ( +0.001)   0.01/ 0.01
+P64            40   -0.676 ( +1.121) 107.85/ 3.22   -3.727 ( +0.000)   0.53/ 2.25   -3.113 ( +0.000)   0.00/ 0.01   -1.642 ( -0.000)   0.00/ 0.01
+R64            40   -1.797 ( +0.000)   3.16/ 3.22   -3.728 ( +0.000)   2.29/ 2.25   -3.113 ( +0.000)   0.01/ 0.01   -1.642 ( -0.000)   0.01/ 0.01
+
+commit brakes (Qwen3.5-0.8B); per-token c of each brake neuron in the original:
+  Final     L23 col 1238: c Wait -0.0001  No -0.0000  Final -1.8028  Therefore +0.0002   (rank 0 most negative in its layer for 'Final')
+    original: make_edit selects col 1238 (coef 0.254; runner-up col 1156 at 0.106)
+    A64x3: make_edit selects col 1238 (coef 0.254; runner-up col 1156 at 0.106)
+  Therefore L22 col 2001: c Wait -0.0001  No -0.0000  Final -0.0008  Therefore -1.3216   (rank 0 most negative in its layer for 'Therefore')
+    original: make_edit selects col 2001 (coef 0.262; runner-up col 1065 at 0.067)
+    A64x3: make_edit selects col 2001 (coef 0.262; runner-up col 1065 at 0.067)
+  saved logs/a12_directions.pt
+
+candidates on original: all-layer self-gain after the edit (change)
+  Final x0.5                  Wait   -1.797 ( +0.000)  No   -3.728 ( +0.000)  Final   -2.211 ( +0.901)  Therefore   -1.642 ( -0.000)
+  Final x0                    Wait   -1.797 ( +0.000)  No   -3.728 ( +0.000)  Final   -1.310 ( +1.803)  Therefore   -1.642 ( -0.000)
+  Final x-1                   Wait   -1.797 ( +0.000)  No   -3.728 ( +0.000)  Final   +0.493 ( +3.606)  Therefore   -1.643 ( -0.000)
+  Therefore x0                Wait   -1.797 ( +0.000)  No   -3.728 ( +0.000)  Final   -3.112 ( +0.001)  Therefore   -0.321 ( +1.322)
+  Final x0 + Therefore x0     Wait   -1.797 ( +0.000)  No   -3.728 ( +0.000)  Final   -1.309 ( +1.804)  Therefore   -0.321 ( +1.321)
+
+candidates on A64x3: all-layer self-gain after the edit (change)
+  Final x0.5                  Wait   -4.039 ( +0.000)  No   -3.729 ( +0.000)  Final   -2.212 ( +0.901)  Therefore   -1.642 ( -0.000)
+  Final x0                    Wait   -4.039 ( +0.000)  No   -3.729 ( +0.000)  Final   -1.310 ( +1.803)  Therefore   -1.642 ( -0.000)
+  Final x-1                   Wait   -4.039 ( +0.000)  No   -3.729 ( +0.000)  Final   +0.493 ( +3.606)  Therefore   -1.642 ( -0.000)
+  Therefore x0                Wait   -4.039 ( +0.000)  No   -3.729 ( +0.000)  Final   -3.112 ( +0.001)  Therefore   -0.320 ( +1.322)
+  Final x0 + Therefore x0     Wait   -4.039 ( +0.000)  No   -3.729 ( +0.000)  Final   -1.309 ( +1.804)  Therefore   -0.320 ( +1.321)

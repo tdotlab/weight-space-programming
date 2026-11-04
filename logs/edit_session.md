@@ -380,3 +380,133 @@ direction), the sign and dose transferred across model sizes without a 2B eval, 
 rules out: silencing discourse markers one at a time as a route past the remaining truncations. The leftover failure
 is not committing, so round 2 should act on stopping: weaken the `</think>` and 'Therefore' brakes from a10 (the
 opposite sign to everything so far), on both models, with predictions written first.
+
+## Round 2: the commit side
+
+Four analyses ran before any round-2 edit was built. They move the target from `</think>` to 'Final'.
+
+### t01: was the answer in hand when the cap hit? (src/analysis/t01_answer_in_hand.py; logs/t01_answer_in_hand.txt)
+Eval outputs only. For each truncated run, every answer the reasoning states (a drafted \boxed{}, or the math after
+"the answer is", "Final Answer:" and similar) is graded against gold. 2B_A64x3: of 55 truncated runs, 17 state an
+answer and 12 state the right one at some point (10 as their last). 2B baseline: 24 of 74 state one, 20 right. 0.8B
+A64x3 (100 at 16k): 29 of 70, 9 right. The rest never state an answer before the cap. So an edit that only makes the
+model stop once it has its answer can gain at most about +12 on 2B_A64x3, +20 on the 2B baseline and +9 on the 0.8B
+A64x3; past that it takes faster thinking, not earlier stopping. The extractor reads answer phrases and misses answers
+stated in other words, so these are floors.
+
+### a11: the stop machinery (src/analysis/a11_stop_gain.py; logs/a11_stop_gain.txt, logs/2B/)
+a08's readout aimed at a token. Put the residual along r_t = (1 + g_final)(E[t] - mean E) and read each neuron's write
+back onto t: c_j = silu(alpha gate_j.x~)(alpha up_j.x~)(r_t.W_down[:, j]), alpha = 0.25 sqrt(H). c < 0 brakes the
+token once it is coming. Calibration: for 'Wait' it returns the a08 brakes (0.8B L22 c573, 92% of its layer; 2B L22
+c5041, 95%) without using u.
+
+- `</think>` has no brake to weaken. Its all-layer self-gain is +0.05 (0.8B) and +0.69 (2B). The largest braking
+  carriers are generic end-of-text neurons (they write <|endoftext|> and <|im_end|>) at c -0.13 or smaller, against
+  -5.3 for the 2B's Wait brake. a10's `</think>` neurons scored well on z x strength, but their self-gain is small.
+- 'Final' carries the strongest brake of any token checked. 2B: L23 c6022, c -9.04 for 'Final' (-10.19 for
+  ' Final'), 80% of its layer, total -12.4 (-13.8). 0.8B: L23 c1238, -1.80 (-2.03), 65-70%, total -3.1 (-3.4). A
+  second brake (2B L23 c3741, 0.8B c1156) writes 'finally', 'ultimately', 最终. A feeder at L17 (2B c4264, 0.8B c838)
+  writes the same 'final' tokens with c > 0.
+- 'Therefore': 2B L22 c3895 (c -3.53, 70% of its layer) and L20 c2476; 0.8B L22 c2001 (-1.32, 73%) and L20 c189.
+  Total -5.9 (2B), -1.6 (0.8B). These are not a10's 'Therefore' brakes (L22 c3552 / c311), whose down columns suppress
+  ' thus' and ' therefore' instead of writing them.
+- All pretraining. The 2B's c3895 reads -3.69 in the base model and -3.68 in the instruct. Post-training left the
+  `</think>`, 'Wait' and ' Therefore' embedding rows almost unchanged (cos 0.997-0.999 between base and instruct).
+
+### a12: does the readout predict what an edit does? (src/analysis/a12_edit_readout.py; logs/a12_edit_readout.txt, logs/2B/)
+For every built edit: the all-layer self-gain of 'Wait', 'No', 'Final' and 'Therefore', set against the token's rate
+per kchar in the edit's eval and in the baseline on the same problems.
+
+| model | edit | token | gain change | rate, edit / base |
+|---|---|---|---|---|
+| 0.8B | R64 | Wait | 0.00 | 3.16 / 3.22 |
+| 0.8B | D_full | Wait | -0.02 | 2.51 / 3.22 |
+| 0.8B | A64h | Wait | -0.56 | 0.96 / 3.22 |
+| 0.8B | A64 | Wait | -1.12 | 0.28 / 3.09 |
+| 0.8B | A64x3 | Wait | -2.24 | 0.03 / 3.09 |
+| 0.8B | A1x3 | Wait | -2.25 | 0.02 / 3.22 |
+| 0.8B | A64x5 | Wait | -4.49 | 0.01 / 3.22 |
+| 0.8B | P64 | Wait | +1.12 | 107.9 / 3.22 |
+| 0.8B | A64x3N3 | No | -3.83 | 0.03 / 2.25 |
+| 2B | 2B_A64x3 | Wait | -9.69 | 0.04 / 1.55 |
+| 2B | 2B_A1x3 | Wait | -9.63 | 0.03 / 1.55 |
+| 2B | 2B_A64x3N3 | No | -14.51 | 0.30 / 1.43 |
+
+The readout gets the sign and the order right for every evaluated edit on both models, and no edit moved another
+token's gain by more than 0.002. The size is looser. On the 0.8B, log(rate ratio) is close to linear in the gain change
+going down (about 2.1 per unit for 'Wait', 1.1 for 'No') and steeper going up (P64: 3.1). The 2B responds much less
+per unit (0.38 for 'Wait', 0.11 for 'No'); its gains run about 3.4x the 0.8B's for the same token. So the readout fixes
+direction and rank, and size only to about an order of magnitude. The one upward point, P64, removed 62% of Wait's
+self-gain and ran away.
+
+Doses for the commit brakes, read out analytically: scaling column j by f adds (f - 1) c_j. make_edit's top-|coef|
+selection picks exactly that column on the original and on A64x3 / 2B_A64x3, and neither start model changed it.
+
+| edit | 0.8B gain | removed | 2B gain | removed |
+|---|---|---|---|---|
+| none ('Final') | -3.11 | | -12.39 | |
+| 'Final' brake x0.5 | -2.21 | 29% | -7.87 | 36% |
+| 'Final' brake x0 | -1.31 | 58% | -3.35 | 73% |
+| 'Final' brake x-1 | +0.49 | 116% | +5.70 | 146% |
+| 'Therefore' brake x0 ('Therefore') | -1.64 -> -0.32 | 80% | -5.85 -> -2.32 | 60% |
+
+On the 0.8B's scale (2B values divided by 3.4), tokens that behave normally sit between -1.6 and -3.7, and the one
+runaway (P64) sat at -0.68. x0.5 stays inside the normal range on both models. x0 lands between normal and runaway
+(0.8B -1.31, 2B about -1.0). The flip makes the gain positive and is not run.
+
+### t02: is 'Final' a stop signal? (src/analysis/t02_final_coupling.py; logs/t02_final_coupling.txt)
+Eval outputs only. Weakening the 'Final' brake can help only if saying 'Final' leads to stopping. On 2B_A64x3, 44 of 45
+finished runs say 'Final' (172 times), against 15 of 55 truncated runs, and every finished run is right: on this model
+finishing is the score. But the first 'Final' sits at 0.54 of the text, about 5,150 chars before the end, and it is
+usually "Final check", a verification pass. The last one, usually "Final Answer", sits about 250 chars from the end.
+The 2B baseline (26 of 26 finished runs say it) and the 0.8B A64x3 (29 of 30) look the same. 'Therefore' is a mid-proof
+connective: half of the finished runs never use it, and those that do stop thousands of chars later. The densest
+'Final' run so far has 1.04 per kchar (21 in one 2B_A64x3 run); P64's 'Wait' ran at 100-180.
+
+So weakening the brake boosts two things: "Final check", a wrap-up pass that costs text, and "Final Answer", the stop.
+It helps only if it tips the choice between verifying again and wrapping up toward wrapping up. That is the hypothesis
+under test.
+
+### Round 2 edits and queue
+Directions: logs/a12_directions.pt and logs/2B/a12_directions.pt (brake_Final, brake_Therefore, each with _where). A
+project edit with --k 1 along a column's own direction scales that column by 1 - scale. Build logs:
+logs/build_<edit>.log, logs/2B/build_<edit without 2B_>.log.
+
+| edit | model | start | column | factor |
+|---|---|---|---|---|
+| 2B_A64x3Fh | 2B | 2B_A64x3 | L23 c6022 ('Final' brake) | x0.5 |
+| 2B_A64x3F0 | 2B | 2B_A64x3 | L23 c6022 | x0 |
+| 2B_Fh | 2B | original | L23 c6022 | x0.5 |
+| A64x3Fh | 0.8B | A64x3 | L23 c1238 ('Final' brake) | x0.5 |
+| A64x3F0 | 0.8B | A64x3 | L23 c1238 | x0 |
+| 2B_A64x3T0 | 2B | 2B_A64x3 | L22 c3895 ('Therefore' brake) | x0 |
+
+Queue: runs/_queue/round2.sh, log runs/_queue/round2.log, in the order above. 2B runs: all 100 at 8k. 0.8B runs: the
+first 40 at 16k. Same preset, slots and seed as round 1.
+
+### Predictions, written before any round-2 eval
+References: 2B_A64x3 46/100, 55 truncated, 0 finished wrong, 'Final' 0.13 per kchar. 2B baseline 26/100, 74 truncated,
+'Final' 0.06. 0.8B A64x3 on the first 40: 13/40, 27 truncated, 'Final' 0.04. Round 1's churn between similar 2B edits
+was 11-14 problems changing sides (+5/-9, +3/-8), so a net gain under about 7 will not be significant at n = 100. A run
+"runs away" when 'Final' reaches 5 per kchar, about 5x the densest run so far. "Answer in hand" means t01's list of
+truncated runs that stated a right answer before the cap (2B_A64x3: 12 problems; 2B baseline: 20).
+
+6. 2B_A64x3Fh vs 2B_A64x3: 'Final' per kchar up 1.5x-10x, and no run runs away. Accuracy 46-54 with gained >= lost,
+   truncated <= 55, finished wrong <= 2. At least half of the problems gained come from the 12 answer-in-hand problems
+   (they are 22% of the truncated runs, so chance would give about a fifth). If 'Final' rises and truncation does not
+   fall, the edit only buys "Final check" text, and the Final brake is not a stop lever.
+7. 2B_A64x3F0 vs 2B_A64x3Fh: 'Final' higher than under Fh (the dose order holds). Accuracy is the open question, with
+   two branches. Either the stronger push to commit gains more than Fh, or the dose is at the edge of runaway: "Final
+   check" passes repeat, premature "Final Answer"s appear, finished wrong reaches 3 or more, and accuracy falls below
+   Fh's. I lean to the first on the 2B, which has responded weakly per unit in every edit so far.
+8. 2B_Fh vs 2B baseline: 'Final' up 1.5x-10x, and no run runs away. Accuracy >= 26 with gained >= lost, finished wrong
+   <= 2, and at least half of the gains come from the 20 answer-in-hand problems (27% of the truncated runs).
+9. A64x3Fh vs A64x3 (0.8B, first 40): 'Final' up 2x-16x, no run runs away, accuracy >= 13, truncated <= 27, finished
+   wrong <= 1.
+10. A64x3F0 (0.8B): the readout puts this dose at P64's level (58% of the gain removed against P64's 62%), so it
+    predicts a runaway: 'Final' above A64x3Fh's, at least one run at 5 per kchar or more, and accuracy at or below
+    A64x3Fh's. If none runs away, the runaway threshold depends on the token: 'Wait' is plausible at almost any
+    sentence start and 'Final' only near an end, and the readout's dose limit is too cautious for rare tokens.
+11. 2B_A64x3T0 vs 2B_A64x3 (control): 'Therefore' up 1.5x-10x, no run runs away, accuracy and truncation unchanged within
+    noise (net within +-5). A brake removal of similar relative size on a commit word that is not a stop signal (t02)
+    should not move stopping. If it moves accuracy as much as Fh, the Fh effect is generic brake removal, not 'Final'.

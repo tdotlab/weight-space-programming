@@ -1,0 +1,59 @@
+
+Qwen3.5-0.8B 'Wait' (id 13784): self-gain at alpha 0.25*sqrt(H), all layers -1.797; by layer (L18-23): L18 +0.104  L19 +0.009  L20 -0.172  L21 -0.146  L22 -1.462  L23 -0.278
+  L22 col   573  c -1.3462 (brake, 92% of its layer)  z(down) +14.9  down + [' wait', '等待', ' waiting', 'wait']  - ['ogh', 'enez', '六一', 'bricas']
+  L18 col   881  c +0.0786 (feeds, 76% of its layer)  z(down) +13.0  down + [' waiting', ' wait', '等待', 'waiting']  - ['lare', 'cly', 'remen', 'manifest']
+  L23 col    66  c -0.0659 (brake, 24% of its layer)  z(down) +5.8  down + ['Theme', 'Challenge', 'Decision', 'Phrase']  - ['到高', '不大的', 'λιο', 'íp']
+  L20 col   405  c -0.0627 (brake, 37% of its layer)  z(down) +8.0  down + [' delays', '延迟', ' delay', ' wait']  - [' absoluta', 'urian', ' World', '绝对']
+  L23 col    58  c -0.0558 (brake, 20% of its layer)  z(down) -7.1  down + ['mensagem', 'aiss', 'uttur', 'bolehkan']  - ['Is', 'J', 'As', 'Z']
+  L17 col  1915  c -0.0554 (brake, 378% of its layer)  z(down) +13.4  down + [' wait', ' waiting', '等待', 'wait']  - ['_orientation', 'inic', 'atics', 'ariam']
+
+Qwen3.5-0.8B '</think>' (id 248069): self-gain at alpha 0.25*sqrt(H), all layers +0.048; by layer (L18-23): L18 +0.023  L19 -0.027  L20 -0.029  L21 -0.056  L22 -0.058  L23 +0.016
+  L19 col    31  c -0.0203 (brake, 76% of its layer)  z(down) +3.8  down + ['grund', 'пон', '新加坡', 'глу']  - ['ne', 'izes', 'ent', 'ist']
+  L22 col  2835  c -0.0174 (brake, 30% of its layer)  z(down) +5.6  down + ['<|endoftext|>', '<|im_end|>', "')</", '<think>']  - ['`.', ').', '".', '\xa0']
+  L23 col    51  c +0.0137 (feeds, 84% of its layer)  z(down) -2.6  down + ['”…', '*“.', ' degusta', ' erotisch']  - [' ', ' (', ' "', ',']
+  L23 col     7  c -0.0128 (brake, -79% of its layer)  z(down) +2.8  down + ['woke', 'prene', 'theless', 'manda']  - [' in', ' to', ' for', ' the']
+  L23 col  1386  c +0.0102 (feeds, 62% of its layer)  z(down) +2.3  down + ['sg', 'lg', 'dy', '有关']  - ['XM', '此时', '享受', 'yu']
+  L22 col   532  c -0.0085 (brake, 15% of its layer)  z(down) -4.3  down + [' أيضاً', 'γγελμα', 'تما', 'μένη']  - ['`', '}`', ' `', '`,']
+
+Qwen3.5-0.8B ' Therefore' (id 14833): self-gain at alpha 0.25*sqrt(H), all layers -2.147; by layer (L18-23): L18 -0.038  L19 -0.137  L20 -0.706  L21 -0.227  L22 -1.955  L23 -0.153
+  L22 col  2001  c -1.4507 (brake, 74% of its layer)  z(down) +16.8  down + [' therefore', '因此', ' Therefore', '因此在']  - [' favori', 'erma', '.shtml', 'мени']
+  L20 col   189  c -0.5565 (brake, 79% of its layer)  z(down) +14.2  down + ['因此', ' therefore', '故', ' thus']  - ['deles', 'tures', 'ggio', 'ropri']
+  L22 col   311  c -0.4460 (brake, 23% of its layer)  z(down) -13.3  down + ['ally', 'étr', 'ulement', 'şk']  - [' thus', ' Thus', ' therefore', 'thus']
+  L17 col   987  c +0.1514 (feeds, 48% of its layer)  z(down) -18.1  down + ['ół', 'wohl', 'alties', '々と']  - [' thus', ' therefore', '因此', ' Thus']
+  L20 col   297  c -0.1418 (brake, 20% of its layer)  z(down) +9.0  down + [' therefore', ' thus', ' hence', ' quindi']  - ['чны', 'ska', 'kker', ' haven']
+  L17 col  3064  c +0.0996 (feeds, 32% of its layer)  z(down) +15.5  down + [' therefore', '因此', ' thus', ' Therefore']  - ['ني', '然', 'ović', 'ly']
+
+Qwen3.5-0.8B 'Therefore' (id 52971): self-gain at alpha 0.25*sqrt(H), all layers -1.642; by layer (L18-23): L18 -0.032  L19 -0.056  L20 -0.507  L21 -0.168  L22 -1.811  L23 -0.166
+  L22 col  2001  c -1.3216 (brake, 73% of its layer)  z(down) +15.5  down + [' therefore', '因此', ' Therefore', '因此在']  - [' favori', 'erma', '.shtml', 'мени']
+  L20 col   189  c -0.4349 (brake, 86% of its layer)  z(down) +12.8  down + ['因此', ' therefore', '故', ' thus']  - ['deles', 'tures', 'ggio', 'ropri']
+  L22 col   311  c -0.3501 (brake, 19% of its layer)  z(down) -11.6  down + ['ally', 'étr', 'ulement', 'şk']  - [' thus', ' Thus', ' therefore', 'thus']
+  L17 col   987  c +0.1685 (feeds, 52% of its layer)  z(down) -16.6  down + ['ół', 'wohl', 'alties', '々と']  - [' thus', ' therefore', '因此', ' Thus']
+  L20 col   297  c -0.0966 (brake, 19% of its layer)  z(down) +8.2  down + [' therefore', ' thus', ' hence', ' quindi']  - ['чны', 'ska', 'kker', ' haven']
+  L17 col  3064  c +0.0830 (feeds, 26% of its layer)  z(down) +14.0  down + [' therefore', '因此', ' thus', ' Therefore']  - ['ني', '然', 'ović', 'ly']
+
+Qwen3.5-0.8B 'Final' (id 18770): self-gain at alpha 0.25*sqrt(H), all layers -3.113; by layer (L18-23): L18 +0.056  L19 -0.262  L20 -0.021  L21 -0.667  L22 -0.170  L23 -2.783
+  L23 col  1238  c -1.8028 (brake, 65% of its layer)  z(down) +22.6  down + [' final', 'final', ' Final', 'Final']  - ['اع', 'chenkt', 'oros', 'igni']
+  L23 col  1156  c -0.7920 (brake, 28% of its layer)  z(down) +18.7  down + ['最终', ' finally', ' ultimately', ' final']  - ['heter', '-disable', 'opsis', ' dint']
+  L21 col   294  c -0.4193 (brake, 63% of its layer)  z(down) -11.0  down + ['adaran', 'omento', ' суток', 'DoubleClick']  - [' end', ' End', ' ends', ' fin']
+  L17 col   838  c +0.3108 (feeds, 77% of its layer)  z(down) +19.2  down + [' final', 'final', '最终', ' Final']  - ['分左右', 'oros', 'eced', 'lemen']
+  L19 col   734  c -0.2588 (brake, 99% of its layer)  z(down) -18.5  down + ['eger', 'eraus', 'erah', 'uchu']  - [' final', 'final', '最终', '最后']
+  L21 col   663  c -0.1905 (brake, 29% of its layer)  z(down) -8.4  down + [' conven', 'vention', 'orris', 'abilia']  - [' last', 'last', ' Last', 'Last']
+
+Qwen3.5-0.8B ' Final' (id 12650): self-gain at alpha 0.25*sqrt(H), all layers -3.440; by layer (L18-23): L18 +0.031  L19 -0.262  L20 -0.027  L21 -0.712  L22 -0.140  L23 -2.902
+  L23 col  1238  c -2.0308 (brake, 70% of its layer)  z(down) +23.8  down + [' final', 'final', ' Final', 'Final']  - ['اع', 'chenkt', 'oros', 'igni']
+  L23 col  1156  c -0.6477 (brake, 22% of its layer)  z(down) +17.8  down + ['最终', ' finally', ' ultimately', ' final']  - ['heter', '-disable', 'opsis', ' dint']
+  L21 col   294  c -0.4980 (brake, 70% of its layer)  z(down) -11.9  down + ['adaran', 'omento', ' суток', 'DoubleClick']  - [' end', ' End', ' ends', ' fin']
+  L17 col   838  c +0.3081 (feeds, 79% of its layer)  z(down) +19.7  down + [' final', 'final', '最终', ' Final']  - ['分左右', 'oros', 'eced', 'lemen']
+  L19 col   734  c -0.2659 (brake, 102% of its layer)  z(down) -18.3  down + ['eger', 'eraus', 'erah', 'uchu']  - [' final', 'final', '最终', '最后']
+  L21 col   663  c -0.1442 (brake, 20% of its layer)  z(down) -9.2  down + [' conven', 'vention', 'orris', 'abilia']  - [' last', 'last', ' Last', 'Last']
+
+origin (base vs instruct):
+  embedding row '</think>': |E| instruct 0.571 base 0.567 (median row 0.623), cos(instruct, base) +0.999
+  embedding row 'Wait': |E| instruct 0.557 base 0.564 (median row 0.623), cos(instruct, base) +0.998
+  embedding row ' Therefore': |E| instruct 0.547 base 0.545 (median row 0.623), cos(instruct, base) +0.997
+  '</think>' L19 col 31: c instruct -0.0203, base -0.0147; layer instruct -0.0268, base -0.0177; rel change gate 0.034 up 0.082 down 0.089 (median down 0.090)
+  '</think>' L22 col 2835: c instruct -0.0174, base -0.0174; layer instruct -0.0576, base -0.0561; rel change gate 0.069 up 0.091 down 0.047 (median down 0.085)
+  '</think>' L23 col 7: c instruct -0.0128, base -0.0125; layer instruct +0.0163, base +0.0203; rel change gate 0.030 up 0.040 down 0.040 (median down 0.068)
+  ' Therefore' L22 col 2001: c instruct -1.4507, base -1.4333; layer instruct -1.9547, base -1.9491; rel change gate 0.067 up 0.115 down 0.099 (median down 0.085)
+  ' Therefore' L20 col 189: c instruct -0.5565, base -0.5974; layer instruct -0.7058, base -0.7640; rel change gate 0.056 up 0.098 down 0.105 (median down 0.088)
+  ' Therefore' L22 col 311: c instruct -0.4460, base -0.4516; layer instruct -1.9547, base -1.9491; rel change gate 0.088 up 0.115 down 0.050 (median down 0.085)

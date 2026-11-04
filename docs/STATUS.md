@@ -1,6 +1,16 @@
 # Status
 
-Last updated 2026-11-03 20:45 EST.
+Last updated 2026-11-03 21:30 EST.
+
+## Round 2: the commit side (running since 2026-11-03 21:30)
+
+Round 1 left 55-60% of problems at the token cap, and on both models nearly every run that finishes is right, so finishing is the score. Four analyses ran before any round-2 edit was built (details, and predictions 6-11 written before the evals, in `logs/edit_session.md` under "Round 2"):
+- t01 (transcripts): few truncated runs have the answer in hand. 2B_A64x3: 12 of 55 had stated the right answer before the cap; 2B baseline: 20 of 74. That caps what any stop-when-done edit can gain.
+- a11 (weights): `</think>` has no self-brake to weaken (all-layer self-gain +0.05 on the 0.8B, +0.69 on the 2B). The strongest brake on a commit word is on 'Final': one pretraining neuron in L23 (0.8B col 1238, 2B col 6022) carries 65-80% of it.
+- a12 (weights vs evals): the self-gain readout ranks every evaluated edit correctly for its token on both models, P64's runaway included; size is good to about an order of magnitude. It puts the 'Final' brake at x0.5 inside the safe range and at x0 near P64's level.
+- t02 (transcripts): 44 of 45 finished 2B_A64x3 runs say 'Final', but the first one ("Final check") comes halfway through and the stopping "Final Answer" comes last. The edit helps only if it tips verifying-again toward wrapping up.
+
+Queue (`runs/_queue/round2.sh`, log `round2.log`): 2B_A64x3Fh and 2B_A64x3F0 ('Final' brake x0.5 and x0 on 2B_A64x3), 2B_Fh (x0.5 on the original 2B), A64x3Fh and A64x3F0 (0.8B, first 40), 2B_A64x3T0 ('Therefore' brake x0, a control). About four hours; rows land in the table below as runs finish.
 
 ## Qwen3.5-2B (round 1 done)
 
@@ -15,7 +25,7 @@ Round 1 results (2B: full 100 at 8k; 0.8B: first 40 at 16k):
 - `A64x3N3` (0.8B, plus the No brake col 613 x3) 12/40 vs A64x3 13 (+3/-4), 'No,' 2.40 -> 0.03. Prediction 4 holds on the marker; the score does not move.
 - `2B_A64x3N3` (plus col 2014 x3) 41/100 vs 2B_A64x3 46 (+3/-8, p 0.23), 'No,' 1.41 -> 0.30, truncated 59 vs 55. Prediction 5 holds on the marker; accuracy flat to slightly down.
 
-Reading: the No brake removes its word on both models and the loops continue in other phrasing ('Let's check', 'Is it', 'Is there', 'Maybe'). 'Wait' removal paid because it broke a loop that ran mostly on 'Wait'; with that gone, the remaining loop is a state of not committing, not a word. Next lever: the decision to stop, i.e. weaken the `</think>` / 'Therefore' brakes from a10.
+Reading: the No brake removes its word on both models and the loops continue in other phrasing ('Let's check', 'Is it', 'Is there', 'Maybe'). 'Wait' removal paid because it broke a loop that ran mostly on 'Wait'; with that gone, the remaining loop is a state of not committing, not a word. Round 2 (above) acts on the decision to stop.
 
 Baseline `runs/2B/math500/base_8k_q8` (same 100 problems and sampling as the 0.8B, 8k cap): 26/100, 74 truncated, every finished answer right, first 40 11/40, held-out 15/60, 'Wait' 1.55 per kchar (0.8B 3.09). Same failure mode, about half as Wait-heavy.
 
@@ -39,7 +49,7 @@ A64, the opposite of P64 (u-component in the same 64 L22 columns doubled), is th
 4. Done: a07 found no post-training 'No,' direction. Next lever is upstream: v_in at L15+L19 stacked on A64, both signs (A64VP, A64VA), since weights cannot fix the sign.
 5. Done for the 0.8B: A64x3 is the pick. A greedy baseline and a non-math regression set are still open.
 6. Done: Qwen3.5-2B round 1 (baseline, 2B_A64x3, A1x3 and 2B_A1x3, the No-brake stacks on both models).
-7. Next: weaken the `</think>` / 'Therefore' brakes (a10) so committing gets easier; pre-register predictions before the evals.
+7. Running: round 2 on the decision to stop. a11 found no `</think>` brake to weaken, so the lever is the 'Final' brake (x0.5 and x0, both models, on and off the Wait edit) with a 'Therefore'-brake control; predictions 6-11 written before the evals.
 
 ## Results
 

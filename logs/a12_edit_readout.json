@@ -1,0 +1,567 @@
+{
+ "model": "Qwen3.5-0.8B",
+ "alpha": "0.25*sqrt(H)",
+ "marker_regex": {
+  "Wait": "(?<![A-Za-z])[Ww]ait",
+  "No": "(?<![A-Za-z])No[,.]",
+  "Final": "(?<![A-Za-z])Final",
+  "Therefore": "(?<![A-Za-z])Therefore"
+ },
+ "brakes": {
+  "Final": [
+   23,
+   1238
+  ],
+  "Therefore": [
+   22,
+   2001
+  ]
+ },
+ "rows": [
+  {
+   "name": "original",
+   "gain": {
+    "Wait": -1.7969088460085914,
+    "No": -3.7278491188772023,
+    "Final": -3.1128607623977587,
+    "Therefore": -1.6421806286089122
+   },
+   "observed": null
+  },
+  {
+   "name": "A1x3",
+   "spec": {
+    "kind": "project",
+    "dir": "u",
+    "start": "original",
+    "layers": "22",
+    "k": "1",
+    "scale": -2.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -4.048699131119065,
+    "No": -3.7279814411886036,
+    "Final": -3.112860017339699,
+    "Therefore": -1.641765899490565
+   },
+   "observed": {
+    "run": "A1x3_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.02,
+     "No": 2.383,
+     "Final": 0.046,
+     "Therefore": 0.022
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "A64",
+   "spec": {
+    "kind": "project",
+    "dir": "u",
+    "start": null,
+    "layers": "22",
+    "k": "64",
+    "scale": -1.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -2.9184777642367408,
+    "No": -3.7282129456289113,
+    "Final": -3.1128927402896807,
+    "Therefore": -1.6418872545473278
+   },
+   "observed": {
+    "run": "A64_q8",
+    "n": 100,
+    "edit": {
+     "Wait": 0.282,
+     "No": 2.198,
+     "Final": 0.035,
+     "Therefore": 0.02
+    },
+    "base": {
+     "Wait": 3.091,
+     "No": 2.14,
+     "Final": 0.012,
+     "Therefore": 0.007
+    }
+   }
+  },
+  {
+   "name": "A64h",
+   "spec": {
+    "kind": "project",
+    "dir": "u",
+    "start": null,
+    "layers": "22",
+    "k": "64",
+    "scale": -0.5
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -2.3575518036959693,
+    "No": -3.7280377079732716,
+    "Final": -3.112879016320221,
+    "Therefore": -1.642028875183314
+   },
+   "observed": {
+    "run": "A64h_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.959,
+     "No": 2.257,
+     "Final": 0.022,
+     "Therefore": 0.013
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "A64VA",
+   "spec": {
+    "kind": "project",
+    "dir": "v_in",
+    "start": "A64",
+    "layers": "15,19",
+    "k": "64",
+    "scale": -1.0
+   },
+   "changed_layers": [
+    15,
+    19,
+    22
+   ],
+   "gain": {
+    "Wait": -2.914837311836891,
+    "No": -3.7282845457084477,
+    "Final": -3.1130119011504576,
+    "Therefore": -1.6407024371437728
+   },
+   "observed": {
+    "run": "A64VA_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.29,
+     "No": 2.342,
+     "Final": 0.032,
+     "Therefore": 0.019
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "A64VP",
+   "spec": {
+    "kind": "project",
+    "dir": "v_in",
+    "start": "A64",
+    "layers": "15,19",
+    "k": "64",
+    "scale": 1.0
+   },
+   "changed_layers": [
+    15,
+    19,
+    22
+   ],
+   "gain": {
+    "Wait": -2.9220520415110514,
+    "No": -3.7281415392644703,
+    "Final": -3.1127704203827307,
+    "Therefore": -1.64307690737769
+   },
+   "observed": {
+    "run": "A64VP_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.278,
+     "No": 2.436,
+     "Final": 0.039,
+     "Therefore": 0.016
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "A64x3",
+   "spec": {
+    "kind": "project",
+    "dir": "u",
+    "start": "original",
+    "layers": "22",
+    "k": "64",
+    "scale": -2.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -4.039520254242234,
+    "No": -3.7285859514959157,
+    "Final": -3.112927445094101,
+    "Therefore": -1.6415962646715343
+   },
+   "observed": {
+    "run": "A64x3_q8",
+    "n": 100,
+    "edit": {
+     "Wait": 0.034,
+     "No": 2.181,
+     "Final": 0.041,
+     "Therefore": 0.024
+    },
+    "base": {
+     "Wait": 3.091,
+     "No": 2.14,
+     "Final": 0.012,
+     "Therefore": 0.007
+    }
+   }
+  },
+  {
+   "name": "A64x3N3",
+   "spec": {
+    "kind": "project",
+    "dir": "brake_No",
+    "start": "A64x3",
+    "layers": "23",
+    "k": "1",
+    "scale": -2.0
+   },
+   "changed_layers": [
+    22,
+    23
+   ],
+   "gain": {
+    "Wait": -4.040427854168229,
+    "No": -7.561372988391668,
+    "Final": -3.112864264170639,
+    "Therefore": -1.6415102700702846
+   },
+   "observed": {
+    "run": "A64x3N3_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.037,
+     "No": 0.032,
+     "Final": 0.033,
+     "Therefore": 0.027
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "A64x5",
+   "spec": {
+    "kind": "project",
+    "dir": "u",
+    "start": "original",
+    "layers": "22",
+    "k": "64",
+    "scale": -4.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -6.282094946014695,
+    "No": -3.7293200423009694,
+    "Final": -3.112992220441811,
+    "Therefore": -1.6410060594789684
+   },
+   "observed": {
+    "run": "A64x5_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 0.012,
+     "No": 2.088,
+     "Final": 0.058,
+     "Therefore": 0.044
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "D_full",
+   "spec": {
+    "kind": "revert",
+    "dir": "u",
+    "start": null,
+    "layers": "22",
+    "k": "all",
+    "scale": 1.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -1.8162327910540625,
+    "No": -3.729421489406377,
+    "Final": -3.112987764994614,
+    "Therefore": -1.6410518358461559
+   },
+   "observed": {
+    "run": "Dfull_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 2.509,
+     "No": 2.227,
+     "Final": 0.013,
+     "Therefore": 0.014
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "P64",
+   "spec": {
+    "kind": "project",
+    "dir": "u",
+    "start": null,
+    "layers": "22",
+    "k": "64",
+    "scale": 1.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -0.6758415306685492,
+    "No": -3.72748088138178,
+    "Final": -3.112829052726738,
+    "Therefore": -1.6424732874147594
+   },
+   "observed": {
+    "run": "P64_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 107.848,
+     "No": 0.527,
+     "Final": 0.0,
+     "Therefore": 0.0
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  },
+  {
+   "name": "R64",
+   "spec": {
+    "kind": "project",
+    "dir": "r",
+    "start": null,
+    "layers": "22",
+    "k": "64",
+    "scale": 1.0
+   },
+   "changed_layers": [
+    22
+   ],
+   "gain": {
+    "Wait": -1.796903362381272,
+    "No": -3.7277409960515797,
+    "Final": -3.1127452187938616,
+    "Therefore": -1.6421921919099987
+   },
+   "observed": {
+    "run": "R64_q8",
+    "n": 40,
+    "edit": {
+     "Wait": 3.163,
+     "No": 2.292,
+     "Final": 0.009,
+     "Therefore": 0.007
+    },
+    "base": {
+     "Wait": 3.222,
+     "No": 2.255,
+     "Final": 0.013,
+     "Therefore": 0.006
+    }
+   }
+  }
+ ],
+ "candidates": [
+  {
+   "start": "original",
+   "edit": "Final x0.5",
+   "factors": {
+    "Final": 0.5
+   },
+   "gain": {
+    "Wait": -1.7968792769552238,
+    "No": -3.727832876797038,
+    "Final": -2.211438857833855,
+    "Therefore": -1.642287335380388
+   }
+  },
+  {
+   "start": "original",
+   "edit": "Final x0",
+   "factors": {
+    "Final": 0.0
+   },
+   "gain": {
+    "Wait": -1.7968497079018562,
+    "No": -3.7278166347168735,
+    "Final": -1.310016953269951,
+    "Therefore": -1.6423940421518637
+   }
+  },
+  {
+   "start": "original",
+   "edit": "Final x-1",
+   "factors": {
+    "Final": -1.0
+   },
+   "gain": {
+    "Wait": -1.796790569795121,
+    "No": -3.7277841505565448,
+    "Final": 0.49282685585785657,
+    "Therefore": -1.6426074556948151
+   }
+  },
+  {
+   "start": "original",
+   "edit": "Therefore x0",
+   "factors": {
+    "Therefore": 0.0
+   },
+   "gain": {
+    "Wait": -1.796792724111583,
+    "No": -3.7278211706343427,
+    "Final": -3.1120160315185785,
+    "Therefore": -0.32059759600088
+   }
+  },
+  {
+   "start": "original",
+   "edit": "Final x0 + Therefore x0",
+   "factors": {
+    "Final": 0.0,
+    "Therefore": 0.0
+   },
+   "gain": {
+    "Wait": -1.796733586004848,
+    "No": -3.727788686474014,
+    "Final": -1.309172222390771,
+    "Therefore": -0.32081100954383146
+   }
+  },
+  {
+   "start": "A64x3",
+   "edit": "Final x0.5",
+   "factors": {
+    "Final": 0.5
+   },
+   "gain": {
+    "Wait": -4.039490685188866,
+    "No": -3.7285697094157513,
+    "Final": -2.2115055405301973,
+    "Therefore": -1.64170297144301
+   }
+  },
+  {
+   "start": "A64x3",
+   "edit": "Final x0",
+   "factors": {
+    "Final": 0.0
+   },
+   "gain": {
+    "Wait": -4.039461116135499,
+    "No": -3.728553467335587,
+    "Final": -1.3100836359662935,
+    "Therefore": -1.6418096782144858
+   }
+  },
+  {
+   "start": "A64x3",
+   "edit": "Final x-1",
+   "factors": {
+    "Final": -1.0
+   },
+   "gain": {
+    "Wait": -4.0394019780287636,
+    "No": -3.728520983175258,
+    "Final": 0.4927601731615141,
+    "Therefore": -1.6420230917574372
+   }
+  },
+  {
+   "start": "A64x3",
+   "edit": "Therefore x0",
+   "factors": {
+    "Therefore": 0.0
+   },
+   "gain": {
+    "Wait": -4.039404132345226,
+    "No": -3.728558003253056,
+    "Final": -3.112082714214921,
+    "Therefore": -0.3200132320635021
+   }
+  },
+  {
+   "start": "A64x3",
+   "edit": "Final x0 + Therefore x0",
+   "factors": {
+    "Final": 0.0,
+    "Therefore": 0.0
+   },
+   "gain": {
+    "Wait": -4.0393449942384905,
+    "No": -3.7285255190927273,
+    "Final": -1.3092389050871134,
+    "Therefore": -0.32022664560645353
+   }
+  }
+ ]
+}
