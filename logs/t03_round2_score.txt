@@ -1,0 +1,27 @@
+
+Prediction 6: 2B/math500/A64x3Fh_8k_q8 vs 2B/math500/A64x3_8k_q8 (100 shared problems). 6/7 clauses hold.
+  FAIL  'Final' per kchar up 1.5x-10x: 0.13 -> 0.171 (x1.32)
+  PASS  no run runs away ('Final' >= 5.0/kchar): densest [1.18, 10, 8505]
+  PASS  accuracy 46-54: 48
+  PASS  gained >= lost: +8/-6
+  PASS  truncated <= 55: 52
+  PASS  finished wrong <= 2: 0
+  PASS  at least half the gains from the 12 answer-in-hand problems: 6/8
+  accuracy 46 -> 48 (+8/-6, sign test p 0.791); truncated 55 -> 52 (newly finished 9, newly truncated 6); finished wrong 0 -> 0
+  held-out 60: 27 -> 29 (+6/-4, p 0.754)
+  answer-in-hand (12 of the reference's 55 truncated): gains from it 6/8 ['test/algebra/1143.json', 'test/algebra/187.json', 'test/algebra/824.json', 'test/geometry/347.json', 'test/prealgebra/1227.json', 'test/precalculus/580.json']
+  per kchar: {'Final': 0.13, 'Therefore': 0.038, 'Final check': 0.043, 'Final Answer': 0.049, 'Wait': 0.043, 'No,': 1.41} -> {'Final': 0.171, 'Therefore': 0.051, 'Final check': 0.048, 'Final Answer': 0.067, 'Wait': 0.037, 'No,': 1.392}
+  finished runs saying 'Final' 44/45 -> 48/48; first 'Final' at 0.54 -> 0.49 of the text, then 5076 -> 4887 chars to the end; finished median length 10643 -> 10560 chars; median tokens 8192 -> 8192
+  premature 'Final Answer' (>2000 chars before the end): 52 in 29 runs -> 68 in 33 runs; densest 'Final' run [1.04, 4, 3855] -> [1.18, 10, 8505]
+  gained ['test/algebra/1143.json', 'test/algebra/187.json', 'test/algebra/824.json', 'test/algebra/972.json', 'test/geometry/347.json', 'test/prealgebra/1227.json', 'test/prealgebra/1807.json', 'test/precalculus/580.json']
+  lost ['test/algebra/2264.json', 'test/counting_and_probability/1114.json', 'test/geometry/456.json', 'test/geometry/802.json', 'test/number_theory/931.json', 'test/precalculus/807.json']
+
+Prediction 7: 2B/math500/A64x3F0_8k_q8 has 0/100 results, not scored yet.
+
+Prediction 8: 2B/math500/Fh_8k_q8 has 0/100 results, not scored yet.
+
+Prediction 9: 0.8B/math500/A64x3Fh_q8 has 0/40 results, not scored yet.
+
+Prediction 10: 0.8B/math500/A64x3F0_q8 has 0/40 results; reference 0.8B/math500/A64x3Fh_q8 not finished, not scored yet.
+
+Prediction 11: 2B/math500/A64x3T0_8k_q8 has 0/100 results, not scored yet.

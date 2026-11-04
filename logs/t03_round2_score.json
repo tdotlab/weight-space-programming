@@ -1,0 +1,172 @@
+{
+ "6": {
+  "run": "2B/math500/A64x3Fh_8k_q8",
+  "ref": "2B/math500/A64x3_8k_q8",
+  "shared": 100,
+  "run_m": {
+   "n": 100,
+   "acc": 48,
+   "trunc": 52,
+   "fin": 48,
+   "fin_wrong": 0,
+   "tokens_median": 8192,
+   "fin_chars_median": 10560,
+   "per_kchar": {
+    "Final": 0.171,
+    "Therefore": 0.051,
+    "Final check": 0.048,
+    "Final Answer": 0.067,
+    "Wait": 0.037,
+    "No,": 1.392
+   },
+   "Final_max_run": [
+    1.18,
+    10,
+    8505,
+    "test/algebra/694.json"
+   ],
+   "Final_runaways": [],
+   "Therefore_max_run": [
+    0.33,
+    6,
+    17978,
+    "test/algebra/187.json"
+   ],
+   "Therefore_runaways": [],
+   "fin_saying_Final": 48,
+   "fin_first_Final_at_median": 0.49,
+   "fin_chars_after_first_Final_median": 4887,
+   "premature_Final_Answer": 68,
+   "runs_with_premature_Final_Answer": 33
+  },
+  "ref_m": {
+   "n": 100,
+   "acc": 46,
+   "trunc": 55,
+   "fin": 45,
+   "fin_wrong": 0,
+   "tokens_median": 8192,
+   "fin_chars_median": 10643,
+   "per_kchar": {
+    "Final": 0.13,
+    "Therefore": 0.038,
+    "Final check": 0.043,
+    "Final Answer": 0.049,
+    "Wait": 0.043,
+    "No,": 1.41
+   },
+   "Final_max_run": [
+    1.04,
+    4,
+    3855,
+    "test/counting_and_probability/190.json"
+   ],
+   "Final_runaways": [],
+   "Therefore_max_run": [
+    0.39,
+    2,
+    5167,
+    "test/intermediate_algebra/1714.json"
+   ],
+   "Therefore_runaways": [],
+   "fin_saying_Final": 44,
+   "fin_first_Final_at_median": 0.54,
+   "fin_chars_after_first_Final_median": 5076,
+   "premature_Final_Answer": 52,
+   "runs_with_premature_Final_Answer": 29
+  },
+  "cmp": {
+   "gained": [
+    "test/algebra/1143.json",
+    "test/algebra/187.json",
+    "test/algebra/824.json",
+    "test/algebra/972.json",
+    "test/geometry/347.json",
+    "test/prealgebra/1227.json",
+    "test/prealgebra/1807.json",
+    "test/precalculus/580.json"
+   ],
+   "lost": [
+    "test/algebra/2264.json",
+    "test/counting_and_probability/1114.json",
+    "test/geometry/456.json",
+    "test/geometry/802.json",
+    "test/number_theory/931.json",
+    "test/precalculus/807.json"
+   ],
+   "p": 0.79052734375,
+   "newly_finished": [
+    "test/algebra/1143.json",
+    "test/algebra/187.json",
+    "test/algebra/634.json",
+    "test/algebra/824.json",
+    "test/algebra/972.json",
+    "test/geometry/347.json",
+    "test/prealgebra/1227.json",
+    "test/prealgebra/1807.json",
+    "test/precalculus/580.json"
+   ],
+   "newly_truncated": [
+    "test/algebra/2264.json",
+    "test/counting_and_probability/1114.json",
+    "test/geometry/456.json",
+    "test/geometry/802.json",
+    "test/number_theory/931.json",
+    "test/precalculus/807.json"
+   ]
+  },
+  "ratio": 1.32,
+  "answer_in_hand": {
+   "list": 12,
+   "of_ref_truncated": 55,
+   "gained_from_list": [
+    "test/algebra/1143.json",
+    "test/algebra/187.json",
+    "test/algebra/824.json",
+    "test/geometry/347.json",
+    "test/prealgebra/1227.json",
+    "test/precalculus/580.json"
+   ],
+   "share": 0.75
+  },
+  "clauses": [
+   [
+    "'Final' per kchar up 1.5x-10x: 0.13 -> 0.171 (x1.32)",
+    false
+   ],
+   [
+    "no run runs away ('Final' >= 5.0/kchar): densest [1.18, 10, 8505]",
+    true
+   ],
+   [
+    "accuracy 46-54: 48",
+    true
+   ],
+   [
+    "gained >= lost: +8/-6",
+    true
+   ],
+   [
+    "truncated <= 55: 52",
+    true
+   ],
+   [
+    "finished wrong <= 2: 0",
+    true
+   ],
+   [
+    "at least half the gains from the 12 answer-in-hand problems: 6/8",
+    true
+   ]
+  ],
+  "notes": [],
+  "heldout": {
+   "run": 29,
+   "ref": 27,
+   "n": 60,
+   "gained": 6,
+   "lost": 4,
+   "p": 0.75390625
+  }
+ }
+}

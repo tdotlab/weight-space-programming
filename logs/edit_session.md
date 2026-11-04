@@ -510,3 +510,26 @@ truncated runs that stated a right answer before the cap (2B_A64x3: 12 problems;
 11. 2B_A64x3T0 vs 2B_A64x3 (control): 'Therefore' up 1.5x-10x, no run runs away, accuracy and truncation unchanged within
     noise (net within +-5). A brake removal of similar relative size on a commit word that is not a stop signal (t02)
     should not move stopping. If it moves accuracy as much as Fh, the Fh effect is generic brake removal, not 'Final'.
+
+## Results, round 2
+
+Scored by `src/analysis/t03_round2_score.py` (logs/t03_round2_score.txt), clause by clause as pre-registered. Builds
+were checked first: each changes only its intended column, at the dose a12 planned (a12 on the built models: 2B Final
+-7.87 for x0.5, -3.35 for x0; 0.8B -2.21, -1.31; 2B Therefore -2.32). Diffing the builds also found single-bit flips on
+this machine (STATUS, Gotchas); in the evaluated Q8_0 files they come to one weight in 2B_Fh and one in 2B_A64x3N3,
+each moved by a quantization step or two.
+
+A caveat on the answer-in-hand clauses (6, 8), found after the pre-registration by running the scorer on round 1:
+2B_A64x3 against the 2B baseline, an edit that does not target stopping, drew 13 of its 21 gains (62%) from the
+baseline's answer-in-hand list. Problems where the model already had the answer are the easiest to convert by any
+means, so "a fifth by chance" was the wrong baseline and that clause cannot tell a stop lever from a general gain.
+
+### 2B_A64x3Fh: 48/100 (runs/2B/math500/A64x3Fh_8k_q8). Prediction 6: 6 of 7 clauses hold, but the mechanism clause fails.
+Halving the Final brake on top of 2B_A64x3 moves 'Final' only from 0.130 to 0.171 per kchar (x1.32; predicted
+1.5x-10x). Accuracy 48 vs 46 (+8/-6, p 0.79), truncated 52 vs 55 (9 newly finished, 6 newly truncated), finished wrong
+0, held-out 29/60 vs 27/60. Six of the eight gains are on the answer-in-hand list. The clauses that pass are bands a
+null edit would also pass (46-54 includes no change), so this is a near-null at this dose, not evidence for the Final
+brake as a stop lever, and not evidence against it either: the word itself barely moved. Per unit of readout the 2B
+gave ln(1.32)/4.52 = 0.06, half its 'No' slope (0.11) and a sixth of its 'Wait' slope (0.38). The extra 'Final's are
+mostly 'Final Answer' drafts the model keeps checking past (premature 'Final Answer', more than 2000 chars before the
+end: 52 in 29 runs to 68 in 33), not 'Final check' (0.043 to 0.048). F0, twice the dose, is the real test.
