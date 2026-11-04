@@ -533,3 +533,19 @@ brake as a stop lever, and not evidence against it either: the word itself barel
 gave ln(1.32)/4.52 = 0.06, half its 'No' slope (0.11) and a sixth of its 'Wait' slope (0.38). The extra 'Final's are
 mostly 'Final Answer' drafts the model keeps checking past (premature 'Final Answer', more than 2000 chars before the
 end: 52 in 29 runs to 68 in 33), not 'Final check' (0.043 to 0.048). F0, twice the dose, is the real test.
+
+### 2B_A64x3F0: 46/100 (runs/2B/math500/A64x3F0_8k_q8). Prediction 7 fails: the dose order does not hold.
+Zeroing the Final brake column (73% of the readout's 'Final' self-brake removed, twice Fh's change) leaves 'Final' at
+0.171 per kchar, exactly Fh's. Accuracy 46 (vs Fh 48: +7/-9, p 0.80; vs 2B_A64x3: +5/-5), truncated 55, finished
+wrong 0, held-out 27/60. Neither branch of prediction 7 happens: no extra gain, and no edge-of-runaway either
+(finished wrong 0, premature 'Final Answer' down from 68 to 55, densest run 1.5 per kchar).
+The gains and losses are one pool of coin-flip problems trading places: F0 wins back five of the six problems Fh lost
+(2264, 1114, 456, 802, 931, 807 among its seven gains) and loses four of Fh's eight gains (1143, 972, 1807, 580).
+About 15 problems on the 2B flip under any weight change, which is the churn round 1 measured.
+Reading: for the first time the readout's dose does not map to the rate. On 'Wait' and 'No' a bigger change in
+self-gain always moved the rate further; on 'Final' x0.5 and x0 give the same x1.3. 'Final' is not a word the 2B is
+holding back near threshold in a loop, as 'Wait' was; it is a section label ("Final check", "Final Answer") that the
+plan of the solution places, and this neuron does not decide when that happens. The rise that both doses share is
+about the size of the base-to-A64x3 rise (0.06 to 0.13), which came with no edit to 'Final' at all, so it may not be
+the brake edit's doing. On the 2B the Final brake is not a stop lever at any dose the readout allows.
+

@@ -1,6 +1,6 @@
 # Status
 
-Last updated 2026-11-03 22:10 EST.
+Last updated 2026-11-03 22:45 EST.
 
 ## Round 2: the commit side (running since 2026-11-03 21:30)
 
@@ -12,7 +12,7 @@ Round 1 left 55-60% of problems at the token cap, and on both models nearly ever
 
 Queue (`runs/_queue/round2.sh`, log `round2.log`): 2B_A64x3Fh and 2B_A64x3F0 ('Final' brake x0.5 and x0 on 2B_A64x3), 2B_Fh (x0.5 on the original 2B), A64x3Fh and A64x3F0 (0.8B, first 40), 2B_A64x3T0 ('Therefore' brake x0, a control). About four hours; rows land in the table below as runs finish.
 
-So far: 2B_A64x3Fh (x0.5) is a near-null, 48 vs 46 (+8/-6, p 0.79), with 'Final' up only x1.3: the 2B barely responds to this brake at half dose. F0 is the real test.
+So far: 2B_A64x3Fh (x0.5) is a near-null, 48 vs 46 (+8/-6, p 0.79), with 'Final' up only x1.3: the 2B barely responds to this brake at half dose. F0 was the real test, and it is null too: zeroing the brake column leaves 'Final' at exactly x0.5's rate and the score at 46 (+5/-5 vs 2B_A64x3). On the 2B the Final brake is not a stop lever; the readout's dose-to-rate mapping fails for the first time, on a word the model places by plan rather than holds back in a loop.
 
 ## Qwen3.5-2B (round 1 done)
 
@@ -79,6 +79,7 @@ First-40 numbers compare against the baseline's same 40 problems: 4/40 correct, 
 | 2B A1x3_8k_q8 | 100 (8k) | 42/100 | 58/100 | 42/42 | 0.03 | 2B, only L22 col 5041 (the Wait brake) x3. +17/-1 vs 2B baseline (p 1e-4); vs 2B_A64x3 +5/-9 (p 0.42). First 40 17, held-out 25/60 |
 | 2B A64x3N3_8k_q8 | 100 (8k) | 41/100 | 59/100 | 41/41 | 0.09 | 2B_A64x3 plus L23 col 2014 (the No brake) x3. 'No,' 1.41 -> 0.30. vs 2B_A64x3 +3/-8 (p 0.23); vs 2B baseline +16/-1. First 40 19, held-out 22/60 |
 | 2B A64x3Fh_8k_q8 | 100 (8k) | 48/100 | 52/100 | 48/48 | 0.04 | 2B_A64x3 plus L23 col 6022 (the Final brake) x0.5. 'Final' 0.13 -> 0.17 per kchar (x1.3; predicted 1.5-10x). vs 2B_A64x3 +8/-6 (p 0.79): noise. Held-out 29/60. Prediction 6: 6/7 clauses, the mechanism one fails |
+| 2B A64x3F0_8k_q8 | 100 (8k) | 46/100 | 55/100 | 46/46 | 0.04 | 2B_A64x3 plus L23 col 6022 zeroed (Final brake x0). 'Final' 0.171, the same as x0.5: the dose order fails (prediction 7). vs Fh +7/-9, vs 2B_A64x3 +5/-5. Held-out 27/60. The same ~15 coin-flip problems trade places |
 
 Weight-analysis findings are in `logs/edit_session.md`. In short, post-training's top change to L22's MLP output is a direction u that writes "Wait" (z +23). The neurons feeding it get extra post-training change in L15 to L21, consistent with MIT's 15/19 without singling them out. The gate/up cosine proxy (a06) could not tell which L22 neurons push u up or down, so P64's sign had to be learned from the eval. The later self-gain readout (a08) gets that sign from weights. But it was built after the evals and is calibrated on only two known signs, so the 0.8B's Deviation 4 stands.
 

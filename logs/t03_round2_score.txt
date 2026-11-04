@@ -16,7 +16,17 @@ Prediction 6: 2B/math500/A64x3Fh_8k_q8 vs 2B/math500/A64x3_8k_q8 (100 shared pro
   gained ['test/algebra/1143.json', 'test/algebra/187.json', 'test/algebra/824.json', 'test/algebra/972.json', 'test/geometry/347.json', 'test/prealgebra/1227.json', 'test/prealgebra/1807.json', 'test/precalculus/580.json']
   lost ['test/algebra/2264.json', 'test/counting_and_probability/1114.json', 'test/geometry/456.json', 'test/geometry/802.json', 'test/number_theory/931.json', 'test/precalculus/807.json']
 
-Prediction 7: 2B/math500/A64x3F0_8k_q8 has 0/100 results, not scored yet.
+Prediction 7: 2B/math500/A64x3F0_8k_q8 vs 2B/math500/A64x3Fh_8k_q8 (100 shared problems). 0/1 clauses hold.
+  FAIL  'Final' higher than under Fh: 0.171 -> 0.171
+  note: branch: neither; accuracy 48 -> 46, finished wrong 0 -> 0, 'Final check' per kchar 0.048 -> 0.049, premature 'Final Answer's 68 -> 55. I leaned to A.
+  accuracy 48 -> 46 (+7/-9, sign test p 0.804); truncated 52 -> 55 (newly finished 7, newly truncated 10); finished wrong 0 -> 0
+  held-out 60: 29 -> 27 (+4/-6, p 0.754)
+  answer-in-hand (0 of the reference's 52 truncated): gains from it 0/7 []
+  per kchar: {'Final': 0.171, 'Therefore': 0.051, 'Final check': 0.048, 'Final Answer': 0.067, 'Wait': 0.037, 'No,': 1.392} -> {'Final': 0.171, 'Therefore': 0.046, 'Final check': 0.049, 'Final Answer': 0.062, 'Wait': 0.035, 'No,': 1.433}
+  finished runs saying 'Final' 48/48 -> 45/45; first 'Final' at 0.49 -> 0.48 of the text, then 4887 -> 4740 chars to the end; finished median length 10560 -> 9109 chars; median tokens 8192 -> 8192
+  premature 'Final Answer' (>2000 chars before the end): 68 in 33 runs -> 55 in 28 runs; densest 'Final' run [1.18, 10, 8505] -> [1.52, 5, 3292]
+  gained ['test/algebra/2264.json', 'test/counting_and_probability/1114.json', 'test/geometry/456.json', 'test/geometry/802.json', 'test/geometry/967.json', 'test/number_theory/931.json', 'test/precalculus/807.json']
+  lost ['test/algebra/1143.json', 'test/algebra/2043.json', 'test/algebra/276.json', 'test/algebra/305.json', 'test/algebra/972.json', 'test/counting_and_probability/803.json', 'test/intermediate_algebra/834.json', 'test/prealgebra/1807.json', 'test/precalculus/580.json']
 
 Prediction 8: 2B/math500/Fh_8k_q8 has 0/100 results, not scored yet.
 

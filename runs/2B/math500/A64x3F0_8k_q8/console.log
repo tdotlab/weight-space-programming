@@ -1,0 +1,39 @@
+A64x3F0_8k_q8: 0 cached, 100 to run
+Timeout is disabled as parsing_timeout is None or <= 0, you must provide                         the logic for timeout interuption yourself to prevent code getting stuck.
+Timeout is disabled as timeout_seconds is None or <= 0, you must provide                         the logic for timeout interuption yourself to prevent code getting stuck.
+  10/100
+  20/100
+  30/100
+  40/100
+  50/100
+  60/100
+  70/100
+  80/100
+  90/100
+  100/100
+{
+  "name": "A64x3F0_8k_q8",
+  "model": "2B",
+  "task": "math500",
+  "gguf": "gguf/2B_A64x3F0-q8_0.gguf",
+  "preset": "qwen",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 1.5
+  },
+  "n": 100,
+  "max_tokens": 8192,
+  "think": true,
+  "seed": 0,
+  "first": 0,
+  "backend_sampling": true,
+  "acc": 0.46,
+  "truncated": 0.55,
+  "acc_when_finished": 1.0,
+  "n_finished": 45,
+  "mean_tokens": 6198,
+  "mean_waits_per_kchar": 0.107
+}
