@@ -564,3 +564,13 @@ kchar (x1.61; predicted 2x-16x). Accuracy 11 vs 13 (+2/-4, p 0.69), truncated 29
 'Final Answer' doubles again (16 -> 33) while fewer runs finish, the same as on the 2B: the model writes the label
 sooner and keeps going. So the half dose behaves the same on both sizes, a modest rise in the word and no stopping.
 The 0.8B is the model where the readout puts F0 near runaway, so prediction 10 is the last real test of this brake.
+
+### A64x3F0 (0.8B): 11/40 (runs/0.8B/math500/A64x3F0_q8). Prediction 10: 2 of 3 clauses; no runaway.
+Zeroing the 0.8B's Final brake column (readout -3.11 -> -1.31). Unlike the 2B, the dose order holds: 'Final' goes
+0.041 -> 0.066 -> 0.136 per kchar across x1, x0.5, x0 (x3.3 over A64x3 at full dose). Accuracy 11 vs Fh's 11 (+3/-3),
+truncated 30, finished wrong 0. The predicted edge of runaway does not come: the densest run says 'Final' 109 times
+at 2.45 per kchar, against the 5.0 line. By the reading pre-registered for this branch, the runaway threshold depends
+on the token, and the readout's dose limit, calibrated on 'Wait', is too cautious for a rare word.
+Reading for the Final brake on both sizes: the readout predicts the direction of the rate change and, on the 0.8B, its
+order; on the 2B the rate saturates at x1.3. On neither model does more 'Final' mean more finishing. The brake
+controls how often the word is said, and the word is not what ends the reasoning.
