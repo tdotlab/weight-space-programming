@@ -260,5 +260,16 @@ Here's a thinking process to solve the problem:
                         *   Use $y = x^2/8$. Let $x = 2k t$ is too messy.  
                         *   Use parameter $\lambda$: $x = \lambda$, $y = \lambda^2/8$.  
                             *   Let's calculate $OA^2$.  
+                            *   Let $\alpha$ be angle of point A with x-axis. Then $\tan \alpha = y/x = (\lambda^2/8)/\lambda = \lambda/8$.  
+                            *   Let $\beta$ be angle of point B.  
+                            *   We need $|OA|^2 = |OB|^2 = |AB|^2$.  
+                            *   If $\triangle OAB$ is equilateral, then $\angle AOB = 60^\circ$ (or 120? No sum is 180, but it's a triangle).  
+                                *   Wait. Vertices are $O$, $A$, $B$. It's a triangle. The angle at the origin is between segments $OA$ and $OB$.  
+                                *   So $\angle AOB = 60^\circ$.  
+                                *   Then $AB^2 = OA^2 + OB^2 - 2 OA \cdot OB \cos(60^\circ) = OA^2 + OB^2 - OA \cdot OB$.  
+                                *   Since equilateral, $OA^2 = AB^2$ and $OB^2 = AB^2$.  
+                                *   So $3 OA^2 = OA^2 + OB^2 - OA \cdot OB  
 
-*Continued in [part 2 of 2](intermediate_algebra_1405_p2.md): GitHub stops rendering math on pages this long, so the transcript is split.*
+## Answer
+
+*(none: the token cap hit during thinking)*

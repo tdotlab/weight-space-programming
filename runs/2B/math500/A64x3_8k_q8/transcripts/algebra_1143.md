@@ -383,5 +383,9 @@ This confirms the result again.
 Note: The vertex condition for $f(y)$ assumes we can reach $y=-1$. Since the domain of $f$ (on graph) is all real numbers, we are good.  
 
 Is there any reason why $x^2=2(y+9)$ might restrict things? No, mapping is bijective on the line where $x^2=y+9$?  
+No, $y = \frac{1}{2}x^2 - 9$. So $x^2 = 2(y+9)$. Since $x$ can be $\pm$, $x^2$ can take all non-negative values.  
+For a given $y$, is there an $x$? Yes, if $y \ge -9$, there are two points. If $y < -9  
 
-*Continued in [part 2 of 2](algebra_1143_p2.md): GitHub stops rendering math on pages this long, so the transcript is split.*
+## Answer
+
+*(none: the token cap hit during thinking)*

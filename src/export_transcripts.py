@@ -106,10 +106,10 @@ def slug(uid):
     return re.sub(r"[^a-zA-Z0-9]+", "_", uid.replace("test/", "").replace(".json", ""))
 
 
-# GitHub renders no math at all on a page with too many expressions: 465 rendered, 491 did not
-# (tested 2026-11-03). Long transcripts are split into parts under this many. The local count
-# runs at or above GitHub's (it also counts things like "$5"), so 450 here is under 465 there.
-MATH_CAP = 450
+# GitHub renders at most about 1950 math expressions per page; every one after that shows
+# "Unable to render expression" (tested 2026-11-03 in headless Chrome). Long transcripts are split
+# into parts under this many. The local count runs at or above GitHub's, so 1800 leaves margin.
+MATH_CAP = 1800
 
 
 def chunks(lines):
