@@ -1,0 +1,16 @@
+{
+ "name": "2B_A64x3Fh",
+ "model": "Qwen3.5-2B",
+ "kind": "project",
+ "dir": "brake_Final",
+ "dirfile": "logs/2B/a12_directions.pt",
+ "start": "2B_A64x3",
+ "layers": "23",
+ "k": "1",
+ "scale": 0.5,
+ "time": "2026-11-03 21:14:13",
+ "weights_changed_total": 2048,
+ "sha256": "63f38720908cabb204dd4fa9e132d5135b2a4f0094e178ff207a96e4df3a574d"
+}
+  L23: 2048 weights changed, rel change 0.004289
+gguf: gguf/2B_A64x3Fh-f16.gguf 3897388000
