@@ -26,6 +26,27 @@ CONVERT = str(TOOLS / "source-code-of-open-source" / "llama.cpp-b11804" / "conve
 P = "model.language_model."
 
 
+def apply_edit(tensors, d, layers, k, scale, base=None):
+    """Edit tensors in place (see the module docstring); base set means revert. Returns (per_layer records, changed).
+    src/verify_artifacts.py rebuilds every edit with this same function."""
+    per_layer, changed = [], 0
+    for L in [int(x) for x in layers.split(",")]:
+        key = P + f"layers.{L}.mlp.down_proj.weight"
+        Wt = tensors[key].float()
+        ref = Wt - base.get_tensor(key).float() if base else Wt
+        coef = d @ ref  # (n_columns,)
+        kk = Wt.shape[1] if k == "all" else int(k)
+        cols = torch.topk(coef.abs(), kk).indices
+        Wn = Wt.clone()
+        Wn[:, cols] -= scale * d[:, None] * coef[cols][None, :]
+        tensors[key] = Wn.to(tensors[key].dtype)
+        diff = (tensors[key].float() != Wt).sum().item()
+        changed += diff
+        per_layer.append(dict(layer=L, columns=sorted(cols.tolist()) if kk <= 256 else f"{kk} columns",
+                              weights_changed=int(diff), rel_change=round(((Wn - Wt).norm() / Wt.norm()).item(), 6)))
+    return per_layer, changed
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--name", required=True)
@@ -59,22 +80,7 @@ def main():
     record = dict(name=a.name, model=MODEL, kind=a.kind, dir=a.dir, dirfile=a.dirfile, start=a.start or "original",
                   layers=a.layers, k=a.k, scale=a.scale,
                   time=time.strftime("%Y-%m-%d %H:%M:%S"), per_layer=[])
-    changed = 0
-    for L in [int(x) for x in a.layers.split(",")]:
-        key = P + f"layers.{L}.mlp.down_proj.weight"
-        Wt = tensors[key].float()
-        ref = Wt - base.get_tensor(key).float() if base else Wt
-        coef = d @ ref  # (3584,)
-        k = Wt.shape[1] if a.k == "all" else int(a.k)
-        cols = torch.topk(coef.abs(), k).indices
-        Wn = Wt.clone()
-        Wn[:, cols] -= a.scale * d[:, None] * coef[cols][None, :]
-        tensors[key] = Wn.to(tensors[key].dtype)
-        diff = (tensors[key].float() != Wt).sum().item()
-        changed += diff
-        record["per_layer"].append(dict(layer=L, columns=sorted(cols.tolist()) if k <= 256 else f"{k} columns",
-                                        weights_changed=int(diff),
-                                        rel_change=round(((Wn - Wt).norm() / Wt.norm()).item(), 6)))
+    record["per_layer"], changed = apply_edit(tensors, d, a.layers, a.k, a.scale, base)
     record["weights_changed_total"] = int(changed)
     save_file(tensors, str(out / FNAME), metadata=meta)
     record["sha256"] = hashlib.sha256((out / FNAME).read_bytes()).hexdigest()
