@@ -573,8 +573,5 @@ The vertices of the triangle are:
 3.  $C = (10,0)$  
 
 We can calculate the area of this triangle using the standard formula for the area of a triangle given its coordinates:  
-$$ \text{Area} = \frac{1}{2} |x_1(y_2 - y_3) + x_2(y_3 - y_1) + x_3(y_1 - y_2)| $$  
-Substituting the values for $A, B, C$:  
-$$ \text{Area} = \frac{1}{2} |0(3 - 0) + 2(0 - 0) + 10(0 - 3)| $$  
-$$ \text{Area} = \frac{1}{2} | 0 +
-$$
+
+*Continued in [part 2 of 2](prealgebra_1114_p2.md): GitHub stops rendering math on pages this long, so the transcript is split.*

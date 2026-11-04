@@ -106,7 +106,66 @@ def slug(uid):
     return re.sub(r"[^a-zA-Z0-9]+", "_", uid.replace("test/", "").replace(".json", ""))
 
 
-def page(r):
+# GitHub renders no math at all on a page with too many expressions: 465 rendered, 491 did not
+# (tested 2026-11-03). Long transcripts are split into parts under this many. The local count
+# runs at or above GitHub's (it also counts things like "$5"), so 450 here is under 465 there.
+MATH_CAP = 450
+
+
+def chunks(lines):
+    """Split Markdown lines into parts of at most MATH_CAP math expressions, cutting only outside
+    code fences and display math, so each part renders on its own. Qwen can write a whole
+    transcript as one nested list, so a cut may land mid-list; the part is then dedented, since
+    a page that opens on an indented line reads as code."""
+    cost, safe, fence, math = [], [], None, False
+    for i, ln in enumerate(lines):
+        safe.append(not fence and not math and bool(ln))
+        c = 0
+        if fence:
+            if ln.strip().startswith(fence):
+                fence = None
+        elif math:  # an unpaired $$ may not open display math on GitHub: count inline spans too
+            math = ln.count("$$") % 2 == 0
+            c = (not math) + sum(s.startswith("$") for s in SPAN.findall(ln))
+        elif OPEN.match(ln):
+            fence = OPEN.match(ln).group(1)
+        else:
+            c = sum(s.startswith("$") for s in SPAN.findall(ln))
+            math = "".join(SPAN.split(ln)[::2]).count("$$") % 2 == 1
+        cost.append(c)
+    parts, start, n, last = [], 0, 0, None
+    for i, c in enumerate(cost):
+        if safe[i] and i > start:
+            last = (i, n)  # cut here: lines[start:i] hold n expressions
+        n += c
+        if n > MATH_CAP and last:
+            cut, before = last
+            parts.append(lines[start:cut])
+            start, n, last = cut, n - before, None
+            if safe[i] and i > start:
+                last = (i, n - c)
+    return [parts[0]] + [dedent(p) for p in parts[1:] + [lines[start:]]] if parts else [lines]
+
+
+def dedent(part):
+    """Take the first line's indentation off every line of a part (not inside code fences)."""
+    d = len(part[0]) - len(part[0].lstrip(" "))
+    out, fence = [], None
+    for ln in part:
+        if fence:
+            if ln.strip().startswith(fence):
+                fence = None
+        else:
+            ln = ln[min(d, len(ln) - len(ln.lstrip(" "))):]
+            m = OPEN.match(ln)
+            fence = m.group(1) if m else None
+        out.append(ln)
+    return out
+
+
+def pages(r):
+    """One page, or several when the transcript has too much math for GitHub to render on one."""
+    s = slug(r["id"])
     prob = PROBLEMS.get(r["id"])
     head = [f"# {r['id']} ({r['subject']}, level {r['level']})", ""]
     if prob:
@@ -119,14 +178,22 @@ def page(r):
         "",
         "## Thinking",
         "",
-        md(r["reasoning"]) if r["reasoning"].strip() else "*(empty)*",
-        "",
-        "## Answer",
-        "",
-        md(r["content"]) if r["content"].strip() else "*(none: the token cap hit during thinking)*",
-        "",
     ]
-    return "\n".join(head)
+    body = [md(r["reasoning"]) if r["reasoning"].strip() else "*(empty)*", "", "## Answer", "",
+            md(r["content"]) if r["content"].strip() else "*(none: the token cap hit during thinking)*", ""]
+    parts = chunks("\n".join(head + body).split("\n"))
+    k = len(parts)
+    name = lambda i: f"{s}.md" if i == 0 else f"{s}_p{i + 1}.md"
+    out = {}
+    for i, p in enumerate(parts):
+        if i:  # later parts: a title and a way back
+            back = f"[Previous part]({name(i - 1)})" + (f" · [Start]({name(0)})" if i > 1 else "")
+            p = [f"# {r['id']}, part {i + 1} of {k}", "", back, ""] + p
+        if i < k - 1:
+            p = p + ["", f"*Continued in [part {i + 2} of {k}]({name(i + 1)}): GitHub stops rendering "
+                         f"math on pages this long, so the transcript is split.*", ""]
+        out[name(i)] = "\n".join(p)
+    return out
 
 
 def export(rd):
@@ -146,7 +213,10 @@ def export(rd):
         s = slug(r["id"])
         lines.append(f"| [{s}]({s}.md) | {r['level']} | {'Y' if r['correct'] else 'n'} | {r['finish']} | "
                      f"{r['tokens']} | {r.get('waits_per_kchar', '')} | `{r['answer']}` | `{r['pred']}` |")
-        (out / f"{s}.md").write_text(page(r), encoding="utf-8")
+        for old in out.glob(f"{s}_p*.md"):  # parts from an earlier, longer split
+            old.unlink()
+        for fn, text in pages(r).items():
+            (out / fn).write_text(text, encoding="utf-8")
     (out / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"exported {rd.relative_to(RUNS).as_posix()}: {len(rows)} transcripts")
 

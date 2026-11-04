@@ -519,13 +519,5 @@ $$ \text{Product} = 8(3)(3)(2) $$
 Let's group this to simplify:  
 $$ \text{Product} = 8 \times (3 \times 3) \times 2 $$  
 $$ \text{Product} = 8 \times 9 \times 2 $$  
-$$ \text{Product} = 72 \times 2 $$  
-$$ \text{Product} = 144 $$  
 
-**Step 5: Take the square root.**  
-The area $A$ is $\sqrt{144}$.  
-$$ A = 12 $$  
-
-Therefore, there are **12** square units in the area of the triangle.  
-
-\boxed{12}  
+*Continued in [part 2 of 2](geometry_802_p2.md): GitHub stops rendering math on pages this long, so the transcript is split.*

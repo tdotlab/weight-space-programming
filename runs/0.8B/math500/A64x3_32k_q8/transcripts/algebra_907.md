@@ -516,8 +516,5 @@ $$\text{Target} = x^3 - 2x + 1$$
 $$= (2x + 1) - 2x + 1$$  
 $$= 2x + 1 - 2x + 1$$  
 $$= 0 + 2$$  
-$$= 2$$  
 
-Thus, the value is $2$.  
-
-\boxed{2}  
+*Continued in [part 2 of 2](algebra_907_p2.md): GitHub stops rendering math on pages this long, so the transcript is split.*
