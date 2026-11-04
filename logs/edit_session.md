@@ -353,3 +353,11 @@ a state that speaks through whatever word is free. With 'Wait' and 'No' both gon
 well below 13, so the No brake does not visibly cut useful self-correction either. Reading: the discourse markers are
 symptoms. Silencing them one at a time is done; the next lever has to act on the decision to stop, which points at the
 `</think>` / 'Therefore' brakes from a10 (weaken them so committing gets easier).
+
+### 2B_A1x3 (one column): 26 -> 42 (runs/2B/math500/A1x3_8k_q8). Prediction 3 holds on accuracy; on 'Wait' it overshoots.
+Only L22 col 5041, the 2B's Wait brake, tripled. Full 100: 42 vs baseline 26 (+17/-1, p 1e-4) and 2B_A64x3's 46 (+5/-9,
+p 0.42). First 40 17 (A64x3 19), held-out 60 25 (A64x3 27). Truncated 58. Every finished answer right. Accuracy lands
+between the two and closer to 2B_A64x3, as predicted. 'Wait' was predicted to land between them too; it went to 0.03
+per kchar, as low as 2B_A64x3's 0.04, so the miss is in the edit's favour. Same result as the 0.8B's A1x3: one pretraining
+neuron, found from the weights, carries the Wait suppression, and the other 63 columns are worth a few points at most
+(4 here, 3 there, neither significant). 'No,' 1.43, untouched.
