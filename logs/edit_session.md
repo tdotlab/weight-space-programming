@@ -361,3 +361,22 @@ between the two and closer to 2B_A64x3, as predicted. 'Wait' was predicted to la
 per kchar, as low as 2B_A64x3's 0.04, so the miss is in the edit's favour. Same result as the 0.8B's A1x3: one pretraining
 neuron, found from the weights, carries the Wait suppression, and the other 63 columns are worth a few points at most
 (4 here, 3 there, neither significant). 'No,' 1.43, untouched.
+
+### 2B_A64x3N3 (plus the No brake): 41/100 (runs/2B/math500/A64x3N3_8k_q8). Prediction 5 holds on 'No,'; accuracy flat to down.
+2B_A64x3 plus L23 col 2014 tripled. 'No,' 1.41 -> 0.30 per kchar (4.7x; predicted at least 2x), a smaller cut than the
+0.8B's 80x. Score 41 vs 2B_A64x3's 46 (+3/-8, p 0.23), truncated 59 vs 55, first 40 19 (same), held-out 22 vs 27. Every
+finished answer right. Vs baseline +16/-1. The truncated tails read as on the 0.8B: "Let's check", "Is it", "Is there",
+"Correct", recomputing without committing. Same answer as prediction 4, on the bigger model.
+
+### Round 1 summary
+Five predictions, written before the evals. 1 (the 0.8B recipe moves to the 2B blind and gains) held: 26 -> 46.
+2 and 3 (one Wait-brake neuron does most of it) held on both models: 10 vs 13 on the 0.8B first 40, 42 vs 46 on the 2B
+100, neither gap significant; on the 2B, 'Wait' fell all the way instead of partway, which the prediction did not
+expect. 4 and 5 (the No brake cuts 'No,') held on the marker, and both answered the open question the same way: the
+loop is a state that talks through whatever word is free. Accuracy did not rise on either model (12 vs 13, 41 vs 46).
+
+What this establishes: the weights alone located the lever (a pretraining brake neuron on the post-training 'Wait'
+direction), the sign and dose transferred across model sizes without a 2B eval, and the fix is one column. What it
+rules out: silencing discourse markers one at a time as a route past the remaining truncations. The leftover failure
+is not committing, so round 2 should act on stopping: weaken the `</think>` and 'Therefore' brakes from a10 (the
+opposite sign to everything so far), on both models, with predictions written first.

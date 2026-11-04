@@ -1,10 +1,23 @@
 # Status
 
-Last updated 2026-11-03 18:25 EST.
+Last updated 2026-11-03 20:45 EST.
 
-## Qwen3.5-2B (in progress)
+## Qwen3.5-2B (round 1 done)
 
-The 0.8B's structure carries over exactly: post-training's top 'Wait' writer is again L22 sv0 (u, z +31.7 for 'Wait'), with the same L23 promoter/suppressor pair. A new weight-only readout (a08) puts the input along u and reads what each L22 neuron writes back. It agrees with both signs the 0.8B evals established. On both models it finds that 94-96% of L22's self-feedback on u is one neuron (0.8B col 573, 2B col 5041), whose gate, up and down weights all line up with u (cos about 0.5-0.65; typical 0.02): a brake that fires on 'Wait' and writes it back down. a09: that neuron is a pretraining feature, unchanged by post-training; u aligns with it. Reading: A64 worked by amplifying this brake. a10 shows the brake is one of a bank: both models carry one self-braking neuron per discourse token in L22-L23 ('Wait', 'No', 'Actually', 'Therefore', `</think>`), at matching strengths. A search by token alone, without u, finds the same Wait neuron. The 'No' brake (0.8B L23 c613, 2B L23 c2014) is the new lead for the 'No,' loops A64x3 leaves. Baseline `runs/2B/math500/base_8k_q8` (same 100 problems and sampling as the 0.8B, 8k cap, 40 slots): 26/100, 74 truncated, every finished answer right (26/26), 'Wait' 1.7 per kchar pooled (0.8B 3.1). First 40: 11/40, 29 truncated; held-out 60: 15/60. All 5 problems the 0.8B baseline solved, the 2B solves too. Same failure mode as the 0.8B, about half as Wait-heavy. `2B_A64x3` (the 0.8B recipe moved over blind, nothing tuned on a 2B eval): 46/100, +21/-1 vs baseline (p 1e-5), held-out 27/60 vs 15/60, truncated 55, 'Wait' 1.55 -> 0.04 per kchar, 'No,' unchanged. Prediction 1 holds. `A1x3` (0.8B, only the Wait brake col 573 tripled, first 40): 10/40 vs baseline 4 (+6/-0, p 0.03) and A64x3 13 (+2/-5, p 0.45), 'Wait' 0.02 per kchar: one neuron does the Wait suppression. Prediction 2 holds. `A64x3N3` (0.8B, A64x3 plus the No brake col 613 tripled, first 40): 12/40 vs A64x3 13 (+3/-4), 28 truncated; 'No,' 2.40 -> 0.03 per kchar. Prediction 4 holds on the marker, but the loops keep going in other words ('Let's check', 'Is it', 'Maybe'): the markers are symptoms, not the loop. `2B_A1x3` (only col 5041 tripled, full 100): 42/100 vs baseline 26 (+17/-1, p 1e-4) and 2B_A64x3 46 (+5/-9, p 0.42), 'Wait' 0.03 per kchar. Prediction 3 holds on accuracy; 'Wait' falls as far as A64x3's rather than between. Built: `2B_A64x3` (the 0.8B winner moved over blind), `2B_A1x3` and `A1x3` (only the Wait brake column, x3), and `A64x3N3` and `2B_A64x3N3` (A64x3 plus the No brake tripled). Queue: `runs/_queue/2B_round1.sh`. Predictions are written in `logs/edit_session.md` before any of them is evaluated.
+Headline: the 0.8B recipe moved over blind takes the 2B from 26/100 to 46/100 at the 8k cap (+21/-1, p 1e-5; held-out 60: 15 to 27), and tripling one pretraining neuron alone gets 42/100. Round 1 tested five predictions written before any of its evals ran (`logs/edit_session.md`). Four held as written, and one held on accuracy while overshooting on 'Wait'. The open problem is the same on both models: about 55-60% of problems still run out of budget, and cutting the hesitation words does not shorten that.
+
+Weight analysis. The 0.8B's structure carries over exactly: post-training's top 'Wait' writer is again L22 sv0 (u, z +31.7 for 'Wait'). A weight-only readout (a08) puts the input along u and reads what each L22 neuron writes back. On both models 94-96% of that self-feedback is one neuron (0.8B col 573, 2B col 5041) whose gate, up and down weights all line up with u: a brake that fires on 'Wait' and writes it back down. a09: it is a pretraining feature that post-training left alone. a10: it is one of a bank of self-braking neurons in L22-L23, one per discourse token ('Wait', 'No', 'Actually', 'Therefore', `</think>`), found by token alone without u.
+
+Round 1 results (2B: full 100 at 8k; 0.8B: first 40 at 16k):
+- `2B_A64x3` 46/100, 'Wait' 1.55 -> 0.04 per kchar, 'No,' unchanged. Prediction 1 holds.
+- `A1x3` (0.8B, only col 573 x3) 10/40 vs baseline 4 (+6/-0) and A64x3 13 (+2/-5, n.s.), 'Wait' 0.02. Prediction 2 holds.
+- `2B_A1x3` (only col 5041 x3) 42/100 vs baseline 26 (+17/-1, p 1e-4) and 2B_A64x3 46 (+5/-9, n.s.), 'Wait' 0.03. Prediction 3 holds on accuracy; 'Wait' falls all the way rather than between. On both models one neuron carries the Wait fix; the other 63 columns add a few points at most, not significant.
+- `A64x3N3` (0.8B, plus the No brake col 613 x3) 12/40 vs A64x3 13 (+3/-4), 'No,' 2.40 -> 0.03. Prediction 4 holds on the marker; the score does not move.
+- `2B_A64x3N3` (plus col 2014 x3) 41/100 vs 2B_A64x3 46 (+3/-8, p 0.23), 'No,' 1.41 -> 0.30, truncated 59 vs 55. Prediction 5 holds on the marker; accuracy flat to slightly down.
+
+Reading: the No brake removes its word on both models and the loops continue in other phrasing ('Let's check', 'Is it', 'Is there', 'Maybe'). 'Wait' removal paid because it broke a loop that ran mostly on 'Wait'; with that gone, the remaining loop is a state of not committing, not a word. Next lever: the decision to stop, i.e. weaken the `</think>` / 'Therefore' brakes from a10.
+
+Baseline `runs/2B/math500/base_8k_q8` (same 100 problems and sampling as the 0.8B, 8k cap): 26/100, 74 truncated, every finished answer right, first 40 11/40, held-out 15/60, 'Wait' 1.55 per kchar (0.8B 3.09). Same failure mode, about half as Wait-heavy.
 
 ## Qwen3.5-0.8B
 
@@ -25,7 +38,8 @@ A64, the opposite of P64 (u-component in the same 64 L22 columns doubled), is th
 3. Done: A64x3 on all 100 (30/100), A64 on all 100 (24/100). At a 32k cap: A64x3 41/100, baseline 15/100.
 4. Done: a07 found no post-training 'No,' direction. Next lever is upstream: v_in at L15+L19 stacked on A64, both signs (A64VP, A64VA), since weights cannot fix the sign.
 5. Done for the 0.8B: A64x3 is the pick. A greedy baseline and a non-math regression set are still open.
-6. Now: Qwen3.5-2B. Baseline at 8k, then `2B_A64x3`, `A1x3` (0.8B, first 40 at 16k) and `2B_A1x3`, all queued behind it.
+6. Done: Qwen3.5-2B round 1 (baseline, 2B_A64x3, A1x3 and 2B_A1x3, the No-brake stacks on both models).
+7. Next: weaken the `</think>` / 'Therefore' brakes (a10) so committing gets easier; pre-register predictions before the evals.
 
 ## Results
 
@@ -51,6 +65,7 @@ First-40 numbers compare against the baseline's same 40 problems: 4/40 correct, 
 | A1x3_q8 | first 40 | 10/40 | 29/40 | 10/11 | 0.02 | only L22 col 573 (the Wait brake) x3, about 1k weights. +6/-0 vs baseline (p 0.03); vs A64x3 +2/-5 (p 0.45). 'No,' 2.38 as A64x3. First finished-wrong answer in a 16k screen |
 | A64x3N3_q8 | first 40 | 12/40 | 28/40 | 12/12 | 0.04 | A64x3 plus L23 col 613 (the No brake) x3. 'No,' 2.40 -> 0.03 per kchar. vs A64x3 +3/-4 (p 1); vs baseline +8/-0 (p 0.008). Loops continue in other phrasing |
 | 2B A1x3_8k_q8 | 100 (8k) | 42/100 | 58/100 | 42/42 | 0.03 | 2B, only L22 col 5041 (the Wait brake) x3. +17/-1 vs 2B baseline (p 1e-4); vs 2B_A64x3 +5/-9 (p 0.42). First 40 17, held-out 25/60 |
+| 2B A64x3N3_8k_q8 | 100 (8k) | 41/100 | 59/100 | 41/41 | 0.09 | 2B_A64x3 plus L23 col 2014 (the No brake) x3. 'No,' 1.41 -> 0.30. vs 2B_A64x3 +3/-8 (p 0.23); vs 2B baseline +16/-1. First 40 19, held-out 22/60 |
 
 Weight-analysis findings are in `logs/edit_session.md`. In short, post-training's top change to L22's MLP output is a direction u that writes "Wait" (z +23). The neurons feeding it get extra post-training change in L15 to L21, consistent with MIT's 15/19 without singling them out. The gate/up cosine proxy (a06) could not tell which L22 neurons push u up or down, so P64's sign had to be learned from the eval. The later self-gain readout (a08) gets that sign from weights. But it was built after the evals and is calibrated on only two known signs, so the 0.8B's Deviation 4 stands.
 

@@ -1,0 +1,14 @@
+=== 17:32:01 build A64x3N3 (0.8B: A64x3 + L23 No-brake column tripled)
+=== 17:33:10 build 2B_A64x3N3
+=== 17:36:01 waiting for base_8k_q8
+=== 17:42:54 start A64x3_8k_q8
+=== 18:20:43 done A64x3_8k_q8: "acc":0.46,"truncated":0.55,
+=== 18:20:44 start A1x3_q8
+=== 18:55:18 done A1x3_q8: "acc":0.25,"truncated":0.725,
+=== 18:55:18 start A64x3N3_q8
+=== 19:26:59 done A64x3N3_q8: "acc":0.3,"truncated":0.7,
+=== 19:26:59 start A1x3_8k_q8
+=== 20:03:10 done A1x3_8k_q8: "acc":0.42,"truncated":0.58,
+=== 20:03:10 start A64x3N3_8k_q8
+=== 20:37:39 done A64x3N3_8k_q8: "acc":0.41,"truncated":0.59,
+=== 20:37:39 round 1 done
