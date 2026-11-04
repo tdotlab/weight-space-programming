@@ -557,3 +557,10 @@ any more runs finishing: the model labels a final answer earlier and then keeps 
 the 2B's 'Final' answers this neuron by a fixed x1.3 that does not grow with dose and does not turn into stopping.
 RAM caveat (STATUS, Gotchas): this build's file carries one flipped bit (L7 up_proj), and the machine's RAM was found
 corrupting cached file pages during this run, so a load-time fault in this or any run cannot be ruled out after the fact.
+
+### A64x3Fh (0.8B): 11/40 (runs/0.8B/math500/A64x3Fh_q8). Prediction 9 fails, 2 of 5 clauses.
+Halving the 0.8B's Final brake (L23 col 1238; readout -3.11 -> -2.21) on top of A64x3: 'Final' 0.041 -> 0.066 per
+kchar (x1.61; predicted 2x-16x). Accuracy 11 vs 13 (+2/-4, p 0.69), truncated 29 vs 27, finished wrong 0. Premature
+'Final Answer' doubles again (16 -> 33) while fewer runs finish, the same as on the 2B: the model writes the label
+sooner and keeps going. So the half dose behaves the same on both sizes, a modest rise in the word and no stopping.
+The 0.8B is the model where the readout puts F0 near runaway, so prediction 10 is the last real test of this brake.

@@ -44,8 +44,20 @@ Prediction 8: 2B/math500/Fh_8k_q8 vs 2B/math500/base_8k_q8 (100 shared problems)
   gained ['test/algebra/1031.json', 'test/prealgebra/2057.json']
   lost ['test/algebra/1339.json', 'test/algebra/170.json', 'test/algebra/1934.json', 'test/algebra/2043.json', 'test/algebra/694.json', 'test/geometry/347.json']
 
-Prediction 9: 0.8B/math500/A64x3Fh_q8 has 0/40 results, not scored yet.
+Prediction 9: 0.8B/math500/A64x3Fh_q8 vs 0.8B/math500/A64x3_q8 (40 shared problems). 2/5 clauses hold.
+  FAIL  'Final' per kchar up 2x-16x: 0.041 -> 0.066 (x1.61)
+  PASS  no run runs away ('Final' >= 5.0/kchar): densest [0.95, 39, 40918]
+  FAIL  accuracy >= 13: 11
+  FAIL  truncated <= 27: 29
+  PASS  finished wrong <= 1: 0
+  accuracy 13 -> 11 (+2/-4, sign test p 0.688); truncated 27 -> 29 (newly finished 2, newly truncated 4); finished wrong 0 -> 0
+  answer-in-hand (3 of the reference's 27 truncated): gains from it 1/2 ['test/algebra/907.json']
+  per kchar: {'Final': 0.041, 'Therefore': 0.023, 'Final check': 0.016, 'Final Answer': 0.012, 'Wait': 0.038, 'No,': 2.396} -> {'Final': 0.066, 'Therefore': 0.039, 'Final check': 0.021, 'Final Answer': 0.027, 'Wait': 0.04, 'No,': 2.361}
+  finished runs saying 'Final' 12/13 -> 11/11; first 'Final' at 0.47 -> 0.59 of the text, then 6571 -> 8327 chars to the end; finished median length 23537 -> 29919 chars; median tokens 16384 -> 16384
+  premature 'Final Answer' (>2000 chars before the end): 16 in 10 runs -> 33 in 7 runs; densest 'Final' run [0.6, 3, 4983] -> [0.95, 39, 40918]
+  gained ['test/algebra/824.json', 'test/algebra/907.json']
+  lost ['test/algebra/170.json', 'test/algebra/2391.json', 'test/geometry/967.json', 'test/intermediate_algebra/834.json']
 
-Prediction 10: 0.8B/math500/A64x3F0_q8 has 0/40 results; reference 0.8B/math500/A64x3Fh_q8 not finished, not scored yet.
+Prediction 10: 0.8B/math500/A64x3F0_q8 has 0/40 results, not scored yet.
 
 Prediction 11: 2B/math500/A64x3T0_8k_q8 has 0/100 results, not scored yet.
